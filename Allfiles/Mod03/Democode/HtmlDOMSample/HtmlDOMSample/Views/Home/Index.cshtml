@@ -1,0 +1,42 @@
+﻿<form>
+    <fieldset>
+        <legend>
+            Enter your details
+        </legend>
+        <ol>
+            <li>
+                <label>
+                    <strong>Full name</strong>
+                    <br />
+                    <input type="text" name="UserName" />
+                </label>
+            </li>
+            <li>
+                <label>
+                    Telephone number
+                    <br />
+                    <input type="text" name="Phone" />
+                </label>
+            </li>
+            <li>
+                <label>
+                    Email Address
+                    <br />
+                    <input type="text" name="Email" />
+                </label>
+            </li>
+            <li>
+                <label>
+                    My hobbies
+                </label>
+                <div id="hobbiesList">
+                    <input type="text" name="hobby" class="hobbiesInput" />
+                    <button type="button" onclick="addHobbies()">Add hobby</button>
+                </div>
+            </li>
+        </ol>
+    </fieldset>
+    <input type="submit" value="Check my details" />
+</form>
+
+<script src="~/Scripts/IndexScript.js"></script>
