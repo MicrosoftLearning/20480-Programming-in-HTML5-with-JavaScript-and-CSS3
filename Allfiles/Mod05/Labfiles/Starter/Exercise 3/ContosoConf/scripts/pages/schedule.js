@@ -1,15 +1,16 @@
-﻿var schedule = [];
-var list = document.getElementById("schedule");
-var track1CheckBox = document.getElementById("show-track-1");
-var track2CheckBox = document.getElementById("show-track-2");
+﻿let schedules = [];
+const list = document.getElementById("schedule");
+const track1CheckBox = document.getElementById("show-track-1");
+const track2CheckBox = document.getElementById("show-track-2");
 
-function downloadSchedule() {
-    var request = new XMLHttpRequest();
+const downloadSchedule = () => {
+
+    const request = new XMLHttpRequest();
     request.open("GET", "/schedule/list", true);
     request.onreadystatechange = function () {
         if (request.readyState === 4) {
             try {
-                var response = JSON.parse(request.responseText);
+                const response = JSON.parse(request.responseText);
                 if (request.status === 200) {
                     schedule = response.schedule;
                     displaySchedule();
@@ -24,50 +25,49 @@ function downloadSchedule() {
     request.send();
 }
 
-function createSessionElement(session) {
-    var li = document.createElement("li");
+const createSessionElement = (session) => {
+    const li = document.createElement("li");
 
     li.sessionId = session.id;
 
-    var star = document.createElement("a");
+    const star = document.createElement("a");
     star.setAttribute("href", "#");
     star.setAttribute("class", "star");
     li.appendChild(star);
 
-    var title = document.createElement("span");
+    const title = document.createElement("span");
     title.textContent = session.title;
     li.appendChild(title);
 
     return li;
 };
 
-function clearList() {
+const clearList = () => {
     while (list.firstChild) {
         list.removeChild(list.firstChild);
     }
 }
 
-function displaySchedule() {
+const displaySchedule = () => {
     clearList();
-    for (var i = 0; i < schedule.length; i++) {
-        var tracks = schedule[i].tracks;
-        var isCurrentTrack = (track1CheckBox.checked && tracks.indexOf(1) >= 0) ||
-                             (track2CheckBox.checked && tracks.indexOf(2) >= 0);
+    for(let schedule of schedules)
+        const tracks = schedul.tracks;
+        const isCurrentTrack = (track1CheckBox.checked && tracks.indexOf(1) >= 0) ||
+            (track2CheckBox.checked && tracks.indexOf(2) >= 0);
         if (isCurrentTrack) {
-            var li = createSessionElement(schedule[i]);
+            const li = createSessionElement(schedule);
             list.appendChild(li);
         }
     }
-}
 
-function saveStar(sessionId, isStarred) {
-    var request = new XMLHttpRequest();
+const saveStar = (sessionId, isStarred) => {
+    const request = new XMLHttpRequest();
     request.open("POST", "/schedule/star/" + sessionId, true);
-    
+
     if (isStarred) {
         request.onreadystatechange = function() {
             if (request.readyState === 4 && request.status === 200) {
-                var response = JSON.parse(request.responseText);
+                const response = JSON.parse(request.responseText);
                 if (response.starCount > 50) {
                     alert("This session is very popular! Be sure to arrive early to get a seat.");
                 }
@@ -76,16 +76,16 @@ function saveStar(sessionId, isStarred) {
     }
 
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    var data = "starred=" + isStarred;
+    const data = "starred=" + isStarred;
     request.send(data);
 }
 
-function handleListClick(event) {
-    var isStarElement = event.srcElement.classList.contains("star");
+const handleListClick = (event) => {
+    const isStarElement = event.srcElement.classList.contains("star");
     if (isStarElement) {
         event.preventDefault(); // Stop the browser following the clicked <a> element's href.
 
-        var listItem = event.srcElement.parentNode;
+        const listItem = event.srcElement.parentNode;
         if (listItem.classList.contains("starred")) {
             listItem.classList.remove("starred");
             saveStar(listItem.sessionId, false);

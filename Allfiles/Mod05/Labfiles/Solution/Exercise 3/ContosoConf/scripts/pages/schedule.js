@@ -1,81 +1,99 @@
-﻿var schedule = [];
-var list = document.getElementById("schedule");
-var track1CheckBox = document.getElementById("show-track-1");
-var track2CheckBox = document.getElementById("show-track-2");
+﻿let schedules = [];
+const list = document.getElementById("schedule");
+const track1CheckBox = document.getElementById("show-track-1");
+const track2CheckBox = document.getElementById("show-track-2");
 
-function downloadSchedule() {
-   $.ajax({
-        type: "GET",
-        url: "/schedule/list"
-    }).done(function(response) {
-        schedule = response.schedule;
-        displaySchedule();
-    }).fail(function() {
+const downloadSchedule = async () => {
+
+
+       // await response of fetch call
+       let response = await fetch("/schedule/list");
+       // transform body to json
+       let data = await response.json();
+
+       // checking response is ok
+       if (response.ok) {
+           schedules = data.schedule;
+           displaySchedule();
+       }
+       else
            alert("Schedule list not available.");
-    });
+
 }
 
-function createSessionElement(session) {
-    var li = document.createElement("li");
+const createSessionElement = (session) => {
+    const li = document.createElement("li");
 
     li.sessionId = session.id;
 
-    var star = document.createElement("a");
+    const star = document.createElement("a");
     star.setAttribute("href", "#");
     star.setAttribute("class", "star");
     li.appendChild(star);
 
-    var title = document.createElement("span");
+    const title = document.createElement("span");
     title.textContent = session.title;
     li.appendChild(title);
 
     return li;
-};
+}
 
-function clearList() {
+const clearList = () => {
     while (list.firstChild) {
         list.removeChild(list.firstChild);
     }
 }
 
-function displaySchedule() {
+const displaySchedule = () => {
     clearList();
-    for (var i = 0; i < schedule.length; i++) {
-        var tracks = schedule[i].tracks;
-        var isCurrentTrack = (track1CheckBox.checked && tracks.indexOf(1) >= 0) ||
-                             (track2CheckBox.checked && tracks.indexOf(2) >= 0);
+    for (let schedule of schedules) {
+        const tracks = schedule.tracks;
+        const isCurrentTrack = track1CheckBox.checked && tracks.indexOf(1) >= 0 ||
+                             track2CheckBox.checked && tracks.indexOf(2) >= 0;
         if (isCurrentTrack) {
-            var li = createSessionElement(schedule[i]);
+            const li = createSessionElement(schedule);
             list.appendChild(li);
         }
     }
 }
 
-function saveStar(sessionId, isStarred) {
-    $.ajax({
-        type: "POST",
-        url: "/schedule/star/" + sessionId,
-        data: { starred: isStarred }
-    }).done(function (response) {
-        if (isStarred && response.starCount > 50) {
-            alert("This session is very popular! Be sure to arrive early to get a seat.");
+const saveStar = async (sessionId, isStarred) => {
+
+    const headers = new Headers({
+        "Content-Type": "application/x-www-form-urlencoded"
+    })
+
+
+    const options = {
+        method: 'POST',
+        headers: headers,
+        body: "starred=" + isStarred
+    }
+
+    const response = await fetch("/schedule/star/" + sessionId, options);
+
+    if (isStarred) {
+        if (response.ok) {
+            const data = await response.json();
+            if (data.starCount > 50)
+                alert("This session is very popular! Be sure to arrive early to get a seat.");
         }
-    });
+    }
 }
 
 
-function handleListClick(event) {
-    var isStarElement = event.srcElement.classList.contains("star");
+const handleListClick = async (event) => {
+    const isStarElement = event.srcElement.classList.contains("star");
     if (isStarElement) {
         event.preventDefault(); // Stop the browser following the clicked <a> element's href.
 
-        var listItem = event.srcElement.parentNode;
+        const listItem = event.srcElement.parentNode;
         if (listItem.classList.contains("starred")) {
             listItem.classList.remove("starred");
-            saveStar(listItem.sessionId, false);
+            await saveStar(listItem.sessionId, false);
         } else {
             listItem.classList.add("starred");
-            saveStar(listItem.sessionId, true);
+            await saveStar(listItem.sessionId, true);
         }
     }
 }
