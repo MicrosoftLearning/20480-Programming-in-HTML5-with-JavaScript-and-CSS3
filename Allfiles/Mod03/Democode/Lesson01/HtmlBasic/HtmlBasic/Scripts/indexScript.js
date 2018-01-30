@@ -26,33 +26,33 @@
             age: 25,
             email: 'william@example.com'
         }]
-
-    let personAboveAge = [];
-
-    let personListString = '';
-    let personAboveListString = '';
-
-    for (let person of personsLst) {
-        personListString += `<li>${person.name} (${person.age}) <br />${person.email}</li>`;
-    }
-
-    for (let person of personsLst) {
-
-        if (person.age >= 20) {
-            personAboveAge.push(person);
-        }
-    }
-
-    for (let i = 0; i < personAboveAge.length; i++) {
-        personAboveListString += `<li>${personAboveAge[i].name} (${personAboveAge[i].age}) <br />${personAboveAge[i].email}</li>`;
-    }
+    const age = 20;
 
 
-    const personOl = document.getElementById('personList');
-    personOl.innerHTML = personListString;
-    const personAbove = document.getElementById('personAboveList');
-    personAbove.innerHTML = personAboveListString;
+    console.log('persons List')
+    printArray(personsLst);
+
+    const personAboveAge = getPersonsAboveAge(personsLst, age);
+    console.log(`persons Above ${age} List`)
+    printArray(personAboveAge);
 }
 
 init();
 
+function getPersonsAboveAge(array, age) {
+    const personAboveAge = [];
+
+    for (let person of array) {
+
+        if (person.age >= age) {
+            personAboveAge.push(person);
+        }
+    }
+    return personAboveAge;
+}
+
+function printArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        console.log(`${array[i].name} (${array[i].age}) ${array[i].email}`);
+    }
+}
