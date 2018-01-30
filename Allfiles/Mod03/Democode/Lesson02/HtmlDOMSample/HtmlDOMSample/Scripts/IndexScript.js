@@ -1,8 +1,6 @@
-﻿function init() {
+﻿document.addEventListener('DOMContentLoaded', function (event) {
     document.getElementById('newHobbyBtn').addEventListener('click', addHobbies);
-}
-
-init();
+});
 
 function addHobbies() {
     //Get all hobbies inputs
