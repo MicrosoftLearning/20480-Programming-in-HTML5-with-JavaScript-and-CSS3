@@ -1,4 +1,4 @@
-﻿var schedule = [
+﻿const schedule = [
     {
         "id": "session-1",
         "title": "Registration",
@@ -83,15 +83,15 @@
 
 
 // TODO: Task 2 - Get the "schedule" list element from the document
-var list = document.getElementById("schedule");
-var track1CheckBox = document.getElementById("show-track-1");
-var track2CheckBox = document.getElementById("show-track-2");
+const list = document.getElementById("schedule");
+const track1CheckBox = document.getElementById("show-track-1");
+const track2CheckBox = document.getElementById("show-track-2");
 
 function createSessionElement(session) {
     // TODO: Task 3 - Create a <li> element for the session.
     //       Add the session title as the <li> text content
     //       Return the <li> element
-    var li = document.createElement("li");
+    const li = document.createElement("li");
     li.textContent = session.title;
     return li;
 };
@@ -108,12 +108,12 @@ function displaySchedule() {
     // TODO: Task 4 - Loop through the schedule array
     //       Create session elements
     //       Append the elements to the list   
-    for (var i = 0; i < schedule.length; i++) {
-        var tracks = schedule[i].tracks;
-        var isCurrentTrack = (track1CheckBox.checked && tracks.indexOf(1) >= 0) ||
+    for (let i = 0; i < schedule.length; i++) {
+        let tracks = schedule[i].tracks;
+        let isCurrentTrack = (track1CheckBox.checked && tracks.indexOf(1) >= 0) ||
                              (track2CheckBox.checked && tracks.indexOf(2) >= 0);
         if (isCurrentTrack) {
-            var li = createSessionElement(schedule[i]);
+            let li = createSessionElement(schedule[i]);
             list.appendChild(li);
         }
     }
