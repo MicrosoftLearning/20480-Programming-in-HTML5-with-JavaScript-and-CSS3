@@ -1,4 +1,4 @@
-﻿var schedule = [
+﻿const schedule = [
     {
         "id": "session-1",
         "title": "Registration",
