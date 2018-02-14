@@ -1,4 +1,4 @@
-﻿var WebSocket = function () {
+﻿const WebSocket = function () {
     this.respondWith({
         questions: [
             {
