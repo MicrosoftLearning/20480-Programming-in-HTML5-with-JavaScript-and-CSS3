@@ -76,8 +76,6 @@ The list of sessions is held in a database that is accessed by using a web servi
 
 The functionality is implemented by a combination of CSS and JavaScript code that sends information to another web service about the sessions that a user selects.
 
-
-
 #### Task 3: View the Register page and register as a new attendee.
 
 1.	Move to the **Register** page.
@@ -188,7 +186,6 @@ The input fields for the first four questions are rendered as stars by using the
 The input field for the comments feedback is a **&lt;textarea&gt;** element.
 When the user submits the feedback, JavaScript code in the feedback.js file and styles in the feedback.css style sheet animate the form to make it fly off the screen. 
 
-
 #### Task 2: Explore the structure of the project.
 
 1.	The files for the project are organized into the following folders. In Solution Explorer, examine the contents of each folder in turn:
@@ -207,6 +204,8 @@ You will not use any of these items in this course.
 3.	Edit the HTML markup for the Home page and change the text for the **Register Free** button to **Register Now**.
 4.	Open the nav.css style sheet in the **styles** folder; this style sheet contains the styles used to render the contents of the **&lt;nav&gt;** element and change the background color to blue.
 5.	Save the changes, return to Internet Explorer, refresh the view, and verify that you can see the effects of the changes.
+
+>**Result:** After completing this exercise, you will be able to describe how the Contoso Conference application is structured as a Visual Studio 2017 project.
 
 ©2017 Microsoft Corporation. All rights reserved.
 
