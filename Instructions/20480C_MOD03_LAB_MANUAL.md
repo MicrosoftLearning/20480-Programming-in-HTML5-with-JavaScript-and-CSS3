@@ -86,7 +86,7 @@ First, you will use the HTML5 DOM to obtain a reference to the page’s schedule
         };
     ```
 The purpose of this function is to create a list element containing the name of the session passed in as the parameter.
-2.	Add JavaScript code to create a **&lt;li&gt;** element, set its text content to the session title, and then return this element:
+2.	Add JavaScript code to create a **`<li>`** element, set its text content to the session title, and then return this element:
 - Use the **createElement** method of the **document** object to create a new **li** object.
 - Set the **textContent** property of the **li** object to the **title** property of the **session** parameter passed in to the **createSessionElement** function
 - Return the new **li** element.
