@@ -20,7 +20,7 @@
 1.	On the Windows 8 **Start** screen, click the **Visual Studio 2017** tile.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
 3.	In the **Open Project** dialog box, browse to the **E:\Mod02\Democode\Starter** folder, click **DemoWebSite.sln** and then click **Open**.
-4.	In Solution Explorer, expand the &gt;E:\...\DemoWebSite`** web application, and then double-click **ContactUs.html**.
+4.	In Solution Explorer, expand the **E:\\...\\DemoWebSite** web application, and then double-click **ContactUs.html**.
 5.	In the **ContactUs.html** file, enclose the entire contents of the **&lt;body&gt;** element in an **&lt;article&gt;** element as shown in bold in the following code example:
     ```html
         <!DOCTYPE HTML>
