@@ -8,14 +8,11 @@ ContosoConf is an annual technical conference that describes the latest tools an
 
 You are a developer that creates web sites by using HTML, CSS, and JavaScript, and you have been given access to the code for the web site for the latest conference. You decide to take a look at this web application to see how it works, and how the developer has used Visual Studio 2017 to create it.
 
-
 #### Objectives
 
 After completing this lab, you will be able to:
 - Describe the structure of the Contoso Conference web application.
 - Use Visual Studio 2012 to examine the structure of a web application, run a web application, and modify a web application.
-
-
 
 #### Lab Setup
 
@@ -24,6 +21,7 @@ Estimated Time: **30 minutes**
 ### Exercise 1: Exploring the Contoso Conference Application
 
 #### Scenario
+
 In this exercise, you will run the Contoso Conference web application and examine each of the functions it provides.
 
 The Contoso Conference web application contains the following pages:
@@ -35,7 +33,6 @@ The Contoso Conference web application contains the following pages:
 - The Location page, which provides information about the conference location and a map of the venue.
 - The Live page, which enables an attendee to submit technical questions to the speakers running the conference sessions. The page displays the answer from the speaker, together with questions (with answers) posted by other conference attendees.
 - The Feedback page, which enables the user to rate conference sessions and speakers.
-
 
 #### Task 1: Start the web application and view the Home page.
 

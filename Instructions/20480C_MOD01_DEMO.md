@@ -143,6 +143,7 @@
 
 
 #### Demonstration Steps
+
 #### Create a Web Site Project
 
 1.	On the Windows 8 **Start** screen, click the **Visual Studio 2017** tile.
