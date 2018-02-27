@@ -159,7 +159,7 @@ The virtual machine is configured with two virtual CPUs, and the grayscaleImage(
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.putImageData(imageData, 0, 0);
 
-        // Returning a jQuery Deferred makes this function easy to chain together with      other deferred operations.
+        // Returning a jQuery Deferred makes this function easy to chain together with other deferred operations.
         // The canvas object is returned as this can be used like an image.
         deferred.resolveWith(this, [canvas]);
     ```
