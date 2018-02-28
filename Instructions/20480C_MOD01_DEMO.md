@@ -33,7 +33,7 @@
         </html>
     ```
 
-4. Save the file as **E:\Mod01\Democode\ ContactUs.html**.
+4. Save the file as **Allfiles\Mod01\Democode\ ContactUs.html**.
 
 #### Add Content to the Page
 
@@ -123,9 +123,9 @@
 
 #### View the Page
 1.	In the Windows taskbar, click the File Explorer icon.
-2.	Browse to the folder **E:\Mod01\Democode**.
-3.	Double-click **ContactUs.html** to display the page in Internet Explorer.
-4.	In the **How do you want to open this type of file (.html)?** dialog box, click **Internet Explorer**.
+2.	Browse to the folder **Allfiles\Mod01\Democode**.
+3.	Double-click **ContactUs.html** to display the page in Microsoft Edge.
+4.	In the **How do you want to open this type of file (.html)?** dialog box, click **Microsoft Edge**.
 
 ![alt text](./Images/20480B_1_ContactUs.png "About page")
 
@@ -153,7 +153,7 @@
  
 >**Note:** It does not matter whether you select the **Visual Basic** or **Visual C#** templates in the left pane; the templates for both languages enable you to create HTML5 web pages and implement functionality by using JavaScript.
 
-4.	From the web location drop-down list, click **File System**, set the file path to **E:\Mod01\Democode\DemoWebSite**, and then click **OK**.
+4.	From the web location drop-down list, click **File System**, set the file path to **Allfiles\Mod01\Democode\DemoWebSite**, and then click **OK**.
 5.	On the **File** menu, click **Save DemoWebSite**.
 
 #### Add and Edit Files in the Project
@@ -161,7 +161,7 @@
 1.	In Visual Studio, click **Solution Explorer**.
 2.	In the Solution Explorer window, right-click the **DemoWebSite** project.
 3.	In the context menu, point to **Add** and then click **Existing Item**.
-4.	In the **Add Existing Item** dialog box, browse to **E:\Mod01\Democode**, click **ContactUs.html**, and then click **Add**.
+4.	In the **Add Existing Item** dialog box, browse to **Allfiles\Mod01\Democode**, click **ContactUs.html**, and then click **Add**.
 5.	In the Solution Explorer window, right-click **ContactUs.html**, and then click **Set As Start Page**.
 6.	In the Solution Explorer window, right-click the **DemoWebSite** project, point to **Add**, and then click **New Folder**
 7.	Change the name of the folder to **styles**.
@@ -193,12 +193,12 @@
 #### Run the Web Application
 1.	In Visual Studio, on the **Debug** menu, click **Start Debugging**.
 2.	In the **Debugging Not Enabled** dialog box, click **Modify the Web.config file to enable debugging**, and then click **OK**.
-3.	Verify that Internet Explorer starts running and displays ContactUs.html. The text for the page should appear in blue.
-4.	In Internet Explorer, if the message **Intranet settings are turned off by default** appears, click **Don’t show this message** again.
+3.	Verify that Microsoft Edge starts running and displays ContactUs.html. The text for the page should appear in blue.
+4.	In Microsoft Edge, if the message **Intranet settings are turned off by default** appears, click **Don’t show this message** again.
 
 >**Note** You can enter some sample data, but do not click **Send** because the URL that is the target of the form is not available.
 
-5.	Leave Internet Explorer running and return to Visual Studio 2017.
+5.	Leave Microsoft Edge running and return to Visual Studio 2017.
 
 #### Modify the Live Application
 1.	In the **ContactUs.html** file, make the following modifications:
@@ -213,7 +213,7 @@
     ```
 
 3.	On the **File** menu, click **Save All**.
-4.	Return to Internet Explorer and press F5 to refresh the display.
+4.	Return to Microsoft Edge and press F5 to refresh the display.
 5.	Verify that the **Name** field changes to **Full name**, the **Telephone** field changes to **Telephone number**, and that the style of the heading has changed.
 6.	Return to Visual Studio 2017.
 7.	On the **Debug** menu, click **Stop Debugging**.
@@ -228,7 +228,7 @@
 4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
 5. Close the Microsoft Edge window.
 
-©2016 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

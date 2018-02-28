@@ -18,15 +18,15 @@
 #### Apply CSS Transitions to HTML Elements
 
 1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
-2.	On the Windows taskbar, click **Internet Explorer**.
-3.	In Internet Explorer, open the file **E:\Mod12\Democode\Transitions.html**. 
+2.	On the Windows taskbar, click **Microsoft Edge**.
+3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\Transitions.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click the **Allow blocked content** button.
 5.	Hover over the upper rectangle on the web page. Verify that the following transitions are applied simultaneously to the rectangle:
 - The width, height, and font size increase over a period of two seconds.
 - The background color transitions to red over a period of 3.75 seconds.
 6.	Move the mouse away from the upper rectangle. Verify that the rectangle reverts to its original appearance, over the same period of time.
 7.	Repeat the previous two steps for the second rectangle. Verify that the same animations apply.
-8.	Right-click the page in Internet Explorer and then click **View source**. Note that:
+8.	Right-click the page in Microsoft Edge and then click **View source**. Note that:
 - The first **div** rule defines default CSS properties for all **&lt;div&gt;** elements.
 - The **div.simple** rule defines a **transition** property that applies to transitions on the **width**, **height**, **font-size**, and **background-color** CSS properties.
 - The **div.complex** rule defines similar transitions, but it uses separate **transition-property**, **transition-duration**, **transition-timing-function**, and **transition-delay** properties.
@@ -34,13 +34,13 @@
 
 #### Handle the transitionend Event
 
-1.	In Internet Explorer, expand the drop-down list box. Verify that it displays messages for all the transitions that have ended. The list includes events for the original transitions when you hover over a rectangle, as well as events for the reverse transitions when you move the mouse away from a rectangle.
+1.	In Microsoft Edge, expand the drop-down list box. Verify that it displays messages for all the transitions that have ended. The list includes events for the original transitions when you hover over a rectangle, as well as events for the reverse transitions when you move the mouse away from a rectangle.
 2.	Switch to the source window.
 3.	In the JavaScript code, note that:
 - The **onLoad()** function sets up event-handlers that call the **onTransitionend()** function when the **transitionend** event is raisedon all the **&lt;div&gt;** elements.
 - The **onTransitionend()** function displays information about the **transitionend** event, by using the **propertyName** and **elapsedTime** properties of the event argument.
 4.	Close the source window.
-5.	Close Internet Explorer.
+5.	Close Microsoft Edge.
 
 # Lesson 2: Transforming Elements
 
@@ -60,14 +60,14 @@
 #### Perform 2D Translations
 
 1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
-2.	On the Windows taskbar, click **Internet Explorer**.
-3.	In Internet Explorer, open the file **E:\Mod12\Democode\2DTranslations.html**. 
+2.	On the Windows taskbar, click **Microsoft Edge**.
+3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\2DTranslations.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click the **Allow blocked content** button.
 5.	Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D translation by using the **translate()**, **translateX()**, or **translateY()** functions. The text message inside each rectangle describes the transformation for that rectangle.
 6.	Right-click in the browser window, and then click **View source**. 
 7.	In the source window, scroll down to the bottom of the document. Note that the body of the document has a series of **&lt;div&gt;** elements, and each element has a distinct CSS class.
 8.	Scroll back up to the top of the code and locate the **&lt;style&gt;** element. The CSS rules implement translations for all the **&lt;div&gt;** elements. The CSS rules set the standard **transform** property, as well as the following vendor-specific properties:
-- **-ms-transform:** Perform a transformation on Internet Explorer 9.
+- **-ms-transform:** Perform a transformation on Microsoft Edge 9.
 - **-webkit-transform:** Perform a transformation on Webkit-based browsers such as Chrome and Safari.
 - **-moz-transform:** Perform a transformation on Mozilla browsers.
 - **-o-transform:** Perform a transformation on Opera browsers.
@@ -75,7 +75,7 @@
 
 #### Perform 2D Scaling Transformations
 
-1.	In Internet Explorer, open the file **E:\Mod12\Democode\2DScaling.html**. 
+1.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\2DScaling.html**. 
 2.	Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D scaling transformation by using the **scale()**, **scaleX()**, or **scaleY()** functions. The text message inside each rectangle describes the transformation for that rectangle. 
 3.	Right-click in the browser window, and then click **View source**. 
 4.	In the source window, scroll down to the bottom of the document. Note that the body of the document has a series of **&lt;div&gt;** elements, and each element has a distinct CSS class.
@@ -84,7 +84,7 @@
 
 #### Perform 2D Rotations
 
-1.	In Internet Explorer, open the file **E:\Mod12\Democode\2DRotations.html**. 
+1.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\2DRotations.html**. 
 2.	Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D rotation by using the **rotate()** function. The fourth rectangle also shows how to perform multiple transformations, and how to change the origin of the transformation to the top left of the target element.
 3.	Right-click in the browser window, and then click **View source**. 
 4.	In the source window, scroll down to the bottom of the document. Note that the body of the document has a series of **&lt;div&gt;** elements, and each element has a distinct CSS class.
@@ -93,13 +93,13 @@
 
 #### Perform 2D Skewing Transformations
 
-1.	In Internet Explorer, open the file **E:\Mod12\Democode\2DSkewing.html**. 
+1.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\2DSkewing.html**. 
 2.	Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D skewing operation by using the **skew()**, **skewX()**, or **skewY()** functions. 
 3.	Right-click in the browser window, and then click **View source**. 
 4.	In the source window, scroll down to the bottom of the document. Note that the body of the document has a series of **&lt;div&gt;** elements, and each element has a distinct CSS class.
 5.	Scroll back up to the top of the code and locate the **&lt;style&gt;** element. The CSS rules implement skewing transformations for all the **&lt;div&gt;** elements. 
 6.	Close the source window.
-7.	Close Internet Explorer.
+7.	Close Microsoft Edge.
 
 ### Demonstration: Performing 3D Transformations
 
@@ -117,8 +117,8 @@
 #### Perform 3D Transformations that Include Transitions
 
 1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
-2.	On the Windows taskbar, click **Internet Explorer**.
-3.	In Internet Explorer, open the file **E:\Mod12\Democode\3DTransformations.html**. 
+2.	On the Windows taskbar, click **Microsoft Edge**.
+3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\3DTransformations.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click the **Allow blocked content** button.
 5.	Verify that the browser displays a cube. There are six faces to the cube, each of which displays text and has a different background color. The front face is partially transparent, so that it does not completely obscure the other faces.
 6.	Hover over the cube. Verify that it rotates by 90 degrees over a period of five seconds. Then move the mouse off the cube, and verify that the cube rotates smoothly back to its original position.
@@ -134,7 +134,7 @@
 - **#backFace:** Transforms the **backFace** element in 3D space, so that it appears at the back of the cube.
 - **#frontFace:** Transforms the **frontFace** element in 3D space, so that it appears at the front of the cube. The background color is partially transparent.
 10.	Close the source window.
-11.	Close Internet Explorer.
+11.	Close Microsoft Edge.
 
 # Lesson 3: Applying CSS Keyframe Animations
 
@@ -154,8 +154,8 @@
 #### Define and Run a Keyframe Animation
 
 1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
-2.	On the Windows taskbar, click **Internet Explorer**.
-3.	In Internet Explorer, open the file **E:\Mod12\Democode\KeyframeAnimations.html**. 
+2.	On the Windows taskbar, click **Microsoft Edge**.
+3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\KeyframeAnimations.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click the **Allow blocked content** button.
 5.	Verify that a green rectangle appears on the page, with a small white circle in the top left corner. The green rectangle represents a pool table and the white circle represents a ball. There is also a button that enables you to start the animation.
 6.	Click **Start Animation**. 
@@ -178,7 +178,7 @@
 - The **MSAnimationEnd** event-handler function is called when an animation ends on the **ball** element. The function enables the button, removes the **animate** class from the ball and the pool table, and displays a message to indicate the elapsed time of the animation.
 - The **startAnimation()** function is Invoked when the user clicks the **Start Animation** button. The function disables the button, and adds the **animate** class to the ball to trigger the animation. The animation starts three seconds later, due to the **-ms-animation-delay: 3s;** property in the **#ball.animate** CSS rule.
 11.	Close the source window.
-12.	Close Internet Explorer.
+12.	Close Microsoft Edge.
 
 ### Demonstration: Animating the User Interface
 
@@ -190,7 +190,7 @@
 4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
 5. Close the Microsoft Edge window.
 
-©2016 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

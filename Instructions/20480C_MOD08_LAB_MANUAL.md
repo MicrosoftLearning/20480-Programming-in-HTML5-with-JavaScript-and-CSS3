@@ -32,7 +32,7 @@ You will add event listeners to handle drag-and-drop events. Then you will use t
 
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **E:\Mod08\Labfiles\Starter\Exercise 1** folder.
+3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod08\Labfiles\Starter\Exercise 1** folder.
 4.	Open **speaker-badge.htm** and review the HTML markup for this page. Notice the **&lt;img&gt;** element that will display the speaker’s image when you have implemented the drag-and-drop functionality:
     ```html
         <img style="width: 300px; height: 300px; border: 1px solid #000"/>
@@ -98,12 +98,12 @@ You will add event listeners to handle drag-and-drop events. Then you will use t
 
 >**Note:** The Speaker Badge page is not accessible from the menu bar in the application because this feature is only intended for use by speakers. To view this page, you must navigate directly to the speaker-badge.htm page on the web site.
 
-2.	Drag-and-drop the file **mark-hanson.jpg** in the **E:\Mod08\Labfiles\Resources** folder onto the Speaker Badge page’s empty image element.
+2.	Drag-and-drop the file **mark-hanson.jpg** in the **Allfiles\Mod08\Labfiles\Resources** folder onto the Speaker Badge page’s empty image element.
 3.	Verify that the speaker’s photo is displayed within the image element.
 
 ![alt text](./Images/20480B_8_speaker-badge-01.png "The Speaker Badge page with the speaker's photo")
 
-4.	Close Internet Explorer and File Explorer.
+4.	Close Microsoft Edge and File Explorer.
 
 >**Results:** After completing this exercise, you will have implemented functionality that enables the user to drag-and-drop an image from File Explorer onto the web page.
 
@@ -115,7 +115,7 @@ In this exercise, you will add a video to the website Home page. You will add cu
 
 #### Task 1: Add a video player to the Home page.
 
-1.	Open the **ContosoConf.sln** solution in the **E:\Mod08\Labfiles\Starter\Exercise 2** folder.
+1.	Open the **ContosoConf.sln** solution in the **Allfiles\Mod08\Labfiles\Starter\Exercise 2** folder.
 2.	Open the **index.htm** file and find the following comment:
     ```html
         <!-- TODO: Add video tag here -->
@@ -183,7 +183,7 @@ You will use the Geolocation API to get the visitor’s current location, and th
 
 #### Task 1: Review the HTML markup and JavaScript code.
 
-1.	Open the **ContosoConf.sln** solution in the **E:\Mod08\Labfiles\Starter\Exercise 3** folder.
+1.	Open the **ContosoConf.sln** solution in the **Allfiles\Mod08\Labfiles\Starter\Exercise 3** folder.
 2.	Open the **location.htm** file and review the HTML markup for this page. Notice that the page includes the following empty heading:
     ```html
         <h2 id="distance"></h2>
@@ -220,13 +220,13 @@ You will use the Geolocation API to get the visitor’s current location, and th
 
 1.	Run the application and view the **location.htm** page.
 
->**Note:** If Internet Explorer displays the message **localhost wants to track your physical location**, click **Allow once**.
+>**Note:** If Microsoft Edge displays the message **localhost wants to track your physical location**, click **Allow once**.
 
 2.	Verify that the page displays the distance to the conference venue in miles.
 
 >**Result:** After completing this exercise, you will have a Location page that displays the distance of the user from the conference venue.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

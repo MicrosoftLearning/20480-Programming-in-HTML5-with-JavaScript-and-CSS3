@@ -31,16 +31,16 @@ First, you will complete the creation of an application manifest file, which lis
 
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Configure Internet Explorer to enable support for application caching:
-- Start Internet Explorer.
-- In the Internet Explorer, press F10 to display the menu bar.
+3.	Configure Microsoft Edge to enable support for application caching:
+- Start Microsoft Edge.
+- In the Microsoft Edge, press F10 to display the menu bar.
 - On the **Tools** menu, click **Internet options**.
 - In the **Internet Options** dialog box, click **Settings**.
 - In the **Website Data Settings** dialog box, click the **Caches and databases** tab.
 - Select the **Allow website caches and databases** check box, and then click **OK**.
 - In the **Internet Options** dialog box, click **OK**.
-- Close Internet Explorer.
-4.	Start Visual Studio and open the **ContosoConf.sln** solution from the **E:\Mod09\Labfiles\Starter\Exercise 1** folder.
+- Close Microsoft Edge.
+4.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod09\Labfiles\Starter\Exercise 1** folder.
 5.	Open the **appcache.manifest** file. This file contains a partial application manifest that lists the resources a web browser must cache for offline access. 
 6.	After the comment near the start of the file, insert the following URLs to cache the **Home**, **About**, **Schedule**, and **Location** pages:
     ```javascript
@@ -68,9 +68,9 @@ First, you will complete the creation of an application manifest file, which lis
 
 ![alt text](./Images/20480B_9_IIS-Express.png "The IIS Express icon in the Windows notification area")
 
-3.	In Internet Explorer, view the **Schedule** page. Verify that the page loads and displays the schedule information. Also verify that, after a brief delay, the **Register** link in the navigation bar is removed. This occurs because the Register page is not cached (it is not included in the **appcache.manifest** file), and registration requires an active connection to the web site.
+3.	In Microsoft Edge, view the **Schedule** page. Verify that the page loads and displays the schedule information. Also verify that, after a brief delay, the **Register** link in the navigation bar is removed. This occurs because the Register page is not cached (it is not included in the **appcache.manifest** file), and registration requires an active connection to the web site.
 4.	View the **About** page and verify that this page displays correctly, and that the **Register** link disappears from the navigation bar.
-5.	Close Internet Explorer.
+5.	Close Microsoft Edge.
 
 >**Results:** After completing this exercise, you will have modified the web application and made the **Home**, **About**, **Schedule**, and **Location** pages available offline.
 
@@ -86,12 +86,12 @@ In this exercise, you will update the JavaScript code for the Schedule page to r
 
 #### Task 1: Observe the current behavior of the Schedule page.
 
-1.	In Visual Studio, open the **ContosoConf.sln** solution in the **E:\Mod09\Labfiles\Starter\Exercise 2** folder.
+1.	In Visual Studio, open the **ContosoConf.sln** solution in the **Allfiles\Mod09\Labfiles\Starter\Exercise 2** folder.
 2.	Run the application and view the **schedule.htm** page.
 3.	Close IIS Express by using the icon in the Windows notification area.
 4.	On the Schedule page, click some of the stars, and then refresh the page.
 5.	Notice that information about which sessions are starred is not saved when the application is running offline (the yellow stars turn white again).
-6.	Close Internet Explorer.
+6.	Close Microsoft Edge.
 
 #### Task 2: Save information about starred session to local storage.
 
@@ -144,27 +144,27 @@ In this exercise, you will update the JavaScript code for the Schedule page to r
 >**Note:** The JavaScript files are listed in **appcache.manifest**, and they will have been cached by the web browser. Making a change to the **appcache.manifest** file forces the browser to download the updated scripts.
 
 2.	Run the application and view the **schedule.htm** page.
-3.	In Internet Explorer, refresh the page to ensure the updated scripts are used.
+3.	In Microsoft Edge, refresh the page to ensure the updated scripts are used.
 4.	Close IIS Express by using the icon in the Windows notification area.
 5.	On the **Schedule** page, click some of the stars, and then refresh the page.
 6.	Verify that the same sessions are still starred.
-7.	Close Internet Explorer.
+7.	Close Microsoft Edge.
 
-#### Task 6: Reset Internet Explorer caching.
+#### Task 6: Reset Microsoft Edge caching.
 
-1.	Configure Internet Explorer to disable support for application caching:
-- Start Internet Explorer.
-- In the Internet Explorer, press F10 to display the menu bar.
+1.	Configure Microsoft Edge to disable support for application caching:
+- Start Microsoft Edge.
+- In the Microsoft Edge, press F10 to display the menu bar.
 - On the **Tools** menu, click **Internet options**.
 - In the **Internet Options** dialog box, click **Settings**.
 - In the **Website Data Settings** dialog box, click the **Caches and databases** tab.
 - Clear the **Allow website caches and databases** check box, and then click **OK**.
 - In the **Internet Options** dialog box, click **OK**.
-- Close Internet Explorer.
+- Close Microsoft Edge.
 
 >**Result:** After completing this exercise, you will have updated the Schedule page to locally record starred sessions.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

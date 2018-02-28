@@ -37,7 +37,7 @@ Finally, you will run the application and view the Schedule page to verify that 
 
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **E:\Mod05\Labfiles\Starter\Exercise 1** folder.
+3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod05\Labfiles\Starter\Exercise 1** folder.
 4.	In the **ContosoConf** project, open the **scripts\pages\schedule.js** file. 
 5.	Review the JavaScript code. 
 - Notice that the previously hard-coded array of session data (in the **schedule** variable) has been replaced with an empty array.
@@ -84,14 +84,14 @@ For non-200 status codes, the **response** object contains a **message** propert
 #### Task 4: Test the Schedule page.
 
 1.	Run the application and view the **schedule.htm** page to verify that the list of sessions is displayed.
-2.	Close Internet Explorer.
-3.	In the **schedule.js** file, change the requested URL to **/schedule/list?fail**, save the file, and then refresh the **schedule.htm** page in Internet Explorer.
+2.	Close Microsoft Edge.
+3.	In the **schedule.js** file, change the requested URL to **/schedule/list?fail**, save the file, and then refresh the **schedule.htm** page in Microsoft Edge.
  
 >**Note:** The URL **/schedule/list?fail** generates errors that enable you to test that the exception handling parts of your code work correctly.
 
 End of RLO
 4.	Run the application again and verify that the error message **Service currently unavailable** appears.
-5.	After testing, close Internet Explorer and change the URL back to **/schedule/list**.
+5.	After testing, close Microsoft Edge and change the URL back to **/schedule/list**.
 
 >**Results:** After completing this exercise, you will have modified the code for the Schedule page to displays the list of sessions retrieved from a web service, and to handle errors that can occur when communicating with a remote service.
 
@@ -105,7 +105,7 @@ First, you will create a function that creates an XMLHttpRequest object that pos
 
 #### Task 1: Send the request to indicate the session that an attendee has selected.
 
-1.	Open the **ContosoConf.sln** solution in the **E:\Mod05\Labfiles\Starter\Exercise 2** folder.
+1.	Open the **ContosoConf.sln** solution in the **Allfiles\Mod05\Labfiles\Starter\Exercise 2** folder.
 2.	In the **schedule.js** file, find the function named **saveStar**.
 3.	Within the function, add code to construct an **XMLHttpRequest** object and make a synchronous POST request to the following URL:
     ```javascript
@@ -140,7 +140,7 @@ First, you will create a function that creates an XMLHttpRequest object that pos
 3.	Verify that an alert is displayed (this session is popular).
 4.	Click the star next to **Diving in at the deep end with Canvas**.
 5.	Verify that no alert is displayed (this session is less popular).
-6.	Close Internet Explorer.
+6.	Close Microsoft Edge.
 
 >**Results:** After completing this exercise, you will have updated the Schedule page to send attendee selections to a web service, and to display a message when a session is popular.
 
@@ -154,7 +154,7 @@ First, you will refactor the **downloadSchedule** function by replacing the use 
 
 #### Task 1: Refactor the downloadSchedule function.
 
-1.	Open the **ContosoConf.sln** solution in the **E:\Mod05\Labfiles\Starter\Exercise 3** folder.
+1.	Open the **ContosoConf.sln** solution in the **Allfiles\Mod05\Labfiles\Starter\Exercise 3** folder.
 2.	Near the bottom of the **schedule.htm** file, before the reference to the **schedule.js** script, add a reference to the jQuery JavaScript file **jquery.min.js** located in the **scripts** folder. 
 
 This action makes the **jQuery** object available for use in the JavaScript code for the Schedule page.
@@ -180,14 +180,14 @@ This action makes the **jQuery** object available for use in the JavaScript code
 2.	Verify that the list of sessions appears correctly.
 3.	Click the star icon next to **New Technologies in Enterprise** and verify that an alert is displayed.
 4.	Click the star icon next to **Diving in at the deep end with Canvas** and verify that no alert is displayed.
-5.	Close Internet Explorer.
+5.	Close Microsoft Edge.
 6.	In **schedule.js**, change the URL in the **downloadSchedule** function to be **/schedule/list?fail**.
 7.	Run the application and view the **schedule.htm** page. Verify that the error message **Schedule list not available** is displayed.
-8.	Close Internet Explorer.
+8.	Close Microsoft Edge.
 
 >**Result:** After completing this exercise, you will have refactored the JavaScript code that sends and receives data to use the jQuery **ajax** method.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

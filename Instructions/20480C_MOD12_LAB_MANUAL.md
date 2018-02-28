@@ -32,7 +32,7 @@ First you will animate the star icons on the **Feedback** page so they react whe
 
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution from the **E:\Mod12\Labfiles\Starter\Exercise 1** folder.
+3.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod12\Labfiles\Starter\Exercise 1** folder.
 4.	In the **ContosoConf** project, examine the contents of the **feedback.htm** file. This page contains an HTML form that collects conference attendee feedback:
     ```html
         <form method="post" action="/send-feedback">
@@ -70,7 +70,7 @@ This page also references the **feedback.css** style sheet in the **/styles/page
   ```
 5.	Run the application and view the **Feedback** page.
 6.	Note that the input elements for the form have been converted into star icons. This feature is implemented by the JavaScript code in the **feedback.js** and **StarRatingView.js** files.
-7.	Close Internet Explorer.
+7.	Close Microsoft Edge.
 
 #### Task 2: Animate the stars on the Feedback form.
 
@@ -95,7 +95,7 @@ This page also references the **feedback.css** style sheet in the **/styles/page
 2.	Move the mouse over the stars. Verify that their size changes and they remain larger when selected.
 3.	View the **Home** page.
 4.	Move the mouse over the **Register Free** link in the header and verify that it rotates and enlarges.
-5.	Close Internet Explorer.
+5.	Close Microsoft Edge.
 
 >**Results:** After completing this exercise, the **Register** button will rotate and the feedback stars will animate when the mouse moves over them.
 
@@ -109,7 +109,7 @@ First, you will define a keyframe animation by using CSS. Next, you will use the
 
 #### Task 1: Define a keyframe animation.
 
-1.	In Visual Studio, open the **ContosoConf.sln** solution in the **E:\Mod12\Labfiles\Starter\Exercise 2** folder.
+1.	In Visual Studio, open the **ContosoConf.sln** solution in the **Allfiles\Mod12\Labfiles\Starter\Exercise 2** folder.
 2.	In the **feedback.css** style sheet in the **styles\pages** folder, find the following comment:
     ```css
         /* TODO: Add key frame animation named "send"
@@ -139,11 +139,11 @@ First, you will define a keyframe animation by using CSS. Next, you will use the
 1.	Run the application and view the **Feedback** page.
 2.	Click **Send Feedback**.
 3.	Verify that the form shrinks and flies off the top of the page.
-4.	Close Internet Explorer.
+4.	Close Microsoft Edge.
 
 >**Result:** After completing this exercise, submitting the conference feedback form will trigger an animation that makes the form fly off the page.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

@@ -30,7 +30,7 @@ First, you will complete the partially completed SVG mark-up of the venue map. N
 
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **E:\Mod11\Labfiles\Starter\Exercise 1** folder.
+3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod11\Labfiles\Starter\Exercise 1** folder.
 4.	Open the **location.htm** file.
 5.	Verify that the page contains the following **&lt;svg&gt;** element of the venue map, and two hidden **&lt;div&gt;** elements containing room information:
     ```html
@@ -56,13 +56,13 @@ Also notice that the script references the **location-venue.js** script in the *
 
 ![alt text](./Images/20480B_11_Venue-Map.png "The incomplete venue map")
 
-7.	Close Internet Explorer.
+7.	Close Microsoft Edge.
 
 #### Task 2: Complete the SVG venue map.
 
 1.	In the **location.htm** file, add the SVG elements for Room B by using **room-b** as the group element id. The missing elements are a filled rectangle and the text with the name of the room. Use the SVG elements for Room A as a guide.
 
->**Note:** You may need to view the page in Internet Explorer and experiment with the coordinate values to get elements in the correct location.
+>**Note:** You may need to view the page in Microsoft Edge and experiment with the coordinate values to get elements in the correct location.
 
 #### Task 3: Add interactivity to the venue map.
 
@@ -112,7 +112,7 @@ Also notice that the script references the **location-venue.js** script in the *
 
 ![alt text](./Images/20480B_11_Venue-Map-Information.png "The details for Room B")
 
-4.	Close Internet Explorer.
+4.	Close Microsoft Edge.
 
 >**Results:** After completing this exercise, you will have a venue map that displays extra information when clicked.
 
@@ -126,7 +126,7 @@ First, you will create a canvas element on the speaker badge page. Next, you wil
 
 #### Task 1: Create the canvas element.
 
-1.	In Visual Studio, open the **ContosoConf.sln** solution in the **E:\Mod11\Labfiles\Starter\Exercise 2** folder.
+1.	In Visual Studio, open the **ContosoConf.sln** solution in the **Allfiles\Mod11\Labfiles\Starter\Exercise 2** folder.
 2.	Open the **speaker-badge.htm** file. This page contains a section that enables the user to create their speaker badge. Previously, you used an **&lt;img&gt;** element to drag and drop an image of the speaker onto this page. This **&lt;img&gt;** element has been removed because you are going to modify the page to use a canvas instead. Using a canvas provides more scope for customizing the image.
 3.	Find following comment:
     ```html
@@ -185,16 +185,16 @@ The file also contains a number of other functions that will draw the various el
 #### Task 3: Test the application.
 
 1.	Run the application and view the **speaker-badge.htm** page.
-2.	Drag and drop the **mark-hansen.jpg** image file from the **E:\Mod11\Labfiles\Resources** folder onto the canvas.
+2.	Drag and drop the **mark-hansen.jpg** image file from the **Allfiles\Mod11\Labfiles\Resources** folder onto the canvas.
 3.	Verify that the image is drawn on the canvas, along with the speaker’s details.
 
 ![alt text](./Images/20480B_11_Speaker-Badge-Canvas.png "The speaker badge for Mark Hanson")
 
-4.	Close Internet Explorer.
+4.	Close Microsoft Edge.
 
 >**Result:** After completing this exercise, you will have a Speaker Badge page that enables a conference speaker to create their badge.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

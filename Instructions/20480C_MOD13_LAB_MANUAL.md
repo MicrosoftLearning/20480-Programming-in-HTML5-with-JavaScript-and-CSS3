@@ -33,14 +33,14 @@ In this exercise, you will review the new **Live** page and JavaScript. You will
 
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480C-SEA-DEV11** virtual machine and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution from the **E:\Mod13\Labfiles\Starter\Exercise 1** folder.
+3.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod13\Labfiles\Starter\Exercise 1** folder.
 4.	Start the application and view the **Live** page. Ignore the error that occurs (this error happens because the JavaScript code for the page is not yet complete). 
 
 Using this page, an attendee can type a question and click **Ask** to send it to the presenter. All questions asked by all attendees will appear on this page, underneath the **Ask a question** box.
 
 ![alt text](./Images/20480B_13_Live.png "The Live page")
 
-5.	Close Internet Explorer and return to Visual Studio.
+5.	Close Microsoft Edge and return to Visual Studio.
 6.	In the **ContosoConf** project, open the **live.htm** file.
 7.	Review the HTML markup for this page and note the **&lt;form&gt;** element used to ask questions, together with the empty **&lt;ul&gt;** element that will display questions:
     ```html
@@ -68,10 +68,10 @@ Using this page, an attendee can type a question and click **Ask** to send it to
 
 1.	In the **live.js** file near the end of the file (just before the call to the **create()** method), find the following comment:
     ```javascript
-        // TODO: Create a web socket connection to ws://localhost:55981/live/socket.ashx
+        // TODO: Create a web socket connection to ws://localhost:[port]/live/socket.ashx
     ```
-- The web server that handles requests sent to the web socket is located at the URL localhost:55981/live/socket.ashx.
-2.	After this comment, add code to create a new **WebSocket** object that connects to the socket server at **localhost:55981/live/socket.ashx**.
+- The web server that handles requests sent to the web socket is located at the URL localhost:[port]/live/socket.ashx.
+2.	After this comment, add code to create a new **WebSocket** object that connects to the socket server at **localhost:[port]/live/socket.ashx**.
 
 >**Note:** The socket is stored in the **LivePage** object as **this.socket**, so methods of **LivePage** can use it.
 
@@ -144,7 +144,7 @@ This method adds the questions specified as the parameter to the list below the 
 - Can you explain more about the Web Socket API, please?
 - This is an #&!%!* inappropriate message!!
 - How much of CSS3 can I use right now?
-3.	Close Internet Explorer.
+3.	Close Microsoft Edge.
 
 >**Results:** After completing this exercise, you will have added JavaScript code to the **Live** web page to receive questions from a web socket and to display them.
 
@@ -156,7 +156,7 @@ In this exercise, you will create a message object that contains a question to a
 
 #### Task 1: Format a question as a message.
 
-1.	Open the **ContosoConf** solution in the **E:\Mod13\Labfiles\Starter\Exercise 2** folder.
+1.	Open the **ContosoConf** solution in the **Allfiles\Mod13\Labfiles\Starter\Exercise 2** folder.
 2.	Open the **live.js** file in the **scripts/pages** folder. In this file, the **LivePage** object has methods that handle the **Ask a question** form submission. The question text is passed to the **askQuestion** method, which looks like this:
     ```javascript
         askQuestion: function (text) {
@@ -185,13 +185,13 @@ In this exercise, you will create a message object that contains a question to a
 #### Task 3: Test the application.
 
 1.	Run the application and view the **Live** page.
-2.	Open a second tab in Internet Explorer and view the **Live** page again.
+2.	Open a second tab in Microsoft Edge and view the **Live** page again.
 3.	Use the **Ask a question** form to submit questions.
 4.	Verify that the questions are displayed on the pages in both tabs.
 
 >**Note:** The message **This is an #&!%!* inappropriate message** might disappear from the second tab.
 
-5.	Close Internet Explorer.
+5.	Close Microsoft Edge.
 
 >**Result:** After completing this exercise, you will have modified the **Live** question page to enable users to ask questions by sending messages to the server by using the web socket.
 
@@ -203,7 +203,7 @@ In this exercise, you will add a link next to each question to enable a student 
 
 #### Task 1: Display report links.
 
-1.	Open the **ContosoConf** solution in the **E:\Mod13\Labfiles\Starter\Exercise 3** folder.
+1.	Open the **ContosoConf** solution in the **Allfiles\Mod13\Labfiles\Starter\Exercise 3** folder.
 2.	Open the **live.js** file in the **scripts/pages** folder, and review the **createReportLink** method:
     ```javascript
         createReportLink: function () {
@@ -265,11 +265,11 @@ This function removes all messages that contain the **remove** property from the
 2.	Verify that **Report** links are displayed next to questions.
 3.	Click the **Report** link next to the question **What are some good resources for getting started with HTML5?** 
 4.	Verify that the question disappears from the page (there will be a short delay while the question is assessed).
-5.	Close Internet Explorer.
+5.	Close Microsoft Edge.
 
 >**Result:** After completing this exercise, you will have added a feature to the **Live** page that enables users to report inappropriate questions and causes the application to remove them.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

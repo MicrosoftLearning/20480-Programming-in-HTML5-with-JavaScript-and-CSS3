@@ -39,7 +39,7 @@ Finally, you will run the application, view the Home page, and verify that the n
 
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution from the **E:\Mod06\Labfiles\Starter\Exercise 1** folder.
+3.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod06\Labfiles\Starter\Exercise 1** folder.
 4.	In the **ContosoConf** project, open the **index.htm** file.
 Notice that the **&lt;head&gt;** has a link to the **/styles/nav.css** style sheet:
     ```html
@@ -59,7 +59,7 @@ Notice that the class of the **&lt;nav&gt;** element is **page-nav**, and that i
 
 ![alt text](./Images/20480B_6_Nav-Bar-Unstyled.png "The unstyled navigation bar")
 
-7.	Close Internet Explorer. 
+7.	Close Microsoft Edge. 
 
 #### Task 2: Style the navigation bar and links.
 
@@ -68,7 +68,7 @@ Notice that the class of the **&lt;nav&gt;** element is **page-nav**, and that i
 - Replace the comment /* TODO: nav.page-nav  */ with a rule that styles **nav** elements that have the **page-nav** class (**nav.page-nav**). Set the background color to #1d1d1d, set the line height to 6rem, and set the font size to 1.7rem.
 - Replace the comment /* TODO: nav.page-nav .container */ with a rule that styles elements that have the container class inside **nav.page-nav** elements (**nav.page-nav .container**). Style the container to use the Flexible Box Layout Model.
 
->**Note:** Internet Explorer requires you to use **-ms-flexbox**; note the **-ms-vendor** prefix.
+>**Note:** Microsoft Edge requires you to use **-ms-flexbox**; note the **-ms-vendor** prefix.
 
 ![alt text](./Images/20480B_6_Nav-Bar-Styled.png "The navigation bar with initial styling")
 
@@ -111,7 +111,7 @@ Notice that the class of the **&lt;nav&gt;** element is **page-nav**, and that i
 
 1.	Run the application, view the **home.htm** page and verify that the navigation bar looks similar to the image shown in the previous task.
 2.	Use the navigation bar to move between pages (for example, move to the **About** page), and verify that the style of the active item in the navigation bar is displayed by using the ribbon effect.
-3.	Close Internet Explorer.
+3.	Close Microsoft Edge.
 
 
 >**Results:** After completing this exercise, you will have styled the navigation bar to match the design mockup.
@@ -128,7 +128,7 @@ You will use a style to set the position of the **Register** link. You will modi
 
 #### Task 1: Review the HTML and CSS.
 
-1.	Open the **Contoso.conf** solution in the **E:\Mod06\Labfiles\Starter\Exercise 2** folder.
+1.	Open the **Contoso.conf** solution in the **Allfiles\Mod06\Labfiles\Starter\Exercise 2** folder.
 2.	In the **ContosoConf** project, open the **index.htm** file.
 3.	Notice that the **&lt;head&gt;** element contains a link to the **header.css** style sheet in the **styles** folder:
     ```html
@@ -149,7 +149,7 @@ You will use a style to set the position of the **Register** link. You will modi
         </header>
     ```
 5.	Run the application, view the **index.htm** page, and verify that the header’s **Register** link is not styled. 
-6.	Close Internet Explorer.
+6.	Close Microsoft Edge.
 
 #### Task 2: Position the Register link and set the text styling.
 
@@ -186,7 +186,7 @@ You will use a style to set the position of the **Register** link. You will modi
 ![alt text](./Images/20480B_6_Register-Link-Final.png "The styled Register link")
 
 2.	Verify that the **Register** link changes color when the mouse hovers over it.
-3.	Close Internet Explorer.
+3.	Close Microsoft Edge.
 
 >**Result:** After completing this exercise, you will have styled the **Register** link in the header of the Home page.
 
@@ -202,7 +202,7 @@ First you will flow the text over three columns and add a "drop cap” style to 
 
 #### Task 1: Review the HTML and CSS.
 
-1.	Open the **Contoso.conf** solution in the **E:\Mod06\Labfiles\Starter\Exercise 3** folder.
+1.	Open the **Contoso.conf** solution in the **Allfiles\Mod06\Labfiles\Starter\Exercise 3** folder.
 2.	In the **ContosoConf** project, open the **about.htm** file. 
 3.	In the **&lt;head&gt;** element notice there is a link to the **about.css** style sheet in the **/styles/pages** folder:
     ```html
@@ -256,11 +256,11 @@ First you will flow the text over three columns and add a "drop cap” style to 
 
 ![alt text](./Images/20480B_6_About-Final.png "The About page")
 
-2.	Close Internet Explorer.
+2.	Close Microsoft Edge.
 
 >**Result:** After completing this exercise, you will have styled the text on the **About** page.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

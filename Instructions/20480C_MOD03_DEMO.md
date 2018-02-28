@@ -23,7 +23,7 @@
 
 >**Note:** It does not matter whether you select the **Visual Basic** or **Visual C#** templates in the left pane; the templates for both languages enable you to create HTML5 web pages and implement functionality by using JavaScript.
 
-4.	From the **Web location** list, click **File System**, set the file path to **E:\Mod03\Democode\jQueryDemoTest**, and then click **OK**.
+4.	From the **Web location** list, click **File System**, set the file path to **Allfiles\Mod03\Democode\jQueryDemoTest**, and then click **OK**.
 5.	On the **Tools** menu, point to **Library Package Manager**, and then click **Manage NuGet Packages for Solution**.
 6.	In the **Manage NuGet Packages** dialog box, click **Online**. A list of available packages for download appears in order of popularity.
 7.	In the **Search Online** box, type **jQuery**.
@@ -73,7 +73,7 @@
 4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
 5. Close the Microsoft Edge window.
 
-©2016 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

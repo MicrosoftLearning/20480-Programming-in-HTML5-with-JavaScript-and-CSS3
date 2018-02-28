@@ -30,12 +30,12 @@ First you will create a new ASP.NET Web Application. Then you will add two HTML 
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480B-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
 3.	Start Visual Studio.
-4.	Create a new web application named **ContosoConf** in the **E:\Mod02\Labfiles\Starter\Exercise 1** folder. Use the **Visual C# ASP.NET Empty Web Application** template to create this web application. 
+4.	Create a new web application named **ContosoConf** in the **Allfiles\Mod02\Labfiles\Starter\Exercise 1** folder. Use the **Visual C# ASP.NET Empty Web Application** template to create this web application. 
 
 #### Task 2: Add the Home page.
 
 1.	Add a new HTML page named **index.htm** to the ContosoConf project. This page is the default page for the website, and will be displayed when a user browses to the URL for the website.
-2.	Using Notepad, open the **index.txt** file located in the **E:\Mod02\Labfiles\Starter\Exercise 1\Resources** folder. 
+2.	Using Notepad, open the **index.txt** file located in the **Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources** folder. 
 - Examine this file, and then add HTML5 elements to the index.htm file in the web application that can display the items specified in the index.txt file. 
 - Use HTML5 elements, such as **&lt;header&gt;**, **&lt;section&gt;**, and **&lt;footer&gt;** where appropriate.
 
@@ -51,7 +51,7 @@ For example, the following &lt;header&gt; element contains the content from the 
 
 #### Task 3: Add images to the Home Page.
 
-1.	Add the speaker and sponsor images to the ContosoConf project. These images are located in the E:\Mod02\Labfiles\Starter\Exercise 1\Resources folder. They should be added to a new folder called **images** in the project.
+1.	Add the speaker and sponsor images to the ContosoConf project. These images are located in the Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources folder. They should be added to a new folder called **images** in the project.
 2.	Update the HTML markup in the **index.htm** file to include the images from the **speakers** and **sponsors** folders in the **images** folder. For example:
     ```html
         <img src="/images/speakers/melissa-kerr.jpg" alt="Melissa Kerr"/>
@@ -67,7 +67,7 @@ For example, the following &lt;header&gt; element contains the content from the 
 1.	Add a new HTML page, named **about.htm** to the ContosoConf project.
 - Use the **Add New Item** command on the **Project** menu.
 - Select the **HTML Page** template.
-2.	Add HTML elements to **about.htm**, using the text provided in the **about.txt** file located in the **E:\Mod02\Labfiles\Starter\Exercise 1\Resources** folder.
+2.	Add HTML elements to **about.htm**, using the text provided in the **about.txt** file located in the **Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources** folder.
 - Add an appropriate title to the page.
 - Copy the **&lt;header&gt;** and **&lt;footer&gt;** elements from **index.htm**.
 - Use the **&lt;article&gt;**, **&lt;blockquote&gt;**, and **&lt;ol&gt;** elements where appropriate.
@@ -88,7 +88,7 @@ For example, the **&lt;nav&gt;** element for the index.htm page should look like
 
 #### Task 6: Run the web application.
 
-1.	Run the web application by using Internet Explorer.
+1.	Run the web application by using Microsoft Edge.
 2.	Verify that the correct text and images are displayed.
 3.	Verify that the navigation links reference the correct pages.
 
@@ -139,7 +139,7 @@ You will create a stylesheet in the ContosoConf project. Then you will add CSS r
 
 ![alt text](./Images/20480B_2_Home.png "The styled Home page")
 
->**Note:** Use the Internet Explorer F12 developer tools to experiment with the CSS rules until you achieve the correct styling.
+>**Note:** Use the Microsoft Edge F12 developer tools to experiment with the CSS rules until you achieve the correct styling.
 
 
 #### Task 3: Run the web application.
@@ -150,7 +150,7 @@ You will create a stylesheet in the ContosoConf project. Then you will add CSS r
 
 >**Result:** After completing this exercise, you will have used CSS rules to style the Home and About pages.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

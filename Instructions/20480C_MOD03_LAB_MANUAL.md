@@ -30,7 +30,7 @@ First, you will use the HTML5 DOM to obtain a reference to the page’s schedule
 
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480B-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **E:\Mod03\Labfiles\Starter\Exercise 1** folder.
+3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod03\Labfiles\Starter\Exercise 1** folder.
 4.	In the **ContosoConf** project, review the content of the page **schedule.htm**. Notice that the **schedule** page section, which will be used to display the list of sessions, currently contains an empty list, also named **schedule**:
     ```html
         <section class="page-section schedule>
@@ -112,7 +112,7 @@ The purpose of this function is to display the title of each session in the list
 
 ![alt text](./Images/20480B_3_Schedule.png "The Schedule page with sessions displayed")
 
->**Note:** Remember that you can use the F12 Developer Tools in Internet Explorer to debug your application. Also, if you make any changes to your code, make sure to clear the browser cache before running the application again (press Ctrl+R in the F12 Developer Tools window). Otherwise, Internet Explorer may attempt to run the previous version of your JavaScript code.
+>**Note:** Remember that you can use the F12 Developer Tools in Microsoft Edge to debug your application. Also, if you make any changes to your code, make sure to clear the browser cache before running the application again (press Ctrl+R in the F12 Developer Tools window). Otherwise, Microsoft Edge may attempt to run the previous version of your JavaScript code.
 
 
 >**Results:** After completing this exercise, you will have added a Schedule page to the ContosoConf application that displays the details of conference sessions.
@@ -127,7 +127,7 @@ First, you will add two checkbox HTML elements to the Schedule page; the first w
 
 #### Task 1: Add checkbox HTML elements.
 
-1.	In Visual Studio, open the **ContosoConf.sln** solution in the **E:\Mod03\LabFiles\Starter\Exercise 2** folder. This project contains a working version of the application as it should appear at the end of exercise 1.
+1.	In Visual Studio, open the **ContosoConf.sln** solution in the **Allfiles\Mod03\LabFiles\Starter\Exercise 2** folder. This project contains a working version of the application as it should appear at the end of exercise 1.
 2.	In the **schedule.htm** file, before the **schedule** list, add two checkboxes that enable the user to specify for which tracks the page should display session information:
 
 ![alt text](./Images/20480B_3_Schedule_With_Checkboxes.png "The Schedule page with checkboxes that enable the user to select the tracks")
@@ -189,7 +189,7 @@ First, you will add two checkbox HTML elements to the Schedule page; the first w
 
 >**Result:** After completing this exercise, you will have updated the **Schedule** page to filter sessions based on which tracks have been selected.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

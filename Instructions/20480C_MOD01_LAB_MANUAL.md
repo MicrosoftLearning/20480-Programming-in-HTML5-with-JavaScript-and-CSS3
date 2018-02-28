@@ -12,7 +12,7 @@ You are a developer that creates web sites by using HTML, CSS, and JavaScript, a
 
 After completing this lab, you will be able to:
 - Describe the structure of the Contoso Conference web application.
-- Use Visual Studio 2012 to examine the structure of a web application, run a web application, and modify a web application.
+- Use Visual Studio 2017 to examine the structure of a web application, run a web application, and modify a web application.
 
 #### Lab Setup
 
@@ -39,7 +39,7 @@ The Contoso Conference web application contains the following pages:
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
 3.	Start Visual Studio.
-4.	Open the **ContosoConf** solution in the **E:\Mod01\Labfiles\Starter** folder
+4.	Open the **ContosoConf** solution in the **Allfiles\Mod01\Labfiles\Starter** folder
 5.	Start the application without debugging.
 
 ![alt text](./Images/20480B_1_Home_Final.png "Home page")
@@ -109,7 +109,7 @@ When you have successfully registered, the confirmation page appears.
 
 1.	Move to the **Location** page.
 
-If the message **localhost wants to track your physical location** appears in the Internet Explorer message bar, click **Allow once**. In the **Enable Location Services** message box, click **Yes**.
+If the message **localhost wants to track your physical location** appears in the Microsoft Edge message bar, click **Allow once**. In the **Enable Location Services** message box, click **Yes**.
 
 The page displays information about your current location (the distance from the conference venue) by using the Geolocation API in JavaScript.
 
@@ -139,7 +139,7 @@ The star rating is implemented by using a combination of JavaScript code and CSS
 7.	In the **Any additional comments** box, type **Good conference**, and then click **Send Feedback**.
 
 Notice that when you send the feedback, the form flies off the screen to indicate that the feedback has been posted. This animation is performed by using CSS.
-8.	Close Internet Explorer.
+8.	Close Microsoft Edge.
 
 >**Results:** After completing this exercise, you will be able to describe the features of the Contoso Conference web application and list the technologies that are used to implement them.
 
@@ -147,7 +147,7 @@ Notice that when you send the feedback, the form flies off the screen to indicat
 
 #### Scenario
 
-In this exercise, you will examine the Visual Studio 2012 project for the Contoso Conference application. You will see how the project is structured, and how the files and scripts for the project are organized into folders. You will then run the application again, make some modifications to the HTML markup and CSS, and view the results.
+In this exercise, you will examine the Visual Studio 2017 project for the Contoso Conference application. You will see how the project is structured, and how the files and scripts for the project are organized into folders. You will then run the application again, make some modifications to the HTML markup and CSS, and view the results.
 
 #### Task 1: Explore the web pages for the application by using Visual Studio 2017.
 
@@ -197,14 +197,14 @@ You will not use any of these items in this course.
 #### Task 3: Run the application and make live modifications.
 
 1.	Build and run the web application without debugging, and display the **Home** page.
-2.	Leave the application running and return to Visual Studio 2012.
+2.	Leave the application running and return to Visual Studio 2017.
 3.	Edit the HTML markup for the Home page and change the text for the **Register Free** button to **Register Now**.
 4.	Open the nav.css style sheet in the **styles** folder; this style sheet contains the styles used to render the contents of the **&lt;nav&gt;** element and change the background color to blue.
-5.	Save the changes, return to Internet Explorer, refresh the view, and verify that you can see the effects of the changes.
+5.	Save the changes, return to Microsoft Edge, refresh the view, and verify that you can see the effects of the changes.
 
 >**Result:** After completing this exercise, you will be able to describe how the Contoso Conference application is structured as a Visual Studio 2017 project.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

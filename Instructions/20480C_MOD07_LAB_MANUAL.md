@@ -53,7 +53,7 @@ In this exercise, you will create a utility function named **Object.inherit**. T
 
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **E:\Mod07\Labfiles\Starter\Exercise 1** folder.
+3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod07\Labfiles\Starter\Exercise 1** folder.
 4.	Open the **Object.inherit.js** file in the **scripts** folder. 
 5.	Review the JavaScript code and comments in this file. This file contains functions called **copyOwnProperties** and **inherit**.
 - You will implement the **inherit** function, using the TODO comments as guidance.
@@ -100,7 +100,7 @@ The JavaScript code for the Schedule page has been partially refactored to be mo
 
 #### Task 1: Define the ScheduleList factory.
 
-1.	Open the **ContosoConf.sln** solution in the **E:\Mod07\Labfiles\Starter\Exercise 2** folder.
+1.	Open the **ContosoConf.sln** solution in the **Allfiles\Mod07\Labfiles\Starter\Exercise 2** folder.
 2.	In the **schedule.js** file, in the **scripts\pages** folder, find the following comment:
     ```javascript
         // TODO: Create a ScheduleList factory object using the Object.inherit helper method.
@@ -171,11 +171,11 @@ The JavaScript code for the Schedule page has been partially refactored to be mo
 
 >**Note:** The styling and layout of the Schedule page has been changed. This is performed by using the CSS rules implemented in the schedule.css style sheet and is not a result of any updates made to the JavaScript code.
 
-3.	Close Internet Explorer. 
+3.	Close Microsoft Edge. 
 
 >**Result:** After completing this exercise, you will be able to describe how the Contoso Conference application is structured as a Visual Studio 2017 project.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

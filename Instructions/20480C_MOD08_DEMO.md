@@ -18,11 +18,11 @@
 #### Set a Breakpoint in JavaScript code
 
 1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
-2.	On the Windows taskbar, click **Internet Explorer**.
-3.	In Internet Explorer, browse to the file **E:\Mod08\Democode\Document.html**.
-4.	If the message **Internet Explorer restricted this webpage from running scripts or ActiveX controls** appears, click **Allow blocked content**.
+2.	On the Windows taskbar, click **Microsoft Edge**.
+3.	In Microsoft Edge, browse to the file **Allfiles\Mod08\Democode\Document.html**.
+4.	If the message **Microsoft Edge restricted this webpage from running scripts or ActiveX controls** appears, click **Allow blocked content**.
 5.	Press F12 to display the Developer Tools window.
-6.	If the F12 Developer Tools window appears as a pane in Internet Explorer, in the F12 Developer Tools pane, click **Unpin**.
+6.	If the F12 Developer Tools window appears as a pane in Microsoft Edge, in the F12 Developer Tools pane, click **Unpin**.
 
 >**Note:** This action causes the F12 Developer Tools to appear in a standalone window.
 
@@ -38,7 +38,7 @@
 3.	In the right pane, click the **Locals** tab.
 4.	On the F12 Developer Tools toolbar, click the **Step over** button several times to step through the code. In the **Locals** tab, verify that the value of the **i** variable changes as execution progresses.
 5.	Close the F12 Developer Tools window.
-6.	Close Internet Explorer.
+6.	Close Microsoft Edge.
 
 ### Demonstration: Using the F12 Developer Tools to Profile a Web Application
 
@@ -56,12 +56,12 @@
 #### Examine the Network Traffic for a Web Application
 
 1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
-2.	On the Windows taskbar, click **Internet Explorer**.
-3.	In Internet Explorer, browse to the website **http://www.beautyoftheweb.com/**.
+2.	On the Windows taskbar, click **Microsoft Edge**.
+3.	In Microsoft Edge, browse to the website **http://www.beautyoftheweb.com/**.
 4.	Press F12 to display F12 Developer Tools window.
 5.	In the F12 Developer Tools window, click **Network**.
 6.	On the F12 Developer Tools toolbar, click **Start capturing**.
-7.	In Internet Explorer, click the **touchgallery** icon in the navigation bar.
+7.	In Microsoft Edge, click the **touchgallery** icon in the navigation bar.
 8.	Return to the F12 Developer Tools window.
 
 ![alt text](./Images/20480B_8_Network-Capture.png "The network traffic captured for a web page")
@@ -81,7 +81,7 @@
 
 1.	In the F12 Developer Tools window, click **Profiler**.
 2.	On the F12 Developer Tools toolbar, click **Start profiling**.
-3.	In Internet Explorer, click the **videos** icon in the navigation bar.
+3.	In Microsoft Edge, click the **videos** icon in the navigation bar.
 4.	Return to the F12 Developer Tools window.
 5.	On the F12 Developer Tools toolbar, click **Stop profiling**.
 
@@ -93,7 +93,7 @@ In the captured data, examine the work performed by the **onWindowEvent** event 
 8.	Double-click **onWindowEvent** to display the code for this event handler in the **Script** window
 9.	Press **Ctrl+Alt+O** to display the tools menu, and then select **Format JavaScript** to display the code in an easier to read format.
 10.	Close the F12 Developer Tools window.
-11.	Close Internet Explorer.
+11.	Close Microsoft Edge.
 
 
 ### Demonstration: Creating Interactive Pages with HTML5 APIs
@@ -106,7 +106,7 @@ In the captured data, examine the work performed by the **onWindowEvent** event 
 4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
 5. Close the Microsoft Edge window.
 
-©2016 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

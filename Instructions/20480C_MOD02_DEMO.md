@@ -19,8 +19,8 @@
 
 1.	On the Windows 8 **Start** screen, click the **Visual Studio 2017** tile.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
-3.	In the **Open Project** dialog box, browse to the **E:\Mod02\Democode\Starter** folder, click **DemoWebSite.sln** and then click **Open**.
-4.	In Solution Explorer, expand the **E:\\...\\DemoWebSite** web application, and then double-click **ContactUs.html**.
+3.	In the **Open Project** dialog box, browse to the **Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln** and then click **Open**.
+4.	In Solution Explorer, expand the **Allfiles\\...\\DemoWebSite** web application, and then double-click **ContactUs.html**.
 5.	In the **ContactUs.html** file, enclose the entire contents of the **&lt;body&gt;** element in an **&lt;article&gt;** element as shown in bold in the following code example:
     ```html
         <!DOCTYPE HTML>
@@ -111,7 +111,7 @@
 #### View the Structure of the Page by Using the F12 Developer Tools
 
 1.	On the **Debug** menu, click **Start Without Debugging**.
-2.	In Internet Explorer, if the message **Intranet settings are turned off by default** appears, click **Don’t show this message again**.
+2.	In Microsoft Edge, if the message **Intranet settings are turned off by default** appears, click **Don’t show this message again**.
 3.	Press F12.
 4.	In the **F12** window, click the **HTML** tab.
 5.	Expand the **&lt;html&gt;** element.
@@ -119,7 +119,7 @@
 7.	Expand the **&lt;article&gt;** element and verify that it contains a **&lt;header&gt;** element and two **&lt;section&gt;** elements.
 8.	Expand the **&lt;header&gt;** element.
 9.	Expand the **&lt;h1&gt;** element.
-10.	Click each element, and verify that Internet Explorer surrounds each element on the page with a box as it is selected in the **F12** window.
+10.	Click each element, and verify that Microsoft Edge surrounds each element on the page with a box as it is selected in the **F12** window.
 
 
 
@@ -127,9 +127,9 @@
 
 1.	In the **&lt;h1&gt;** element, click **Contact Contoso Conferencing**.
 2.	Change this text to **We'd love to hear from you…**, and then press ENTER.
-3.	Verify that Internet Explorer displays the modified text.
+3.	Verify that Microsoft Edge displays the modified text.
 4.	Press F12 to close the **F12** window.
-5.	Close Internet Explorer, and then close Visual Studio 2017.
+5.	Close Microsoft Edge, and then close Visual Studio 2017.
 
 # Lesson 2: Styling an HTML5 Page
 
@@ -150,8 +150,8 @@
 
 1.	On the Windows 8 **Start** screen, click the **Visual Studio 2017** tile.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
-3.	In the **Open Project** dialog box, browse to the **E:\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
-4.	In Solution Explorer, expand the **E:\\...\\DemoWebSite** web application, and then expand the **styles** folder.
+3.	In the **Open Project** dialog box, browse to the **Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
+4.	In Solution Explorer, expand the **Allfiles\\...\\DemoWebSite** web application, and then expand the **styles** folder.
 5.	Double-click **ContactUsStyles.css**
 6.	Review the existing rules for the **body** and **h1** elements.
 7.	Modify the **body** rule, remove the color rule, and change the font used on the whole page as shown in bold in the following code example.
@@ -234,12 +234,12 @@
 
 1.	In Solution Explorer, double-click **ContactUs.html**.
 2.	On the **Debug** menu, click **Start Without Debugging**.
-3.	In Internet Explorer, if the message **Intranet settings are turned off by default** appears, click **Don’t show this message again**.
+3.	In Microsoft Edge, if the message **Intranet settings are turned off by default** appears, click **Don’t show this message again**.
 4.	Verify that the new styles have been applied to the page.
 
 ![alt text](./Images/20480B_2_ContactUs_Styled.png "The ContactUs page with styling")
 
-5.	In Internet Explorer, press F12.
+5.	In Microsoft Edge, press F12.
 6.	In the **F12** window, with the **HTML** tab selected, double-click the **&lt;html&gt;** element to expand it.
 7.	Click the **&lt;body&gt;** element.
 8.	In the right pane, verify that the following the CSS rule appears:
@@ -248,7 +248,7 @@
     ```
 9.	In this rule, select the text **"Segoe UI"**.
 10.	Change the value to read **"Times New Roman"** and press ENTER.
-11.	Verify that Internet Explorer reflects this change to the font on the page.
+11.	Verify that Microsoft Edge reflects this change to the font on the page.
 12.	In the left pane, expand the **&lt;body&gt;** element, expand the **&lt;article&gt;** element, and then click the first **&lt;section&gt;** element.
 13.	In the right pane, verify that the following styles are specified for this section:
     ```css
@@ -262,7 +262,7 @@
           border-bottom-style: dotted;
     ```
 14.	Press F12 to close the **F12** window.
-15.	Close Internet Explorer, and then close Visual Studio 2017.
+15.	Close Microsoft Edge, and then close Visual Studio 2017.
 
 ### Demonstration: Creating and Styling an HTML5 Page
 
@@ -274,7 +274,7 @@
 4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
 5. Close the Microsoft Edge window.
 
-©2016 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

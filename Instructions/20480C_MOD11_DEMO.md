@@ -18,18 +18,18 @@
 #### Transform SVG Elements
 
 1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
-2.	On the Windows taskbar, click **Internet Explorer**.
-3.	In Internet Explorer, open the file **E:\Mod11\Democode\SvgDocument.html**. 
+2.	On the Windows taskbar, click **Microsoft Edge**.
+3.	In Microsoft Edge, open the file **Allfiles\Mod11\Democode\SvgDocument.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click the **Allow blocked content** button.
-5.	In Internet Explorer, click the **Transformations** button.
-6.	Right-click the web page in Internet Explorer, and then click **View source**.
+5.	In Microsoft Edge, click the **Transformations** button.
+6.	Right-click the web page in Microsoft Edge, and then click **View source**.
 7.	In the source window, locate the &lt;!-- Demonstrate transformations --&lt; comment and review the **&lt;svg&gt;** element: 
 o	The <transform> elements translate the square by 200 units in the X and Y axes, scale it by a factor of 0.5, and rotate it.
 8.	Close the source window.
 
 #### Handle Events on SVG Elements
 
-1.	In Internet Explorer, click the **Events** button.
+1.	In Microsoft Edge, click the **Events** button.
 2.	Hover the mouse over the red shape on the left side of the window. Verify that the shape changes to a yellow fill color and a dotted green border.
 3.	Move the mouse off the shape. Verify that it reverts to a red fill color with no outline.
 4.	Hover the mouse over the blue shape on the right side of the window. Verify that the shape changes to a yellow fill color and a dotted green border.
@@ -42,7 +42,7 @@ o	The <transform> elements translate the square by 200 units in the X and Y axes
 - Each **&lt;path&gt;** element responds to the **onmousedown** event and uses JavaScript code to display the appropriate message.
 10.	In the source window, locate the **path:hover** CSS rule near the top of the document. This CSS rule defines the style for all **&lt;path&gt;** elements when the user hovers over them with the mouse. 
 11.	Close the source window.
-12.	Close Internet Explorer.
+12.	Close Microsoft Edge.
 
 # Lesson 2: Drawing Graphics by Using the Canvas API
 
@@ -62,11 +62,11 @@ o	The <transform> elements translate the square by 200 units in the X and Y axes
 #### Perform Simple Transformations
 
 1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
-2.	On the Windows taskbar, click **Internet Explorer**.
-3.	In Internet Explorer, open the file **E:\Mod11\Democode\CanvasDocument.html**. 
+2.	On the Windows taskbar, click **Microsoft Edge**.
+3.	In Microsoft Edge, open the file **Allfiles\Mod11\Democode\CanvasDocument.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click the **Allow blocked content** button.
-5.	In Internet Explorer, click the **Separate Transformations** button.
-6.	Right-click the web page in Internet Explorer, and then click **View source**.
+5.	In Microsoft Edge, click the **Separate Transformations** button.
+6.	Right-click the web page in Microsoft Edge, and then click **View source**.
 7.	In the source window, locate the **demoSeperateTransformations** function and review the code: 
 - The **demoSeperateTransformations** function uses the **drawShape** function to draw a triangle filled with an image of the Welsh flag.
 - Before calling the drawShape function, the code transforms the context; it moves the canvas to the right and down by half the width and height of the canvas, then it scales the context by a different value in the X and Y dimensions, and then rotates the context by PI/4 radians.
@@ -76,12 +76,12 @@ o	The <transform> elements translate the square by 200 units in the X and Y axes
 
 #### Perform Matrix Transformation
 
-1.	In Internet Explorer, click the **Matrix Transformations** button.
+1.	In Microsoft Edge, click the **Matrix Transformations** button.
 2.	In the source window, locate the **demoMatrixTransformations** function and review the code: 
 - This function is similar to the previous one in that it transforms the context and then calls the **drawShape** function to display the image.
 - The difference is that this function uses the **transform** function to perform a matrix transformation, scaling, skewing, and translating the context in a single function call.
 3.	Close the source window.
-4.	Close Internet Explorer.
+4.	Close Microsoft Edge.
 
 ### Demonstration: Creating Advanced Graphics
 
@@ -93,7 +93,7 @@ o	The <transform> elements translate the square by 200 units in the X and Y axes
 4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
 5. Close the Microsoft Edge window.
 
-©2016 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

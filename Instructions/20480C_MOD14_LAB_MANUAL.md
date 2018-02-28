@@ -32,7 +32,7 @@ First, you will review the HTML markup and JavaScript code for the **Speaker Bad
 
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution from the **E:\Mod14\Labfiles\Starter\Exercise 1** folder.
+3.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod14\Labfiles\Starter\Exercise 1** folder.
 4.	In the **ContosoConf** project, review the **Speaker Badge** page. Note the script reference to the **grayscale.js** JavaScript file in the **/scripts** folder:
     ```html
         <script src="/scripts/grayscale.js" type="text/javascript"></script>
@@ -85,17 +85,17 @@ First, you will review the HTML markup and JavaScript code for the **Speaker Bad
 >**Note:** The **pipe()** function enables you to chain function calls together into a pipeline. The functions can operate asynchronously, but the **pipe()** function ensures that each function call is made only after the previous call has completed.
 
 3.	Run the application and view the **speaker-badge.htm** page.
-4.	Drag the file **E:\Mod14\Labfiles\Resources\mark-hanson-large.jpg** from File Explorer and drop it onto the speaker badge canvas in Internet Explorer.
+4.	Drag the file **Allfiles\Mod14\Labfiles\Resources\mark-hanson-large.jpg** from File Explorer and drop it onto the speaker badge canvas in Microsoft Edge.
 5.	While the image is being processed, try scrolling the page or moving to a different page. Note that the page is frozen.
 
->**Note:** Internet Explorer may display the message **localhost is not responding due to a long-running script**. If this occurs, allow the script to complete.
+>**Note:** Microsoft Edge may display the message **localhost is not responding due to a long-running script**. If this occurs, allow the script to complete.
 
->**Note:** You can observe the load that Internet Explorer is under by using Task Manager as follows:
+>**Note:** You can observe the load that Microsoft Edge is under by using Task Manager as follows:
 >1.	Right-click the Windows Taskbar and then click **Task Manager**.
 >2.	In Task Manager, click **More details**, and then click the **Performance** tab.
 The virtual machine is configured with two virtual CPUs, and the grayscaleImage() function will keep one of the CPUs fully occupied, resulting in an overall processor utilization of approximately 50%. When the grayscale image appears, the processor utilization will drop close to 0.
 
-6.	Close Internet Explorer.
+6.	Close Microsoft Edge.
 
 #### Task 3: Create a web worker to perform image processing.
 
@@ -177,15 +177,15 @@ The virtual machine is configured with two virtual CPUs, and the grayscaleImage(
 
 1.	Run the application and view the **Speaker Badge** page.
 
->**Note:** You may need to clear the browser cache and **restart** Internet Explorer before testing changes to the worker script. To do this, press F12 to show the F12 Developer Tools window, and on the **Cache** menu click **Clear browser cache**.
+>**Note:** You may need to clear the browser cache and **restart** Microsoft Edge before testing changes to the worker script. To do this, press F12 to show the F12 Developer Tools window, and on the **Cache** menu click **Clear browser cache**.
 
-2.	Drag and drop the file **E:\Mod14\Labfiles\Resources\mark-hanson-large.jpg** onto the canvas.
+2.	Drag and drop the file **Allfiles\Mod14\Labfiles\Resources\mark-hanson-large.jpg** onto the canvas.
 3.	Verify that the page is still responsive while the image is being processed.
-4.	Close Internet Explorer.
+4.	Close Microsoft Edge.
 
 >**Results:** After completing this exercise, you will have a created a web page that remains responsive while slow image processing code runs in a web worker.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 

@@ -28,14 +28,14 @@ In the style sheet, you will add rules to override the layout of the website, re
 
 1.	Start the **MSL-TMG1** virtual machine if it is not already running.
 2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **E:\Mod10\Labfiles\Starter\Exercise 1** folder.
+3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod10\Labfiles\Starter\Exercise 1** folder.
 4.	Run the application and view the **about.htm** page. 
-5.	In Internet Explorer, press F10 to display the menu bar
+5.	In Microsoft Edge, press F10 to display the menu bar
 6.	On the **File** menu, click **Print preview**. Notice that the print preview attempts to display the page header and that the text columns are too narrow.
 
 ![alt text](./Images/20480B_10_Print-Preview.png "The About page in Print Preview mode")
 
-7.	Close the **Print Preview** window and then close Internet Explorer.
+7.	Close the **Print Preview** window and then close Microsoft Edge.
 8.	In Visual Studio, examine the about.htm page and verify that the **&lt;nav&gt;** element is marked with the **page-nav** class, the **&lt;header&gt;** element is marked with the **page-header** class, and the **&lt;footer&gt;** element is marked with the **page-footer** class, as follows:
 ```html
     <nav class="page-nav">
@@ -75,11 +75,11 @@ In **print.css**, add a CSS rule that removes the columns, so that the text disp
 
 1.	Run the application and view the **About** page.
 2.	Refresh the page to ensure that the most recent version of the **About** page is loaded.
-3.	In Internet Explorer, open the **Print Preview** window and verify that the preview does not display the navigation, header, or footer, and that the text has no columns.
+3.	In Microsoft Edge, open the **Print Preview** window and verify that the preview does not display the navigation, header, or footer, and that the text has no columns.
 
 ![alt text](./Images/20480B_10_Print-Preview-Final.png "The Print Preview version of the About page")
 
-4.	Close the **Print Preview** window and then close Internet Explorer.
+4.	Close the **Print Preview** window and then close Microsoft Edge.
 
 >**Results:** After completing this exercise, you will have added a style sheet that implements a print-friendly format for web pages.
 
@@ -94,9 +94,9 @@ Finally, you will run the application again and verify that the website layout a
 
 #### Task 1: Simulate the web application running on a small device.
 
-1.	In Visual Studio, open the **ContosoConf** solution in the **E:\Mod10\Labfiles\Starter\Exercise 2** folder.
+1.	In Visual Studio, open the **ContosoConf** solution in the **Allfiles\Mod10\Labfiles\Starter\Exercise 2** folder.
 2.	Run the application and view the **index.htm** page.
-3.	Resize Internet Explorer to **480 × 800**, approximating the form factor of a Windows Phone 8 device.
+3.	Resize Microsoft Edge to **480 × 800**, approximating the form factor of a Windows Phone 8 device.
 
 >**Note:** Use the F12 Developer Tools to change the size of the device viewing the website. The **Resize** command on the **Tools** menu enables you to change the size of the browser.
 
@@ -104,7 +104,7 @@ Finally, you will run the application again and verify that the website layout a
 
 ![alt text](./Images/20480B_10_Home-Narrow.png "The Home page")
 
-5.	Close Internet Explorer.
+5.	Close Microsoft Edge.
 
 #### Task 2: Implement styles for hand-held devices and smartphones.
 
@@ -128,13 +128,13 @@ Finally, you will run the application again and verify that the website layout a
 #### Task 3: Test the application.
 
 1.	Run the application and view the **Home** page.
-2.	Use the F12 Developer Tools to resize Internet Explorer to various sizes to test that the media queries adapt the user interface correctly.
+2.	Use the F12 Developer Tools to resize Microsoft Edge to various sizes to test that the media queries adapt the user interface correctly.
 - As a minimum, try the sizes 1280x1024 and 480x800.
-3.	Close Internet Explorer.
+3.	Close Microsoft Edge.
 
 >**Result:** After completing this exercise, you will have a website that adapts to different screen sizes.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 
