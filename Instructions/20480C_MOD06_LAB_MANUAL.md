@@ -37,15 +37,13 @@ Finally, you will run the application, view the Home page, and verify that the n
 
 #### Task 1: Review the HTML structure.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod06\Labfiles\Starter\Exercise 1** folder.
-4.	In the **ContosoConf** project, open the **index.htm** file.
+1.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod06\Labfiles\Starter\Exercise 1** folder.
+2.	In the **ContosoConf** project, open the **index.htm** file.
 Notice that the **&lt;head&gt;** has a link to the **/styles/nav.css** style sheet:
     ```html
         <link href="/styles/nav.css" rel="stylesheet" type="text/css" />
     ```
-5.	Find the **&lt;nav&gt;** element, at the start of the **&lt;body&gt;**.
+3.	Find the **&lt;nav&gt;** element, at the start of the **&lt;body&gt;**.
 Notice that the class of the **&lt;nav&gt;** element is **page-nav**, and that it contains a **&lt;div&gt;** element with the class **container**. Also notice that the Home link has the class **active** because it is the active page:
     ```html
         <nav class="page-nav">
@@ -55,11 +53,11 @@ Notice that the class of the **&lt;nav&gt;** element is **page-nav**, and that i
           </div>
         </nav>
     ```
-6.	Run the application, view the Home page, and notice that the navigation links are currently unstyled.
+4.	Run the application, view the Home page, and notice that the navigation links are currently unstyled.
 
 ![alt text](./Images/20480B_6_Nav-Bar-Unstyled.png "The unstyled navigation bar")
 
-7.	Close Microsoft Edge. 
+5.	Close Microsoft Edge. 
 
 #### Task 2: Style the navigation bar and links.
 

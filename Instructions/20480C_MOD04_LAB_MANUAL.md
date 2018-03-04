@@ -28,11 +28,9 @@ You will select the correct input types for each piece of data collected by the 
 
 #### Task 1: Modify the Register page.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod04\Labfiles\Starter\Exercise 1** folder.
-4.	Open the **register.htm** file. 
-5.	Find the **&lt;form&gt;** element and read the TODO comment that describes the form input requirements together with the HTML snippet to use as a template:
+1.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod04\Labfiles\Starter\Exercise 1** folder.
+2.	Open the **register.htm** file. 
+3.	Find the **&lt;form&gt;** element and read the TODO comment that describes the form input requirements together with the HTML snippet to use as a template:
     ```html
         <form method="post" action="/registration/new" id="registration-form">
             <!--
@@ -57,12 +55,12 @@ You will select the correct input types for each piece of data collected by the 
             </div>
         </form>
     ```
-6.	Notice that **register.htm** has a reference to the style sheet **/styles/pages/register.css** in the **&lt;head&gt;** element **/scripts/pages/register.js** just before the **&lt;/body&gt;** tag:
+4.	Notice that **register.htm** has a reference to the style sheet **/styles/pages/register.css** in the **&lt;head&gt;** element **/scripts/pages/register.js** just before the **&lt;/body&gt;** tag:
     ```html
         <link href="/styles/pages/register.css" rel="stylesheet" type="text/css" />
     ```
 This CSS file contains the styles for the registration page.
-7.	Also notice that the **register.htm** file contains a reference to the **/scripts/pages/register.js** JavaScript file that contains the code used by the registration page:
+5.	Also notice that the **register.htm** file contains a reference to the **/scripts/pages/register.js** JavaScript file that contains the code used by the registration page:
   ```html
       <script src="/scripts/pages/register.js" type="text/javascript"></script>
   ```

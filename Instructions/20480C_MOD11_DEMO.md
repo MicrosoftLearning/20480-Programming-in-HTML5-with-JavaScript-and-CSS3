@@ -7,17 +7,12 @@
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
-
 
 #### Demonstration Steps
 
 #### Transform SVG Elements
 
-1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
+1.	On the Windows 10 **Start** screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
 3.	In Microsoft Edge, open the file **Allfiles\Mod11\Democode\SvgDocument.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click the **Allow blocked content** button.
@@ -51,17 +46,12 @@ o	The <transform> elements translate the square by 200 units in the X and Y axes
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
-
 
 #### Demonstration Steps
 
 #### Perform Simple Transformations
 
-1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
+1.	On the Windows 10 **Start** screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
 3.	In Microsoft Edge, open the file **Allfiles\Mod11\Democode\CanvasDocument.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click the **Allow blocked content** button.
@@ -88,10 +78,6 @@ o	The <transform> elements translate the square by 200 units in the X and Y axes
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

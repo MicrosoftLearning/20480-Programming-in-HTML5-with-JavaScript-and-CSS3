@@ -28,11 +28,9 @@ First, you will complete the partially completed SVG mark-up of the venue map. N
 
 #### Task 1: Review the incomplete HTML markup for the venue map.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod11\Labfiles\Starter\Exercise 1** folder.
-4.	Open the **location.htm** file.
-5.	Verify that the page contains the following **&lt;svg&gt;** element of the venue map, and two hidden **&lt;div&gt;** elements containing room information:
+1.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod11\Labfiles\Starter\Exercise 1** folder.
+2.	Open the **location.htm** file.
+3.	Verify that the page contains the following **&lt;svg&gt;** element of the venue map, and two hidden **&lt;div&gt;** elements containing room information:
     ```html
         <svg viewBox="-1 -1 302 102" width="100%" height="230">
             <!-- Room A -->
@@ -52,11 +50,11 @@ Also notice that the script references the **location-venue.js** script in the *
   ```html
         <script src="/scripts/pages/location-venue.js" type="text/javascript"></script>
   ```
-6.	Run the application and view the **Location** page. Notice that the details for Room B are missing:
+4.	Run the application and view the **Location** page. Notice that the details for Room B are missing:
 
 ![alt text](./Images/20480B_11_Venue-Map.png "The incomplete venue map")
 
-7.	Close Microsoft Edge.
+5.	Close Microsoft Edge.
 
 #### Task 2: Complete the SVG venue map.
 

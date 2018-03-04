@@ -7,17 +7,12 @@
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
-
 
 #### Demonstration Steps
 
 #### Divide the Content for a Page into an Article with Sections
 
-1.	On the Windows 8 **Start** screen, click the **Visual Studio 2017** tile.
+1.	On the Windows 10 **Start** screen, click the **Visual Studio 2017** tile.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
 3.	In the **Open Project** dialog box, browse to the **Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln** and then click **Open**.
 4.	In Solution Explorer, expand the **Allfiles\\...\\DemoWebSite** web application, and then double-click **ContactUs.html**.
@@ -138,17 +133,12 @@
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
-
 
 #### Demonstration Steps
 
 #### Create New Styles by Using Visual Studio
 
-1.	On the Windows 8 **Start** screen, click the **Visual Studio 2017** tile.
+1.	On the Windows 10 **Start** screen, click the **Visual Studio 2017** tile.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
 3.	In the **Open Project** dialog box, browse to the **Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
 4.	In Solution Explorer, expand the **Allfiles\\...\\DemoWebSite** web application, and then expand the **styles** folder.

@@ -30,14 +30,12 @@ First, you will review the HTML markup and JavaScript code for the **Speaker Bad
 
 #### Task 1: Review the Speaker Badge page.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod14\Labfiles\Starter\Exercise 1** folder.
-4.	In the **ContosoConf** project, review the **Speaker Badge** page. Note the script reference to the **grayscale.js** JavaScript file in the **/scripts** folder:
+1.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod14\Labfiles\Starter\Exercise 1** folder.
+2.	In the **ContosoConf** project, review the **Speaker Badge** page. Note the script reference to the **grayscale.js** JavaScript file in the **/scripts** folder:
     ```html
         <script src="/scripts/grayscale.js" type="text/javascript"></script>
     ```
-5.	Open the **grayscale.js** JavaScript file in the **scripts** folder, and review the code. Notice that this file contains a function named **conference.grayscaleImage**, which converts an image to grayscale. This function converts the image one pixel at a time, and can take a long time to convert a large image:
+3.	Open the **grayscale.js** JavaScript file in the **scripts** folder, and review the code. Notice that this file contains a function named **conference.grayscaleImage**, which converts an image to grayscale. This function converts the image one pixel at a time, and can take a long time to convert a large image:
     ```javascript
         conference.grayscaleImage = function (image) {
             // Converts a colour image into gray scale.
@@ -69,7 +67,7 @@ First, you will review the HTML markup and JavaScript code for the **Speaker Bad
 
 >**Note:** For the purposes of this exercise, you can ignore the references to the jQuery **.Deferred()** function and the **deferred** object; this object simply enables the **grayscaleImage()** function to be used in a pipeline by using the **pipe()** function, as you will see in the next task.
 
-6.	Also note that the **/scripts** folder contains another JavaScript file called **grayscale-worker.js**, which currently contains no code.
+4.	Also note that the **/scripts** folder contains another JavaScript file called **grayscale-worker.js**, which currently contains no code.
 
 #### Task 2: Convert the speaker badge image to grayscale.
 

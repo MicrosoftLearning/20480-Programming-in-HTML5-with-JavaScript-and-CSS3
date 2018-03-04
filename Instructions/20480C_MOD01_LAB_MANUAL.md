@@ -36,22 +36,18 @@ The Contoso Conference web application contains the following pages:
 
 #### Task 1: Start the web application and view the Home page.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio.
-4.	Open the **ContosoConf** solution in the **Allfiles\Mod01\Labfiles\Starter** folder
-5.	Start the application without debugging.
+1.	Start Visual Studio.
+2.	Open the **ContosoConf** solution in the **Allfiles\Mod01\Labfiles\Starter** folder
+3.	Start the application without debugging.
 
 ![alt text](./Images/20480B_1_Home_Final.png "Home page")
 The graphics elements for the speakers and sponsors are implemented by using HTML **img** elements. The sources of the images are jpg and png files.
 
-6.	Scroll to the bottom of the page and play the video from the previous conference. This functionality is implemented by using the HTML5 **video** element. 
-7.	Pause the video.
+4.	Scroll to the bottom of the page and play the video from the previous conference. This functionality is implemented by using the HTML5 **video** element. 
+5.	Pause the video.
 
->**Note:** You will not hear any sounds because Hyper-V does not provide a virtual audio device.
-
-8.	Scroll to the top of the **Home** page and hover the mouse over the **Register Free** icon. Notice that the icon rotates and expands as the mouse enters the icon. This feature is implemented by using CSS. 
-9.	At the very top of the page, move the mouse over the menu bar listing the names of the pages in the application. Do not click any menu items. Notice that each item is highlighted as the mouse traverses it. This feature is implemented by using an HTML **nav** element and CSS. 
+6.	Scroll to the top of the **Home** page and hover the mouse over the **Register Free** icon. Notice that the icon rotates and expands as the mouse enters the icon. This feature is implemented by using CSS. 
+7.	At the very top of the page, move the mouse over the menu bar listing the names of the pages in the application. Do not click any menu items. Notice that each item is highlighted as the mouse traverses it. This feature is implemented by using an HTML **nav** element and CSS. 
 
 
 #### Task 2: View the About and Schedule pages.

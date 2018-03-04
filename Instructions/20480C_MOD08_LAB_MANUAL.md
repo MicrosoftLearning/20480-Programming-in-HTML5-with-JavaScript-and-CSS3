@@ -30,19 +30,17 @@ You will add event listeners to handle drag-and-drop events. Then you will use t
 
 #### Task 1: Review the HTML markup and JavaScript code for the Speaker Badge page.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod08\Labfiles\Starter\Exercise 1** folder.
-4.	Open **speaker-badge.htm** and review the HTML markup for this page. Notice the **&lt;img&gt;** element that will display the speaker’s image when you have implemented the drag-and-drop functionality:
+1.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod08\Labfiles\Starter\Exercise 1** folder.
+2.	Open **speaker-badge.htm** and review the HTML markup for this page. Notice the **&lt;img&gt;** element that will display the speaker’s image when you have implemented the drag-and-drop functionality:
     ```html
         <img style="width: 300px; height: 300px; border: 1px solid #000"/>
     ```
-5.	Also notice that the page has script references for jQuery and the **/scripts/pages/speaker-badge.js** file:
+3.	Also notice that the page has script references for jQuery and the **/scripts/pages/speaker-badge.js** file:
     ```html
         <script src="/scripts/jquery.min.js" type="text/javascript"></script>
         <script src="/scripts/pages/speaker-badge.js" type="text/javascript"></script>
     ```
-6.	Open the **speaker-badge.js** file in the **scripts/pages** folder, and review the JavaScript code. This code defines a **SpeakerBadgePage** object that controls the page:
+4.	Open the **speaker-badge.js** file in the **scripts/pages** folder, and review the JavaScript code. This code defines a **SpeakerBadgePage** object that controls the page:
     ```javascript
         var SpeakerBadgePage = Object.inherit({ 
             ...

@@ -26,17 +26,15 @@ In the style sheet, you will add rules to override the layout of the website, re
 
 #### Task 1: Review the existing application.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod10\Labfiles\Starter\Exercise 1** folder.
-4.	Run the application and view the **about.htm** page. 
-5.	In Microsoft Edge, press F10 to display the menu bar
-6.	On the **File** menu, click **Print preview**. Notice that the print preview attempts to display the page header and that the text columns are too narrow.
+1.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod10\Labfiles\Starter\Exercise 1** folder.
+2.	Run the application and view the **about.htm** page. 
+3.	In Microsoft Edge, press F10 to display the menu bar
+4.	On the **File** menu, click **Print preview**. Notice that the print preview attempts to display the page header and that the text columns are too narrow.
 
 ![alt text](./Images/20480B_10_Print-Preview.png "The About page in Print Preview mode")
 
-7.	Close the **Print Preview** window and then close Microsoft Edge.
-8.	In Visual Studio, examine the about.htm page and verify that the **&lt;nav&gt;** element is marked with the **page-nav** class, the **&lt;header&gt;** element is marked with the **page-header** class, and the **&lt;footer&gt;** element is marked with the **page-footer** class, as follows:
+5.	Close the **Print Preview** window and then close Microsoft Edge.
+6.	In Visual Studio, examine the about.htm page and verify that the **&lt;nav&gt;** element is marked with the **page-nav** class, the **&lt;header&gt;** element is marked with the **page-header** class, and the **&lt;footer&gt;** element is marked with the **page-footer** class, as follows:
 ```html
     <nav class="page-nav">
     

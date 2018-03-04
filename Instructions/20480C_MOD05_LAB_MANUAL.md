@@ -35,11 +35,9 @@ Finally, you will run the application and view the Schedule page to verify that 
 
 #### Task 1: Review the Schedule page.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod05\Labfiles\Starter\Exercise 1** folder.
-4.	In the **ContosoConf** project, open the **scripts\pages\schedule.js** file. 
-5.	Review the JavaScript code. 
+1.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod05\Labfiles\Starter\Exercise 1** folder.
+2.	In the **ContosoConf** project, open the **scripts\pages\schedule.js** file. 
+3.	Review the JavaScript code. 
 - Notice that the previously hard-coded array of session data (in the **schedule** variable) has been replaced with an empty array.
 - Also notice that the **createSessionElement** function has been modified to generate a star icon next to the session title.
 

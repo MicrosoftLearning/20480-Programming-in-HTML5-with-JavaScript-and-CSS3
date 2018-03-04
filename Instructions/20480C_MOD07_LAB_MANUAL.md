@@ -51,11 +51,9 @@ In this exercise, you will create a utility function named **Object.inherit**. T
 
 #### Task 1: Review the Object.inherit.js JavaScript file.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod07\Labfiles\Starter\Exercise 1** folder.
-4.	Open the **Object.inherit.js** file in the **scripts** folder. 
-5.	Review the JavaScript code and comments in this file. This file contains functions called **copyOwnProperties** and **inherit**.
+1.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod07\Labfiles\Starter\Exercise 1** folder.
+2.	Open the **Object.inherit.js** file in the **scripts** folder. 
+3.	Review the JavaScript code and comments in this file. This file contains functions called **copyOwnProperties** and **inherit**.
 - You will implement the **inherit** function, using the TODO comments as guidance.
 - **copyOwnProperties** is a helper function that copies properties from one object to another. The **inherit** function will use this function.
 

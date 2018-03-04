@@ -27,10 +27,8 @@ First you will create a new ASP.NET Web Application. Then you will add two HTML 
 
 #### Task 1: Create a new ASP.NET web application.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480B-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio.
-4.	Create a new web application named **ContosoConf** in the **Allfiles\Mod02\Labfiles\Starter\Exercise 1** folder. Use the **Visual C# ASP.NET Empty Web Application** template to create this web application. 
+1.	Start Visual Studio.
+2.	Create a new web application named **ContosoConf** in the **Allfiles\Mod02\Labfiles\Starter\Exercise 1** folder. Use the **Visual C# ASP.NET Empty Web Application** template to create this web application. 
 
 #### Task 2: Add the Home page.
 

@@ -7,17 +7,12 @@
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
-
 
 #### Demonstration Steps
 
 #### Set a Breakpoint in JavaScript code
 
-1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
+1.	On the Windows 10 **Start** screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
 3.	In Microsoft Edge, browse to the file **Allfiles\Mod08\Democode\Document.html**.
 4.	If the message **Microsoft Edge restricted this webpage from running scripts or ActiveX controls** appears, click **Allow blocked content**.
@@ -45,17 +40,12 @@
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
-
 
 #### Demonstration Steps
 
 #### Examine the Network Traffic for a Web Application
 
-1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
+1.	On the Windows 10 **Start** screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
 3.	In Microsoft Edge, browse to the website **http://www.beautyoftheweb.com/**.
 4.	Press F12 to display F12 Developer Tools window.
@@ -101,10 +91,6 @@ In the captured data, examine the work performed by the **onWindowEvent** event 
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

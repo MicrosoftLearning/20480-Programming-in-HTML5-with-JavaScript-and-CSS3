@@ -28,10 +28,8 @@ First, you will use the HTML5 DOM to obtain a reference to the page’s schedule
 
 #### Task 1: Review the existing code for the Schedule page.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480B-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod03\Labfiles\Starter\Exercise 1** folder.
-4.	In the **ContosoConf** project, review the content of the page **schedule.htm**. Notice that the **schedule** page section, which will be used to display the list of sessions, currently contains an empty list, also named **schedule**:
+1.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod03\Labfiles\Starter\Exercise 1** folder.
+2.	In the **ContosoConf** project, review the content of the page **schedule.htm**. Notice that the **schedule** page section, which will be used to display the list of sessions, currently contains an empty list, also named **schedule**:
     ```html
         <section class="page-section schedule>
             <div class="container">
@@ -40,11 +38,11 @@ First, you will use the HTML5 DOM to obtain a reference to the page’s schedule
             </div>
         </section>
     ```
-5.	Also notice that the **schedule.htm** page references the JavaScript code in the **scripts\pages\schedule.js** script file:
+3.	Also notice that the **schedule.htm** page references the JavaScript code in the **scripts\pages\schedule.js** script file:
     ```html
         <script src="/scripts/pages/schedule.js" type="text/javascript"></script>
     ```
-6.	Review the **scripts\pages\schedule.js** script file. This file contains the details of each session held in JSON format. The data is held in an array named **schedule**, and each object in the array has three properties that specify the session id, the session title, and the tracks to which the session belongs (a session may be part of more than one track):
+4.	Review the **scripts\pages\schedule.js** script file. This file contains the details of each session held in JSON format. The data is held in an array named **schedule**, and each object in the array has three properties that specify the session id, the session title, and the tracks to which the session belongs (a session may be part of more than one track):
     ```javascript
         var schedule = [
             {

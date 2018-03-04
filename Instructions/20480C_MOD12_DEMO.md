@@ -7,17 +7,12 @@
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
-
 
 #### Demonstration Steps
 
 #### Apply CSS Transitions to HTML Elements
 
-1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
+1.	On the Windows 10 **Start** screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
 3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\Transitions.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click the **Allow blocked content** button.
@@ -49,17 +44,12 @@
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
-
 
 #### Demonstration Steps
 
 #### Perform 2D Translations
 
-1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
+1.	On the Windows 10 **Start** screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
 3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\2DTranslations.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click the **Allow blocked content** button.
@@ -106,17 +96,12 @@
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
-
 
 #### Demonstration Steps
 
 #### Perform 3D Transformations that Include Transitions
 
-1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
+1.	On the Windows 10 **Start** screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
 3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\3DTransformations.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click the **Allow blocked content** button.
@@ -143,17 +128,12 @@
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
-
 
 #### Demonstration Steps
 
 #### Define and Run a Keyframe Animation
 
-1.	On the Windows 8 **Start** screen, click the **Desktop** tile.
+1.	On the Windows 10 **Start** screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
 3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\KeyframeAnimations.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click the **Allow blocked content** button.
@@ -185,10 +165,6 @@
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

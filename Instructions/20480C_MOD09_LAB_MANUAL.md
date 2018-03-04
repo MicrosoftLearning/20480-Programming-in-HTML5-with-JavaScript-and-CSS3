@@ -29,9 +29,7 @@ First, you will complete the creation of an application manifest file, which lis
 
 #### Task 1: Configure the application cache manifest.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Configure Microsoft Edge to enable support for application caching:
+1.	Configure Microsoft Edge to enable support for application caching:
 - Start Microsoft Edge.
 - In the Microsoft Edge, press F10 to display the menu bar.
 - On the **Tools** menu, click **Internet options**.
@@ -40,16 +38,16 @@ First, you will complete the creation of an application manifest file, which lis
 - Select the **Allow website caches and databases** check box, and then click **OK**.
 - In the **Internet Options** dialog box, click **OK**.
 - Close Microsoft Edge.
-4.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod09\Labfiles\Starter\Exercise 1** folder.
-5.	Open the **appcache.manifest** file. This file contains a partial application manifest that lists the resources a web browser must cache for offline access. 
-6.	After the comment near the start of the file, insert the following URLs to cache the **Home**, **About**, **Schedule**, and **Location** pages:
+2.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod09\Labfiles\Starter\Exercise 1** folder.
+3.	Open the **appcache.manifest** file. This file contains a partial application manifest that lists the resources a web browser must cache for offline access. 
+4.	After the comment near the start of the file, insert the following URLs to cache the **Home**, **About**, **Schedule**, and **Location** pages:
     ```javascript
         /index.htm
         /about.htm
         /location.htm
         /schedule.htm
     ```
-7.	Add the **manifest="/appcache.manifest"** attribute to the **&lt;html&gt;** element of the **Home**, **About**, **Schedule**, and **Location** pages. These are the pages that will operate offline by using the application cache. 
+5.	Add the **manifest="/appcache.manifest"** attribute to the **&lt;html&gt;** element of the **Home**, **About**, **Schedule**, and **Location** pages. These are the pages that will operate offline by using the application cache. 
 
 #### Task 2: Detect offline mode by using JavaScript code.
 

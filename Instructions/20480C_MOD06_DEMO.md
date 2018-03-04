@@ -7,17 +7,12 @@
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
-
 
 #### Demonstration Steps
 
 #### Switch between layout modes in a web page
 
-1.	On the Windows 8 **Start** screen, click the **Visual Studio 2017** tile.
+1.	On the Windows 10 **Start** screen, click the **Visual Studio 2017** tile.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **File**.
 3.	In the **Open File** dialog, browse to the **Allfiles\Mod06\Democode** folder, click **positioning.html**, and then click **Open**.
 4.	Review the code with the students. This file contains an HTML **article** with four **div** elements. The file also contains styles for the **article** and **div** elements.
@@ -115,10 +110,6 @@
 #### Preparation Steps 
 
 1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

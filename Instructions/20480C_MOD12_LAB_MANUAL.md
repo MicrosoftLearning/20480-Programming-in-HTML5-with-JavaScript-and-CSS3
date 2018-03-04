@@ -30,10 +30,8 @@ First you will animate the star icons on the **Feedback** page so they react whe
 
 #### Task 1: Review the Feedback page.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480C-SEA-DEV11** virtual machine if it is not already running, and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod12\Labfiles\Starter\Exercise 1** folder.
-4.	In the **ContosoConf** project, examine the contents of the **feedback.htm** file. This page contains an HTML form that collects conference attendee feedback:
+1.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod12\Labfiles\Starter\Exercise 1** folder.
+2.	In the **ContosoConf** project, examine the contents of the **feedback.htm** file. This page contains an HTML form that collects conference attendee feedback:
     ```html
         <form method="post" action="/send-feedback">
             <div class="field feedback-question">
@@ -68,9 +66,9 @@ This page also references the **feedback.css** style sheet in the **/styles/page
   ```html
       <script src="/scripts/pages/feedback.js" type="text/javascript"></script>
   ```
-5.	Run the application and view the **Feedback** page.
-6.	Note that the input elements for the form have been converted into star icons. This feature is implemented by the JavaScript code in the **feedback.js** and **StarRatingView.js** files.
-7.	Close Microsoft Edge.
+3.	Run the application and view the **Feedback** page.
+4.	Note that the input elements for the form have been converted into star icons. This feature is implemented by the JavaScript code in the **feedback.js** and **StarRatingView.js** files.
+5.	Close Microsoft Edge.
 
 #### Task 2: Animate the stars on the Feedback form.
 

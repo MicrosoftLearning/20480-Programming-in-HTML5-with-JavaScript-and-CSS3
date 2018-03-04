@@ -31,18 +31,16 @@ In this exercise, you will review the new **Live** page and JavaScript. You will
 
 #### Task 1: Review the Live page.
 
-1.	Start the **MSL-TMG1** virtual machine if it is not already running.
-2.	Start the **20480C-SEA-DEV11** virtual machine and log on as **Student** with the password **Pa$$w0rd**.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod13\Labfiles\Starter\Exercise 1** folder.
-4.	Start the application and view the **Live** page. Ignore the error that occurs (this error happens because the JavaScript code for the page is not yet complete). 
+1.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod13\Labfiles\Starter\Exercise 1** folder.
+2.	Start the application and view the **Live** page. Ignore the error that occurs (this error happens because the JavaScript code for the page is not yet complete). 
 
 Using this page, an attendee can type a question and click **Ask** to send it to the presenter. All questions asked by all attendees will appear on this page, underneath the **Ask a question** box.
 
 ![alt text](./Images/20480B_13_Live.png "The Live page")
 
-5.	Close Microsoft Edge and return to Visual Studio.
-6.	In the **ContosoConf** project, open the **live.htm** file.
-7.	Review the HTML markup for this page and note the **&lt;form&gt;** element used to ask questions, together with the empty **&lt;ul&gt;** element that will display questions:
+3.	Close Microsoft Edge and return to Visual Studio.
+4.	In the **ContosoConf** project, open the **live.htm** file.
+5.	Review the HTML markup for this page and note the **&lt;form&gt;** element used to ask questions, together with the empty **&lt;ul&gt;** element that will display questions:
     ```html
         <form action="#">
             <label for="ask-question-text">Ask a question</label>
@@ -53,11 +51,11 @@ Using this page, an attendee can type a question and click **Ask** to send it to
             <!-- Questions will be displayed here when received by the web socket. -->
         </ul>
     ```
-8.	Also, note the **&lt;script&gt;** element referencing the **live.js** file in the **/scripts/pages** folder:
+6.	Also, note the **&lt;script&gt;** element referencing the **live.js** file in the **/scripts/pages** folder:
     ```html
         <script src="/scripts/pages/live.js" type="text/javascript"></script>
     ```
-9.	Open the **live.js** file that is in the **/scripts/pages** folder and review the code. The JavaScript code in this file defines a **LivePage** object, which controls the page. The code to manipulate the user interface and respond to DOM events has already been written:
+7.	Open the **live.js** file that is in the **/scripts/pages** folder and review the code. The JavaScript code in this file defines a **LivePage** object, which controls the page. The code to manipulate the user interface and respond to DOM events has already been written:
     ```javascript
         var LivePage = Object.inherit({
         ...
