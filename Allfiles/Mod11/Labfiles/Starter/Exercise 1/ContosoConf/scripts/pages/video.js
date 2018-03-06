@@ -3,33 +3,33 @@
 
 (function () {
 
-    var formatTime = conference.formatTime;
+    const formatTime = conference.formatTime;
     
 
-    var videoSection = document.querySelector(".video");
-    var video = videoSection.querySelector("video");
-    var controls = videoSection.querySelector(".video-controls");
-    var playButton = videoSection.querySelector(".video-play");
-    var pauseButton = videoSection.querySelector(".video-pause");
-    var time = videoSection.querySelector(".video-time");
+    const videoSection = document.querySelector(".video");
+    const video = videoSection.querySelector("video");
+    const controls = videoSection.querySelector(".video-controls");
+    const playButton = videoSection.querySelector(".video-play");
+    const pauseButton = videoSection.querySelector(".video-pause");
+    const time = videoSection.querySelector(".video-time");
 
-    var ready = function () {
+    const ready = function () {
         controls.style.display = "block";
     };
 
-    var play = function () {
+    const play = function () {
         video.play();
         playButton.style.display = "none";
         pauseButton.style.display = "";
     };
 
-    var pause = function () {
+    const pause = function () {
         video.pause();
         playButton.style.display = "";
         pauseButton.style.display = "none";
     };
 
-    var updateTime = function () {
+    const updateTime = function () {
         time.textContent = formatTime(video.currentTime);
     };
 

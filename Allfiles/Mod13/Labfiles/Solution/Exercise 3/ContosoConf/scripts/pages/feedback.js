@@ -3,16 +3,16 @@
 
 (function () {
 
-    var section = document.getElementById("feedback");
-    var form = section.querySelector("form");
-    var sent = document.getElementById("feedback-sent");
+    const section = document.getElementById("feedback");
+    const form = section.querySelector("form");
+    const sent = document.getElementById("feedback-sent");
 
-    var formSubmitting = function (event) {
+    const formSubmitting = function (event) {
         event.preventDefault();
         form.classList.add("sending");
     };
 
-    var animationEnded = function () {
+    const animationEnded = function () {
         section.style.display = "none";
         sent.style.display = "block";
     };
@@ -22,10 +22,10 @@
     form.addEventListener("webkitAnimationEnd", animationEnded, false);
     form.addEventListener("animationEnd", animationEnded, false);
 
-    var StarRatingView = conference.StarRatingView;
+    const StarRatingView = conference.StarRatingView;
 
-    var questions = form.querySelectorAll(".feedback-question");
-    for (var i = 0; i < questions.length; i++) {
+    const questions = form.querySelectorAll(".feedback-question");
+    for (let i = 0; i < questions.length; i++) {
         StarRatingView.create(questions[i]);
     }
 

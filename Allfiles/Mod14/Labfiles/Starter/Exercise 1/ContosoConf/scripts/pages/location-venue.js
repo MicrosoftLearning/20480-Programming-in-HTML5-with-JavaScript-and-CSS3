@@ -1,9 +1,9 @@
 ﻿(function () {
 
-    var currentInfoDiv = document.getElementById("instruction");
+    let currentInfoDiv = document.getElementById("instruction");
 
-    var showRoomInfo = function (roomId) {
-        var infoDiv = document.getElementById(roomId + "-info");
+    const showRoomInfo = function (roomId) {
+        const infoDiv = document.getElementById(roomId + "-info");
         if (currentInfoDiv) {
             currentInfoDiv.style.display = "none";
         }
@@ -11,9 +11,9 @@
         currentInfoDiv = infoDiv;
     };
 
-    var rooms = document.querySelectorAll(".room");
-    for (var i = 0; i < rooms.length; i++) {
-        var room = rooms[i];
+    const rooms = document.querySelectorAll(".room");
+    for (let i = 0; i < rooms.length; i++) {
+        const room = rooms[i];
         room.addEventListener("click", function () {
             showRoomInfo(this.id);
         });

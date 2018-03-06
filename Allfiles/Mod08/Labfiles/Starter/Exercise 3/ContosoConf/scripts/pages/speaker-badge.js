@@ -3,7 +3,7 @@
 (function () {
     "use strict";
 
-    var SpeakerBadgePage = Object.inherit({
+    const SpeakerBadgePage = Object.inherit({
 
         initialize: function (element) {
             this.imageElement = element.querySelector("img");
@@ -25,14 +25,14 @@
             event.preventDefault();
 
             // TODO: Get the files from the event
-            var files = event.dataTransfer.files;
+            const files = event.dataTransfer.files;
 
             // TODO: Read the first file in the array
             //       Check the file type is an image
             //       Use this.readFile to read the file, then display the image
             //       (Note that this.readFile returns a jQuery deferred, so chain this.displayImage using the "done" method.)
             if (files.length == 0) return;
-            var file = files[0];
+            const file = files[0];
             if (this.isImageType(file.type)) {
                 this.readFile(file).done(this.displayImage);
             } else {
@@ -41,21 +41,21 @@
         },
 
         isImageType: function (type) {
-            var imageTypes = ["image/jpeg", "image/jpg", "image/png"];
+            const imageTypes = ["image/jpeg", "image/jpg", "image/png"];
             return imageTypes.indexOf(type) >= 0;
         },
 
         readFile: function (file) {
-            var reading = $.Deferred();
-            var context = this;
+            const reading = $.Deferred();
+            const context = this;
             
             // TODO: Create a new FileReader
-            var reader = new FileReader();
+            const reader = new FileReader();
             
             // TODO: Assign a callback function for reader.onload
             reader.onload = function (loadEvent) {
                 // TODO: In the callback use reading.resolveWith(context, [fileDataUrl]); to return the file data URL.
-                var fileDataUrl = loadEvent.target.result;
+                const fileDataUrl = loadEvent.target.result;
                 reading.resolveWith(context, [fileDataUrl]);
             };
             
@@ -70,7 +70,7 @@
         }
     });
 
-    var badgeElement = document.querySelector(".badge");
+    const badgeElement = document.querySelector(".badge");
     SpeakerBadgePage.create(badgeElement);
 
 } ());

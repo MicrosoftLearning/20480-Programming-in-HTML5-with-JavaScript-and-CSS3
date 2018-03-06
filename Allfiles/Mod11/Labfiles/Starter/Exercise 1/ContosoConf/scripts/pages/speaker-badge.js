@@ -2,7 +2,7 @@
 
 (function () {
 
-    var speakerBadgePage = Object.inherit({
+    const speakerBadgePage = Object.inherit({
         
         initialize: function (element) {
             this.canvas = element.querySelector("canvas");
@@ -25,11 +25,11 @@
             event.stopPropagation();
             event.preventDefault();
 
-            var files = event.dataTransfer.files;
+            const files = event.dataTransfer.files;
             if (files.length == 0) return;
 
             // More than one file could have been dropped, we'll just use the first.
-            var file = files[0];
+            const file = files[0];
             if (this.isImageType(file.type)) {
                 this.readFile(file)
                     .pipe(this.loadImage)
@@ -91,7 +91,7 @@
 
         drawBarCode: function (text) {
             text = "*" + text + "*"; // Wrap in "*" deliminators.
-            var encodings = {
+            const encodings = {
                 "0": "bwbWBwBwb",
                 "1": "BwbWbwbwB",
                 "2": "bwBWbwbwB",
@@ -104,16 +104,16 @@
                 "9": "bwBWbwBwb",
                 "*": "bWbwBwBwb"
             };
-            var x = 200, y = 140, height = 40, thick = 6, thin = 2;
-            for (var charIndex = 0; charIndex < text.length; charIndex++) {
-                var code = encodings[text[charIndex]];
-                for (var stripeIndex = 0; stripeIndex < code.length; stripeIndex++) {
+            let x = 200, y = 140, height = 40, thick = 6, thin = 2;
+            for (let charIndex = 0; charIndex < text.length; charIndex++) {
+                const code = encodings[text[charIndex]];
+                for (let stripeIndex = 0; stripeIndex < code.length; stripeIndex++) {
                     if (stripeIndex % 2 === 0) {
                         this.context.fillStyle = "black";
                     } else {
                         this.context.fillStyle = "white";
                     }
-                    var isWideStripe = code.charCodeAt(stripeIndex) < 91;
+                    const isWideStripe = code.charCodeAt(stripeIndex) < 91;
                     if (isWideStripe) {
                         this.context.fillRect(x, y, thick, height);
                         x += thick;
@@ -133,16 +133,16 @@
         },
 
         isImageType: function (type) {
-            var imageTypes = ["image/jpeg", "image/jpg", "image/png"];
+            const imageTypes = ["image/jpeg", "image/jpg", "image/png"];
             return imageTypes.indexOf(type) === 0;
         },
 
         readFile: function (file) {
-            var reading = $.Deferred();
-            var reader = new FileReader();
-            var self = this;
+            const reading = $.Deferred();
+            const reader = new FileReader();
+            const self = this;
             reader.onload = function (loadEvent) {
-                var fileDataUrl = loadEvent.target.result;
+                const fileDataUrl = loadEvent.target.result;
                 reading.resolveWith(self, [fileDataUrl]);
             };
             reader.readAsDataURL(file);
@@ -150,9 +150,9 @@
         },
 
         loadImage: function (imageUrl) {
-            var loading = $.Deferred();
-            var image = new Image();
-            var self = this;
+            const loading = $.Deferred();
+            const image = new Image();
+            const self = this;
             image.onload = function () {
                 loading.resolveWith(self, [image]);
             };
@@ -162,7 +162,7 @@
         
     });
 
-    var badgeElement = document.querySelector(".badge");
+    const badgeElement = document.querySelector(".badge");
     speakerBadgePage.create(badgeElement);
 
 } ());

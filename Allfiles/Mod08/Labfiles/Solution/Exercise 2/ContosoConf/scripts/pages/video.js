@@ -3,36 +3,36 @@
 
 (function () {
 
-    var formatTime = conference.formatTime;
+    const formatTime = conference.formatTime;
     
     // TODO: Make sure the element class attributes in index.htm match these selectors.
-    var videoSection = document.querySelector(".video");
-    var video = videoSection.querySelector("video");
-    var controls = videoSection.querySelector(".video-controls");
-    var playButton = videoSection.querySelector(".video-play");
-    var pauseButton = videoSection.querySelector(".video-pause");
-    var time = videoSection.querySelector(".video-time");
+    const videoSection = document.querySelector(".video");
+    const video = videoSection.querySelector("video");
+    const controls = videoSection.querySelector(".video-controls");
+    const playButton = videoSection.querySelector(".video-play");
+    const pauseButton = videoSection.querySelector(".video-pause");
+    const time = videoSection.querySelector(".video-time");
 
-    var ready = function () {
+    const ready = function () {
         // TODO: display the video controls
         controls.style.display = "block";
     };
 
-    var play = function () {
+    const play = function () {
         // TODO: play the video
         video.play();
         playButton.style.display = "none";
         pauseButton.style.display = "";
     };
 
-    var pause = function () {
+    const pause = function () {
         // TODO: pause the video
         video.pause();
         playButton.style.display = "";
         pauseButton.style.display = "none";
     };
 
-    var updateTime = function () {
+    const updateTime = function () {
         // TODO: Set time.textContent using video.current time.
         //       Use the formatTime function to convert raw seconds into HH:MM:SS format.
         time.textContent = formatTime(video.currentTime);

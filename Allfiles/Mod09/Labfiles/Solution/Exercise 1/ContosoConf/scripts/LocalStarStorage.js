@@ -21,7 +21,7 @@
 
         removeStar: function (sessionId) {
             /// <summary>Removes the star from the given session.</summary>
-            var index = this.sessions.indexOf(sessionId);
+            const index = this.sessions.indexOf(sessionId);
             if (index >= 0) {
                 this.sessions.splice(index, 1);
                 this.save();
