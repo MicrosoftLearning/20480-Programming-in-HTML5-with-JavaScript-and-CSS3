@@ -3,7 +3,7 @@
 (function () {
     "use strict";
 
-    var SpeakerBadgePage = Object.inherit({
+    const SpeakerBadgePage = Object.inherit({
 
         initialize: function (element) {
             this.imageElement = element.querySelector("img");
@@ -25,12 +25,12 @@
             event.preventDefault();
 
             // TODO: Get the files from the event
-            var files = event.dataTransfer.files;
+            const files = event.dataTransfer.files;
             
             if (files.length == 0) return;
 
             // TODO: Read the first file in the array
-            var file = files[0];
+            const file = files[0];
             //       Check the file type is an image
             if (this.isImageType(file.type)) {
                 //       Use this.readFile to read the file, then display the image
@@ -42,21 +42,21 @@
         },
 
         isImageType: function (type) {
-            var imageTypes = ["image/jpeg", "image/jpg", "image/png"];
+            const imageTypes = ["image/jpeg", "image/jpg", "image/png"];
             return imageTypes.indexOf(type) >= 0;
         },
 
         readFile: function (file) {
-            var reading = $.Deferred();
-            var context = this;
+            const reading = $.Deferred();
+            const context = this;
             
             // TODO: Create a new FileReader
-            var reader = new FileReader();
+            const reader = new FileReader();
 
             // TODO: Assign a callback function for reader.onload
             // TODO: In the callback use reading.resolveWith(context, [fileDataUrl]); to return the file data URL.
             reader.onload = function (loadEvent) {
-                var fileDataUrl = loadEvent.target.result;
+                const fileDataUrl = loadEvent.target.result;
                 reading.resolveWith(context, [fileDataUrl]);
             };
             
@@ -71,7 +71,7 @@
         }
     });
 
-    var badgeElement = document.querySelector(".badge");
+    const badgeElement = document.querySelector(".badge");
     SpeakerBadgePage.create(badgeElement);
 
 } ());

@@ -2,16 +2,16 @@
 
 (function () {
 
-    var createCanvas = function (size) {
+    const createCanvas = function (size) {
         /// <summary>Creates a canvas used for image manipulation.</summary>
 
-        var temporaryCanvas = document.createElement("canvas");
+        const temporaryCanvas = document.createElement("canvas");
         temporaryCanvas.setAttribute("width", size.width);
         temporaryCanvas.setAttribute("height", size.height);
         return temporaryCanvas;
     };
 
-    var getImageData = function (context, image) {
+    const getImageData = function (context, image) {
         /// <summary>Draws the image onto the canvas context, then returns the resulting image data.</summary>
 
         context.drawImage(image, 0, 0);
@@ -20,14 +20,14 @@
 
     conference.grayscaleImage = function (image) {
         /// <summary>Converts a colour image into grey scale.</summary>
-        var deferred = $.Deferred();
+        const deferred = $.Deferred();
 
-        var canvas = createCanvas(image);
-        var context = canvas.getContext("2d");
-        var imageData = getImageData(context, image);
+        const canvas = createCanvas(image);
+        const context = canvas.getContext("2d");
+        const imageData = getImageData(context, image);
 
-        var handleMessage = function (event) {
-            var message = event.data;
+        const handleMessage = function (event) {
+            const message = event.data;
             
             if (message.progress) {
                 deferred.notifyWith(this, [message.progress]);
@@ -40,7 +40,7 @@
             }
         };
 
-        var worker = new Worker("/scripts/grayscale-worker.js");
+        const worker = new Worker("/scripts/grayscale-worker.js");
         worker.addEventListener("message", handleMessage.bind(this));
         worker.postMessage(imageData);
 

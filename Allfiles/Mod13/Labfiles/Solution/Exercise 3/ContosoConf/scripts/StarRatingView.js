@@ -14,11 +14,11 @@
         },
 
         createUI: function () {
-            var min = parseInt(this.inputElement.min, 10);
-            var max = parseInt(this.inputElement.max, 10);
+            const min = parseInt(this.inputElement.min, 10);
+            const max = parseInt(this.inputElement.max, 10);
             this.starElements = [];
-            for (var rating = min; rating <= max; rating++) {
-                var starElement = this.createStarElement(rating);
+            for (let rating = min; rating <= max; rating++) {
+                const starElement = this.createStarElement(rating);
                 this.element.appendChild(starElement);
                 this.starElements.push(starElement);
             }
@@ -27,7 +27,7 @@
         },
 
         createStarElement: function (rating) {
-            var starElement = document.createElement("div");
+            const starElement = document.createElement("div");
             starElement.setAttribute("class", "star");
             starElement.ratingValue = rating;
             return starElement;
@@ -42,7 +42,7 @@
         },
 
         starClicked: function (e) {
-            var element = e.srcElement || e.target;
+            const element = e.srcElement || e.target;
             if (!element.classList.contains("star")) return;
 
             this.setRating(element.ratingValue);
@@ -51,26 +51,26 @@
         starMousedOver: function (e) {
             // Mousing over a star will toggle the "hover" state for it and all preceeding stars.
 
-            var element = e.srcElement || e.target;
+            const element = e.srcElement || e.target;
             if (!element.classList.contains("star")) return;
 
             this.setHoverState(element.ratingValue);
         },
 
         starMousedOut: function (e) {
-            var element = e.srcElement || e.target;
+            const element = e.srcElement || e.target;
             if (!element.classList.contains("star")) return;
             this.removeHoverStates();
         },
 
         setHoverState: function (rating) {
-            for (var i = 0; i < rating; i++) {
+            for (let i = 0; i < rating; i++) {
                 this.starElements[i].classList.add("hover");
             }
         },
 
         removeHoverStates: function () {
-            for (var i = 0, length = this.starElements.length; i < length; i++) {
+            for (let i = 0, length = this.starElements.length; i < length; i++) {
                 this.starElements[i].classList.remove("hover");
             }
         },
@@ -78,8 +78,8 @@
         setRating: function (rating) {
             this.inputElement.value = rating;
 
-            var index;
-            var max = this.starElements.length;
+            let index;
+            const max = this.starElements.length;
             for (index = 0; index < rating; index++) {
                 this.starElements[index].classList.add("selected");
             }

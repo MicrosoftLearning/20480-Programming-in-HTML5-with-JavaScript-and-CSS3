@@ -8,12 +8,12 @@
     "use strict";
 
     // Import objects/functions from the conference namespace.
-    var HtmlTemplate = conference.HtmlTemplate;
-    var LocalStarStorage = conference.LocalStarStorage;
-    var parseTimeAsTotalMinutes = conference.parseTimeAsTotalMinutes;
+    const HtmlTemplate = conference.HtmlTemplate;
+    const LocalStarStorage = conference.LocalStarStorage;
+    const parseTimeAsTotalMinutes = conference.parseTimeAsTotalMinutes;
 
 
-    var ScheduleItem = Object.inherit({
+    const ScheduleItem = Object.inherit({
 
         initialize: function (data, localStarStorage) {
             this.id = data.id;
@@ -44,16 +44,16 @@
         },
 
         initializeElementPosition: function (start, end) {
-            var startTimeInMinutes = parseTimeAsTotalMinutes(start);
-            var endTimeInMinutes = parseTimeAsTotalMinutes(end);
-            var pixelsPerMinute = 2;
-            var conferenceStartTimeInMinutes = 8 * 60 + 30;
+            const startTimeInMinutes = parseTimeAsTotalMinutes(start);
+            const endTimeInMinutes = parseTimeAsTotalMinutes(end);
+            const pixelsPerMinute = 2;
+            const conferenceStartTimeInMinutes = 8 * 60 + 30;
             this.element.style.top = pixelsPerMinute * (startTimeInMinutes - conferenceStartTimeInMinutes) + "px";
             this.element.style.height = pixelsPerMinute * (endTimeInMinutes - startTimeInMinutes) + "px";
         },
 
         addStarClickEventHandler: function () {
-            var starElement = this.element.querySelector(".star");
+            const starElement = this.element.querySelector(".star");
             starElement.addEventListener("click", this.toggleStar.bind(this), false);
         },
 
@@ -88,7 +88,7 @@
         },
 
         postStarChange: function (isStarred) {
-            var request = $.ajax({
+            const request = $.ajax({
                 type: "POST",
                 url: "/schedule/star/" + this.id,
                 data: { starred: isStarred },
@@ -100,7 +100,7 @@
         },
 
         updateStarCount: function (starCount) {
-            var starCountElement = this.element.querySelector(".star-count");
+            const starCountElement = this.element.querySelector(".star-count");
             starCountElement.textContent = starCount.toString();
         },
 
@@ -114,7 +114,7 @@
     });
 
     // TODO: Create a ScheduleList factory object using the Object.inherit helper method.
-    var ScheduleList = Object.inherit({
+    const ScheduleList = Object.inherit({
         initialize: function (element, localStarStorage) {
             this.element = element;
             this.localStarStorage = localStarStorage;
@@ -123,7 +123,7 @@
         // TODO: Refactor these functions into methods of the ScheduleList object.
 
         startDownload: function () {
-        var request = $.ajax({
+        const request = $.ajax({
             url: "/schedule/list",
             // TODO: When refactoring, add the following property
             context: this
@@ -146,14 +146,14 @@
         },
 
         add: function (itemData) {
-            var item = ScheduleItem.create(itemData, this.localStarStorage);
+            const item = ScheduleItem.create(itemData, this.localStarStorage);
             this.element.appendChild(item.element);
         }
     });
 
     // TODO: Replace the following code by creating a ScheduleList object 
     //       and calling the startDownload method.
-    var scheduleList = ScheduleList.create(
+    const scheduleList = ScheduleList.create(
         document.getElementById("schedule"),
         LocalStarStorage.create(localStorage)
     );

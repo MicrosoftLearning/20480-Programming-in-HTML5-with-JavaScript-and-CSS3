@@ -2,15 +2,15 @@
 
 // TODO: Strict mode
 
-var copyOwnProperties = function (from, to) {
-    for (var propertyName in from) {
+const copyOwnProperties = function (from, to) {
+    for (let propertyName in from) {
         if (from.hasOwnProperty(propertyName)) {
             to[propertyName] = from[propertyName];
         }
     }
 };
 
-var inherit = function (additionalProperties) {
+const inherit = function (additionalProperties) {
     // `inherit` creates an factory object that is similar to a Class in C# and Java.
     // The created factory object has a `create` method that creates instances.
     // The factory object also serves as the prototype for created instances.

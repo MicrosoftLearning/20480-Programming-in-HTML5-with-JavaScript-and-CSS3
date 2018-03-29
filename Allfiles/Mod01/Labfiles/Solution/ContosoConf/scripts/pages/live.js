@@ -2,7 +2,7 @@
 
 (function () {
 
-    var LivePage = Object.inherit({
+    const LivePage = Object.inherit({
 
         initialize: function (socket, sectionElement) {
             this.initializeSocket(socket);
@@ -18,7 +18,7 @@
             this.questionListElement = sectionElement.querySelector("ul");
             this.questionInput = sectionElement.querySelector("input");
 
-            var form = sectionElement.querySelector("form");
+            const form = sectionElement.querySelector("form");
             form.addEventListener("click", this.handleFormSubmit.bind(this), false);
 
             this.questionListElement.addEventListener("click", this.handleQuestionsClick.bind(this), false);
@@ -28,14 +28,14 @@
             // Prevent the form actually submitting.
             event.preventDefault();
 
-            var text = this.questionInput.value;
+            const text = this.questionInput.value;
             if (text) {
                 this.askQuestion(text);
             }
         },
 
         askQuestion: function (text) {
-            var message = {
+            const message = {
                 ask: text
             };
             this.socket.send(JSON.stringify(message));
@@ -45,7 +45,7 @@
         },
 
         handleSocketMessage: function (event) {
-            var message = JSON.parse(event.data);
+            const message = JSON.parse(event.data);
             if (message.questions) {
                 this.handleQuestionsMessage(message);
             } else if (message.remove) {
@@ -58,8 +58,8 @@
         },
 
         handleRemoveMessage: function (message) {
-            var listItems = this.questionListElement.querySelectorAll("li");
-            for (var i = 0; i < listItems.length; i++) {
+            const listItems = this.questionListElement.querySelectorAll("li");
+            for (let i = 0; i < listItems.length; i++) {
                 if (listItems[i].questionId === message.remove) {
                     this.questionListElement.removeChild(listItems[i]);
                     break;
@@ -68,20 +68,20 @@
         },
 
         displayQuestion: function (question) {
-            var item = this.createQuestionItem(question);
+            const item = this.createQuestionItem(question);
             item.appendChild(this.createReportLink());
             this.questionListElement.appendChild(item);
         },
 
         createQuestionItem: function (question) {
-            var item = document.createElement("li");
+            const item = document.createElement("li");
             item.textContent = question.text + " ";
             item.questionId = question.id;
             return item;
         },
 
         createReportLink: function () {
-            var report = document.createElement("a");
+            const report = document.createElement("a");
             report.textContent = "Report";
             report.setAttribute("href", "#");
             report.setAttribute("class", "report");
@@ -91,9 +91,9 @@
         handleQuestionsClick: function (event) {
             event.preventDefault();
 
-            var clickedElement = event.srcElement || event.target;
+            const clickedElement = event.srcElement || event.target;
             if (this.isReportLink(clickedElement)) {
-                var questionId = clickedElement.parentNode.questionId;
+                const questionId = clickedElement.parentNode.questionId;
                 this.reportQuestion(questionId);
                 clickedElement.textContent = "Reported";
             }

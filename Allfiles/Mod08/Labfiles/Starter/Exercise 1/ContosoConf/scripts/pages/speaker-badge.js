@@ -3,7 +3,7 @@
 (function () {
     "use strict";
 
-    var SpeakerBadgePage = Object.inherit({
+    const SpeakerBadgePage = Object.inherit({
 
         initialize: function (element) {
             this.imageElement = element.querySelector("img");
@@ -23,7 +23,7 @@
             event.preventDefault();
 
             // TODO: Get the files from the event
-            // var files = ... ;
+            // const files = ... ;
             
             if (files.length == 0) return;
 
@@ -34,16 +34,16 @@
         },
 
         isImageType: function (type) {
-            var imageTypes = ["image/jpeg", "image/jpg", "image/png"];
+            const imageTypes = ["image/jpeg", "image/jpg", "image/png"];
             return imageTypes.indexOf(type) >= 0;
         },
 
         readFile: function (file) {
-            var reading = $.Deferred();
-            var context = this;
+            const reading = $.Deferred();
+            const context = this;
             
             // TODO: Create a new FileReader
-            // var reader = ... ;
+            // const reader = ... ;
 
             // TODO: Assign a callback function for reader.onload
             
@@ -59,7 +59,7 @@
         }
     });
 
-    var badgeElement = document.querySelector(".badge");
+    const badgeElement = document.querySelector(".badge");
     SpeakerBadgePage.create(badgeElement);
 
 } ());

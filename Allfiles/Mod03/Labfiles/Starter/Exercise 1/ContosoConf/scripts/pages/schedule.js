@@ -83,7 +83,7 @@
 
 
 // TODO: Task 2 - Get the "schedule" list element from the document
-// var list = ... ;
+// const list = ... ;
 
 function createSessionElement(session) {
     // TODO: Task 3 - Create a <li> element for the session.

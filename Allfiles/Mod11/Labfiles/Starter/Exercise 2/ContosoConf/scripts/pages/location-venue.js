@@ -1,9 +1,9 @@
 ﻿(function () {
 
-    var currentInfoDiv = document.getElementById("instruction");
+    let currentInfoDiv = document.getElementById("instruction");
 
-    var showRoomInfo = function (roomId) {
-        var infoDiv = document.getElementById(roomId + "-info");
+    const showRoomInfo = function (roomId) {
+        const infoDiv = document.getElementById(roomId + "-info");
         if (currentInfoDiv) {
             currentInfoDiv.style.display = "none";
         }
@@ -12,11 +12,11 @@
     };
 
     // TODO: Get the room elements in the svg element.
-    var rooms = document.querySelectorAll(".room");
+    const rooms = document.querySelectorAll(".room");
 
     // TODO: Add a click event listener for each room element.
-    for (var i = 0; i < rooms.length; i++) {
-        var room = rooms[i];
+    for (let i = 0; i < rooms.length; i++) {
+        const room = rooms[i];
         room.addEventListener("click", function () {
             showRoomInfo(this.id);
         });

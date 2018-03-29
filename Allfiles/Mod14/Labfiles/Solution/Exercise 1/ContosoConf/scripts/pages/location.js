@@ -3,40 +3,40 @@
 
 (function () {
 
-    var conferenceLocation = {
+    const conferenceLocation = {
         latitude: 47.6097,  // decimal degrees
         longitude: 122.3331 // decimal degrees
     };
 
-    var maximumDistanceInMilesFromConferenceToShowVenue = 10;
+    const maximumDistanceInMilesFromConferenceToShowVenue = 10;
 
-    var distanceElement = document.getElementById("distance");
-    var travelSection = document.querySelector("section.travel");
-    var venueSection = document.querySelector("section.venue");
+    const distanceElement = document.getElementById("distance");
+    const travelSection = document.querySelector("section.travel");
+    const venueSection = document.querySelector("section.venue");
 
-    var distanceFromConference = function (coords) {
+    const distanceFromConference = function (coords) {
         return Math.floor(conference.geometry.distanceInMiles(coords, conferenceLocation));
     };
 
-    var showDistanceMessage = function (distance) {
-        var message = "You are " + distance + " miles from the conference";
+    const showDistanceMessage = function (distance) {
+        const message = "You are " + distance + " miles from the conference";
         distanceElement.textContent = message;
     };
 
-    var moveVenueSectionToTop = function () {
+    const moveVenueSectionToTop = function () {
         travelSection.parentNode.insertBefore(venueSection, travelSection);
     };
 
-    var updateUIForPosition = function (position) {
-        var distance = distanceFromConference(position.coords);
+    const updateUIForPosition = function (position) {
+        const distance = distanceFromConference(position.coords);
         showDistanceMessage(distance);
-        var isNearToConference = distance < maximumDistanceInMilesFromConferenceToShowVenue;
+        const isNearToConference = distance < maximumDistanceInMilesFromConferenceToShowVenue;
         if (isNearToConference) {
             moveVenueSectionToTop();
         }
     };
 
-    var error = function () {
+    const error = function () {
         distanceElement.textContent = "Could not detect your current location.";
     };
 
