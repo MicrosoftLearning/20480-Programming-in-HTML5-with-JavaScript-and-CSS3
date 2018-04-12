@@ -75,7 +75,7 @@
         }
     ```
 
-7.  defined an array of person with **Name**, **Age** and **Email** property
+7.  Dרefine an array of person with **Name**, **Age** and **Email** property
     ```javascript
         const personsLst = [
         {
@@ -104,7 +104,7 @@
             email: 'william@example.com'
         }]
     ```
-8.  defined age property
+8.  Define age property
     ```javascript
         const age = 20;
     ```
@@ -257,6 +257,73 @@
         </body>
         </html>
     ```
+
+#### Add the JavaScript file.
+
+1.  Right click on the **Script** folder, click **Add**, then click **New Item**.
+2.  In the **Add New Item – HtmlBasics** dialog box, click **JavaScript Fike**.
+3.  In the **Name** box, type **indexScript.js**.
+4.	Click **Add**.
+5.  Open **indexScript.js** file.
+6.  Create **createNode** function that recive html element name and return html element.
+    ```javascript
+        function createNode(element) {
+            return document.createElement(element);
+        }
+    ```
+7.  Create **append** function that recive parent and childe element and append the childe to the parent
+    ```javascript
+        function append(parent, el) {
+            return parent.appendChild(el);
+        }
+    ```
+8.  Create **addHobbies** function.
+9.  Get all input with the **hobbiesInput** class into const variable
+    ```javascript
+        const inputList = document.querySelectorAll('.hobbiesInput');
+    ```
+10. Check if **inputList** contain less then 5 element and add new input with the **createNode** and **append** functions otherwise remove the event listener
+    ```javascript
+        if (inputList.length < 5) {
+        
+            const hobbiesList = document.getElementById('hobbiesList');
+        
+            const newLineElement = createNode('br'),
+            inputElement = createNode('input');
+        
+            inputElement.setAttribute("class", "hobbiesInput");
+        
+            append(hobbiesList, newLineElement);
+            append(hobbiesList, inputElement);
+        }
+        else {
+            document.getElementById('newHobbyBtn').removeEventListener('click', addHobbies);
+        }
+    ```
+11.  Add event listener on **DOMContentLoaded** on the java script page
+    ```javascript
+        document.addEventListener('DOMContentLoaded', function (event) {
+            
+        });
+    ```
+12.  Get **newHobbyBtn** button by **getElementById**, add event listener on the button and attach **addHobbies** function.
+    ```javascript
+        document.getElementById('newHobbyBtn').addEventListener('click', addHobbies);
+    ```
+13. add the folowing script tag to the **&lt;Head&gt;** element of the **index.html** page.
+    ```html
+        <script src="/Scripts/indexScript.js"></script>
+    ```
+
+#### Run the web application.
+
+1.	In Solution Explorer, double-click **Property**.
+2.	On the side menu, click **web**.
+3.	select the **Specific Page** then press **...** button and select **Index.html**. 
+4.	Click the **IIS Express** (Run).
+5.	In Microsoft Edge, press F12 to see the console.
+6.	Verify that the array prints to the console.
+7.	Close Microsoft Edge and return to Visual Studio.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
