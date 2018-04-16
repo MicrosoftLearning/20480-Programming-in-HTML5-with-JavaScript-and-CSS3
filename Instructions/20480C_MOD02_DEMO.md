@@ -6,13 +6,13 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 
 #### Demonstration Steps
 
 #### Divide the Content for a Page into an Article with Sections
 
-1.	On the Windows 10 **Start** screen, click the **Visual Studio 2017** tile.
+1.	Open **Visual Studio 2017**.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
 3.	In the **Open Project** dialog box, browse to the **Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln** and then click **Open**.
 4.	In Solution Explorer, expand the **Allfiles\\...\\DemoWebSite** web application, and then double-click **ContactUs.html**.
@@ -132,13 +132,13 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 
 #### Demonstration Steps
 
 #### Create New Styles by Using Visual Studio
 
-1.	On the Windows 10 **Start** screen, click the **Visual Studio 2017** tile.
+1.	Open **Visual Studio 2017**.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
 3.	In the **Open Project** dialog box, browse to the **Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
 4.	In Solution Explorer, expand the **Allfiles\\...\\DemoWebSite** web application, and then expand the **styles** folder.
@@ -258,11 +258,25 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+
+#### Demonstration Steps
+
+1.	Read the Lab Scenario to students and point out that they should read each scenario before attempting the lab for a module.
+2.	Point out to students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
+3.	Start Visual Studio, and open the **ContosoConf.sln** solution in the **Allfiles\Mod02\Labfiles\Solution\Exercise 2\ContosoConf** folder.
+4.	In Solution Explorer, expand the **ContosoConf** project, and then double-click **index.htm**.
+5.	In the Code Editor window, briefly scroll through the HTML markup for the web page and explain to students that they will be creating the Home page for the web application and adding the HTML markup to display the elements on this page.
+6.	In Solution Explorer, double-click **about.htm**.
+7.	In the Code Editor window, explain that this page contains information about the conference, but that currently much of the data displayed on this page is simply placeholder text that will be replaced later with specific information about the conference by the conference organizers.
+8.	In Solution Explorer, expand the **styles** folder, and then double-click **site.css**. Explain to students that this style sheet contains the initial global styles that they will be defining for the application, and that these styles will be applied to the **Home** and **About** pages.
+9.	On the **Debug** menu, click **Start Without Debugging**.
+
+>**Note:** If the message **Intranet settings are turned off by default** appears, click **Don’t show this message** again. 
+
+10.	In Internet Explorer, show the simple styling for the **Home** page; the labs in later modules will modify and extend some of these styles, for example, to change the appearance of the navigation bar.
+11.	In the navigation bar, click **About**. Again, explain that the simple styling used by this page will be modified in later labs to generate a more appealing layout.
+12.	Close Internet Explorer.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
