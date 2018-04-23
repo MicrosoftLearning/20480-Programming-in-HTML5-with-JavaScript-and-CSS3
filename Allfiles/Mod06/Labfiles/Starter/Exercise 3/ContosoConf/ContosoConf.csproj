@@ -90,7 +90,6 @@
     <Content Include="about.htm" />
     <Content Include="registered.htm" />
     <Content Include="Global.asax" />
-    <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\pages\register.js" />
     <Content Include="scripts\pages\schedule.js" />
     <Content Include="schedule.htm" />
@@ -150,7 +149,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55981</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
