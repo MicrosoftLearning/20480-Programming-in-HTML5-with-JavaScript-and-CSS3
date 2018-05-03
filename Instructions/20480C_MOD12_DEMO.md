@@ -6,7 +6,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 
 #### Demonstration Steps
 
@@ -43,7 +43,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 
 #### Demonstration Steps
 
@@ -95,7 +95,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 
 #### Demonstration Steps
 
@@ -127,7 +127,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 
 #### Demonstration Steps
 
@@ -164,7 +164,33 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+
+#### Demonstration Steps
+
+1.	Read the Lab Scenario to students and point out that they should read each scenario before attempting the lab for a module.
+2.	Point out to students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
+3.	Start Visual Studio, and open the **ContosoConf.sln** solution in the **Allfiles\Mod12\Labfiles\Solution\Exercise 2** folder.
+4.	On the **Debug** menu, click **Start Without Debugging**.
+
+>**Note:** If the message **Intranet settings are turned off by default** appears, click **Don’t show this message** again.
+
+5.	In Internet Explorer, on the **Home** page, move the mouse over the **Register Free** link, and point out how the link expands and rotates as the mouse traverses it.
+6.	In the navigation bar, click **Feedback**.
+7.	On the **Feedback** page, move the mouse over the stars and point out how they are animated.
+8.	Click **Send Feedback**, and point out how the feedback form is animated; it changes size and then flies off the top of the screen
+9.	Close Internet Explorer.
+10.	In Solution Explorer, expand the **ContosoConf** project, expand the **styles** folder, and then double-click **header.css**.
+11.	In the Code Editor window, find the **header.page-header .register:hover** rule, and draw students' attention to the **transform** and **transition** properties in this rule. These properties rotate and scale the **Register Free** link over a period of 1 second.
+12.	In Solution Explorer, in the **styles** folder, expand the **pages** folder, and then double-click **feedback.css**. 
+13.	In the Code Editor window, point out the transition and transform properties in the **.star, .star:hover**, and **.star:selected** rules. These are the transformations and transitions that occur when the user hovers the mouse over the stars on the **Feedback** page.
+14.	Point out the **@keyframes** send and **.sending** rules. These are the CSS rules that animate the feedback form, causing it to fly off the page when the user clicks **Send Feedback**.
+15.	In Solution Explorer, expand the **scripts** folder, expand the **pages** folder, and then double-click **feedback.js**. 
+16.	In the Code Editor window, find the following line of code:
+    ```javascript
+        form.classList.add("sending");
+    ```
+17.	Explain that this statement adds the **sending** class to the feedback form, which triggers the animation defined by the **.sending** rule in the **feedback.css** stylesheet.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

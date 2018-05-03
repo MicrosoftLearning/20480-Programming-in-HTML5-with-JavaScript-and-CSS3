@@ -6,13 +6,13 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 
 #### Demonstration Steps
 
 #### Switch between layout modes in a web page
 
-1.	On the Windows 10 **Start** screen, click the **Visual Studio 2017** tile.
+1.	Open **Visual Studio 2017**.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **File**.
 3.	In the **Open File** dialog, browse to the **Allfiles\Mod06\Democode** folder, click **positioning.html**, and then click **Open**.
 4.	Review the code with the students. This file contains an HTML **article** with four **div** elements. The file also contains styles for the **article** and **div** elements.
@@ -109,7 +109,44 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+
+#### Demonstration Steps
+
+1.	Read the Lab Scenario to students and point out that they should read each scenario before attempting the lab for a module.
+2.	Point out to students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
+3.	Start Visual Studio, and open the **ContosoConf.sln** solution in the **Allfiles\Mod06\Labfiles\Solution\Exercise 3** folder.
+4.	On the **Debug** menu, click **Start Without Debugging**.
+
+>**Note:** If the message **Intranet settings are turned off by default** appears, click **Don’t show this message** again.
+
+5.	In Internet Explorer, on the **Home** page, point out the styling of the items in the navigation bar. Click each page in turn, and notice how the navigation bar uses a ribbon effect to indicate the current page.
+6.	In the navigation bar, click **Home**.
+7.	On the **Home** page, point out the **Register Free** link. This is an ordinary HTML link created as an **&lt;a&gt;** tag that navigates the user to the **Register** page, but styled to look like a large red button.
+8.	Hover the mouse over the **Register Free** link and point out how the link is highlighted.
+9.	In the navigation bar, click **About**. Point out the following features of the text on this page:
+    1.	The text is formatted in three columns.
+    2.	The first letter of the first paragraph as styled as a drop cap.
+    3.	The text at the start of all the remaining paragraphs is indented.
+    4.	The block quote in the third column is styled to make it stand out.
+10.	Close Internet Explorer.
+11.	In Solution Explorer, expand the **ContosoConf** project, expand the **styles** folder, and then double-click **nav.css**.
+12.	In the Code Editor window, scroll through the code. Point out that students will add the styles defined in this file to change the layout of the navigation bar.
+13.	In Solution Explorer, double-click **header.css**. 
+14.	In the Code Editor window, summarize the purpose of the following style rules:
+    1.	**header.page-header .register**. This rule formats the **Register Free** link as a large red button.
+    2.	**header.page-header .register:hover**. This rule highlights the Register Free link when the mouse hovers over it.
+    3.	**header.page-header .register:before**. This rule adds a dotted border around the button for the **Register Free** link.
+    4.	**header.page-header .register .free**. This rule sets the font size of the word **Free** in the **Register Free** link. This word is displayed with a font size that is 80% of the size of the word **Register**.
+15.	In Solution Explorer, in the **styles** folder, expand **pages**, and then double-click **about.css**. 
+16.	In the Code Editor window, summarize the purpose of the following style rules:
+    1.	**.about > article > section**. This rule formats the text on the **About** page in three columns.
+    2.	**.about p:first-child:first-letter**. This rule formats the first letter of the first paragraph as a drop cap.
+    3.	**.about p**. This rule indents each paragraph on the **About** page.
+    4.	**.about p:first-child**. This rule prevents the drop cap in the first paragraph from being indented.
+    5.	**.about blockquote**. This rule formats the text for the block quote on the **About** page.
+    6.	**.about blockquote:before**. This rule adds the quote mark to the start of the block quote.
+
 
 ©2018 Microsoft Corporation. All rights reserved.
 

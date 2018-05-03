@@ -6,7 +6,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 
 #### Demonstration Steps
 
@@ -45,7 +45,7 @@ o	The <transform> elements translate the square by 200 units in the X and Y axes
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 
 #### Demonstration Steps
 
@@ -77,7 +77,39 @@ o	The <transform> elements translate the square by 200 units in the X and Y axes
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+
+#### Demonstration Steps
+
+1.	Read the Lab Scenario to students and point out that they should read each scenario before attempting the lab for a module.
+2.	Point out to students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
+3.	Start Visual Studio, and open the **ContosoConf.sln** solution in the **Allfiles\Mod11\Labfiles\Solution\Exercise 2** folder.
+4.	On the **Debug** menu, click **Start Without Debugging**.
+
+>**Note:** If the message **Intranet settings are turned off by default** appears, click **Don’t show this message** again. 
+
+5.	In Internet Explorer, on the navigation bar, click **Location**.
+6.	In the message box **localhost wants to track your physical location**, click **Allow once**.
+7.	Scroll down and point out the location map. Mention that students will implement part of this map in exercise 1.
+8.	In the location map, click **Room B**. Point out that that students will write code to catch the click event of the SVG element that defines the map for room B and use this event to display the sessions being held in that room.
+9.	Close Internet Explorer.
+10.	In Solution Explorer, expand the **ContosoConf** project, and then double-click **location.htm**. 
+11.	In the Code Editor window, find the **&lt;svg viewBox …&gt;** element, and explain that students will implement this element to draw venue map for Room B.
+12.	In Solution Explorer, expand the **scripts** folder, expand the **pages** folder, and then double-click **location-venue.js**. 
+13.	In the Code Editor window, explain that the code in this file handles the click event for the **&lt;svg&gt;** element and displays the list of sessions that run in the room that the user clicked.
+14.	In Solution Explorer, double-click **speaker-badge.htm**.
+15.	In the Code Editor window, find the following section:
+    ```html
+        <section class="page-section badge">
+            <div class="container">
+                <h1>Create your speaker badge for ContosoConf</h1>
+                <!-- TODO: Add canvas here -->
+                <canvas width="500" height="200" style="border: 1px solid #888" data-speaker-id="234724" data-speaker-name="Mark Hanson">
+                </canvas>
+            </div>
+        </section>
+    ```
+16.	Explain that in exercise 2 students will create the **&lt;canvas&gt;** element in this section and use it to display the photograph of the instructor, rather than using an **&lt;img&gt;** element.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

@@ -6,7 +6,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 
 #### Demonstration Steps
 
@@ -39,7 +39,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 
 #### Demonstration Steps
 
@@ -90,7 +90,74 @@ In the captured data, examine the work performed by the **onWindowEvent** event 
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+
+#### Demonstration Steps
+
+1.	Read the Lab Scenario to students and point out that they should read each scenario before attempting the lab for a module.
+2.	Point out to students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
+3.	Start Visual Studio, and open the **ContosoConf.sln** solution in the **Allfiles\Mod08\Labfiles\Solution\Exercise 3** folder.
+4.	In Solution Explorer, expand the **ContosoConf** project, and then double-click **speaker-badge.htm**.
+5.	In the Code Editor window, scroll through the code and find the following **&lt;section&gt;** element:
+    ```html
+        <section class="page-section badge">
+            <div class="container">
+                <h1>Create your speaker badge for ContosoConf</h1>
+                <p>Drag and drop your profile picture here...</p>
+                <img style="width: 300px; height: 300px; border: 1px solid #000"/>
+            </div>
+        </section>
+    ```
+6.	Explain that the students will add drag and drop functionality to the **&lt;img&gt;** element in this section to enable a user to drag an image file and drop it on the web page, where it will appear in this element.
+7.	In Solution Explorer, expand the **scripts** folder, expand the **pages** folder, and then double-click **speaker-badge.js**. Students will complete the code for the **SpeakerBadgePage** object in this script to handle **dragover** and **dragdrop** events. When the **dragdrop** event occurs, the event handler will read the file dropped on the image element and display the contents on the web page.
+8.	Display the **speaker-badge.htm** file in the Code Editor window, and then on the **Debug** menu, click **Start Without Debugging**.
+
+>**Note:** It is necessary to display this file in the Code Editor window so that Visual Studio navigates directly to this page when it starts the application; the Speaker Badge page is not listed in the navigation bar.
+
+>**Note:**If the message **Intranet settings are turned off by default** appears, click **Don’t show this message** again.
+
+9.	On the Windows taskbar, click **File Explorer** and browse to **Allfiles\Mod08\Labfiles\Resources**.
+10.	Drag-and-drop **mark-hanson.jpg** from File Explorer, onto the empty rectangle in Internet Explorer, and verify that the image appears on the page
+11.	Close Internet Explorer.
+12.	In Solution Explorer, double-click **index.htm**.
+13.	Find the following section near the bottom of the file. This section contains the HTML markup for the video controls that download and play a video presentation of a session from a previous conference:
+    ```html
+        <section class="video">
+            <h2>Video from last year</h2>
+            <video src="http://ak.channel9.msdn.com/ch9/265b/9a76fccd-941e-4285-ad00-9ea200aa265b/MIX09KEY01_high_ch9.mp4"></video>
+            <div class="video-controls" style="display: none">
+                <button class="video-play">Play</button>
+                <button class="video-pause">Pause</button>
+                <span class="video-time"></span>
+            </div>
+        </section>
+    ```
+14.	In Solution Explorer, in the **scripts\pages** folder, double-click **video.js**. Explain that this file contains the code that students will write to play and pause the video, and display the elapsed time while the video runs.
+15.	On the **Debug** menu, click **Start Without Debugging**.
+16.	Scroll to the bottom of the **Home** page and click **Play**. Notice that the video starts running, a **Pause** button appears, and the elapsed time is also displayed.
+17.	Click **Pause** to suspend the video.
+18.	Close Internet Explorer.
+19.	In Solution Explorer, double-click **location.htm**.
+20.	Find the following section near the bottom of the file. This **&lt;h2&gt;** element with the **id** of distance will be used to display the distance of the user from the conference location:
+    ```html
+        <section class="travel">
+            <h1>Travelling to ContosoConf</h1>
+            <h2 id="distance"></h2>
+            <h2>Address</h2>
+            <address>
+                ...
+            </address>
+            <h2>Hotels</h2>
+            <p>...</p>
+        </section>
+    ```
+21.	In Solution Explorer, in the **scripts\pages** folder, double-click **location.js**. Explain that this file contains the code that students will complete to find and display the distance of the user from the conference location by using the Geolocation API.
+22.	On the **Debug** menu, click **Start Without Debugging**.
+23.	In the navigation bar, click **Location**.
+24.	In the message box **localhost wants to track your physical location**, click **Allow once**.
+25.	In the **Enable Location Services** dialog box, click **Yes**.
+26.	Point out that the distance to the conference venue appears above the address on the **Location** page.
+27.	Close Internet Explorer.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

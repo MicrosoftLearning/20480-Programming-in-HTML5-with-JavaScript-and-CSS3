@@ -6,7 +6,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
 3. Run the **DemoWebSite - Complete.sln** application.
 4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
@@ -134,14 +134,14 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
 
 
 #### Demonstration Steps
 
 #### Create a Web Site Project
 
-1.	On the Windows 10 **Start** screen, click the **Visual Studio 2017** tile.
+1.	Open **Visual Studio 2017**.
 2.	In Visual Studio, on the **File** menu, point to **New*, and then click **Web Site**.
 3.	In the **New Web Site** dialog box, click **ASP.NET Empty Web Site**.
 
@@ -217,11 +217,34 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
-2. Navigate to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
-3. Run the **DemoWebSite - Complete.sln** application.
-4. In the Address bar of the Microsoft Edge window, note the port number that appears after "http://localhost:" You will use the port number during this demonstration.
-5. Close the Microsoft Edge window.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+
+#### Demonstration Steps
+
+1.	Read the Lab Scenario to students and point out that they should read each scenario before attempting the lab for a module.
+2.	Point out to students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
+3.	Start Visual Studio, and open the **ContosoConf.sln** solution in the **Allfiles\Mod01\Labfiles\Starter** folder.
+4.	In Solution Explorer, expand the **ContosoConf** project, and highlight the **.htm** files in the root folder of the project; these files correspond to each of the web pages that students will be building in the labs throughout the course.
+5.	Double-click **index.htm** to display the HTML markup for this page in the Code Editor window. Explain that this is the Home page of the application, and it is the default page that users see when they visit the website for the application.
+6.	At the bottom of the **Design** View window, click the Design tab. Explain that the layout shown in the Design View window is the default styling of the page, and that the stylesheets that students create as part of the application modify the way in which elements are presented.
+7.	In Solution Explorer, expand the **styles** folder. Point out that this folder contains the global style sheets used by all pages throughout the application.
+8.	Expand the **pages** folder, and describe how each web page also has its own stylesheet containing the styles that are pertinent to that page.
+9.	Double-click **index.css** to display the stylesheet in the Code Editor window. Scroll through this style sheet and emphasize that this stylesheet contains the styles that will are used by the Home page (**index.htm**).
+10.	In Solution Explorer, expand the **scripts** folder. Explain that this folder contains the global JavaScript code files used throughout the application.
+11.	Expand the **pages** folder, and describe how most of the web pages also have their own code file containing the JavaScript code specifically for that page.
+12.	Double-click **video.js** to display the JavaScript code in the Code Editor window. Scroll through this file and explain that this is the code that handles the video player controls on the Home page.
+13.	On the **Debug** menu, click **Start Without Debugging**. Explain that this step saves changes that might have been made to the HTML files, stylesheets, and JavaScript code files, and then starts the web application running. It then moves to the Home page of the application and displays it by using Internet Explorer.
+
+>**Note:** If the message **Intranet settings are turned off by default** appears, click **Don’t show this message** again.
+
+14.	Point out that the web application runs by using a local instance of IIS Express on the virtual machine; highlight the URL in the address bar of Internet Explorer.
+15.	Quickly visit each of the pages in the application by using the links in the navigation bar at the top of the web page. 
+
+>**Note:** On the **Location** page, the message **localhost wants to track your physical location** will appear; click **Allow once**. In the **Enable Location Services** dialog box, click **Yes**.
+
+16.	Explain that the first exercise of the lab provides more information about the purpose of each web page in the application.
+17.	Close Internet Explorer.
+
 
 ©2018 Microsoft Corporation. All rights reserved.
 

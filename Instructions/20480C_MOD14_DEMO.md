@@ -6,7 +6,29 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/get_started/Allfiles.
+1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+
+#### Demonstration Steps
+
+1.	Read the Lab Scenario to students and point out that they should read each scenario before attempting the lab for a module.
+2.	Point out to students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
+3.	Start Visual Studio, and open the **ContosoConf.sln** solution in the **Allfiles\Mod14\Labfiles\Solution\Exercise 1** folder.
+4.	In Solution Explorer, expand the **ContosoConf** project, and then double-click **speaker-badge.htm**.
+5.	On the **Debug** menu, click **Start Without Debugging**.
+
+>**Note:** If the message **Intranet settings are turned off by default** appears, click **Don’t show this message** again.
+
+6.	On the taskbar, click **File Explorer**.
+7.	Browse to the **Allfiles\Mod14\Labfiles\Resources** folder.
+8.	Drag **mark-hanson-large.jpg** from File Explorer into Internet Explorer and drop it onto the canvas with the label **Drag your profile photo here**.
+9.	Verify that you can scroll the page up and down while and image is being processed.
+10.	Wait until the grayscale image of the presenter has been generated (this may take a minute or two), and then close Internet Explorer.
+11.	In Solution Explorer, expand the **ContosoConf** project, expand the **scripts** folder, and then double-click **grayscale-worker.js**.
+12.	In the Code Editor window, explain that the event handler at the top of the file waits for a message containing a color image. The event handler then calls the **grayscalePixel()** function to convert each pixel in the image to grayscale, and then posts a message with that contains the grayscale image data.
+13.	In Solution Explorer, double-click **grayscale.js**.
+14.	In the Code Editor window, find the **grayscaleImage()** function. Explain that this function creates a web worker that runs the **grayscale-worker.js** script, and posts a message to the web worker that contains the data for the image that the user dropped onto the canvas on the form. This function also arranges to catch the message that the web worker posts back, containing the grayscale version of the image, which is displayed on the canvas on the web page.
+15.	Point out that the code that sets up the message handler for the web worker uses **bind(this)** to ensure that the anonymous function that handles the event is resolved to the web page and not the web worker variable.
+16.	Close Visual Studio, and then close File Explorer.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
