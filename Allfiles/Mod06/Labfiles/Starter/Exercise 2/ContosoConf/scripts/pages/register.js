@@ -5,7 +5,7 @@ const submitButton = form.querySelector("button");
 const passwordInput = document.getElementById("password");
 const confirmPasswordInput = document.getElementById("confirm-password");
 
-const checkPasswords = function () {
+const checkPasswords = () => {
     const passwordsMatch = passwordInput.value === confirmPasswordInput.value;
     if (passwordsMatch) {
         // Clear any previous error message.
@@ -16,16 +16,16 @@ const checkPasswords = function () {
     }
 };
 
-const addPasswordInputEventListeners = function () {
+const addPasswordInputEventListeners = () => {
     passwordInput.addEventListener("input", checkPasswords, false);
     confirmPasswordInput.addEventListener("input", checkPasswords, false);
 };
 
-const formSubmissionAttempted = function () {
+const formSubmissionAttempted = () => {
     form.classList.add("submission-attempted");
 };
 
-const addSubmitClickEventListener = function () {
+const addSubmitClickEventListener = () => {
     submitButton.addEventListener("click", formSubmissionAttempted, false);
 };
 
