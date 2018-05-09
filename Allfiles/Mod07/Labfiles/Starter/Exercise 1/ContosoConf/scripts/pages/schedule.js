@@ -1,57 +1,57 @@
-﻿// TODO: Wrap this file's code in an immediately invoked function expression
-(function () {
-    // TODO: Strict mode
-    "use strict";
-    
-    const copyOwnProperties = function (from, to) {
-        for (let propertyName in from) {
-            if (from.hasOwnProperty(propertyName)) {
-                to[propertyName] = from[propertyName];
-            }
-        }
-    };
+﻿/// <reference path="../HtmlTemplate.js" />
+/// <reference path="../LocalStarStorage.js" />
+/// <reference path="../datetime.js" />
 
-    const inherit = function (additionalProperties) {
-        // `inherit` creates an factory object that is similar to a Class in C# and Java.
-        // The created factory object has a `create` method that creates instances.
-        // The factory object also serves as the prototype for created instances.
-        // So any properties added to the factory (via the additionalProperties parameter)
-        // will available to created instances.
-        // If the additionalProperties has a function named `initialize`, then this is
-        // called to initialize created instances.
-        
-        // TODO: Create a variable named `factory`, assign it a new object who's prototype is `this`.
-        const factory = Object.create(this);
+// Import objects/functions from the conference namespace.
+import { LocalStarStorage } from "../LocalStarStorage.js";
+import { ScheduleItem } from "../ScheduleItem.js";
 
-        // TODO: Add a method called `create` to `factory`, that does the following
-        factory.create = function() {
-            const instance = Object.create(factory);
+// TODO: Create a ScheduleList factory object using the Object.inherit helper method.
 
-            // The instance may have an `initialize` method.
-            if (typeof instance.initialize === "function") {
-                instance.initialize.apply(instance, arguments);
-            }
+// TODO: Refactor these functions into methods of the ScheduleList object.
 
-            return instance;
-        };
+async function startDownload() {
+    // await response of fetch call
+    let response = await fetch("/schedule/list")
+    // transform body to json
+    let data = await response.json();
 
-        // TODO: Copy properties of `additionalProperties` onto `factory' (using copyOwnProperties).
-        copyOwnProperties(additionalProperties, factory);
+    // checking response is ok
+    if (response.ok) {
+        downloadDone(data);
+    } else {
+        downloadFailed();
+    }
+}
 
-        // TODO: Return the `factory` object.
-        return factory;
-    };
+function downloadDone(responseData) {
+    addAll(responseData.schedule);
+}
 
-    // TODO: Add the inherit function to the built-in `Object` object.
-    Object.inherit = inherit;
+function downloadFailed() {
+    alert("Could not retrieve schedule data at this time. Please try again later.");
+}
 
-} ());
+function addAll(itemsArray) {
+    itemsArray.forEach(add); // TODO: When refactoring this, add the `this` argument to `forEach`.
+}
+
+function add(itemData) {
+    const item = new ScheduleItem(itemData, localStarStorage);
+    element.appendChild(item.element);
+}
+
+// TODO: Replace the following code by creating a ScheduleList object 
+//       and calling the startDownload method.
+const element = document.getElementById("schedule");
+const localStarStorage = new LocalStarStorage(localStorage);
+startDownload();
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
 // SIG // gjcCAR4wJAIBAQQQEODJBs441BGiowAQS9NQkAIBAAIB
-// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFJD6cYBTUoYI
-// SIG // npS0g/S1Yj3+7pJXoIIVJjCCBJkwggOBoAMCAQICEzMA
+// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFBA2C2iCUcWW
+// SIG // RahjRxzyo5UbSIqdoIIVJjCCBJkwggOBoAMCAQICEzMA
 // SIG // AACdHo0nrrjz2DgAAQAAAJ0wDQYJKoZIhvcNAQEFBQAw
 // SIG // eTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0
 // SIG // b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1p
@@ -223,18 +223,18 @@
 // SIG // rrjz2DgAAQAAAJ0wCQYFKw4DAhoFAKCBvjAZBgkqhkiG
 // SIG // 9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgEL
 // SIG // MQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQU
-// SIG // GMVG7V0OFHfgdjtmXb6ZsnwxB2swXgYKKwYBBAGCNwIB
+// SIG // wESTRJPu6g0jH2/5LxWNBED7uV4wXgYKKwYBBAGCNwIB
 // SIG // DDFQME6gJoAkAE0AaQBjAHIAbwBzAG8AZgB0ACAATABl
 // SIG // AGEAcgBuAGkAbgBnoSSAImh0dHA6Ly93d3cubWljcm9z
 // SIG // b2Z0LmNvbS9sZWFybmluZyAwDQYJKoZIhvcNAQEBBQAE
-// SIG // ggEAn3sGc2avz0DOydH0aiuzFd1PCYCYJG1V3nVZpjzP
-// SIG // jHvpjawNJKIQoy52KfW0kTwjo1gD72E5bkRf/Dlbo6yS
-// SIG // OJ0UmWt3ZhmpvSmxhr6nVKXj6R64HQZRAZWM42KGNQzy
-// SIG // HipRcd2WCQeOx5mNjsre0CBjof8bolVgKCxVRRMuPfA4
-// SIG // G3zTquuOrB3G+4YXdp/lH1Q6EPDICYITs8jdgk6UGY9e
-// SIG // 8lhyPuwo90Vu7l0fS4D7ifpabWZXhhp+CpYhuzs+C2w4
-// SIG // oORFjI0pmS/BtDKdXoiOGoDA14Fvz7u+v3t/XLk3+Py+
-// SIG // jLrEDIcvu7KS5r5x7qjbho+Ct0fg4X06acQukqGCAh8w
+// SIG // ggEAeshWM8+se5UpBaz2JN4QySH1tTvU8C0Q9cXQPCiF
+// SIG // VmjBE59eHdWBNu8ABYuJJ/tdk4cAgKGWO01B2xJ0wMFZ
+// SIG // wcXgDccz3VjNOrgfb8nyNLlZl5I9ZUmjmdpn+gkNsZXz
+// SIG // RYb+Bd7AGTCo7BJF+1dnRv7v3f3fMI8sZam3UUrSWNRo
+// SIG // lGn5S3UMZPSHcd/mB0u1O1kAHXQprltX94wTaSFYceBu
+// SIG // y11dOL3At9dG9rqheGf1V2jWfbljf2blS7TUZQOeC3cr
+// SIG // nOaykseRUJnfrrGJYgCEuHoh933KtdZDMadHbPhOfrvc
+// SIG // /lrXHBd5zlFShveYed6emNkSND+btalHTTSpO6GCAh8w
 // SIG // ggIbBgkqhkiG9w0BCQYxggIMMIICCAIBATCBhTB3MQsw
 // SIG // CQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQ
 // SIG // MA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9z
@@ -242,14 +242,14 @@
 // SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECkkoAAAAAACAwCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
 // SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNTc0Nlow
-// SIG // IwYJKoZIhvcNAQkEMRYEFCuRPnSc8GURhHIv81FVaUEb
-// SIG // eA+LMA0GCSqGSIb3DQEBBQUABIIBAD4RPpjvQ47v9k+S
-// SIG // vjXQ2fQ/h5W2PveuRMT8lclv5rE92ZUzwwT8ZlpcUyVb
-// SIG // tz8yTnw8GNcQ7Dx34JSO8PgzfKukB1pJhojbkGHDIsoQ
-// SIG // xq3nDcycg5/wjmIK0vK6M35YrG4byW9xpqEyHkUpvXId
-// SIG // aUNwlodCSLps8d3lahynd0w2ghTKC+dcJ6cD1VAwU8sJ
-// SIG // pSHYunwZC6c3Dwe/CDpRB8ijLaT8yZJvzLR+iJYUlAkg
-// SIG // /uoV1dzslGBI/Z54Ggwj7QXxi7tKzFIWCkoDHftohCTB
-// SIG // 49N2S8nt2FytKPEsrNAlvNtmit3dfcBr0DMYAVRhdaAP
-// SIG // 2z57uBZxDhWi/G/SV1o=
+// SIG // IwYJKoZIhvcNAQkEMRYEFDGaGlE5ofwLG4vH9Dcgmv68
+// SIG // rZFEMA0GCSqGSIb3DQEBBQUABIIBAGqAfnGBmuQAkS8p
+// SIG // 3fptHkUs2r+DQswdqjyTyyU72qwRSy44273Ggpl1NIxR
+// SIG // 3pDpQ57cRqLbPZp3zbkUDTk/pGmeN27XTeQiHemDQbk0
+// SIG // fbKGnOZt2IzTuITSSz4tS/6EqjzPVkFBPoXUtUbeQJtQ
+// SIG // UyOk00eeHpfKn3N+uBGtkWkJyL9WgnH3VLhqxHjZt/cl
+// SIG // pHIcZ87l3yW/ONq/keJbUCPAJKtPZIF5n0mft4IkNwA2
+// SIG // cIuzeevP4cfZAMvvlSV26PzGSPQDxfo6XVt0LWuChS7E
+// SIG // e2rAvgkucibMv7UNXr1frHOSY2Sq/XhRKfBjQoupAsZ6
+// SIG // arePR0/BQmJNmv75oPM=
 // SIG // End signature block
