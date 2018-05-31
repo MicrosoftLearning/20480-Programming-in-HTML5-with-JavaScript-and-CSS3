@@ -1,45 +1,20 @@
-﻿(function () {
-    "use strict";
+﻿/// <reference path="../LocalStarStorage.js" />
+import { ScheduleList } from "../ScheduleList.js";
+import { LocalStarStorage } from "../LocalStarStorage.js";
 
-    const copyOwnProperties = function (from, to) {
-        for (let propertyName in from) {
-            if (from.hasOwnProperty(propertyName)) {
-                to[propertyName] = from[propertyName];
-            }
-        }
-    };
+const scheduleListElement = document.getElementById("schedule");
+const scheduleList = new ScheduleList(
+    scheduleListElement,
+    new LocalStarStorage(localStorage)
+);
 
-    const inherit = function (additionalProperties) {
-        const subclass = Object.create(this);
-
-        subclass.create = function () {
-            // When calling `MyClass.create()` directly, `this` will be `MyClass` as expected.
-            // When passing `MyClass.create` to another function we lose the intended `this` (it's probably set to `window` or null)
-            // so explicitly use the `subclass` in that case.
-            const prototype = (this && this !== window) ? this : subclass;
-            const instance = Object.create(prototype);
-            
-            // The instance may have an `initialize` method.
-            if (typeof instance.initialize === "function") {
-                instance.initialize.apply(instance, arguments);
-            }
-            
-            return instance;
-        };
-
-        copyOwnProperties(additionalProperties, subclass);
-
-        return subclass;
-    };
-
-    Object.inherit = inherit;
-} ());
+scheduleList.startDownload();
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
 // SIG // gjcCAR4wJAIBAQQQEODJBs441BGiowAQS9NQkAIBAAIB
-// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFHVvbwiWQ9tD
-// SIG // eC4Tmuer/okyJM6FoIIVJjCCBJkwggOBoAMCAQICEzMA
+// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFKWooJilsP8c
+// SIG // FqaBehwZlY8yAl36oIIVJjCCBJkwggOBoAMCAQICEzMA
 // SIG // AACdHo0nrrjz2DgAAQAAAJ0wDQYJKoZIhvcNAQEFBQAw
 // SIG // eTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0
 // SIG // b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1p
@@ -211,33 +186,33 @@
 // SIG // rrjz2DgAAQAAAJ0wCQYFKw4DAhoFAKCBvjAZBgkqhkiG
 // SIG // 9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgEL
 // SIG // MQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQU
-// SIG // r6bixYrEXMQt7szGpJlgcDegiSkwXgYKKwYBBAGCNwIB
+// SIG // 5DbN619MEY4yq9E9ntcps3JmcZ0wXgYKKwYBBAGCNwIB
 // SIG // DDFQME6gJoAkAE0AaQBjAHIAbwBzAG8AZgB0ACAATABl
 // SIG // AGEAcgBuAGkAbgBnoSSAImh0dHA6Ly93d3cubWljcm9z
 // SIG // b2Z0LmNvbS9sZWFybmluZyAwDQYJKoZIhvcNAQEBBQAE
-// SIG // ggEAJONb9LXCqz3DkONJbvakqfMhhMcWS5i8bGIXNP3u
-// SIG // /fNf/TP9AggzBAbmTX90yp5jZF5FJBqKr+btzyl4ipqU
-// SIG // qF0SjqMnqy2FNVkiDVwmJ5XRd776BJYQ4ZUk8FMLyyQJ
-// SIG // p1YB7sFTG5iRkEPG1N1ZNdGrwVDnQt7ZHFa2IsP1Cy5x
-// SIG // 63NL7EGgBtoctfiLuAz/sk7qmar0mc3GsXJ2RmEN/MgR
-// SIG // YtDa0B11QUbRZoeSKI2v2Nhb7QdT4Ulv1yM7kv6cfU5a
-// SIG // UYjMvIN1onH6QcQxmO2jgv77F546NZLCpu/xqFGb69fR
-// SIG // Z14agrxMhCQQRxPkMqvfJS/h8DZF9GPs4571EqGCAh8w
+// SIG // ggEAdHlY2qU/4spe0BX0AGQ7WhmqqwL5Nqi8NngnEn/8
+// SIG // ahENOD1jeKLceaOd3De9NDE+8cTk/404caAFQL5W1U56
+// SIG // pRdhVghAzRZsPd0bz3XFHpLrEG7QDu851d2r3O3qHDu6
+// SIG // jNkvhZpGoBTzg3jyhIGRWfqumElQDjd7y7OVWMnja2D3
+// SIG // rHuN7LNmyKy8RaIMGsB3aub1ShHIj7rWOlw+X3MP7nOa
+// SIG // JHbZMFDVa/oWyfVeh1QIZFuPUbUBQhLZwLMr0xN1ILZw
+// SIG // m11xDfvlPNl2cz7EN1hpNrmXNsEMr+oO0z17ZtE46/W6
+// SIG // iUFZRLAz/AZWSp1JcISxmczob+U+ael4YC+CraGCAh8w
 // SIG // ggIbBgkqhkiG9w0BCQYxggIMMIICCAIBATCBhTB3MQsw
 // SIG // CQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQ
 // SIG // MA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9z
 // SIG // b2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3Nv
 // SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECkkoAAAAAACAwCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
-// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNTc0OFow
-// SIG // IwYJKoZIhvcNAQkEMRYEFHZg7NkDV7G4Y5+gwR1RkT5z
-// SIG // C0dAMA0GCSqGSIb3DQEBBQUABIIBAIfN2yg0iutJcTX7
-// SIG // PcYD5VCNHslQelh0F82efWVHWXwnkt1gwLM/IrJvJ8Mh
-// SIG // ipCNBetTSQJmEY/aV+On1RMJsY08NXGGC9jHPxgPvEqN
-// SIG // QVTi2cUBP32ZSPnzJw6Jdp7XWB4p/OakRD49yG9H/QNn
-// SIG // VCt4wh4lEZ5/+g6qauW6ZXit6gPeasl59opKna5j0fV/
-// SIG // L5JHD/zd1lYk+e49WdkOLIeAyU3841F9GKitDWG9IcIF
-// SIG // b9hFdyawyrGpmGej42S4BIr1UO+RsLnI4+syt2mawabS
-// SIG // w17Bnu2zog3o/0uDgPI5sGhFT06BU/ruTe77qcS5GfhL
-// SIG // 9Win29CphXStgJVSuTM=
+// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNTc1NFow
+// SIG // IwYJKoZIhvcNAQkEMRYEFFW0QextgWdmScxNGPIBBbrh
+// SIG // F/PPMA0GCSqGSIb3DQEBBQUABIIBAJ9BSt+kM+F7Yv6l
+// SIG // fE81ptGJ+OUZ3TD2vLg/qCp62oEwYYpHsQ7eM6bS3dhQ
+// SIG // SyJ/A9C9rXiLC+Jm5tZn7nUop8au6vfvJH5Ocj0S2Oil
+// SIG // 3jtG+WtBocbZgyuEmwPO6A7W16e/oGaCRAEmKl5ZHtO0
+// SIG // o+7s2fDbhc9ximg4ZxUcZ03aW+AkRjYcAIHbKbT2aiN+
+// SIG // g8/UHDogAFfVsHOGjljd/pEG9MLA3uyfqb3w74EEcSxX
+// SIG // wbq/2gMkjm5855bwL/tvR+P2IypsvFZwdcfH5V0ejrQP
+// SIG // 3nfw/XzDHurD3KkFdeJUNr1aHxus5s++PJX3/ymo2qdI
+// SIG // mj4/0KmUWuZmXXfYb8Y=
 // SIG // End signature block

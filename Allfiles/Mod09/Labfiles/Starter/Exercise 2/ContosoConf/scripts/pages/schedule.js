@@ -1,12 +1,23 @@
-﻿// Define the global top-level namespace object.
-// All other scripts will attach their public objects/functions to this namespace.
-const conference = { };
+﻿/// <reference path="../LocalStarStorage.js" />
+import { ScheduleList } from "../ScheduleList.js";
+import { LocalStarStorage } from "../LocalStarStorage.js";
+
+
+
+const scheduleListElement = document.getElementById("schedule");
+const scheduleList = new ScheduleList(
+    scheduleListElement,
+    new LocalStarStorage(localStorage)
+);
+
+scheduleList.startDownload();
+
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
 // SIG // gjcCAR4wJAIBAQQQEODJBs441BGiowAQS9NQkAIBAAIB
-// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFF3IOobRh9b2
-// SIG // AaNiGCiTVLolfmXmoIIVJjCCBJkwggOBoAMCAQICEzMA
+// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFKWooJilsP8c
+// SIG // FqaBehwZlY8yAl36oIIVJjCCBJkwggOBoAMCAQICEzMA
 // SIG // AACdHo0nrrjz2DgAAQAAAJ0wDQYJKoZIhvcNAQEFBQAw
 // SIG // eTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0
 // SIG // b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1p
@@ -178,33 +189,33 @@ const conference = { };
 // SIG // rrjz2DgAAQAAAJ0wCQYFKw4DAhoFAKCBvjAZBgkqhkiG
 // SIG // 9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgEL
 // SIG // MQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQU
-// SIG // 4DnDyvKe6h0Gyzt3OgMDnYYIHsMwXgYKKwYBBAGCNwIB
+// SIG // 5DbN619MEY4yq9E9ntcps3JmcZ0wXgYKKwYBBAGCNwIB
 // SIG // DDFQME6gJoAkAE0AaQBjAHIAbwBzAG8AZgB0ACAATABl
 // SIG // AGEAcgBuAGkAbgBnoSSAImh0dHA6Ly93d3cubWljcm9z
 // SIG // b2Z0LmNvbS9sZWFybmluZyAwDQYJKoZIhvcNAQEBBQAE
-// SIG // ggEAtfyG6zvFtI0k2Isc5y5zgjNCKBWp+liFb243wNjh
-// SIG // RL5nzx2x7dpv0eArSIrJO+FER7+KrhnkraeebMxIClvk
-// SIG // ElXARwVHCdegTl60s0sfN9qqgOdFYc/QUsnVB7wHuH0R
-// SIG // oegBzxvq+iF3KhRBCAnnUl3j1m4ZxjUh2xJK6BW1sQY3
-// SIG // /Lx2mOgholtdzqZ6BgvwevySL/WKjV5Q0fQT6R3JDdN9
-// SIG // PzTLJqX/5KFCoxPcTlErrchS8je9xsk9An135Eu0olbZ
-// SIG // GMDdvFHd5xBPmU/24P7HfzN/iFyLAyovFUjqtShfLvUr
-// SIG // nndfejmNpaKtXuMkjuliBxT3tTwGnAmvfFP0YaGCAh8w
+// SIG // ggEAdHlY2qU/4spe0BX0AGQ7WhmqqwL5Nqi8NngnEn/8
+// SIG // ahENOD1jeKLceaOd3De9NDE+8cTk/404caAFQL5W1U56
+// SIG // pRdhVghAzRZsPd0bz3XFHpLrEG7QDu851d2r3O3qHDu6
+// SIG // jNkvhZpGoBTzg3jyhIGRWfqumElQDjd7y7OVWMnja2D3
+// SIG // rHuN7LNmyKy8RaIMGsB3aub1ShHIj7rWOlw+X3MP7nOa
+// SIG // JHbZMFDVa/oWyfVeh1QIZFuPUbUBQhLZwLMr0xN1ILZw
+// SIG // m11xDfvlPNl2cz7EN1hpNrmXNsEMr+oO0z17ZtE46/W6
+// SIG // iUFZRLAz/AZWSp1JcISxmczob+U+ael4YC+CraGCAh8w
 // SIG // ggIbBgkqhkiG9w0BCQYxggIMMIICCAIBATCBhTB3MQsw
 // SIG // CQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQ
 // SIG // MA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9z
 // SIG // b2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3Nv
 // SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECkkoAAAAAACAwCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
-// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNTc0OFow
-// SIG // IwYJKoZIhvcNAQkEMRYEFGuW4bE5aWQCbS6hhk7RUJwC
-// SIG // EJQ7MA0GCSqGSIb3DQEBBQUABIIBAJE/WH04GkSF068d
-// SIG // 1gw/RJAq990c4oECsEax85YM2rxbUEQBxIqalX10Uua5
-// SIG // PEK4sv4tSDfdxjmwwjJWkDHCx3Yg9p2oWG4JmkWocIni
-// SIG // E42pE4pbIpwHbnKJciVWC8qaxViOAN7ciXsFZ2or0p50
-// SIG // wwReIAKt88xklUtAvs29+WGjxqRkycNqlMJOascXE9AN
-// SIG // TlGNC3uY61sA9OwgC1A1gSoeNFYRwKIDJOj8CURo0GqD
-// SIG // WHZAWsPBcU8Piqi0xFi9AXLoWY3YDFcJc2Fj0pjvE93z
-// SIG // vHyGUcwJ5PTAqf5omgPhtSbNWlWcujo5P6htydfL2p07
-// SIG // OlL9OqnV1rwDO5jrs/Y=
+// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNTc1OFow
+// SIG // IwYJKoZIhvcNAQkEMRYEFFW0QextgWdmScxNGPIBBbrh
+// SIG // F/PPMA0GCSqGSIb3DQEBBQUABIIBADW5SfXOMcYcryGZ
+// SIG // z1hxMAnfVg3lIuuWDZ/50RoxKk2p3oA+n0Pu/CPuS0mP
+// SIG // Q3JlmepJL3YgkRF0CneYInzN5JvJRJm4xCnVY2FwQr3W
+// SIG // DaX/Pf5RUNgnO1fWgp2J0jbdDk97AOix71aKWk+WACzp
+// SIG // MYzfwRtjXVP8zPnntinJu/hfu7ZJgG+ORUeSFl1B/k7s
+// SIG // avg2WXMX5tdNfX3SS6HQq7jt4DuIIgmwpoJeZ3I84+yR
+// SIG // 2n1Mw7+vfM4gR/8ZTYkoHOr/6igimm7ORJXB5hYIWbpV
+// SIG // mBY7DaR72tLXeFPaUEopYSHX8bdqySa7ewLpULvIUglV
+// SIG // O2GnJklwBwc7KQ24pOM=
 // SIG // End signature block
