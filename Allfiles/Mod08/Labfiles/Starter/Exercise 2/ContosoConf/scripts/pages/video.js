@@ -1,40 +1,37 @@
-﻿/// <reference path="../_namespace.js" />
-/// <reference path="../datetime.js" />
+﻿/// <reference path="../datetime.js" />
 
-(function () {
+import { formatTime } from "../datetime.js";
 
-    const formatTime = conference.formatTime;
-    
-    // Make sure the element class attributes in index.htm match these selectors.
-    const videoSection = document.querySelector(".video");
-    const video = videoSection.querySelector("video");
-    const controls = videoSection.querySelector(".video-controls");
-    const playButton = videoSection.querySelector(".video-play");
-    const pauseButton = videoSection.querySelector(".video-pause");
-    const time = videoSection.querySelector(".video-time");
+// Make sure the element class attributes in index.htm match these selectors.
+const videoSection = document.querySelector(".video");
+const video = videoSection.querySelector("video");
+const controls = videoSection.querySelector(".video-controls");
+const playButton = videoSection.querySelector(".video-play");
+const pauseButton = videoSection.querySelector(".video-pause");
+const time = videoSection.querySelector(".video-time");
 
-    const ready = function () {
-        // TODO: display the video controls
+function ready() {
+    // TODO: display the video controls
 
-    };
+};
 
-    const play = function () {
-        // TODO: play the video
- 
-    };
+function play() {
+    // TODO: play the video
 
-    const pause = function () {
-        // TODO: pause the video
-  
-    };
+};
 
-    const updateTime = function () {
-        // TODO: Set time.textContent using video.current time.
-        //       Use the formatTime function to convert raw seconds into HH:MM:SS format.
+function pause() {
+    // TODO: pause the video
 
-    };
+};
 
-    pauseButton.style.display = "none";
+function updateTime() {
+    // TODO: Set time.textContent using video.current time.
+    //       Use the formatTime function to convert raw seconds into HH:MM:SS format.
+
+};
+
+pauseButton.style.display = "none";
 
     // TODO: Add event listeners for:
     //       video loaddata
@@ -42,7 +39,6 @@
     //       play click
     //       pause click
 
-} ());
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB

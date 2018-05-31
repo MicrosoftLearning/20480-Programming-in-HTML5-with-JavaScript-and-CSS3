@@ -1,52 +1,48 @@
-﻿/// <reference path="_namespace.js" />
-/// <reference path="geometry.js" />
+﻿import { distanceInMiles } from "../geometry.js";
 
-(function () {
+const conferenceLocation = {
+    latitude: 47.6097,  // decimal degrees
+    longitude: 122.3331 // decimal degrees
+};
 
-    const conferenceLocation = {
-        latitude: 47.6097,  // decimal degrees
-        longitude: 122.3331 // decimal degrees
-    };
+const maximumDistanceInMilesFromConferenceToShowVenue = 10;
 
-    const maximumDistanceInMilesFromConferenceToShowVenue = 10;
+const distanceElement = document.getElementById("distance");
+const travelSection = document.querySelector("section.travel");
+const venueSection = document.querySelector("section.venue");
 
-    const distanceElement = document.getElementById("distance");
-    const travelSection = document.querySelector("section.travel");
-    const venueSection = document.querySelector("section.venue");
+function distanceFromConference(coords) {
+    return Math.floor(distanceInMiles(coords, conferenceLocation));
+};
 
-    const distanceFromConference = function (coords) {
-        return Math.floor(conference.geometry.distanceInMiles(coords, conferenceLocation));
-    };
+function showDistanceMessage(distance) {
+    const message = "You are " + distance + " miles from the conference";
+    distanceElement.textContent = message;
+};
 
-    const showDistanceMessage = function (distance) {
-        const message = "You are " + distance + " miles from the conference";
-        distanceElement.textContent = message;
-    };
+function moveVenueSectionToTop() {
+    travelSection.parentNode.insertBefore(venueSection, travelSection);
+};
 
-    const moveVenueSectionToTop = function () {
-        travelSection.parentNode.insertBefore(venueSection, travelSection);
-    };
+function updateUIForPosition(position) {
+    // TODO: Calculate the distance from the conference
+    const distance = distanceFromConference(position.coords);
 
-    const updateUIForPosition = function (position) {
-        // TODO: Calculate the distance from the conference
-        const distance = distanceFromConference(position.coords);
-        
-        showDistanceMessage(distance);
-        const isNearToConference = distance < maximumDistanceInMilesFromConferenceToShowVenue;
-        if (isNearToConference) {
-            moveVenueSectionToTop();
-        }
-    };
+    showDistanceMessage(distance);
+    const isNearToConference = distance < maximumDistanceInMilesFromConferenceToShowVenue;
+    if (isNearToConference) {
+        moveVenueSectionToTop();
+    }
+};
 
-    const error = function () {
-        distanceElement.textContent = "Could not detect your current location.";
-    };
+function error() {
+    distanceElement.textContent = "Could not detect your current location.";
+};
 
-    // TODO: Get current position from the geolocation API.
-    //       Call updateUIForPosition for success and error for failure.
-    navigator.geolocation.getCurrentPosition(updateUIForPosition, error);
+// TODO: Get current position from the geolocation API.
+//       Call updateUIForPosition for success and error for failure.
+navigator.geolocation.getCurrentPosition(updateUIForPosition, error);
 
-} ());
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
