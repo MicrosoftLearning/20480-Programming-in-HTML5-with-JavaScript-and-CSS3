@@ -62,7 +62,7 @@ You will select the correct input types for each piece of data collected by the 
 This CSS file contains the styles for the registration page.
 5.	Also notice that the **register.htm** file contains a reference to the **/scripts/pages/register.js** JavaScript file that contains the code used by the registration page:
   ```html
-      <script src="/scripts/pages/register.js" type="text/javascript"></script>
+      <script src="/scripts/pages/register.js" type="module"></script>
   ```
 
 #### Task 2: Add form inputs to the Register page.

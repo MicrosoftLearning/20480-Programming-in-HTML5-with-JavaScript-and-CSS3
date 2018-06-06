@@ -90,12 +90,11 @@
     <Content Include="about.htm" />
     <Content Include="registered.htm" />
     <Content Include="Global.asax" />
+    <Content Include="scripts\LivePage.js" />
     <Content Include="scripts\offline.js" />
     <Content Include="scripts\datetime.js" />
-    <Content Include="scripts\Object.inherit.js" />
     <Content Include="scripts\geometry.js" />
     <Content Include="scripts\HtmlTemplate.js" />
-    <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\pages\live.js" />
     <Content Include="scripts\pages\location.js" />
     <Content Include="scripts\pages\register.js" />
@@ -104,6 +103,9 @@
     <Content Include="scripts\pages\location-venue.js" />
     <Content Include="scripts\LocalStarStorage.js" />
     <Content Include="scripts\pages\video.js" />
+    <Content Include="scripts\ScheduleItem.js" />
+    <Content Include="scripts\ScheduleList.js" />
+    <Content Include="scripts\speakerBadgePage.js" />
     <Content Include="speaker-badge.htm" />
     <Content Include="location.htm" />
     <Content Include="live.htm" />
@@ -122,7 +124,6 @@
     <Content Include="index.htm" />
     <Content Include="scripts\pages\feedback.js" />
     <Content Include="scripts\StarRatingView.js" />
-    <Content Include="scripts\_namespace.js" />
     <Content Include="styles\images\stars.png" />
     <Content Include="styles\mobile.css" />
     <Content Include="styles\header.css" />

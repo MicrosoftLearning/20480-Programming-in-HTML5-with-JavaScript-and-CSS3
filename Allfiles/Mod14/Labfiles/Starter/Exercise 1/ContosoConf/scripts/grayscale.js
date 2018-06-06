@@ -1,61 +1,56 @@
-﻿/// <reference path="_namespace.js" />
+﻿function createCanvas(size) {
+    /// <summary>Creates a canvas used for image manipulation.</summary>
 
-(function () {
+    const temporaryCanvas = document.createElement("canvas");
+    temporaryCanvas.setAttribute("width", size.width);
+    temporaryCanvas.setAttribute("height", size.height);
+    return temporaryCanvas;
+};
 
-    const createCanvas = function (size) {
-        /// <summary>Creates a canvas used for image manipulation.</summary>
+function getImageData(context, image) {
+    /// <summary>Draws the image onto the canvas context, then returns the resulting image data.</summary>
 
-        const temporaryCanvas = document.createElement("canvas");
-        temporaryCanvas.setAttribute("width", size.width);
-        temporaryCanvas.setAttribute("height", size.height);
-        return temporaryCanvas;
-    };
+    context.drawImage(image, 0, 0);
+    return context.getImageData(0, 0, image.width, image.height);
+};
 
-    const getImageData = function (context, image) {
-        /// <summary>Draws the image onto the canvas context, then returns the resulting image data.</summary>
+function grayscalePixel(pixels, index) {
+    /// <summary>Updates the pixel, starting at the given index, to be gray scale.</summary>
 
-        context.drawImage(image, 0, 0);
-        return context.getImageData(0, 0, image.width, image.height);
-    };
+    const brightness = 0.34 * pixels[index] + 0.5 * pixels[index + 1] + 0.16 * pixels[index + 2];
 
-    const grayscalePixel = function (pixels, index) {
-        /// <summary>Updates the pixel, starting at the given index, to be gray scale.</summary>
+    pixels[index] = brightness; // red
+    pixels[index + 1] = brightness; // green
+    pixels[index + 2] = brightness; // blue
+};
 
-        const brightness = 0.34 * pixels[index] + 0.5 * pixels[index + 1] + 0.16 * pixels[index + 2];
+export function grayscaleImage(image) {
+    // Converts a colour image into gray scale.
 
-        pixels[index] = brightness; // red
-        pixels[index + 1] = brightness; // green
-        pixels[index + 2] = brightness; // blue
-    };
+    const deferred = $.Deferred();
 
-    conference.grayscaleImage = function (image) {
-        // Converts a colour image into gray scale.
+    const canvas = createCanvas(image);
+    const context = canvas.getContext("2d");
+    const imageData = getImageData(context, image);
 
-        const deferred = $.Deferred();
+    // TODO: Create a Worker that runs /scripts/grayscale-worker.js
 
-        const canvas = createCanvas(image);
-        const context = canvas.getContext("2d");
-        const imageData = getImageData(context, image);
+    const pixels = imageData.data;
+    // 4 array items per pixel => Red, Green, Blue, Alpha
+    for (const i = 0; i < pixels.length; i += 4) {
+        grayscalePixel(pixels, i);
+    }
 
-        // TODO: Create a Worker that runs /scripts/grayscale-worker.js
+    // Update the canvas with the gray scaled image data.
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.putImageData(imageData, 0, 0);
 
-        const pixels = imageData.data;
-        // 4 array items per pixel => Red, Green, Blue, Alpha
-        for (const i = 0; i < pixels.length; i += 4) {
-            grayscalePixel(pixels, i);
-        }
-        
-        // Update the canvas with the gray scaled image data.
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.putImageData(imageData, 0, 0);
+    // Returning a jQuery Deferred makes this function easy to chain together with other deferred operations.
+    // The canvas object is returned as this can be used like an image.
+    deferred.resolveWith(this, [canvas]);
+    return deferred;
+};
 
-        // Returning a jQuery Deferred makes this function easy to chain together with other deferred operations.
-        // The canvas object is returned as this can be used like an image.
-        deferred.resolveWith(this, [canvas]);
-        return deferred;
-    };
-
-} ());
 // SIG // Begin signature block
 // SIG // MIIaaAYJKoZIhvcNAQcCoIIaWTCCGlUCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB

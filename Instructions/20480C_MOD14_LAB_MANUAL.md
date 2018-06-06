@@ -33,7 +33,7 @@ First, you will review the HTML markup and JavaScript code for the **Speaker Bad
 1.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod14\Labfiles\Starter\Exercise 1** folder.
 2.	In the **ContosoConf** project, review the **Speaker Badge** page. Note the script reference to the **grayscale.js** JavaScript file in the **/scripts** folder:
     ```html
-        <script src="/scripts/grayscale.js" type="text/javascript"></script>
+        <script src="/scripts/grayscale.js" type="module"></script>
     ```
 3.	Open the **grayscale.js** JavaScript file in the **scripts** folder, and review the code. Notice that this file contains a function named **conference.grayscaleImage**, which converts an image to grayscale. This function converts the image one pixel at a time, and can take a long time to convert a large image:
     ```javascript

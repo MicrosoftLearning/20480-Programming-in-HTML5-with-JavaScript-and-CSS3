@@ -1,37 +1,31 @@
-﻿/// <reference path="../_namespace.js" />
-/// <reference path="../StarRatingView.js" />
+﻿import { StarRatingView } from "../StarRatingView.js";
 
-(function () {
+const section = document.getElementById("feedback");
+const form = section.querySelector("form");
+const sent = document.getElementById("feedback-sent");
 
-    const section = document.getElementById("feedback");
-    const form = section.querySelector("form");
-    const sent = document.getElementById("feedback-sent");
+function formSubmitting(event) {
+    event.preventDefault();
+    // TODO: Trigger the animation by adding the "sending" CSS class to the form
+    form.classList.add("sending");
+};
 
-    const formSubmitting = function (event) {
-        event.preventDefault();
-        // TODO: Trigger the animation by adding the "sending" CSS class to the form
-        form.classList.add("sending");
-    };
+function animationEnded() {
+    section.style.display = "none";
+    sent.style.display = "block";
+};
 
-    const animationEnded = function () {
-        section.style.display = "none";
-        sent.style.display = "block";
-    };
+form.addEventListener("submit", formSubmitting, false);
 
-    form.addEventListener("submit", formSubmitting, false);
+// TODO: Add listener for the animationend event,
+//       calling the animationEnded function.
+form.addEventListener("animationend", animationEnded, false);
 
-    // TODO: Add listener for the animationend event,
-    //       calling the animationEnded function.
-    form.addEventListener("animationend", animationEnded, false);
+const questions = form.querySelectorAll(".feedback-question");
+for (let i = 0; i < questions.length; i++) {
+    new StarRatingView(questions[i]);
+}
 
-    const StarRatingView = conference.StarRatingView;
-
-    const questions = form.querySelectorAll(".feedback-question");
-    for (let i = 0; i < questions.length; i++) {
-        StarRatingView.create(questions[i]);
-    }
-
-} ());
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB

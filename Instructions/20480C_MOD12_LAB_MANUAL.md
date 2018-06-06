@@ -64,7 +64,7 @@ This page also references the **feedback.css** style sheet in the **/styles/page
       <link href="/styles/pages/feedback.css" rel="stylesheet" type="text/css" />
   ```
   ```html
-      <script src="/scripts/pages/feedback.js" type="text/javascript"></script>
+      <script src="/scripts/pages/feedback.js" type="module"></script>
   ```
 3.	Run the application and view the **Feedback** page.
 4.	Note that the input elements for the form have been converted into star icons. This feature is implemented by the JavaScript code in the **feedback.js** and **StarRatingView.js** files.

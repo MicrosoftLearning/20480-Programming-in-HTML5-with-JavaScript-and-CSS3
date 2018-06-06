@@ -48,7 +48,7 @@ First, you will complete the partially completed SVG mark-up of the venue map. N
 
 Also notice that the script references the **location-venue.js** script in the **scripts/pages** folder:
   ```html
-        <script src="/scripts/pages/location-venue.js" type="text/javascript"></script>
+        <script src="/scripts/pages/location-venue.js" type="module"></script>
   ```
 4.	Run the application and view the **Location** page. Notice that the details for Room B are missing:
 

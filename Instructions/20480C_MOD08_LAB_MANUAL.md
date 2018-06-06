@@ -37,8 +37,8 @@ You will add event listeners to handle drag-and-drop events. Then you will use t
     ```
 3.	Also notice that the page has script references for jQuery and the **/scripts/pages/speaker-badge.js** file:
     ```html
-        <script src="/scripts/jquery.min.js" type="text/javascript"></script>
-        <script src="/scripts/pages/speaker-badge.js" type="text/javascript"></script>
+        <script src="/scripts/jquery.min.js" type="module"></script>
+        <script src="/scripts/pages/speaker-badge.js" type="module"></script>
     ```
 4.	Open the **speaker-badge.js** file in the **scripts/pages** folder, and review the JavaScript code. This code defines a **SpeakerBadgePage** object that controls the page:
     ```javascript

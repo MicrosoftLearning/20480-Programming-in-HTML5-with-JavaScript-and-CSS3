@@ -11,20 +11,20 @@ const distanceElement = document.getElementById("distance");
 const travelSection = document.querySelector("section.travel");
 const venueSection = document.querySelector("section.venue");
 
-function distanceFromConference (coords) {
+function distanceFromConference(coords) {
     return Math.floor(distanceInMiles(coords, conferenceLocation));
 };
 
-function showDistanceMessage (distance) {
+function showDistanceMessage(distance) {
     const message = "You are " + distance + " miles from the conference";
     distanceElement.textContent = message;
 };
 
-function moveVenueSectionToTop () {
+function moveVenueSectionToTop() {
     travelSection.parentNode.insertBefore(venueSection, travelSection);
 };
 
-function updateUIForPosition (position) {
+function updateUIForPosition(position) {
     const distance = distanceFromConference(position.coords);
     showDistanceMessage(distance);
     const isNearToConference = distance < maximumDistanceInMilesFromConferenceToShowVenue;
@@ -33,7 +33,7 @@ function updateUIForPosition (position) {
     }
 };
 
-function error () {
+function error() {
     distanceElement.textContent = "Could not detect your current location.";
 };
 

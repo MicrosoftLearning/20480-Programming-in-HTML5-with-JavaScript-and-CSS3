@@ -1,35 +1,29 @@
-﻿/// <reference path="../_namespace.js" />
-/// <reference path="../StarRatingView.js" />
+﻿import { StarRatingView } from "../StarRatingView.js";
 
-(function () {
+const section = document.getElementById("feedback");
+const form = section.querySelector("form");
+const sent = document.getElementById("feedback-sent");
 
-    const section = document.getElementById("feedback");
-    const form = section.querySelector("form");
-    const sent = document.getElementById("feedback-sent");
+function formSubmitting(event) {
+    event.preventDefault();
+    form.classList.add("sending");
+};
 
-    const formSubmitting = function (event) {
-        event.preventDefault();
-        form.classList.add("sending");
-    };
+function animationEnded() {
+    section.style.display = "none";
+    sent.style.display = "block";
+};
 
-    const animationEnded = function () {
-        section.style.display = "none";
-        sent.style.display = "block";
-    };
+form.addEventListener("submit", formSubmitting, false);
+form.addEventListener("msAnimationEnd", animationEnded, false);
+form.addEventListener("webkitAnimationEnd", animationEnded, false);
+form.addEventListener("animationEnd", animationEnded, false);
 
-    form.addEventListener("submit", formSubmitting, false);
-    form.addEventListener("msAnimationEnd", animationEnded, false);
-    form.addEventListener("webkitAnimationEnd", animationEnded, false);
-    form.addEventListener("animationEnd", animationEnded, false);
+const questions = form.querySelectorAll(".feedback-question");
+for (let i = 0; i < questions.length; i++) {
+    new StarRatingView(questions[i]);
+}
 
-    const StarRatingView = conference.StarRatingView;
-
-    const questions = form.querySelectorAll(".feedback-question");
-    for (let i = 0; i < questions.length; i++) {
-        StarRatingView.create(questions[i]);
-    }
-
-} ());
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB

@@ -1,5 +1,4 @@
-﻿
-const radiusOfEarthInMiles = 3963.1676;
+﻿const radiusOfEarthInMiles = 3963.1676;
 
 function radians(degrees) {
     return degrees * Math.PI / 180;

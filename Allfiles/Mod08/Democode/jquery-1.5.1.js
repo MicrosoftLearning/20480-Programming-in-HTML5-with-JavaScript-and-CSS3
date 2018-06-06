@@ -5635,7 +5635,7 @@ jQuery.extend({
 
 		if ( fragment ) {
 			for ( i = 0; ret[i]; i++ ) {
-				if ( scripts && jQuery.nodeName( ret[i], "script" ) && (!ret[i].type || ret[i].type.toLowerCase() === "text/javascript") ) {
+				if ( scripts && jQuery.nodeName( ret[i], "script" ) && (!ret[i].type || ret[i].type.toLowerCase() === "module") ) {
 					scripts.push( ret[i].parentNode ? ret[i].parentNode.removeChild( ret[i] ) : ret[i] );
 
 				} else {
@@ -6376,7 +6376,7 @@ jQuery.extend({
 			xml: "application/xml, text/xml",
 			html: "text/html",
 			text: "text/plain",
-			json: "application/json, text/javascript",
+			json: "application/json, module",
 			"*": "*/*"
 		},
 
@@ -7116,7 +7116,7 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 // Install script dataType
 jQuery.ajaxSetup({
 	accepts: {
-		script: "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"
+		script: "module, application/javascript, application/ecmascript, application/x-ecmascript"
 	},
 	contents: {
 		script: /javascript|ecmascript/
