@@ -39,9 +39,9 @@ o	The <transform> elements translate the square by 200 units in the X and Y axes
 11.	Close the source window.
 12.	Close Microsoft Edge.
 
->**Note:** The HTML document has two buttons that enable you to demonstrate transformations and events. There is a separate <svg> element for each part of the demonstration. When you click one of the buttons on the page, the page uses the DOM to locate the appropriate <svg> element for that part of the demonstration.
-When you click the Transformations button, the web page displays two rectangles. The first rectangle is not transformed. The second rectangle has three transformations applied to it: a translation, a scale, and a skew in the X direction.
-When you click the Events button, the web page displays two <path> shapes representing Alaska and Hawaii. The onmousedown event is handled on each shape, to display a message box when the user clicks on the shape. The web page also defines a CSS rule that changes the color of the shape when the user hovers over the shape with the mouse.
+>**Note:** The HTML document has two buttons that enable you to demonstrate transformations and events. There is a separate **&lt;svg&gt;** element for each part of the demonstration. When you click one of the buttons on the page, the page uses the DOM to locate the appropriate **&lt;svg&gt;** element for that part of the demonstration.
+When you click the **Transformations** button, the web page displays two rectangles. The first rectangle is not transformed. The second rectangle has three transformations applied to it: a translation, a scale, and a skew in the X direction.
+When you click the **Events** button, the web page displays two **&lt;path&gt;** shapes representing Alaska and Hawaii. The **onmousedown** event is handled on each shape, to display a message box when the user clicks on the shape. The web page also defines a CSS rule that changes the color of the shape when the user hovers over the shape with the mouse.
 
 
 # Lesson 2: Drawing Graphics by Using the Canvas API
