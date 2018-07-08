@@ -78,6 +78,10 @@ When you click the Events button, the web page displays two <path> shapes repres
 3.	Close the source window.
 4.	Close Microsoft Edge.
 
+>**Note:** When you click the **Separate Transformations** button, the web page invokes the **demoSeparateTransformations()** function. This function invokes separate transformation functions on the two-dimensional context. Explain these functions. Also point out the **save()** and **restore()** function calls, which save the initial context and then restore it at the end of the drawing operations.
+When you click the **Matrix Transformations** button, the web page invokes the **demoMatrixTransformations()** function. This function performs a composite relative transformation on the coordinate system, by using the **transform()** function. The code also contains a commented-out call to **setTransform()**, to show how to perform an absolute transformation. Explain the difference between **transform()** and **setTransform()**.
+
+
 ### Demonstration: Creating Advanced Graphics
 
 #### Preparation Steps 
