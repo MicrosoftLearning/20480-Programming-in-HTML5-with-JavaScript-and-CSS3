@@ -91,6 +91,8 @@
 6.	Close the source window.
 7.	Close Microsoft Edge.
 
+>**Note:** Note that some of the transformations in this demonstration cause the target elements to appear partially off the screen.
+
 ### Demonstration: Performing 3D Transformations
 
 #### Preparation Steps 
