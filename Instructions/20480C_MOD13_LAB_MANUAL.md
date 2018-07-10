@@ -53,7 +53,7 @@ Using this page, an attendee can type a question and click **Ask** to send it to
     ```
 6.	Also, note the **&lt;script&gt;** element referencing the **live.js** file in the **/scripts/pages** folder:
     ```html
-        <script src="/scripts/pages/live.js" type="module"></script>
+        <script src="/scripts/pages/live.js" type="text/javascript"></script>
     ```
 7.	Open the **live.js** file that is in the **/scripts/pages** folder and review the code. The JavaScript code in this file defines a **LivePage** object, which controls the page. The code to manipulate the user interface and respond to DOM events has already been written:
     ```javascript

@@ -40,7 +40,7 @@ First, you will use the HTML5 DOM to obtain a reference to the page’s schedule
     ```
 3.	Also notice that the **schedule.htm** page references the JavaScript code in the **scripts\pages\schedule.js** script file:
     ```html
-        <script src="/scripts/pages/schedule.js" type="module"></script>
+        <script src="/scripts/pages/schedule.js" type="text/javascript"></script>
     ```
 4.	Review the **scripts\pages\schedule.js** script file. This file contains the details of each session held in JSON format. The data is held in an array named **schedule**, and each object in the array has three properties that specify the session id, the session title, and the tracks to which the session belongs (a session may be part of more than one track):
     ```javascript
