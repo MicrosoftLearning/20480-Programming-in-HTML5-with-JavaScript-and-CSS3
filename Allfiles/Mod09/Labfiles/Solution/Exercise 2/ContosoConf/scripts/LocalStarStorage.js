@@ -1,64 +1,56 @@
-﻿/// <reference path="_namespace.js" />
-/// <reference path="Object.inherit.js" />
+﻿export class LocalStarStorage {
+    constructor(localStorage) {
+        /// <summary>Encapsulates the browser's localStorage API to make saving a list of starred sessions easy.</summary>
+        this.localStorage = localStorage;
+        this.load();
+    }
 
-(function () {
+    addStar(sessionId) {
+        /// <summary>Stars the given session.</summary>
+        if (this.isStarred(sessionId)) return;
 
-    conference.LocalStarStorage = Object.inherit({
+        this.sessions.push(sessionId);
+        this.save();
+    }
 
-        initialize: function (localStorage) {
-            /// <summary>Encapsulates the browser's localStorage API to make saving a list of starred sessions easy.</summary>
-            this.localStorage = localStorage;
-            this.load();
-        },
-
-        addStar: function (sessionId) {
-            /// <summary>Stars the given session.</summary>
-            if (this.isStarred(sessionId)) return;
-
-            this.sessions.push(sessionId);
+    removeStar(sessionId) {
+        /// <summary>Removes the star from the given session.</summary>
+        const index = this.sessions.indexOf(sessionId);
+        if (index >= 0) {
+            this.sessions.splice(index, 1);
             this.save();
-        },
+        }
+    }
 
-        removeStar: function (sessionId) {
-            /// <summary>Removes the star from the given session.</summary>
-            const index = this.sessions.indexOf(sessionId);
-            if (index >= 0) {
-                this.sessions.splice(index, 1);
-                this.save();
-            }
-        },
+    isStarred(sessionId) {
+        /// <summary>Returns true if the given session is starred.</summary>
+        return this.sessions.indexOf(sessionId) >= 0;
+    }
 
-        isStarred: function (sessionId) {
-            /// <summary>Returns true if the given session is starred.</summary>
-            return this.sessions.indexOf(sessionId) >= 0;
-        },
+    load() {
+        /// <summary>Loads the starred sessions from storage.</summary>
 
-        load: function () {
-            /// <summary>Loads the starred sessions from storage.</summary>
-            
-            // TODO: get the "stars" from local storage
-            const json = this.localStorage.getItem("stars");
-            if (json) {
-                try {
-                    // TODO: parse the JSON string into this.sessions
-                    this.sessions = JSON.parse(json) || [];
-                } catch (exception) {
-                    this.sessions = [];
-                }
-            } else {
+        // TODO: get the "stars" from local storage
+        const json = this.localStorage.getItem("stars");
+        if (json) {
+            try {
+                // TODO: parse the JSON string into this.sessions
+                this.sessions = JSON.parse(json) || [];
+            } catch (exception) {
                 this.sessions = [];
             }
-        },
-
-        save: function () {
-            /// <summary>Saves the starred sessions to storage.</summary>
-            // TODO: convert this.sessions into a JSON string
-            // TODO: save this JSON string into local storage as "stars"
-            this.localStorage.setItem("stars", JSON.stringify(this.sessions));
+        } else {
+            this.sessions = [];
         }
-    });
+    }
 
-} ());
+    save() {
+        /// <summary>Saves the starred sessions to storage.</summary>
+        // TODO: convert this.sessions into a JSON string
+        // TODO: save this JSON string into local storage as "stars"
+        this.localStorage.setItem("stars", JSON.stringify(this.sessions));
+    }
+}
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB

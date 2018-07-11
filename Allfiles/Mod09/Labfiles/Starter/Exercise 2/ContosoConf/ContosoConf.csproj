@@ -92,10 +92,8 @@
     <Content Include="Global.asax" />
     <Content Include="scripts\offline.js" />
     <Content Include="scripts\datetime.js" />
-    <Content Include="scripts\Object.inherit.js" />
     <Content Include="scripts\geometry.js" />
     <Content Include="scripts\HtmlTemplate.js" />
-    <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\pages\location.js" />
     <Content Include="scripts\pages\register.js" />
     <Content Include="scripts\pages\schedule.js" />
@@ -114,7 +112,8 @@
     <Content Include="images\sponsors\sponsor5.png" />
     <Content Include="images\sponsors\sponsor1.png" />
     <Content Include="index.htm" />
-    <Content Include="scripts\_namespace.js" />
+    <Content Include="scripts\ScheduleItem.js" />
+    <Content Include="scripts\ScheduleList.js" />
     <Content Include="styles\images\stars.png" />
     <Content Include="styles\header.css" />
     <Content Include="styles\footer.css" />

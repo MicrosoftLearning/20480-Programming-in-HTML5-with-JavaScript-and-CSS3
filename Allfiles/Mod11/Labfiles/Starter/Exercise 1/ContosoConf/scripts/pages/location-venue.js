@@ -1,15 +1,13 @@
-﻿(function () {
+﻿let currentInfoDiv = document.getElementById("instruction");
 
-    let currentInfoDiv = document.getElementById("instruction");
-
-    const showRoomInfo = function (roomId) {
-        const infoDiv = document.getElementById(roomId + "-info");
-        if (currentInfoDiv) {
-            currentInfoDiv.style.display = "none";
-        }
-        infoDiv.style.display = "block";
-        currentInfoDiv = infoDiv;
-    };
+function showRoomInfo(roomId) {
+    const infoDiv = document.getElementById(roomId + "-info");
+    if (currentInfoDiv) {
+        currentInfoDiv.style.display = "none";
+    }
+    infoDiv.style.display = "block";
+    currentInfoDiv = infoDiv;
+};
 
     // TODO: Get the room elements in the svg element.
     // const rooms = ;
@@ -17,7 +15,6 @@
     // TODO: Add a click event listener for each room element.
     //       Call the showRoomInfo function, passing the clicked element's id property.
 
-} ());
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB

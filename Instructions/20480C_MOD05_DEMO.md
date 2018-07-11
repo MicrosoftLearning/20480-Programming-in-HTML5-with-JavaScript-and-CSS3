@@ -1,6 +1,6 @@
 # Module 5: Communicating with a Remote Server
 
-# Lesson 2: Sending and Receiving Data by Using the jQuery Library
+# Lesson 3: Sending and Receiving Data by Using Fetch API
 
 ### Demonstration: Communicating with a Remote Data Source
 

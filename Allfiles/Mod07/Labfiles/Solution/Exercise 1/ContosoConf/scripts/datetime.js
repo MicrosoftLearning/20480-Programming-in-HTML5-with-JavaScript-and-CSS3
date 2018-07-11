@@ -1,8 +1,7 @@
-﻿
-export function parseTimeAsTotalMinutes(timeString) {
+﻿export function parseTimeAsTotalMinutes(timeString) {
     const timeParts = timeString.split(":");
     return parseInt(timeParts[0], 10) * 60 + parseInt(timeParts[1], 10);
-};
+}
 
 function formatTime(totalSeconds) {
     const hours = Math.floor(totalSeconds / 3600);
@@ -23,7 +22,7 @@ function formatTime(totalSeconds) {
     add(seconds);
 
     return parts.join(":");
-};
+}
 // SIG // Begin signature block
 // SIG // MIIaaAYJKoZIhvcNAQcCoIIaWTCCGlUCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB

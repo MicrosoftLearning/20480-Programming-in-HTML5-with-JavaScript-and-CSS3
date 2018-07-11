@@ -1,23 +1,21 @@
-﻿(function () {
+﻿const offlinePages = /^\/(index|about|schedule|location).htm$/;
 
-    const offlinePages = /^\/(index|about|schedule|location).htm$/;
-
-    const hideLinksThatRequireOnline = function () {
-        const allNavLinks = document.querySelectorAll("nav.page-nav a");
-        for (let i = 0; i < allNavLinks.length; i++) {
-            const href = allNavLinks[i].getAttribute("href");
-            if (!offlinePages.test(href)) {
-                allNavLinks[i].style.display = "none";
-            }
+function hideLinksThatRequireOnline() {
+    const allNavLinks = document.querySelectorAll("nav.page-nav a");
+    for (let i = 0; i < allNavLinks.length; i++) {
+        const href = allNavLinks[i].getAttribute("href");
+        if (!offlinePages.test(href)) {
+            allNavLinks[i].style.display = "none";
         }
-    };
+    }
+};
 
-    const showLinks = function () {
-        const allNavLinks = document.querySelectorAll("nav.page-nav a");
-        for (let i = 0; i < allNavLinks.length; i++) {
-            allNavLinks[i].style.display = "";
-        }
-    };
+function showLinks() {
+    const allNavLinks = document.querySelectorAll("nav.page-nav a");
+    for (let i = 0; i < allNavLinks.length; i++) {
+        allNavLinks[i].style.display = "";
+    }
+};
 
 
     // TODO: if currently offline, hide navigation links that require online
@@ -26,8 +24,7 @@
     //       which either hide or show navigation links.
 
     // TODO: also handle the applicationCache error event to hide links
-    
-} ());
+
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB

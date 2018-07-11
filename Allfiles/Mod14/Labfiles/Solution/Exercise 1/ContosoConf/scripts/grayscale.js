@@ -1,51 +1,45 @@
-﻿/// <reference path="_namespace.js" />
+﻿function createCanvas(size) {
+    /// <summary>Creates a canvas used for image manipulation.</summary>
 
-(function () {
+    const temporaryCanvas = document.createElement("canvas");
+    temporaryCanvas.setAttribute("width", size.width);
+    temporaryCanvas.setAttribute("height", size.height);
+    return temporaryCanvas;
+};
 
-    const createCanvas = function (size) {
-        /// <summary>Creates a canvas used for image manipulation.</summary>
+function getImageData(context, image) {
+    /// <summary>Draws the image onto the canvas context, then returns the resulting image data.</summary>
 
-        const temporaryCanvas = document.createElement("canvas");
-        temporaryCanvas.setAttribute("width", size.width);
-        temporaryCanvas.setAttribute("height", size.height);
-        return temporaryCanvas;
+    context.drawImage(image, 0, 0);
+    return context.getImageData(0, 0, image.width, image.height);
+};
+
+
+
+export function grayscaleImage(image) {
+    // Converts a colour image into gray scale.
+
+    const deferred = $.Deferred();
+
+    const canvas = createCanvas(image);
+    const context = canvas.getContext("2d");
+    const imageData = getImageData(context, image);
+
+    // TODO: Create a Worker that runs /scripts/grayscale-worker.js
+    const worker = new Worker("/scripts/grayscale-worker.js");
+    const handleMessage = function (event) {
+        const message = event.data;
+        const updatedImageData = message.done;
+        // Update the canvas with the gray scaled image data.
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.putImageData(updatedImageData, 0, 0);
+        deferred.resolveWith(this, [canvas]);
     };
+    worker.addEventListener("message", handleMessage.bind(this));
+    worker.postMessage(imageData);
 
-    const getImageData = function (context, image) {
-        /// <summary>Draws the image onto the canvas context, then returns the resulting image data.</summary>
-
-        context.drawImage(image, 0, 0);
-        return context.getImageData(0, 0, image.width, image.height);
-    };
-
-
-
-    conference.grayscaleImage = function (image) {
-        // Converts a colour image into gray scale.
-
-        const deferred = $.Deferred();
-
-        const canvas = createCanvas(image);
-        const context = canvas.getContext("2d");
-        const imageData = getImageData(context, image);
-
-        // TODO: Create a Worker that runs /scripts/grayscale-worker.js
-        const worker = new Worker("/scripts/grayscale-worker.js");
-        const handleMessage = function (event) {
-            const message = event.data;
-            const updatedImageData = message.done;
-            // Update the canvas with the gray scaled image data.
-            context.clearRect(0, 0, canvas.width, canvas.height);
-            context.putImageData(updatedImageData, 0, 0);
-            deferred.resolveWith(this, [canvas]);
-        };
-        worker.addEventListener("message", handleMessage.bind(this));
-        worker.postMessage(imageData);
-        
-        return deferred;
-    };
-
-} ());
+    return deferred;
+};
 // SIG // Begin signature block
 // SIG // MIIaaAYJKoZIhvcNAQcCoIIaWTCCGlUCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
