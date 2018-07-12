@@ -6,8 +6,6 @@ export class ScheduleList {
         this.localStarStorage = localStarStorage;
     }
 
-    // TODO: Refactor these functions into methods of the ScheduleList object.
-
     async startDownload() {
         // await response of fetch call
         let response = await fetch("/schedule/list")
@@ -31,7 +29,7 @@ export class ScheduleList {
     }
 
     addAll(itemsArray) {
-        itemsArray.forEach(this.add, this); // TODO: When refactoring this, add the `this` argument to `forEach`.
+        itemsArray.forEach(this.add, this);
     }
 
     add(itemData) {
