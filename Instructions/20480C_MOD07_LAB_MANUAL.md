@@ -56,9 +56,9 @@ The JavaScript code for the Schedule page has been partially refactored to be mo
 >    ```
 >Should be moved to the **ScheduleList** class as following method:
 >    ```javascript
->    	 downloadDone(responseData) {
+>        downloadDone(responseData) {
 >            this.addAll(responseData.schedule);
->       }
+>        }
 >    ```
 
 3.	In the **startDownload** method, **downloadDone** and ***downloadFailed* method calls should be referenced by **this**.
