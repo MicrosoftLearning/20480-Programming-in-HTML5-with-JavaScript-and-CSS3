@@ -34,7 +34,7 @@ The JavaScript code for the Schedule page has been partially refactored to be mo
     ```
 3.	In the **scripts** folder, add a new JavaScript File **ScheduleList.js**.
 
-### Task 2: Convert variables into properties of the ScheduleList class.
+#### Task 2: Convert variables into properties of the ScheduleList class.
 1.	Add a **constructor** to the **ScheduleList** class.
 - The **constructor** should take two parameters called **element** and **localStarStorage** 
 - The **constructor** should use these two parameters to create and populate properties also called **element** and **localStarStorage** for the **ScheduleList** object
