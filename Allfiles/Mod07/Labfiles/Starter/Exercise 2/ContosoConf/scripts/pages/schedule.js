@@ -2,18 +2,18 @@
 /// <reference path="../LocalStarStorage.js" />
 /// <reference path="../datetime.js" />
 
-// Import objects/functions from the conference namespace.
+//TODO: Import objects/functions from the modules/classes.
 import { LocalStarStorage } from "../LocalStarStorage.js";
 import { ScheduleItem } from "../ScheduleItem.js";
 
-// TODO: Create a ScheduleList factory object using the Object.inherit helper method.
+// TODO: Create a ScheduleList class
 
-// TODO: Refactor these variables into properties of the ScheduleList object.
+// TODO: Refactor these variables into properties of the ScheduleList class.
 //       Assign them in the "initialize" method from arguments
 
 const element, localStarStorage;
 
-// TODO: Refactor these functions into methods of the ScheduleList object.
+// TODO: Refactor these functions into methods of the ScheduleList class.
 
 async function startDownload() {
     // await response of fetch call
