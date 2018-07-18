@@ -23,7 +23,7 @@
         }
     ```
 8.	Explain that this statement detects whether the browser has a network connection. If it does not, the **hideLinksThatRequireOnline()** function modifies the links in the navigation bar to ensure that pages that require network connectivity (such as the **Location** and **Register** pages) do not appear.
-9.	In Solution Explorer, expand the **scripts** folder, expand the **pages** folder, and then double-click **schedule.js**.
+9.	In Solution Explorer, expand the **scripts** folder, then double-click **ScheduleItem.js**.
 10.	In the Code Editor window, find the **setStar()** function. Point out that this function saves information about sessions that the user has selected (by clicking the star icon) to local storage, and also posts this information to the web server. Similarly, the **unsetStar()** function removes information about selected sessions from local storage. In this way, the user can still record which sessions they are interested in, even if the browser does not have a network connection.
 
 ©2018 Microsoft Corporation. All rights reserved.

@@ -19,13 +19,13 @@
 /images/sponsors/sponsor4.png
 /images/sponsors/sponsor5.png
 
-/scripts/_namespace.js
+#/scripts/_namespace.js
 /scripts/datetime.js
 /scripts/geometry.js
 /scripts/HtmlTemplate.js
-/scripts/jquery.min.js
 /scripts/LocalStarStorage.js
-/scripts/Object.inherit.js
+/scripts/ScheduleItem.js
+/scripts/ScheduleList.js
 /scripts/offline.js
 
 /scripts/pages/location.js
