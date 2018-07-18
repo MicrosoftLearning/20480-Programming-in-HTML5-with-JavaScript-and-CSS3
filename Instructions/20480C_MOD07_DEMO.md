@@ -12,7 +12,7 @@
 
 1.	Read the Lab Scenario to students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
-3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod07\Labfiles\Solution\Exercise 2** folder.
+3.	Start Visual Studio and open the **ContosoConf.sln** solution in the **Allfiles\Mod07\Labfiles\Solution\Exercise 1** folder.
 4.	In Solution Explorer, expand the **ContosoConf** project, expand the **scripts** folder, and then add a new Javascript File **ScheduleList.js**. 
 5.	In the Code Editor window, add a **constructor** to this class. Mention that the purpose of this constructor is to create and initialize new instances of **ScheduleList** type.
 6.	In Solution Explorer, in the **scripts** folder, expand the **pages** folder, and then double-click **schedule.js**. 

@@ -20,7 +20,6 @@ export class ScheduleItem {
         this.addStarClickEventHandler();
     }
 
-
     initializeElementClass() {
         if (this.isInTrack(1) && this.isInTrack(2)) {
             this.element.classList.add("both-tracks");
@@ -57,7 +56,7 @@ export class ScheduleItem {
         }
     }
 
-    isStarre() {
+    isStarred() {
         return this.element.classList.contains(this.starredClass);
     }
 
