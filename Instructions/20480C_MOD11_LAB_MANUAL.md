@@ -166,7 +166,7 @@ The file also contains a number of other functions that will draw the various el
 - Use the **drawImage** method of the context.
 - Note that the image is not always square, so calculate the source coordinates and size that will display the central square portion only. Use the **Math.min** function to calculate the minimum of the image’s **width** and **height** properties, like this:
     ```javascript
-        var size = Math.min(image.width, image.height);
+        const size = Math.min(image.width, image.height);
     ```
 
 ![alt text](./Images/20480B_11_Square.png "The central square portion of a rectangle")
