@@ -22,13 +22,13 @@
 7.	Mention that if several users are viewing the same web site, the same questions will appear in their browsers.
 8.	Click the **Report** link by the **What color are my eyes?** question. Explain that the web page changes the text of the link to **Reported** while the question is evaluated by the web server. The web server removes the question, all browsers displaying the **Live** page are updated, and the question disappears.
 9.	Close Internet Explorer.
-10.	In Solution Explorer, expand the **ContosoConf** project, expand the **scripts** folder, expand the **pages** folder, and then double-click **live.js**. 
-11.	In the Code Editor window, point out the following functions:
--	**initializeSocket**. This function arranges to handle the **onmessage** event of the socket and call the **handleSocketMessage()** function whenever a message arrives.
--	**askQuestion**. This function runs when the user has typed a question and clicked **Ask**. The text is formatted as a message and serialized as JSON before being sent to the web server for processing.
--	**handleSocketMessage**. This function runs when the web server sends a message back to the browser. The function examines the incoming message, and if it contains questions it calls the **handleQuestionsMessage()** function to display the questions on the web page. If the message contains a remove request, the function calls the **handleRemoveMessage()** function to remove the question from the web page.
--	**handleQuestionsMessage**. This function parses a message and displays the questions that it contains on the web page.
--	**reportQuestion**. This function runs when the user clicks the **Report** link; it sends a report message to the web server that contains the id of the question to be removed.
+10.	In Solution Explorer, expand the **ContosoConf** project, expand the **scripts** folder, and then double-click **LivePage.js**. 
+11.	In the Code Editor window, point out the following methods:
+-	**initializeSocket**. This method arranges to handle the **onmessage** event of the socket and call the **handleSocketMessage()** method whenever a message arrives.
+-	**askQuestion**. This method runs when the user has typed a question and clicked **Ask**. The text is formatted as a message and serialized as JSON before being sent to the web server for processing.
+-	**handleSocketMessage**. This method runs when the web server sends a message back to the browser. The method examines the incoming message, and if it contains questions it calls the **handleQuestionsMessage()** method to display the questions on the web page. If the message contains a remove request, the method calls the **handleRemoveMessage()** method to remove the question from the web page.
+-	**handleQuestionsMessage**. This method parses a message and displays the questions that it contains on the web page.
+-	**reportQuestion**. This method runs when the user clicks the **Report** link; it sends a report message to the web server that contains the id of the question to be removed.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
