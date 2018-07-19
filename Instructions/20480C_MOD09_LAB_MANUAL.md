@@ -110,7 +110,7 @@ In this exercise, you will update the JavaScript code for the Schedule page to r
 
 #### Task 4: Use the local storage wrapper to save and load data in the Schedule page.
 
-1.	In the **scripts\pages** folder, open the **schedule.js** page.
+1.	In the **scripts** folder, open the **ScheduleItem.js** page.
 2.	In the **initialize** method, find the following comment:
     ```javascript
         // TODO: Check if item is starred

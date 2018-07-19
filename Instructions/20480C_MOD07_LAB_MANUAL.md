@@ -19,7 +19,7 @@ After completing this lab, you will be able to:
 
 Estimated Time: **60 minutes**
 
-### Exercise 2: Refactoring JavaScript Code to Use Classes and Objects.
+### Exercise 1: Refactoring JavaScript Code to Use Classes and Objects.
 
 #### Scenario
 
@@ -27,7 +27,7 @@ The JavaScript code for the Schedule page has been partially refactored to be mo
 
 #### Task 1: Define the ScheduleList class.
 
-1.	Open the **ContosoConf.sln** solution in the **Allfiles\Mod07\Labfiles\Starter\Exercise 2** folder.
+1.	Open the **ContosoConf.sln** solution in the **Allfiles\Mod07\Labfiles\Starter\Exercise 1** folder.
 2.	In the **schedule.js** file, in the **scripts\pages** folder, find & remove the following comment:
     ```javascript
 		// TODO: Create a ScheduleList class.

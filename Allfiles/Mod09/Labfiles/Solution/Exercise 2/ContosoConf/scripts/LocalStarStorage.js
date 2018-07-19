@@ -32,9 +32,11 @@
 
         // TODO: get the "stars" from local storage
         const json = this.localStorage.getItem("stars");
+        
+        // TODO: parse the JSON string into this.sessions
+        // TODO: handle failures due to missing data, etc
         if (json) {
             try {
-                // TODO: parse the JSON string into this.sessions
                 this.sessions = JSON.parse(json) || [];
             } catch (exception) {
                 this.sessions = [];

@@ -24,11 +24,11 @@ export class SpeakerBadgePage {
         // TODO: Read the first file in the array
         //       Check the file type is an image
         //       Use this.readFile to read the file, then display the image
-        //       (Note that this.readFile returns a jQuery deferred, so chain this.displayImage using the "done" method.)
+        //       (Note that this.readFile returns a Promise, so chain this.displayImage.bind(this) using the "then" method.)
         if (files.length == 0) return;
         const file = files[0];
         if (this.isImageType(file.type)) {
-            this.readFile(file).done(this.displayImage);
+            this.readFile(file).then(this.displayImage.bind(this));
         } else {
             alert("Please drop an image file.");
         }
@@ -40,23 +40,22 @@ export class SpeakerBadgePage {
     }
 
     readFile(file) {
-        const reading = $.Deferred();
-        const context = this;
+         // Return a new promise.
+         return new Promise(function (resolve, reject) {
+            // TODO: Create a new FileReader
+            const reader = new FileReader();
 
-        // TODO: Create a new FileReader
-        const reader = new FileReader();
+            // TODO: Assign a callback function for reader.onload
+            // TODO: In the callback use resolve([fileDataUrl]); to return the file data URL.
+            reader.onload = function (loadEvent) {
+                const fileDataUrl = loadEvent.target.result;
+                
+                resolve([fileDataUrl]);
+            };
 
-        // TODO: Assign a callback function for reader.onload
-        reader.onload = function (loadEvent) {
-            // TODO: In the callback use reading.resolveWith(context, [fileDataUrl]); to return the file data URL.
-            const fileDataUrl = loadEvent.target.result;
-            reading.resolveWith(context, [fileDataUrl]);
-        };
-
-        // TODO: Start reading the file as a DataURL
-        reader.readAsDataURL(file);
-
-        return reading;
+            // TODO: Start reading the file as a DataURL
+            reader.readAsDataURL(file);
+        });
     }
 
     displayImage(imageUrl) {

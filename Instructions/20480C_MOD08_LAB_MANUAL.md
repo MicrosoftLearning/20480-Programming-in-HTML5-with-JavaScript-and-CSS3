@@ -37,14 +37,11 @@ You will add event listeners to handle drag-and-drop events. Then you will use t
     ```
 3.	Also notice that the page has script references for jQuery and the **/scripts/pages/speaker-badge.js** file:
     ```html
-        <script src="/scripts/jquery.min.js" type="text/javascript"></script>
-        <script src="/scripts/pages/speaker-badge.js" type="text/javascript"></script>
+        <script src="/scripts/pages/speaker-badge.js" type="module"></script>
     ```
 4.	Open the **speaker-badge.js** file in the **scripts/pages** folder, and review the JavaScript code. This code defines a **SpeakerBadgePage** object that controls the page:
     ```javascript
-        var SpeakerBadgePage = Object.inherit({ 
-            ...
-        });
+		new SpeakerBadgePage(badgeElement);
     ```
 - You will add code to the **initialize** method of **SpeakerBadgePage** object to configure drag and drop event handlers.
 - The **handleDragOver** function has already been implemented; it simply changes the cursor to a "copy" cursor as an item is dragged over an element.
@@ -84,11 +81,11 @@ You will add event listeners to handle drag-and-drop events. Then you will use t
 1.	In the **speaker-badge.js** file, review the **readFile** method.
 2.	Use the File API to implement the missing functionality in the **readFile** method: 
 - After the comment // TODO: Create a new FileReader, create a new **FileReader** object and assign it to a variable named **reader**.
-- After the comments // TODO: Assign a callback function for reader.onload and // TODO: In the callback use reading.resolveWith(context, [fileDataUrl]); to return the file data URL, add code to assign a callback function to the **onload** property of the **reader** object.
-- In the callback, resolve the **reading** deferred object, passing it the result of reading the file.
+- After the comments // TODO: Assign a callback function for reader.onload and // TODO: In the callback use resolve([fileDataUrl]); to return the file data URL, add code to assign a callback function to the **onload** property of the **reader** object.
+- In the callback, resolve the **Promise** object, passing it the result of reading the file.
 - After the comment // TODO: Start reading the file as a DataURL, add code that uses the **reader** object to start reading the file as a data URL.
 
->**Note:** Reading a file is an asynchronous operation, so the **readFile** method returns a jQuery deferred object that is resolved after the file has been read.
+>**Note:** Reading a file is an asynchronous operation, so the **readFile** method returns a Promise object that is resolved after the file has been read.
 
 #### Task 5: Test the Speaker Badge page.
 

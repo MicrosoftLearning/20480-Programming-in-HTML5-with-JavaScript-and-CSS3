@@ -24,8 +24,8 @@ function play() {
 function pause() {
     // TODO: pause the video
     video.pause();
-    playButton.style.display = "";
     pauseButton.style.display = "none";
+    playButton.style.display = "";
 };
 
 function updateTime() {

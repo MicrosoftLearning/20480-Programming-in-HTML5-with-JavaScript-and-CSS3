@@ -7,9 +7,9 @@ export class ScheduleItem {
         this.tracks = data.tracks;
         this.localStarStorage = localStarStorage;
         this.scheduleItemTemplate = new HtmlTemplate("schedule-item");
-        this.starredClass = "starred";
+        this.starredClass = "starred",
 
-        this.element = this.scheduleItemTemplate.createElement(data);
+            this.element = this.scheduleItemTemplate.createElement(data);
 
         if (localStarStorage.isStarred(this.id)) {
             this.element.classList.add(this.starredClass);
@@ -19,6 +19,7 @@ export class ScheduleItem {
         this.initializeElementPosition(data.start, data.end);
         this.addStarClickEventHandler();
     }
+
 
     initializeElementClass() {
         if (this.isInTrack(1) && this.isInTrack(2)) {
@@ -47,6 +48,7 @@ export class ScheduleItem {
     isInTrack(track) {
         return this.tracks.indexOf(track) >= 0;
     }
+
 
     toggleStar() {
         if (this.isStarred()) {
