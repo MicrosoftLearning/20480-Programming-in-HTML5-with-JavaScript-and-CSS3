@@ -24,11 +24,11 @@ export class SpeakerBadgePage {
         // TODO: Read the first file in the array
         //       Check the file type is an image
         //       Use this.readFile to read the file, then display the image
-        //       (Note that this.readFile returns a Promise, so chain this.displayImage using the "then" method.)
+        //       (Note that this.readFile returns a Promise, so chain this.displayImage.bind(this) using the "then" method.)
         if (files.length == 0) return;
         const file = files[0];
         if (this.isImageType(file.type)) {
-            this.readFile(file).then(this.displayImage);
+            this.readFile(file).then(this.displayImage.bind(this));
         } else {
             alert("Please drop an image file.");
         }
@@ -59,7 +59,6 @@ export class SpeakerBadgePage {
     }
 
     displayImage(imageUrl) {
-        document.querySelector("img").src = imageUrl;
-        //this.imageElement.src = imageUrl;
+        this.imageElement.src = imageUrl;
     }
 }
