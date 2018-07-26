@@ -28,8 +28,8 @@ export class speakerBadgePage {
         const file = files[0];
         if (this.isImageType(file.type)) {
             this.readFile(file)
-                .then(this.loadImage.bind(this))
-                .then(this.drawBadge.bind(this));
+                .then((file) => this.loadImage(file))
+                .then((file) => this.drawBadge(file));
         } else {
             alert("Please drop an image file.");
         }

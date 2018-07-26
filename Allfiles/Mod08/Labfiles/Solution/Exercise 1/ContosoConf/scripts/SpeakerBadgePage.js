@@ -28,8 +28,8 @@ export class SpeakerBadgePage {
         //       Check the file type is an image
         if (this.isImageType(file.type)) {
             //       Use this.readFile to read the file, then display the image
-            //       (Note that this.readFile returns a Promise, so chain this.displayImage.bind(this) using the "then" method.)
-            this.readFile(file).then(this.displayImage.bind(this));
+            //       (Note that this.readFile returns a Promise, so chain ((file)=> this.displayImage(file)) using the "then" method.)
+            this.readFile(file).then((file)=> this.displayImage(file));
         } else {
             alert("Please drop an image file.");
         }
