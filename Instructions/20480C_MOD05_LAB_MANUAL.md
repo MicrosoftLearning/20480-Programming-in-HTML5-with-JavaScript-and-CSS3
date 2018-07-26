@@ -15,7 +15,7 @@ A session may be very popular, so the web service will return the number of atte
 After completing this lab, you will be able to:
 1.	Write JavaScript code to retrieve data from a remote data source.
 2.	Write JavaScript code to send data to a remote data source.
-3.	Use the jQuery **ajax** method to simplify code that performs remote communications.
+3.	Use the async **fetch** method to simplify code that performs remote communications.
 
 #### Lab Setup
 
@@ -66,7 +66,7 @@ Finally, you will run the application and view the Schedule page to verify that 
 5.	After the previous statement, create an empty callback that handles the response from the web service and attach it to the **onreadystatechange** property of the **request** object.
 6.	In the callback, perform the following operations:
 - Ensure that the **readyState** property of the request object indicates the response is complete (it should have the value **4**).
-- Parse the JSON string in the response into an object and assign this object to the **schedule** variable.
+- Parse the JSON string in the response into an object and push the elements of this object in the **schedule** variable.
 - Call the **displaySchedule** function to display the sessions on the page.
 7.	After you have created the callback, add a statement to send the request to the server
 - Use the **send()** method of the **request** object.
@@ -142,35 +142,29 @@ First, you will create a function that creates an XMLHttpRequest object that pos
 
 >**Results:** After completing this exercise, you will have updated the Schedule page to send attendee selections to a web service, and to display a message when a session is popular.
 
-### Exercise 3: Refactoring the Code by Using the jQuery ajax Method.
+### Exercise 3: Refactoring the Code by Using the async fetch Method.
 
 #### Scenario
 
-The existing code using an **XMLHttpRequest** object works, but it is somewhat verbose. The **XMLHttpRequest** object also requires you to carefully set HTTP headers and encode the content appropriately; otherwise request data may not be transmitted correctly. In this exercise, you will refactor the JavaScript code for the Schedule page to make it simpler and more maintainable, by using the jQuery **ajax()** function.
+The existing code using an **XMLHttpRequest** object works, but it is somewhat verbose. The **XMLHttpRequest** object also requires you to carefully set HTTP headers and encode the content appropriately; otherwise request data may not be transmitted correctly. In this exercise, you will refactor the JavaScript code for the Schedule page to make it simpler and more maintainable, by using the async **fetch()** function.
 
-First, you will refactor the **downloadSchedule** function by replacing the use of an **XMLHttpRequest** object with a call to the jQuery **ajax** method. Then you will refactor the **saveStar()** function in a similar manner. Using the **ajax()** function will simplify the code by automatically encoding the request content and setting HTTP headers. Finally, you will run the application and view the Schedule page to verify that it still displays sessions and responds to star clicks as before.
+First, you will refactor the **downloadSchedule** function by replacing the use of an **XMLHttpRequest** object with a call to the **fetch** method. Then you will refactor the **saveStar()** function in a similar manner. Using the **fetch()** function will simplify the code by automatically encoding the request content and setting HTTP headers. Finally, you will run the application and view the Schedule page to verify that it still displays sessions and responds to star clicks as before.
 
 #### Task 1: Refactor the downloadSchedule function.
 
 1.	Open the **ContosoConf.sln** solution in the **Allfiles\Mod05\Labfiles\Starter\Exercise 3** folder.
-2.	Near the bottom of the **schedule.htm** file, before the reference to the **schedule.js** script, add a reference to the jQuery JavaScript file **jquery.min.js** located in the **scripts** folder. 
+2.	In the **schedule.js** file in the **scripts/pages** folder, refactor the **downloadSchedule** function to use the async **fetch()** function.
+- The fetch fetch must have a **url** agrument of **/schedule/list**.
+- Use the **response.json** with await to fetch the json response asyncronously; the response will contain a property called **schedule** that you should parse and push to the **schedule** array variable, and then call the **displaySchedule()** function.
 
-This action makes the **jQuery** object available for use in the JavaScript code for the Schedule page.
-
-3.	In the **schedule.js** file in the **scripts/pages** folder, refactor the **downloadSchedule** function to use the jQuery **ajax()** function.
-- The ajax options object must have a **type** property of **GET** and a **url** property of **/schedule/list**.
-- Use the jQuery **done()** function to provide a callback function that handles the web service response; the response will contain a property called **schedule** that you should assign to the local **schedule** array variable, and then call the **displaySchedule()** function.
-
->**Note:** The **done** callback is passed an argument containing the parsed JSON response object, so you do not need to use the **JSON.parse** method to extract the session data.
-
-- Use the jQuery **fail()** function to provide a callback function that handles any errors that might occur; simply display the message **Schedule list not available** in this callback
+- Check **response.ok** to handle any errors that might occur; simply display the message **Schedule list not available**.
 
 #### Task 2: Refactor the saveStar function.
 
-1.	In the **schedule.js** file, refactor the **saveStar** function to use the jQuery **ajax()** function.
-- The ajax options object must have a **type** property of **POST** and **url** property of **"/schedule/star/" + sessionId**.
-- The data passed by using the ajax options object that specifies whether a session has been selected should be a JavaScript object and not a string.
-- Use the jQuery **done()** function to implement a callback function that receives the web service response. In this callback, if the **starCount** property in the response object passed to the callback is greater than 50, display the message **This session is very popular! Be sure to arrive early to get a seat**.
+1.	In the **schedule.js** file, refactor the **saveStar** function to use the async **fetch()** function.
+- The fetch options object must have a **method** property of **POST**, **header** property to type **Headers** containing **Content-Type** header and **body** property of **"starred=" + isStarred**.
+- The fetch fetch must have a **url** agrument of **/schedule/list** and the **options** argument.
+- Use the **response.json** with await to fetch the json response asyncronously. Check if the **starCount** property in the response object is greater than 50, display the message **This session is very popular! Be sure to arrive early to get a seat**.
 
 #### Test the Schedule page.
 
@@ -183,7 +177,7 @@ This action makes the **jQuery** object available for use in the JavaScript code
 7.	Run the application and view the **schedule.htm** page. Verify that the error message **Schedule list not available** is displayed.
 8.	Close Microsoft Edge.
 
->**Result:** After completing this exercise, you will have refactored the JavaScript code that sends and receives data to use the jQuery **ajax** method.
+>**Result:** After completing this exercise, you will have refactored the JavaScript code that sends and receives data to use the async **fetch** method.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
