@@ -6,7 +6,7 @@
 
 During conference sessions, attendees may wish to ask questions. Distributing microphones among members of the audience can be problematic and slow, so you have been asked to add a page to the website that enables attendees to submit questions. Speakers can either respond immediately or later, depending on the nature of the questions and the session.
 
-On the website, all questions must be displayed in real-time without reloading the page, so that all attendees and the speaker can see what has been asked. To support this requirement, a web socket server has been created. You need to update the web application to send the details of questions to the socket server, and also to receive and display questions submitted by other attendees.
+On the website, all questions must be displayed in real-time without reloading the page, so that all attendees and the speaker can see what has been asked. To support this requirement, a web socket server has been created. You need to update the web application to send the details of the questions to the socket server, and also to receive and display questions submitted by other attendees.
 
 >**Note:** The web socket server is implemented by using ASP.NET and C#. The details of how this server works are outside the scope of this lab.
 
@@ -27,12 +27,12 @@ Estimated Time: **90 minutes**
 
 #### Scenario
 
-In this exercise, you will review the new **Live** page and JavaScript. You will write JavaScript that creates a web socket and connect the socket to the server. Then you will handle messages received from the web socket. You will parse the JSON serialized messages into objects that contain new questions to display on the page. Finally, you will run the application, view the **Live** page and verify that it displays the questions sent by the socket server.
+In this exercise, you will review the new **Live** page and JavaScript. You will write JavaScript that creates a web socket and connects the socket to the server. Then you will handle messages received from the web socket. You will parse the JSON serialized messages into objects that contain new questions to display on the page. Finally, you will run the application, view the **Live** page and verify that it displays the questions sent by the socket server.
 
-#### Task 1: Review the Live page.
+#### Task 1: Review the Live page
 
-1.	Start Visual Studio and open the **ContosoConf.sln** solution from the **Allfiles\Mod13\Labfiles\Starter\Exercise 1** folder.
-2.	Start the application and view the **Live** page. Ignore the error that occurs (this error happens because the JavaScript code for the page is not yet complete). 
+1.	Start Microsoft Visual Studio, and then from the **Allfiles\Mod13\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+2.	Start the application, and then view the **Live** page. Ignore the error that occurs (this error happens because the JavaScript code for the page is not yet complete).
 
 Using this page, an attendee can type a question and click **Ask** to send it to the presenter. All questions asked by all attendees will appear on this page, underneath the **Ask a question** box.
 
@@ -51,30 +51,30 @@ Using this page, an attendee can type a question and click **Ask** to send it to
             <!-- Questions will be displayed here when received by the web socket. -->
         </ul>
     ```
-6.	Also, note the **&lt;script&gt;** element referencing the **live.js** file in the **/scripts/pages** folder:
+6.	Also, in the **/scripts/pages** folder, note the **&lt;script&gt;** element referencing the **live.js** file:
     ```html
         <script src="/scripts/pages/live.js" type="text/javascript"></script>
     ```
-7.	Open the **live.js** file that is in the **/scripts/pages** folder and review the code. The JavaScript code in this file defines a **LivePage** object, which controls the page. The code to manipulate the user interface and respond to DOM events has already been written:
+7.	From the **/scripts/pages** folder, open the **live.js** file, and then review the code. The JavaScript code in this file defines a **LivePage** object, which controls the page. The code to manipulate the user interface and respond to DOM events has already been written:
     ```javascript
         var LivePage = Object.inherit({
         ...
         })
     ```
 
-#### Task 2: Receive messages by using a web socket.
+#### Task 2: Receive messages by using a web socket
 
 1.	In the **live.js** file near the end of the file (just before the call to the **create()** method), find the following comment:
     ```javascript
         // TODO: Create a web socket connection to ws://localhost:[port]/live/socket.ashx
     ```
-- The web server that handles requests sent to the web socket is located at the URL localhost:[port]/live/socket.ashx.
+- The web server that handles requests sent to the web socket is located at **localhost:[port]/live/socket.ashx**.
 2.	After this comment, add code to create a new **WebSocket** object that connects to the socket server at **localhost:[port]/live/socket.ashx**.
 
 >**Note:** The socket is stored in the **LivePage** object as **this.socket**, so methods of **LivePage** can use it.
 
-3.	Find the **initializeSocket()** function in the **LivePage** object.
-4.	In the **initializeSocket()** function, after the comment // TODO: Assign a callback to handle messages from the socket, assign a callback function to the **onmessage** property of the socket. As follows:
+3.	In the **LivePage** object, find the **initializeSocket()** function.
+4.	In the **initializeSocket()** function, after the __// TODO: Assign a callback to handle messages from the socket__ comment, assign a callback function to the **onmessage** property of the socket as follows:
     ```javascript
         this.socket.onmessage = this.handleSocketMessage.bind(this);
     ```
@@ -84,7 +84,7 @@ Using this page, an attendee can type a question and click **Ask** to send it to
 >        var o = {data : 1}; // object
 >
 >        ...
->        function f(a) = { 
+>        function f(a) = {
 >            return this.data + b;
 >        };  // function
 >        ...
@@ -111,12 +111,12 @@ Using this page, an attendee can type a question and click **Ask** to send it to
 
 >**Note:** You will implement the commented code for the **handleSocketMessage** method in the next step.
 
-#### Task 3: Display questions received as messages.
+#### Task 3: Display questions received as messages
 
-1.	The **handleSocketMessage** method receives incoming messages from the web socket. The message data is stored in the **event** parameter, but it is serialized as a JSON string. In this method, add JavaScript code to perform the following tasks:
-- After the comment // TODO: Parse the event data into message object, parse the JSON message into a JavaScript object named **message**.
+1.	The **handleSocketMessage** method receives incoming messages from the web socket. The message data is stored in the **event** parameter, but it is serialized as a JSON string. In this method, add a JavaScript code to perform the following tasks:
+- After the __// TODO: Parse the event data into message object__ comment, parse the JSON message into a JavaScript object named **message**.
 - Modify the statement that calls the **handlQuestionsMessage()** function and only run this statement if the **message** variable contains a **questions** property.
-2.	Review the **displayQuestion** method:
+2.	Review the **displayQuestion** method.
     ```javascript
         displayQuestion: function (question) {
             var item = this.createQuestionItem(question);
@@ -136,26 +136,26 @@ This method adds the questions specified as the parameter to the list below the 
 
 #### Task 4: Test the application.
 
-1.	Run the application and view the **Live** page. The server-side web socket will send a series of test questions.
+1.	Run the application, and then view the **Live** page. The server-side web socket will send a series of test questions.
 2.	Verify that the following four questions appear on the page over a period of a few seconds.
-- What are some good resources for getting started with HTML5?
-- Can you explain more about the Web Socket API, please?
-- This is an #&!%!* inappropriate message!!
-- How much of CSS3 can I use right now?
+- **What are some good resources for getting started with HTML5?**
+- **Can you explain more about the Web Socket API, please?**
+- **This is an #&!%!* inappropriate message!!**
+- **How much of CSS3 can I use right now?**
 3.	Close Microsoft Edge.
 
->**Results:** After completing this exercise, you will have added JavaScript code to the **Live** web page to receive questions from a web socket and to display them.
+>**Results:** After completing this exercise, you will have added a JavaScript code to the **Live** web page to receive questions from a web socket and to display them.
 
-### Exercise 2: Sending Messages to a Web Socket.
+### Exercise 2: Sending Messages to a Web Socket
 
 #### Scenario
 
-In this exercise, you will create a message object that contains a question to ask. You will serialize this message and send it to the server by using the web socket. Then you will run the application, view two concurrent instances of the **Live** page, and verify that asking questions results in them being displayed on the page in both instances.
+In this exercise, you will create a message object that contains a question. You will serialize this message and send it to the server by using the web socket. Then you will run the application, view two concurrent instances of the **Live** page and verify that asking questions results in them being displayed on the page in both instances.
 
-#### Task 1: Format a question as a message.
+#### Task 1: Format a question as a message
 
-1.	Open the **ContosoConf** solution in the **Allfiles\Mod13\Labfiles\Starter\Exercise 2** folder.
-2.	Open the **live.js** file in the **scripts/pages** folder. In this file, the **LivePage** object has methods that handle the **Ask a question** form submission. The question text is passed to the **askQuestion** method, which looks like this:
+1.	From the **Allfiles\Mod13\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf** solution.
+2.	From the **scripts/pages** folder, open the **live.js** file. In this file, the **LivePage** object has methods that handle the **Ask a question** form submission. The question text is passed to the **askQuestion** method, which looks like this:
     ```javascript
         askQuestion: function (text) {
             // TODO: Create a message object with the format { ask: text }
@@ -168,41 +168,41 @@ In this exercise, you will create a message object that contains a question to a
             this.questionInput.value = "";
         }
     ```
-3.	In the **askQuestion** method, after the comment // TODO: Create a message object with the format { ask: text }, create a variable named **message** that contains an object with the following format (this is the message structure expected by the socket server):
+3.	In the **askQuestion** method, after the __// TODO: Create a message object with the format { ask: text }__ comment, create a variable named **message** that contains an object with the following format (this is the message structure expected by the socket server):
     ```javascript
         { ask: text }
     ```
-4.	After the comment // TODO: Convert the message object into a JSON string, serialize the **message** variable as a JSON string. 
+4.	After the __// TODO: Convert the message object into a JSON string__ comment, serialize the **message** variable as a JSON string.
 - Use the **JSON.stringify()** function.
 
-#### Task 2: Send the message to the web socket.
+#### Task 2: Send the message to the web socket
 
-1.	In the **askQuestion** method, after the comment // TODO: Send the message to the socket, send the JSON serialized message to the web socket.
+In the **askQuestion** method, after the __// TODO: Send the message to the socket__ comment, send the JSON serialized message to the web socket.
 - Use the **send()** function of the **socket** variable.
 
-#### Task 3: Test the application.
+#### Task 3: Test the application
 
-1.	Run the application and view the **Live** page.
-2.	Open a second tab in Microsoft Edge and view the **Live** page again.
+1.	Run the application, and then view the **Live** page.
+2.	Open a second tab in Microsoft Edge, and then view the **Live** page again.
 3.	Use the **Ask a question** form to submit questions.
 4.	Verify that the questions are displayed on the pages in both tabs.
 
->**Note:** The message **This is an #&!%!* inappropriate message** might disappear from the second tab.
+>**Note:** The **This is an #&!%!* inappropriate message** message might disappear from the second tab.
 
 5.	Close Microsoft Edge.
 
 >**Result:** After completing this exercise, you will have modified the **Live** question page to enable users to ask questions by sending messages to the server by using the web socket.
 
-### Exercise 3: Handling Different Web Socket Message Types.
+### Exercise 3: Handling Different Web Socket Message Types
 
 #### Scenario
 
-In this exercise, you will add a link next to each question to enable a student to report the question as inappropriate. Then you will handle messages from the server instructing the page to remove a question; this process will involve handling different types of messages. Finally, you will run the application, view the **Live** page, and verify that clicking the link causes the question to be removed.
+In this exercise, you will add a link next to each question to enable a student to report the question as inappropriate. Then you will handle messages from the server instructing the page to remove a question; this process will involve handling different types of messages. Finally, you will run the application, view the **Live** page, and then verify that clicking the link causes the question to be removed.
 
-#### Task 1: Display report links.
+#### Task 1: Display report links
 
-1.	Open the **ContosoConf** solution in the **Allfiles\Mod13\Labfiles\Starter\Exercise 3** folder.
-2.	Open the **live.js** file in the **scripts/pages** folder, and review the **createReportLink** method:
+1.	From the **Allfiles\Mod13\Labfiles\Starter\Exercise 3** folder, open the **ContosoConf** solution.
+2.	From the **scripts/pages** folder, open the **live.js** file, and then review the **createReportLink** method:
     ```javascript
         createReportLink: function () {
             var report = document.createElement("a");
@@ -213,13 +213,13 @@ In this exercise, you will add a link next to each question to enable a student 
         }
     ```
 This method creates a new link element that enables a user to report a question to the moderator, and adds attributes that cause the link to be rendered appropriately.
-3.	Uncomment the following line of the **displayQuestion** method: 
+3.	Uncomment the following line of the **displayQuestion** method:
   ```javascrit
       //item.appendChild(this.createReportLink());
   ```
 - This statement calls the **createReportLink()** function to add the **Report** link next to each question.
 
-#### Task 2: Send the report message.
+#### Task 2: Send the report message
 
 1.	When a **Report** link is clicked, the **handleQuestionsClick** event handler changes the text of the link to **Reported**, and then calls the **reportQuestion** method:
     ```javascript
@@ -234,13 +234,13 @@ This method creates a new link element that enables a user to report a question 
             }
         }
     ```
-In the **reportQuestion()** function, after the comment // TODO: Send socket message { report: questionId }, add code to send the socket a message with the following format (this message specifies the ID of the question being reported):
+2. In the **reportQuestion()** function, after the __// TODO: Send socket message { report: questionId }__ comment, add code to send the socket a message with the following format (this message specifies the ID of the question being reported):
   ```javascript
       { report: questionId }
   ```
 - Use the **JSON.stringify()** function to serialize the message.
 
-#### Task 3: Handle Remove Question messages.
+#### Task 3: Handle the Remove Question messages
 
 1.	Find the **handleRemoveMessage()** function:
     ```javascript
@@ -257,11 +257,11 @@ In the **reportQuestion()** function, after the comment // TODO: Send socket mes
 This function removes all messages that contain the **remove** property from the displayed list of questions; the socket server attaches this property to all messages that should no longer be displayed.
 2.	Update the **handleSocketMessage()** function to call the **handleRemoveMessage()** function for all messages that have the **remove** property.
 
-#### Task 4: Test the application.
+#### Task 4: Test the application
 
-1.	Run the application and view the **Live** page.
+1.	Run the application, and then view the **Live** page.
 2.	Verify that **Report** links are displayed next to questions.
-3.	Click the **Report** link next to the question **What are some good resources for getting started with HTML5?** 
+3.	Click the **Report** link next to the **What are some good resources for getting started with HTML5?** question.
 4.	Verify that the question disappears from the page (there will be a short delay while the question is assessed).
 5.	Close Microsoft Edge.
 
