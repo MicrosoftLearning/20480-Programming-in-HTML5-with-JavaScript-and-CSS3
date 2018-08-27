@@ -6,7 +6,7 @@
 
 The existing JavaScript code for the ContosoConf website has been written without much high-level structure or organization. While this approach is fine for small pieces of code, it will not scale up for a larger project. An unstructured collection of functions and variables scattered throughout a JavaScript file can quickly become unmaintainable.
 
-Before implementing more website features by using JavaScript, you decide to refactor the existing code to introduce better organizational practices. The resulting code will be more maintainable and provide a good pattern for implementing future website features.
+Before implementing more JavaScript code to enhance the website, you decide to refactor the existing code for better organizational practices. The resulting code will be more maintainable and provide a good pattern for implementing features in the future.
 
 #### Objectives
 
@@ -19,28 +19,28 @@ After completing this lab, you will be able to:
 
 Estimated Time: **60 minutes**
 
-### Exercise 1: Refactoring JavaScript Code to Use Classes and Objects.
+### Exercise 1: Refactoring JavaScript Code to Use Classes and Objects
 
 #### Scenario
 
-The JavaScript code for the Schedule page has been partially refactored to be more maintainable. In this exercise, you will continue the refactoring process by updating the code for the Schedule page. You will create a new class **ScheduleList**. Then you will move the existing functions and variables relating to the schedule list into this class.
+The JavaScript code for the **Schedule** page has been partially refactored to be more maintainable. In this exercise, you will continue the refactoring process by updating the code for the **Schedule** page. You will create a new class **ScheduleList**, and then you will move the existing functions and variables relating to the schedule list into this new class.
 
-#### Task 1: Define the ScheduleList class.
+#### Task 1: Define the ScheduleList class
 
-1.	Open the **ContosoConf.sln** solution in the **Allfiles\Mod07\Labfiles\Starter\Exercise 1** folder.
-2.	In the **schedule.js** file, in the **scripts\pages** folder, find & remove the following comment:
+1.	From the **Allfiles\Mod07\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+2.	In the **schedule.js** file, in the **scripts\pages** folder, find and remove the following comment:
     ```javascript
 		// TODO: Create a ScheduleList class.
     ```
-3.	In the **scripts** folder, add a new JavaScript File **ScheduleList.js**.
+3.	In the **scripts** folder, add a new JavaScript file **ScheduleList.js**.
 
-#### Task 2: Convert variables into properties of the ScheduleList class.
-1.	Add a **constructor** to the **ScheduleList** class.
-- The **constructor** should take two parameters called **element** and **localStarStorage** 
-- The **constructor** should use these two parameters to create and populate properties also called **element** and **localStarStorage** for the **ScheduleList** object
-2.	Remove the **element** and **localStarStorage** variables from the **ScheduleList** object (they have been moved to **ScheduleList** class).
+#### Task 2: Convert variables into properties of the ScheduleList class
+1.	To the **ScheduleList** class, add a constructor.
+- The constructor should take two parameters called **element** and **localStarStorage**.
+- The constructor should use these two parameters to create and populate properties also called **element** and **localStarStorage** for the **ScheduleList** object.
+2.	Remove the **element** and **localStarStorage** variables from the **ScheduleList** object (they have been moved to the **ScheduleList** class).
 
-#### Task 3: Convert functions into methods of the **ScheduleList** class.
+#### Task 3: Convert functions into methods of the ScheduleList class
 
 1.	In the **schedule.js** file, find the following comment:
     ```javascript
@@ -48,29 +48,29 @@ The JavaScript code for the Schedule page has been partially refactored to be mo
     ```
 2.	Move each of the functions following the comment to **ScheduleList** class as methods.
 
->**Note:** As an example of refactoring a function, the following code:
->    ```javascript
+>**Note**: As an example of refactoring a function, the following code:
+>  ```javascript
 >        downloadDone: function (responseData) {
 >            addAll(responseData.schedule);
 >        }
->    ```
->Should be moved to the **ScheduleList** class as following method:
->    ```javascript
+>  ```
+>Should be moved to the **ScheduleList** class as the following method:
+>  ```javascript
 >        downloadDone(responseData) {
 >            this.addAll(responseData.schedule);
 >        }
->    ```
+>  ```
 
-3.	In the **startDownload** method, **downloadDone** and ***downloadFailed* method calls should be referenced by **this**.
+3.	In the **startDownload** method, **downloadDone** and **downloadFailed** method calls should be referenced by **this**.
 
 
 4.	In the **addAll** method, specify that the **forEach** function should call the **add** method of the object referenced by **this**. Also, pass **this** as the second parameter to the **forEach** function.
 
->**Note:** The second parameter to the **forEach** function specifies the object that any use of **this** will reference in the **add** function.
+>**Note**: The second parameter to the **forEach** function specifies the object that any use of **this** will reference in the **add** function.
 
 5.	In the **add** method, **localStarStorage** and **element** should be referenced by **this**.
 
-#### Task 4: Create and use a ScheduleList object.
+#### Task 4: Create and use a ScheduleList object
 
 1.	Near the end of the **schedule.js** file, find the following JavaScript code:
     ```javascript
@@ -80,21 +80,21 @@ The JavaScript code for the Schedule page has been partially refactored to be mo
         localStarStorage = LocalStarStorage.create(localStorage);
         startDownload();
     ```
-2.	Modify this code to create a **ScheduleList** object by using the **new ScheduleList()** constructor. Pass the DOM element and local star storage object as parameters to **new ScheduleList()**.
+2.	Modify this code to create a **ScheduleList** object by using the **new ScheduleList()** constructor. Pass the DOM element and the **localStarStorage** object as parameters to **new ScheduleList()**.
 3.	Call the **startDownload** method of the **ScheduleList** object.
 
-#### Task 5: Test the application.
+#### Task 5: Test the application
 
-1.	Run the application and view the **schedule.htm** page.
+1.	Run the application, and then view the **schedule.htm** page.
 2.	Verify that the page looks similar to the image below:
 
 ![alt text](./Images/20480B_7_Schedule-Refactored.png "The Schedule page")
 
->**Note:** The styling and layout of the Schedule page has been changed. This is performed by using the CSS rules implemented in the schedule.css style sheet and is not a result of any updates made to the JavaScript code.
+>**Note**: The styling and layout of the **Schedule** page has been changed. This is performed by using the CSS rules implemented in the **schedule.css** style sheet and is not a result of any updates made to the JavaScript code.
 
 3.	Close Microsoft Edge. 
 
->**Result:** After completing this exercise, you will be able to describe how the Contoso Conference application is structured as a Visual Studio 2017 project.
+>**Result**: After completing this exercise, you will be able to describe how the Contoso Conference application is structured as a Microsoft Visual Studio 2017 project.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

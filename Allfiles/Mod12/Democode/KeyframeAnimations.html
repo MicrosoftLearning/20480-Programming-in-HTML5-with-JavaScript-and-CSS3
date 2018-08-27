@@ -33,13 +33,13 @@
             top: 0px;
         }
 
-        @-ms-keyframes ballmovement {
+        @keyframes ballmovement {
 
             0% {
                 left: 0px;
                 top: 0px;
                 background-color: yellow;
-                -ms-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
             }
     
             33% {
@@ -58,17 +58,17 @@
                 left: 300px;
                 top: 160px;
                 background-color: purple;
-                -ms-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
             }
         }
 
         #ball.animate {
-            -ms-animation-name: ballmovement;
-            -ms-animation-duration: 10s;
-            -ms-animation-delay: 3s;
-            -ms-animation-timing-function: linear;
-            -ms-animation-iteration-count: 2;
-            -ms-animation-direction: alternate;
+            animation-name: ballmovement;
+            animation-duration: 10s;
+            animation-delay: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
         }
 
     </style>
@@ -129,4 +129,3 @@
     <div id="messageLabel"></div>
 </body>
 </html>
-
