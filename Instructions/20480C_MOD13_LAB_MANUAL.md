@@ -57,14 +57,14 @@ Using this page, an attendee can type a question and click **Ask** to send it to
     ```
 7.	From the **/scripts/pages** folder, open the **live.js** file, and then review the code. The JavaScript code in this file defines a **LivePage** object, which controls the page. The code to manipulate the user interface and respond to DOM events has already been written:
     ```javascript
-        var LivePage = Object.inherit({
+		new LivePage(
         ...
-        })
+        );
     ```
 
 #### Task 2: Receive messages by using a web socket
 
-1.	In the **live.js** file near the end of the file (just before the call to the **create()** method), find the following comment:
+1.	In the **live.js** file in the end beginning the file, find the following comment:
     ```javascript
         // TODO: Create a web socket connection to ws://localhost:[port]/live/socket.ashx
     ```
@@ -73,8 +73,9 @@ Using this page, an attendee can type a question and click **Ask** to send it to
 
 >**Note:** The socket is stored in the **LivePage** object as **this.socket**, so methods of **LivePage** can use it.
 
-3.	In the **LivePage** object, find the **initializeSocket()** function.
-4.	In the **initializeSocket()** function, after the __// TODO: Assign a callback to handle messages from the socket__ comment, assign a callback function to the **onmessage** property of the socket as follows:
+3.	Find the **initializeSocket()** function in the **LivePage.js** file.
+4.	In the **initializeSocket()** function, after the comment // TODO: Assign a callback to handle messages from the socket, assign a callback function to the **onmessage** property of the socket. As follows:
+
     ```javascript
         this.socket.onmessage = this.handleSocketMessage.bind(this);
     ```
@@ -99,7 +100,7 @@ Using this page, an attendee can type a question and click **Ask** to send it to
 >In the case of the lab code, the **handleSocketMessage()** function looks like this:
 >
 >    ```javascript
->        handleSocketMessage: function (event) {
+>        handleSocketMessage(event) {
 >            // TODO: Parse the event data into message object.
 >            // var message = ... ;
 >
@@ -118,7 +119,7 @@ Using this page, an attendee can type a question and click **Ask** to send it to
 - Modify the statement that calls the **handlQuestionsMessage()** function and only run this statement if the **message** variable contains a **questions** property.
 2.	Review the **displayQuestion** method.
     ```javascript
-        displayQuestion: function (question) {
+        displayQuestion(question) {
             var item = this.createQuestionItem(question);
             //item.appendChild(this.createReportLink());
             this.questionListElement.appendChild(item);
@@ -154,10 +155,11 @@ In this exercise, you will create a message object that contains a question. You
 
 #### Task 1: Format a question as a message
 
-1.	From the **Allfiles\Mod13\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf** solution.
-2.	From the **scripts/pages** folder, open the **live.js** file. In this file, the **LivePage** object has methods that handle the **Ask a question** form submission. The question text is passed to the **askQuestion** method, which looks like this:
+1.	Open the **ContosoConf** solution in the **Allfiles\Mod13\Labfiles\Starter\Exercise 2** folder.
+2.	Open the **        new LivePage(.js** file in the **scripts** folder. In this file, the **LivePage** class has methods that handle the **Ask a question** form submission. The question text is passed to the **askQuestion** method, which looks like this:
+
     ```javascript
-        askQuestion: function (text) {
+        askQuestion(text) {
             // TODO: Create a message object with the format { ask: text }
 
             // TODO: Convert the message object into a JSON string
@@ -201,10 +203,11 @@ In this exercise, you will add a link next to each question to enable a student 
 
 #### Task 1: Display report links
 
-1.	From the **Allfiles\Mod13\Labfiles\Starter\Exercise 3** folder, open the **ContosoConf** solution.
-2.	From the **scripts/pages** folder, open the **live.js** file, and then review the **createReportLink** method:
+1.	Open the **ContosoConf** solution in the **Allfiles\Mod13\Labfiles\Starter\Exercise 3** folder.
+2.	Open the **LivePage.js** file in the **scripts** folder, and review the **createReportLink** method:
+
     ```javascript
-        createReportLink: function () {
+        createReportLink() {
             var report = document.createElement("a");
             report.textContent = "Report";
             report.setAttribute("href", "#");
@@ -213,8 +216,9 @@ In this exercise, you will add a link next to each question to enable a student 
         }
     ```
 This method creates a new link element that enables a user to report a question to the moderator, and adds attributes that cause the link to be rendered appropriately.
-3.	Uncomment the following line of the **displayQuestion** method:
-  ```javascrit
+3.	Uncomment the following line of the **displayQuestion** method: 
+  ```javascript
+
       //item.appendChild(this.createReportLink());
   ```
 - This statement calls the **createReportLink()** function to add the **Report** link next to each question.
@@ -223,7 +227,7 @@ This method creates a new link element that enables a user to report a question 
 
 1.	When a **Report** link is clicked, the **handleQuestionsClick** event handler changes the text of the link to **Reported**, and then calls the **reportQuestion** method:
     ```javascript
-        handleQuestionsClick: function (event) {
+        handleQuestionsClick(event) {
             event.preventDefault();
 
             var clickedElement = event.srcElement || event.target;
@@ -244,7 +248,7 @@ This method creates a new link element that enables a user to report a question 
 
 1.	Find the **handleRemoveMessage()** function:
     ```javascript
-        handleRemoveMessage: function (message) {
+        handleRemoveMessage(message) {
             var listItems = this.questionListElement.querySelectorAll("li");
             for (var i = 0; i < listItems.length; i++) {
                 if (listItems[i].questionId === message.remove) {

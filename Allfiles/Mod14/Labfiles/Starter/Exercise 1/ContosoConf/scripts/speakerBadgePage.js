@@ -1,4 +1,4 @@
-import { grayscaleImage } from "../grayscale.js";
+import { grayscaleImage } from "./grayscale.js";
 
 export class SpeakerBadgePage {
 
@@ -33,8 +33,9 @@ export class SpeakerBadgePage {
             this.busy();
             // TODO: Add grayscaleImage into the processing pipeline.
             this.readFile(file)
-                .pipe(this.loadImage)
-                .done(this.drawBadge, this.notBusy);
+                .then((file) => this.loadImage(file))
+                .then((file) => this.drawBadge(file))
+                .then((file) => this.notBusy(file));
         } else {
             alert("Please drop an image file.");
         }
@@ -140,26 +141,32 @@ export class SpeakerBadgePage {
     }
 
     readFile(file) {
-        const reading = $.Deferred();
-        const reader = new FileReader();
-        const self = this;
-        reader.onload = function (loadEvent) {
-            const fileDataUrl = loadEvent.target.result;
-            reading.resolveWith(self, [fileDataUrl]);
-        };
-        reader.readAsDataURL(file);
-        return reading;
+        // Return a new promise.
+        return new Promise(function (resolve, reject) {
+
+            const reader = new FileReader();
+
+            reader.onload = function (loadEvent) {
+                const fileDataUrl = loadEvent.target.result;
+
+                resolve([fileDataUrl]);
+            };
+
+            reader.readAsDataURL(file);
+        });
     }
 
     loadImage(imageUrl) {
-        const loading = $.Deferred();
-        const image = new Image();
-        const self = this;
-        image.onload = function () {
-            loading.resolveWith(self, [image]);
-        };
-        image.src = imageUrl; // This starts the image loading
-        return loading;
+         // Return a new promise.
+         return new Promise(function (resolve, reject) {
+            const image = new Image();
+
+            image.onload = function () {
+                resolve(image);
+            };
+
+            image.src = imageUrl; // This starts the image loading
+        });
     }
 
     busy() {

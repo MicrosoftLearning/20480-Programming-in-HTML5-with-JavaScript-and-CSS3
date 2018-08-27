@@ -12,7 +12,7 @@ const downloadSchedule = () => {
             try {
                 const response = JSON.parse(request.responseText);
                 if (request.status === 200) {
-                    schedule = response.schedule;
+                    schedules = response.schedule;
                     displaySchedule();
                 } else {
                     alert(response.message);

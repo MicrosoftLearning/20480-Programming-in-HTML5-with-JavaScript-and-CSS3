@@ -1,4 +1,5 @@
-﻿function createCanvas(size) {
+﻿import { grayscalePixel } from "./grayscale-worker.js";
+function createCanvas(size) {
     /// <summary>Creates a canvas used for image manipulation.</summary>
 
     const temporaryCanvas = document.createElement("canvas");
@@ -19,26 +20,28 @@ function getImageData(context, image) {
 export function grayscaleImage(image) {
     // Converts a colour image into gray scale.
 
-    const deferred = $.Deferred();
+    // Return a new promise.
+    return new Promise(function (resolve, reject) {   
+        const canvas = createCanvas(image);
+        const context = canvas.getContext("2d");
+        const imageData = getImageData(context, image);
 
-    const canvas = createCanvas(image);
-    const context = canvas.getContext("2d");
-    const imageData = getImageData(context, image);
+        // TODO: Create a Worker that runs /scripts/grayscale-worker.js
+        const worker = new Worker("/scripts/grayscale-worker.js");
+        const handleMessage = function (event) {
+            // Update the canvas with the gray scaled image data.
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.putImageData(imageData, 0, 0);
 
-    // TODO: Create a Worker that runs /scripts/grayscale-worker.js
-    const worker = new Worker("/scripts/grayscale-worker.js");
-    const handleMessage = function (event) {
-        const message = event.data;
-        const updatedImageData = message.done;
-        // Update the canvas with the gray scaled image data.
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.putImageData(updatedImageData, 0, 0);
-        deferred.resolveWith(this, [canvas]);
-    };
-    worker.addEventListener("message", handleMessage.bind(this));
-    worker.postMessage(imageData);
+            // Returning a Promise makes this function easy to chain together with other deferred operations.
+            // The canvas object is returned as this can be used like an image.
+            resolve([canvas]);
+        };
+        worker.addEventListener("message", handleMessage.bind(this));
+        worker.postMessage(imageData);
 
-    return deferred;
+       
+    });
 };
 // SIG // Begin signature block
 // SIG // MIIaaAYJKoZIhvcNAQcCoIIaWTCCGlUCAQExCzAJBgUr

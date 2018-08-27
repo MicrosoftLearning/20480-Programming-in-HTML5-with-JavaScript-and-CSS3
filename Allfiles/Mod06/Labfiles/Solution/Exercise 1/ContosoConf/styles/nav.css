@@ -10,7 +10,7 @@ nav.page-nav {
 /* TODO: nav.page-nav .container */
 nav.page-nav .container {
     display: -ms-flexbox;
-    display: flexbox;
+    display: flex;
 }
 
 /* TODO: nav.page-nav a */

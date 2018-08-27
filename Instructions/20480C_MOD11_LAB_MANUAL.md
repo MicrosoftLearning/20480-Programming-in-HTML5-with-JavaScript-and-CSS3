@@ -164,10 +164,11 @@ The file also contains a number of other functions that will draw the various el
 - To draw and fill the rectangle, use the **fillRect** method of the context; the **width** and **height** properties of the rectangle should be the same as those of the canvas.
 5.	In the **drawSpeakerImage** method, after the __// TODO: Draw the image on the canvas__ comment, add code to draw the image on the canvas at the coordinates **(20, 20)** with size **160 × 160**.
 - Use the **drawImage** method of the context.
-- Note that the image is not always square, so calculate the source coordinates and size that will display the central square portion only. Use the **Math.min** function to calculate the minimum value of the image’s **width** and **height** properties, like this:
-   ```javascript
-        var size = Math.min(image.width, image.height);
-   ```
+- Note that the image is not always square, so calculate the source coordinates and size that will display the central square portion only. Use the **Math.min** function to calculate the minimum of the image’s **width** and **height** properties, like this:
+    ```javascript
+        const size = Math.min(image.width, image.height);
+    ```
+
 
 ![alt text](./Images/20480B_11_Square.png "The central square portion of a rectangle")
 

@@ -29,7 +29,7 @@
 
 .feedback-question {
     display: -ms-flexbox;
-    display: flexbox;
+    display: flex;
     -ms-flex-align: center;
     flex-align: center;
     -ms-flex-pack: justify;

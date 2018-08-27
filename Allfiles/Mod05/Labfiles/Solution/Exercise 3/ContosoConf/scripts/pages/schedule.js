@@ -4,21 +4,18 @@ const track1CheckBox = document.getElementById("show-track-1");
 const track2CheckBox = document.getElementById("show-track-2");
 
 const downloadSchedule = async () => {
-
-
        // await response of fetch call
        let response = await fetch("/schedule/list");
-       // transform body to json
-       let data = await response.json();
 
        // checking response is ok
        if (response.ok) {
+           // transform body to json
+           let data = await response.json();
            schedules = data.schedule;
            displaySchedule();
        }
        else
            alert("Schedule list not available.");
-
 }
 
 const createSessionElement = (session) => {
