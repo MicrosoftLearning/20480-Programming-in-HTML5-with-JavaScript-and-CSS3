@@ -107,7 +107,7 @@ function displaySchedule() {
     //       Create session elements
     //       Append the elements to the list   
     for (let i = 0; i < schedule.length; i++) {
-        let li = createSessionElement(schedule[i]);
+        const li = createSessionElement(schedule[i]);
         list.appendChild(li);
     }
 }

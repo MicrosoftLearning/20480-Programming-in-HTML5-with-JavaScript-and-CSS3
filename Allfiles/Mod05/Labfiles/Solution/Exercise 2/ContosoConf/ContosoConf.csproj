@@ -90,7 +90,6 @@
     <Content Include="about.htm" />
     <Content Include="registered.htm" />
     <Content Include="Global.asax" />
-    <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\pages\register.js" />
     <Content Include="scripts\pages\schedule.js" />
     <Content Include="schedule.htm" />

@@ -5,7 +5,7 @@
     nav.page-nav .container {
         display: -ms-flexbox;
         display: -webkit-flexbox;
-        display: flexbox;
+        display: flex;
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;

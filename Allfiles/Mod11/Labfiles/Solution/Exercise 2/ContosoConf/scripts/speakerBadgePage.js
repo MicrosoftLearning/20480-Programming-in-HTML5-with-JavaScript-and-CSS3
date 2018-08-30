@@ -28,8 +28,8 @@ export class speakerBadgePage {
         const file = files[0];
         if (this.isImageType(file.type)) {
             this.readFile(file)
-                .pipe(this.loadImage)
-                .done(this.drawBadge);
+                .then((file) => this.loadImage(file))
+                .then((file) => this.drawBadge(file));
         } else {
             alert("Please drop an image file.");
         }
@@ -155,25 +155,35 @@ export class speakerBadgePage {
     }
 
     readFile(file) {
-        const reading = $.Deferred();
-        const reader = new FileReader();
-        const self = this;
-        reader.onload = function (loadEvent) {
-            const fileDataUrl = loadEvent.target.result;
-            reading.resolveWith(self, [fileDataUrl]);
-        };
-        reader.readAsDataURL(file);
-        return reading;
+        // Return a new promise.
+        return new Promise(function (resolve, reject) {
+
+            const reader = new FileReader();
+
+            reader.onload = function (loadEvent) {
+                const fileDataUrl = loadEvent.target.result;
+
+                resolve([fileDataUrl]);
+            };
+
+            reader.readAsDataURL(file);
+        });
     }
 
+    
+
     loadImage(imageUrl) {
-        const loading = $.Deferred();
-        const image = new Image();
-        const self = this;
-        image.onload = function () {
-            loading.resolveWith(self, [image]);
-        };
-        image.src = imageUrl; // This starts the image loading
-        return loading;
+
+        // Return a new promise.
+        return new Promise(function (resolve, reject) {
+            const image = new Image();
+
+            image.onload = function () {
+                resolve(image);
+            };
+
+            image.src = imageUrl; // This starts the image loading
+        });
+        
     }
 }
