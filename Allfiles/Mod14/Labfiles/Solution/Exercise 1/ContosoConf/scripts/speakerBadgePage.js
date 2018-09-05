@@ -25,7 +25,7 @@ export class SpeakerBadgePage {
         event.preventDefault();
 
         const files = event.dataTransfer.files;
-        if (files.length == 0) return;
+        if (files.length === 0) return;
 
         // More than one file could have been dropped, we'll just use the first.
         const file = files[0];
@@ -35,7 +35,8 @@ export class SpeakerBadgePage {
             this.readFile(file)
                 .then((file) => this.loadImage(file))
                 .then((file) => grayscaleImage(file))
-                .then((file) => this.notBusy(file));
+                .then((file) => this.drawBadge(file))
+                .then(() => this.notBusy());
         } else {
             alert("Please drop an image file.");
         }
