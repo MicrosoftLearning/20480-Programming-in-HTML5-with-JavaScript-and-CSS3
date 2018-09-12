@@ -6,17 +6,17 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+Ensure that you have cloned the 20480C directory from GitHub (**https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course.
 
 #### Demonstration Steps
 
 #### Divide the Content for a Page into an Article with Sections
 
-1.	Open **Visual Studio 2017**.
+1.	Open Microsoft Visual Studio 2017.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
-3.	In the **Open Project** dialog box, browse to the **Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln** and then click **Open**.
+3.	In the **Open Project** dialog box, browse to the **Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
 4.	In Solution Explorer, expand the **Allfiles\\...\\DemoWebSite** web application, and then double-click **ContactUs.html**.
-5.	In the **ContactUs.html** file, enclose the entire contents of the **&lt;body&gt;** element in an **&lt;article&gt;** element as shown in bold in the following code example:
+5.	In the **ContactUs.html** file, enclose the contents of the **&lt;body&gt;** element in an **&lt;article&gt;** element as shown in the following code example:
     ```html
         <!DOCTYPE HTML>
         <html lang="en">  
@@ -30,7 +30,7 @@
         </html>
 
     ```
-6.	Within the **&lt;article&gt;** element, enclose the first three **&lt;p&gt;** elements containing the company name, address, and contact email in a **&lt;section&gt;** element, as shown in bold in the following code example:
+6.	Within the **&lt;article&gt;** element, enclose the first three **&lt;p&gt;** elements containing the company name, address, and contact email in a **&lt;section&gt;** element, as shown in the following code example:
     ```html
         ...
         <h1>Contact Contoso Conferencing</h1>
@@ -49,7 +49,7 @@
         </p>
         ...
     ```
-7.	Wrap the HTML form and **&lt;p&gt;** element immediately above it in a second **&lt;section&gt;** element, as shown in bold in the following code example:
+7.	Wrap the HTML form and **&lt;p&gt;** element immediately above it in a second **&lt;section&gt;** element, as shown in the following code example:
     ```html
         ...
         <section>
@@ -66,7 +66,7 @@
 
 #### Add a Header and a Footer to the Page
 
-1.	Enclose the **&lt;h1&gt;** element near the top of the **ContactUs.html** file in a **&lt;header&gt;** element, as shown in bold in the following code example:
+1.	Enclose the **&lt;h1&gt;** element near the top of the **ContactUs.html** file in a **&lt;header&gt;** element, as shown in the following code example:
     ```html
         ...
         <article>
@@ -77,14 +77,14 @@
         </article>
         ...
     ```
-2.	Add the following **&lt;img&gt;* element shown in bold to the **&lt;header&gt;** element above the **&lt;h1&gt;** element.
+2.	Add the following **&lt;img&gt;** element to the **&lt;header&gt;** element, which is above the **&lt;h1&gt;** element.
     ```html
         <header>
           <img src="images/Contoso.png" alt="Company Logo" />
           <h1>Contact Contoso Conferencing</h1>
         </header>
     ```
-3.	Add the following HTML markup shown in bold immediately after the **&lt;/article&gt;** tag near the end of the document.
+3.	Add the following HTML markup immediately after the **&lt;/article&gt;** tag near the end of the document.
     ```html
         ...
         </article>
@@ -106,25 +106,25 @@
 #### View the Structure of the Page by Using the F12 Developer Tools
 
 1.	On the **Debug** menu, click **Start Without Debugging**.
-2.	In Microsoft Edge, if the message **Intranet settings are turned off by default** appears, click **Don’t show this message again**.
+2.	In Microsoft Edge, if the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 3.	Press F12.
 4.	In the **F12** window, click the **HTML** tab.
 5.	Expand the **&lt;html&gt;** element.
 6.	Expand the **&lt;body&gt;** element.
-7.	Expand the **&lt;article&gt;** element and verify that it contains a **&lt;header&gt;** element and two **&lt;section&gt;** elements.
+7.	Expand the **&lt;article&gt;** element, and then verify that it contains a **&lt;header&gt;** element and two **&lt;section&gt;** elements.
 8.	Expand the **&lt;header&gt;** element.
 9.	Expand the **&lt;h1&gt;** element.
-10.	Click each element, and verify that Microsoft Edge surrounds each element on the page with a box as it is selected in the **F12** window.
+10. In the **F12** window, click each element and verify that Microsoft Edge surrounds each element as you select it.
 
 
 
 #### Make a Temporary Change to the Page by Using the F12 Developer Tools
 
 1.	In the **&lt;h1&gt;** element, click **Contact Contoso Conferencing**.
-2.	Change this text to **We'd love to hear from you…**, and then press ENTER.
+2.	Change this text to **We'd love to hear from you…**, and then press Enter.
 3.	Verify that Microsoft Edge displays the modified text.
-4.	Press F12 to close the **F12** window.
-5.	Close Microsoft Edge, and then close Visual Studio 2017.
+4.	To close the **F12** window, press F12.
+5.	Close Microsoft Edge, and then close Visual Studio.
 
 # Lesson 2: Styling an HTML5 Page
 
@@ -132,19 +132,19 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+Ensure that you have cloned the 20480C directory from GitHub (**https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course. 
 
 #### Demonstration Steps
 
 #### Create New Styles by Using Visual Studio
 
-1.	Open **Visual Studio 2017**.
+1.	Open Visual Studio.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
 3.	In the **Open Project** dialog box, browse to the **Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
 4.	In Solution Explorer, expand the **Allfiles\\...\\DemoWebSite** web application, and then expand the **styles** folder.
-5.	Double-click **ContactUsStyles.css**
+5.	Double-click **ContactUsStyles.css**.
 6.	Review the existing rules for the **body** and **h1** elements.
-7.	Modify the **body** rule, remove the color rule, and change the font used on the whole page as shown in bold in the following code example.
+7.	Modify the **body** rule, remove the **color** rule, and change the font used on the whole page as shown in the following code example.
     ```css
         body {
           font-family: "Segoe UI", Helvetica, Arial, sans-serif;
@@ -157,7 +157,7 @@
           color: red;
         }
     ```
-9.	Add the following rules that make the header appear separately from the rest of the content.
+9.	To make the header appear separately from the rest of the content, add the following rules:
     ```css
         header {
           padding-bottom: 10px;
@@ -175,16 +175,16 @@
         section {
         }
     ```
-11.	Click after the opening curly brace for the section rule, and in the toolbar click the **Build Style** button.   
+11.	Click after the opening curly brace for the section rule, and then in the toolbar, click **Build Style**.   
 
->**Note:** If the toolbar is not visible, right-click in the body of the section rule and then click **Build Style**.
+>**Note**: If the toolbar is not visible, right-click the body of the section rule, and then click **Build Style**.
 
 12.	In the **Modify Style** dialog box, in the **Category** list, click **Box**.
-13.	Clear the **padding: Same for all** check box, and in the **bottom** box, type **5**.
+13.	Clear the **padding: Same for all** check box, and then in the **bottom** box, enter **5**.
 14.	In the **Category** list, click **Border**.
-15.	Under **border-style**, clear the **Same for all** check box, and in the **bottom** list box, click **dotted**.
-16.	Under **border-width**, clear the **Same for all** check box, and in the **bottom** box, type **1**.
-17.	Under **border-color**, clear the **Same for all** check box, and in the **bottom** box, type **grey**.
+15.	Under **border-style**, clear the **Same for all** check box, and then in the **bottom** list box, select **dotted**.
+16.	Under **border-width**, clear the **Same for all** check box, and then in the **bottom** box, enter **1**.
+17.	Under **border-color**, clear the **Same for all** check box, and then in the **bottom** box, enter **grey**.
 18.	Click **OK**.
 19.	Verify that the section rule now looks like this:
     ```css
@@ -195,7 +195,7 @@
           border-bottom-color: grey;
         }
     ```
-20.	Add the following rules to style the form and its elements.
+20.	To style the form and its elements, add the following rules:
     ```css
         fieldset {
           background-color: pink;
@@ -224,21 +224,20 @@
 
 1.	In Solution Explorer, double-click **ContactUs.html**.
 2.	On the **Debug** menu, click **Start Without Debugging**.
-3.	In Microsoft Edge, if the message **Intranet settings are turned off by default** appears, click **Don’t show this message again**.
+3.	In Microsoft Edge, if the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 4.	Verify that the new styles have been applied to the page.
 
 ![alt text](./Images/20480B_2_ContactUs_Styled.png "The ContactUs page with styling")
 
 5.	In Microsoft Edge, press F12.
-6.	In the **F12** window, with the **HTML** tab selected, double-click the **&lt;html&gt;** element to expand it.
+6.	In the **F12** window, select the **HTML** tab, and then double-click the **&lt;html&gt;** element.
 7.	Click the **&lt;body&gt;** element.
-8.	In the right pane, verify that the following the CSS rule appears:
+8.	In the right pane, verify that the following CSS rule appears:
     ```css
         font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     ```
-9.	In this rule, select the text **"Segoe UI"**.
-10.	Change the value to read **"Times New Roman"** and press ENTER.
-11.	Verify that Microsoft Edge reflects this change to the font on the page.
+9.	In this rule, select the text **"Segoe UI"**, change it to **"Times New Roman"**, and then press Enter.
+10.	In Microsoft Edge, verify that this font change reflects on the page.
 12.	In the left pane, expand the **&lt;body&gt;** element, expand the **&lt;article&gt;** element, and then click the first **&lt;section&gt;** element.
 13.	In the right pane, verify that the following styles are specified for this section:
     ```css
@@ -251,30 +250,30 @@
           border-bottom-width: 1px;
           border-bottom-style: dotted;
     ```
-14.	Press F12 to close the **F12** window.
-15.	Close Microsoft Edge, and then close Visual Studio 2017.
+14.	To close the **F12** window, press F12.
+15.	Close Microsoft Edge, and then close Visual Studio.
 
 ### Demonstration: Creating and Styling an HTML5 Page
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+Ensure that you have cloned the 20480C directory from GitHub (**https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course.
 
 #### Demonstration Steps
 
-1.	Read the Lab Scenario to students and point out that they should read each scenario before attempting the lab for a module.
-2.	Point out to students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
-3.	Start Visual Studio, and open the **ContosoConf.sln** solution in the **Allfiles\Mod02\Labfiles\Solution\Exercise 2\ContosoConf** folder.
+1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
+2.	Point out to the students that the exercise scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
+3.	Start Visual Studio. Then, in the **Allfiles\Mod02\Labfiles\Solution\Exercise 2\ContosoConf** folder, open the **ContosoConf.sln** solution.
 4.	In Solution Explorer, expand the **ContosoConf** project, and then double-click **index.htm**.
-5.	In the Code Editor window, briefly scroll through the HTML markup for the web page and explain to students that they will be creating the Home page for the web application and adding the HTML markup to display the elements on this page.
+5.	In code editor, briefly scroll through the HTML markup for the web page, and explain to the students that they will be creating the **Home** page for the web application and adding the HTML markup to display the elements on this page.
 6.	In Solution Explorer, double-click **about.htm**.
-7.	In the Code Editor window, explain that this page contains information about the conference, but that currently much of the data displayed on this page is simply placeholder text that will be replaced later with specific information about the conference by the conference organizers.
+7.	In code editor, explain that this page contains information about the conference, but the current data is just placeholder text that the conference organizers will replace later with specific information about the conference.
 8.	In Solution Explorer, expand the **styles** folder, and then double-click **site.css**. Explain to students that this style sheet contains the initial global styles that they will be defining for the application, and that these styles will be applied to the **Home** and **About** pages.
 9.	On the **Debug** menu, click **Start Without Debugging**.
 
->**Note:** If the message **Intranet settings are turned off by default** appears, click **Don’t show this message** again. 
+>**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message** again. 
 
-10.	In Internet Explorer, show the simple styling for the **Home** page; the labs in later modules will modify and extend some of these styles, for example, to change the appearance of the navigation bar.
+10.	In Internet Explorer, show the simple styling for the **Home** page. The labs in later modules will modify and extend some of these styles, for example, to change the appearance of the navigation bar.
 11.	In the navigation bar, click **About**. Again, explain that the simple styling used by this page will be modified in later labs to generate a more appealing layout.
 12.	Close Internet Explorer.
 

@@ -202,11 +202,11 @@ In the **register.js** file, find the comment that starts with the following tex
 >**note:** The extra CSS class is added by the **formSubmissionAttempted** function, which is called when the **Register** button is clicked, as shown in the following code from the register.js file:
 >
 >    ```javascript
->        var formSubmissionAttempted = function() {
+>        const formSubmissionAttempted = function() {
 >                form.classList.add("submission-attempted");
 >        };
 >
->        var addSubmitClickEventListener = function() {
+>        const addSubmitClickEventListener = function() {
 >                submitButton.addEventListener("click", formSubmissionAttempted, false);
 >        };
 >    ```

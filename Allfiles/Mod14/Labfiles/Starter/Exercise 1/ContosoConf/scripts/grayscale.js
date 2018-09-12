@@ -27,28 +27,29 @@ function grayscalePixel(pixels, index) {
 export function grayscaleImage(image) {
     // Converts a colour image into gray scale.
 
-    const deferred = $.Deferred();
+    // Return a new promise.
+    return new Promise(function (resolve, reject) {
+        
+        const canvas = createCanvas(image);
+        const context = canvas.getContext("2d");
+        const imageData = getImageData(context, image);
 
-    const canvas = createCanvas(image);
-    const context = canvas.getContext("2d");
-    const imageData = getImageData(context, image);
+        // TODO: Create a Worker that runs /scripts/grayscale-worker.js
 
-    // TODO: Create a Worker that runs /scripts/grayscale-worker.js
+        const pixels = imageData.data;
+        // 4 array items per pixel => Red, Green, Blue, Alpha
+        for (let i = 0; i < pixels.length; i += 4) {
+            grayscalePixel(pixels, i);
+        }
 
-    const pixels = imageData.data;
-    // 4 array items per pixel => Red, Green, Blue, Alpha
-    for (const i = 0; i < pixels.length; i += 4) {
-        grayscalePixel(pixels, i);
-    }
+        // Update the canvas with the gray scaled image data.
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.putImageData(imageData, 0, 0);
 
-    // Update the canvas with the gray scaled image data.
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.putImageData(imageData, 0, 0);
-
-    // Returning a jQuery Deferred makes this function easy to chain together with other deferred operations.
-    // The canvas object is returned as this can be used like an image.
-    deferred.resolveWith(this, [canvas]);
-    return deferred;
+        // Returning a Promise makes this function easy to chain together with other deferred operations.
+        // The canvas object is returned as this can be used like an image.
+        resolve([canvas]);
+    });
 };
 
 // SIG // Begin signature block

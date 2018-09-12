@@ -1,4 +1,4 @@
-﻿const schedule = [];
+﻿let schedule = [];
 const list = document.getElementById("schedule");
 const track1CheckBox = document.getElementById("show-track-1");
 const track2CheckBox = document.getElementById("show-track-2");

@@ -4,7 +4,7 @@
     list-style-type: none;
     padding: 0;
     display: -ms-flexbox;
-    display: flexbox;
+    display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
@@ -28,7 +28,7 @@
     list-style-type: none;
     padding: 0;
     display: -ms-flexbox;
-    display: flexbox;
+    display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
