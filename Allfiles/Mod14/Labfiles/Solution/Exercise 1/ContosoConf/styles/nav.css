@@ -9,7 +9,7 @@ nav.page-nav {
 
 nav.page-nav .container {
     display: -ms-flexbox;
-    display: flexbox;
+    display: flex;
 }
 
 nav.page-nav a {

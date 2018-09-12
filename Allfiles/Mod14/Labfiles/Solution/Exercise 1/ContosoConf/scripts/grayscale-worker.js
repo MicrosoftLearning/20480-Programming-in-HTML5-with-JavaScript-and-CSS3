@@ -9,7 +9,7 @@ addEventListener("message", function (event) {
 });
 
 function grayscalePixel(pixels, index) {
-    // Updates the pixel, starting at the given index, to be gray scale.
+    /// <summary>Updates the pixel, starting at the given index, to be gray scale.</summary>
 
     const brightness = 0.34 * pixels[index] + 0.5 * pixels[index + 1] + 0.16 * pixels[index + 2];
 

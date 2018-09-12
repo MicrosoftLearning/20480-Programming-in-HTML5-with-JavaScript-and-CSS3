@@ -4,7 +4,7 @@
     
     nav.page-nav .container {
         display: -ms-flexbox;
-        display: flexbox;
+        display: flex;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         -ms-flex-pack: center;

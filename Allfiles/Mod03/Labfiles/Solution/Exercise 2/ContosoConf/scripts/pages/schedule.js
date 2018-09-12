@@ -109,11 +109,11 @@ function displaySchedule() {
     //       Create session elements
     //       Append the elements to the list   
     for (let i = 0; i < schedule.length; i++) {
-        let tracks = schedule[i].tracks;
-        let isCurrentTrack = (track1CheckBox.checked && tracks.indexOf(1) >= 0) ||
+        const tracks = schedule[i].tracks;
+        const isCurrentTrack = (track1CheckBox.checked && tracks.indexOf(1) >= 0) ||
                              (track2CheckBox.checked && tracks.indexOf(2) >= 0);
         if (isCurrentTrack) {
-            let li = createSessionElement(schedule[i]);
+            const li = createSessionElement(schedule[i]);
             list.appendChild(li);
         }
     }
