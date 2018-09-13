@@ -75,7 +75,7 @@
         }
     ```
 
-7.  Dרefine an array of person with **Name**, **Age** and **Email** property
+7.  Define an array of person with **Name**, **Age** and **Email** property
     ```javascript
         const personsLst = [
         {
