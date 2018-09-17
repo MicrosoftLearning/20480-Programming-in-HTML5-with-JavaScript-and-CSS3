@@ -37,7 +37,6 @@
             <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
             <link href="/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
             <script src="/Scripts/modernizr-2.6.2.js"></script>
-            <script src="/Scripts/IndexScript.js"></script>
         </head>
         <body>
             <div class="navbar navbar-inverse navbar-fixed-top">
@@ -80,7 +79,7 @@
 6.  Add the following code to **indexScript.js**
     ```javascript
         //server URL
-        const weatherApiUrl = "https://randomuser.me/api/?results=3";
+        const personApiUrl = "https://randomuser.me/api/?results=3";
 
         //Create new element by element name
         function createNode(element) {
@@ -92,7 +91,98 @@
             return parent.appendChild(el); 
         }
     ```
+7. Define an async method called **getPersons**.
+    ```javascript
+        async function getPersons() {
+        }
+    ```
+8. inside **getPersons** mathod create **fetch** call to **personApiUrl** and store the response in a variable.
+    ```javascript
+        let response = await fetch(personApiUrl);
+    ```
+9. if the **response** is ok create a table and use the map function to iterate for each element in the response element to generate row and add it to the table.
+    ```javascript
+        if (response.ok) {
+            //Converting the response to Json
+            const data = await response.json();
+            //Get table element
+            const table = document.getElementById("PersonTable");
+            //Mapping all persons into the table
+            data.results.map(function (auther) {
+                //Create new element to insert into the table
+                const tr = createNode('tr'),
+                    fullNameRow = createNode('td'),
+                    PicRow = createNode('td'),
+                    PicEl = createNode('img'),
+                    emailRow = createNode('td');
+                //Insert the data into the element
+                fullNameRow.innerHTML = `${auther.name.title}. ${auther.name.last} ${auther.name.first}`;
+                PicEl.src = auther.picture.medium;
+                emailRow.innerHTML = auther.email;
+                //Insert the elements into the table
+                append(tr, fullNameRow);
+                append(PicRow, PicEl);
+                append(tr, PicRow);
+                append(tr, emailRow);
+                append(table, tr);
+            })
+        }
+    ```
+10. wrap all the code in **getPerson** mathod with **try-catch**.
+    ```javascript
+        try {
+            //Get request by fetch
+            let response = await fetch(personApiUrl);
+            if (response.ok) {
+                //Converting the response to Json
+                const data = await response.json();
+                //Get table element
+                const table = document.getElementById("PersonTable");
+                //Mapping all persons into the table
+                data.results.map(function (auther) {
+                    //Create new element to insert into the table
+                    const tr = createNode('tr'),
+                        fullNameRow = createNode('td'),
+                        PicRow = createNode('td'),
+                        PicEl = createNode('img'),
+                        emailRow = createNode('td');
+                    //Insert the data into the element
+                    fullNameRow.innerHTML = `${auther.name.title}. ${auther.name.last} ${auther.name.first}`;
+                    PicEl.src = auther.picture.medium;
+                    emailRow.innerHTML = auther.email;
+                    //Insert the elements into the table
+                    append(tr, fullNameRow);
+                    append(PicRow, PicEl);
+                    append(tr, PicRow);
+                    append(tr, emailRow);
+                    append(table, tr);
+                })
+            }
+        }
+        catch (e) {
+            console.log(e);
+        }
+    ```
+11. Add event listener on **DOMContentLoaded**. get the add person button by it's id **addPersonsBtn** and add an event listener on **click** event and call the **getPerson** mathod.
+    ```javascript
+        document.addEventListener('DOMContentLoaded', function (event) {
+            document.getElementById('addPersonsBtn').addEventListener('click', getPersons);
+        });
+    ```
+12. add the folowing script tag to the **&lt;Head&gt;** element of the **index.html** page.
+    ```html
+        <script src="/Scripts/indexScript.js"></script>
+    ```
 
+#### Run the web application.
+
+1.	In Solution Explorer, double-click **Property**.
+2.	On the side menu, click **web**.
+3.	select the **Specific Page** then press **...** button and select **Index.html**. 
+4.	Click the **IIS Express** (Run).
+5.	In Microsoft Edge, press the **Get Persons** button.
+6.	Verify that the table is full with persones.
+7.	Close Microsoft Edge and return to Visual Studio.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
