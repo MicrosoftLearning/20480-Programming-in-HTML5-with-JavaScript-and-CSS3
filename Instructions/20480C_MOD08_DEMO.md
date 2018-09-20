@@ -47,7 +47,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the Start screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, browse to the website **http://www.beautyoftheweb.com/**.
+3.	In Microsoft Edge, browse to the website **http://www.microsoft.com/**.
 4.	To display the **F12 Developer Tools** window, press F12.
 5.	In the **F12 Developer Tools** window, click **Network**.
 6.	On the **F12 Developer Tools** toolbar, click **Start capturing**.

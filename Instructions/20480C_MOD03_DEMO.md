@@ -76,6 +76,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
    ```
 7. To define an array of people with the **Name**, **Age**, and **Email** properties, enter the following code:
    ```javascript
+
         const personsLst = [
         {
             name: 'Adam adam',

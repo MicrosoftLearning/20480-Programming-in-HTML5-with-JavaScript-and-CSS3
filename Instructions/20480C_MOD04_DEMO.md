@@ -6,33 +6,33 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+Ensure that you have cloned the 20480C directory from GitHub (**https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course.
 
 #### Demonstration Steps
 
-1.	Read the Lab Scenario to students and point out that they should read each scenario before attempting the lab for a module.
-2.	Point out to students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
-3.	Start Visual Studio, and open the **ContosoConf.sln** solution in the **Allfiles\Mod04\Labfiles\Solution\Exercise 2** folder.
-4.	In Solution Explorer, expand the **ContosoConf** project, and then double-click **register.htm**.
-5.	In the Code Editor window, find the **&lt;form&gt;** element, and explain that students will create this form to enable new users to register with the conference. The form contains fields for the user's first name, last name, email address, password (including a confirm password field), and an optional URL if the user has a web site. The HTML markup uses input attributes to validate the data entered by the user.
-6.	In Solution Explorer, expand the **scripts** folder, expand the **pages** folder, and then double-click **register.js**.
-7.	In the Code Editor window, explain that students will write the **checkPassword** function to verify that the values entered in the password and confirm that password fields match.
-8.	In Solution Explorer, expand the **styles** folder, expand the **pages** folder, and then double-click **register.css**.
-9.	In the Code Editor window, explain that students will create the style that highlights input elements that fail validation by using the **input:invalid** pseudo-class.
+1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
+2.	Point out to the students that the exercise scenario for each exercise is essential reading and contains a description of what they will accomplish in the exercise.
+3.	Start Microsoft Visual Studio. From the **Allfiles\Mod04\Labfiles\Solution\Exercise 2** folder, open the **ContosoConf.sln** solution.
+4.	In **Solution Explorer**, expand the **ContosoConf** project, and then double-click **register.htm**.
+5.	In the **Code Editor** window, find the **&lt;form&gt;** element, and explain that students will create this form to enable new users to register with the conference. The form contains boxes for the user's first name, last name, email address, password (including a confirm password box), and an optional URL, if the user has a website. The HTML markup uses input attributes to validate the data entered by the user.
+6.	In **Solution Explorer**, expand the **scripts** folder, expand the **pages** folder, and then double-click **register.js**.
+7.	In the **Code Editor** window, explain that students will write the **checkPassword** function to verify that the values entered in the **Password** and **Confirm Password** boxes match.
+8.	In **Solution Explorer**, expand the **styles** folder, expand the **pages** folder, and then double-click **register.css**.
+9.	In the **Code Editor** window, explain that students will create the style that highlights input elements that fail validation by using the **input:invalid** pseudo-class.
 10.	On the **Debug** menu, click **Start Without Debugging**.
 
->**Note:** If the message **Intranet settings are turned off by default** appears, click **Don’t show this message** again.
+>**Note:** If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
-11.	In Internet Explorer, on the **Home** page, in the navigation bar, click **Register**.
-12.	On the **Register** page, click the **Register** button and point out that the form does not allow the user to omit mandatory information, such as the first name, last name, email address, or password.
+11.	In Internet Explorer, on the **Home** page, on the navigation bar, click **Register**.
+12.	On the **Register** page, click **Register**, and point out that the form does not allow the user to omit mandatory information, such as the first name, last name, email address, or password.
 13.	In the **First name** box, type **Josh**.
 14.	In the **Last name** box, type **Bailey**.
 15.	In the **Email address** box, type **josh.bailey@adatum.com**.
 16.	In the **Choose a password** box, type **Passw0rd**.
 17.	In the **Confirm your password** box, type **Passw0rd**.
 18.	In the **Website/blog** box, type **http://adatum.com/**.
-19.	Click **Register**, and verify that the **Thanks for registering** page appears.
-20.	Mention that the form also performs other checks, such as verifying the email address is in the correct format, and that the values in the password and confirm password fields match.
+19.	Click **Register** and verify that the **Thanks for registering** page appears.
+20.	Mention that the form also performs other checks, such as verifying that the email address is in the correct format, and that the values in the password and confirm password fields match.
 21.	Close Internet Explorer.
 
 ©2018 Microsoft Corporation. All rights reserved.
