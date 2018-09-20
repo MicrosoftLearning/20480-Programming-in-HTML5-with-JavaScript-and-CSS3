@@ -1,5 +1,5 @@
 ﻿//server URL
-const weatherApiUrl = "https://randomuser.me/api/?results=3";
+const personApiUrl = "https://randomuser.me/api/?results=3";
 
 document.addEventListener('DOMContentLoaded', function (event) {
     document.getElementById('addPersonsBtn').addEventListener('click', getPersons);
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 async function getPersons() {
     try {
         //Get request by fetch
-        let response = await fetch(weatherApiUrl);
+        let response = await fetch(personApiUrl);
         if (response.ok) {
             //Converting the response to Json
             const data = await response.json();

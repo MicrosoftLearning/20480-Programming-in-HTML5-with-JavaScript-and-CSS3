@@ -2,32 +2,32 @@
 
 # Lesson 1: Overview of JavaScript
 
-### Demonstration: Creating a simple Javascript file that defines Variables, array and functions.
+### Demonstration: Creating a Simple Javascript File that Defines Variables, Array, and Functions
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+Ensure that you have cloned the 20480C directory from GitHub (**https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course. 
 
 #### Demonstration Steps
 
 #### Create new project
 
-1. On the Windows 10 **Start** screen, open **Visual studio 2017**.
+1. Open Microsoft Visual Studio 2017.
 2. In Visual Studio, on the **File** menu, point to **New**, and then click **Project**.
-3. In the **New Project** dialog box, in the left pane, under **Installed** expand the **Visual C#** node, and then click the **Web** node.
-4. click **ASP.NET Empty Web Application**.
-5. In the **Name** box, type **HtmlBasics**.
-6.	In the **Location** box, type **Allfiles\Mod03\Labfiles\Starter\Exercise 1**, and then click **OK**.
+3. In the **New Project** dialog box, in the left pane, under **Installed**, expand **Visual C#**, and then click **Web**.
+4. Click **ASP.NET Empty Web Application**.
+5. In the **Name** box, enter **HtmlBasics**.
+6.	In the **Location** box, enter **Allfiles\Mod03\Labfiles\Starter\Exercise 1**, and then click **OK**.
 
-#### Add the index page.
+#### Add the index page
 
 1.	In Visual Studio, on the **Project** menu, click **Add New Item**.
 2.	In the **Add New Item – HtmlBasics** dialog box, click **HTML Page**.
-3.	In the **Name** box, type **index.html**.
+3.	In the **Name** box, enter **index.html**.
 4.	Click **Add**.
-5.  Open **index.html** file.
-6.  Inside the file add the following text
-    ```html
+5. Open the **index.html** file.
+6. In the **index.html** file, add the following text:
+   ```html
         <!DOCTYPE html>
         <html>
         <head>
@@ -60,23 +60,23 @@
             </div>
         </body>
         </html>
-    ```
+   ```
 
-#### Add the JavaScript file.
+#### Add the JavaScript file
 
-1.  Right click on the **Script** folder, click **Add**, then click **New Item**.
-2.  In the **Add New Item – HtmlBasics** dialog box, click **JavaScript Fike**.
-3.  In the **Name** box, type **indexScript.js**.
+1. Right-click the **Script** folder, select **Add**, and then click **New Item**.
+2. In the **Add New Item – HtmlBasics** dialog box, click **JavaScript File**.
+3. In the **Name** box, enter **indexScript.js**.
 4.	Click **Add**.
-5.  Open **indexScript.js** file.
-6.  Create **Init** function
-    ```javascript
+5. Open the **indexScript.js** file.
+6. To create an **Init** function, enter the following code: 
+   ```javascript
         function init() {
         }
-    ```
+   ```
+7. To define an array of people with the **Name**, **Age**, and **Email** properties, enter the following code:
+   ```javascript
 
-7.  Define an array of person with **Name**, **Age** and **Email** property
-    ```javascript
         const personsLst = [
         {
             name: 'Adam adam',
@@ -103,14 +103,13 @@
             age: 25,
             email: 'william@example.com'
         }]
-    ```
-8.  Define age property
+   ```
+8. To define an **age** property, enter the following code:
     ```javascript
         const age = 20;
     ```
-
-9.  Create function that recived an **array** and **age** property and return new array with all the person above the age
-    ```javascript
+9. To create a function that receives the array of people and the **age** property, and then returns a new array with all the people above the defined age, enter the following code:
+   ```javascript
         function getPersonsAboveAge(array, age) {
             const personAboveAge = [];
 
@@ -122,69 +121,69 @@
             }
             return personAboveAge;
         }
-    ```
-10. Create a function that recived an **array** and print it to the console using a for loop
-    ```javascript
+   ```
+10. To create a function that receives an array and prints it to the console by using a **for** loop, enter the following code:
+   ```javascript
         function printArray(array) {
             for (let i = 0; i < array.length; i++) {
                 console.log(`${array[i].name} (${array[i].age}) ${array[i].email}`);
             }
         }
-    ```
+   ```
 
-11. Call the **printArray** Function from the **init** function with the complate array
-    ```javascript
+11. To call the **printArray** function from the **init** function with the complete array, enter the following code:
+   ```javascript
         printArray(personsLst);
     ```
-12. call the **getPersonsAboveAge** with the array and the age property we defined earlier and save the return value in **const** property
-    ```javascript
+12. To call **getPersonsAboveAge** with the array and the **age** property that we defined earlier, and then save the return value in the **const** property, enter the following code:
+   ```javascript
         const personAboveAge = getPersonsAboveAge(personsLst, age);
-    ```
-13. Call the **printArray** again but now with the array above age
-    ```javascript
+   ```
+13. To call the **printArray** function again but now with the array of people above the defined age, enter the following code:
+   ```javascript
         printArray(personAboveAge);
-    ```
-14. add the folowing script tag to the **&lt;Head&gt;** element of the **index.html** page.
-    ```html
+   ```
+14. On the **index.html** page, to the **&lt;Head&gt;** element, add the folowing script tag:
+   ```html
         <script src="/Scripts/indexScript.js"></script>
-    ```
+   ```
 
-#### Run the web application.
+#### Run the web application
 
 1.	In Solution Explorer, double-click **Property**.
-2.	On the side menu, click **web**.
-3.	select the **Specific Page** then press **...** button and select **Index.html**. 
-4.	Click the **IIS Express** (Run).
-5.	In Microsoft Edge, press F12 to see the console.
+2.	In the left pane, click **web**.
+3.	Select the specific page, click **...**, and then select **Index.html**. 
+4.	Click **IIS Express (Run)**.
+5.	To see the console, in Microsoft Edge, press F12.
 6.	Verify that the array prints to the console.
-7.	Close Microsoft Edge and return to Visual Studio.
+7.	Close Microsoft Edge, and then return to Visual Studio.
 
 ### Demonstration: Manipulating the DOM with Javascript
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+Ensure that you have cloned the 20480C directory from GitHub (**https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course. 
 
 #### Demonstration Steps
 
 #### Create new project
 
-1. On the Windows 10 **Start** screen, open **Visual studio 2017**.
+1. Open Visual Studio.
 2. In Visual Studio, on the **File** menu, point to **New**, and then click **Project**.
-3. In the **New Project** dialog box, in the left pane, under **Installed** expand the **Visual C#** node, and then click the **Web** node.
-4. click **ASP.NET Empty Web Application**.
-5. In the **Name** box, type **HtmlDOMSample**.
-6.	In the **Location** box, type **Allfiles\Mod03\Labfiles\Starter\Exercise 2**, and then click **OK**.
+3. In the **New Project** dialog box, in the left pane, under **Installed**, expand the **Visual C#** node, and then click the **Web** node.
+4. Click **ASP.NET Empty Web Application**.
+5. In the **Name** box, enter **HtmlDOMSample**.
+6.	In the **Location** box, enter **Allfiles\Mod03\Labfiles\Starter\Exercise 2**, and then click **OK**.
 
-#### Add the index page.
+#### Add the index page
 
 1.	In Visual Studio, on the **Project** menu, click **Add New Item**.
 2.	In the **Add New Item – HtmlBasics** dialog box, click **HTML Page**.
-3.	In the **Name** box, type **index.html**.
+3.	In the **Name** box, enter **index.html**.
 4.	Click **Add**.
-5.  Open **index.html** file.
-6.  Inside the file add the following text
-    ```html
+5. Open the **index.html** file.
+6. In the file, add the following code:
+   ```html
         <!DOCTYPE html>
         <html>
         <head>
@@ -256,33 +255,32 @@
             </div>
         </body>
         </html>
-    ```
+   ```
+#### Add the JavaScript file
 
-#### Add the JavaScript file.
-
-1.  Right click on the **Script** folder, click **Add**, then click **New Item**.
-2.  In the **Add New Item – HtmlBasics** dialog box, click **JavaScript Fike**.
-3.  In the **Name** box, type **indexScript.js**.
+1. Right-click the **Script** folder, select **Add**, and then click **New Item**.
+2. In the **Add New Item – HtmlBasics** dialog box, click **JavaScript File**.
+3. In the **Name** box, enter **indexScript.js**.
 4.	Click **Add**.
-5.  Open **indexScript.js** file.
-6.  Create **createNode** function that recive html element name and return html element.
-    ```javascript
+5. Open the **indexScript.js** file.
+6. To create a **createNode** function that receives the html element name and returns the html element, enter the following code:
+   ```javascript
         function createNode(element) {
             return document.createElement(element);
         }
-    ```
-7.  Create **append** function that recive parent and childe element and append the childe to the parent
-    ```javascript
+   ```
+7. To create an **append** function that receives the parent and child elements and appends the child to the parent, enter the following code:
+   ```javascript
         function append(parent, el) {
             return parent.appendChild(el);
         }
-    ```
-8.  Create **addHobbies** function.
-9.  Get all input with the **hobbiesInput** class into const variable
+   ```
+8. Create an **addHobbies** function.
+9. To get all the inputs with the **hobbiesInput** class into the *const* variable, enter the following code:
     ```javascript
         const inputList = document.querySelectorAll('.hobbiesInput');
     ```
-10. Check if **inputList** contain less then 5 element and add new input with the **createNode** and **append** functions otherwise remove the event listener
+10. To check that **inputList** contains less than five elements, add new inputs with the **createNode** and **append** functions,  and if **inputList** contains more than five elements, remove the event listener, and then enter the following code:
     ```javascript
         if (inputList.length < 5) {
         
@@ -300,33 +298,33 @@
             document.getElementById('newHobbyBtn').removeEventListener('click', addHobbies);
         }
     ```
-11.  Add event listener on **DOMContentLoaded** on the java script page
+11. On the JavaScript page, to add an event listener on **DOMContentLoaded**, enter the following code:
     ```javascript
         document.addEventListener('DOMContentLoaded', function (event) {
             
         });
     ```
-12.  Get **newHobbyBtn** button by **getElementById**, add event listener on the button and attach **addHobbies** function.
+12. To get a **newHobbyBtn** button by **getElementById**, add an event listener on the button, and attach an **addHobbies** function, enter the following code:
     ```javascript
         document.getElementById('newHobbyBtn').addEventListener('click', addHobbies);
     ```
-13. add the folowing script tag to the **&lt;Head&gt;** element of the **index.html** page.
+13. On the **index.html** page, to the **&lt;Head&gt;** element, add the folowing script tag:
     ```html
         <script src="/Scripts/indexScript.js"></script>
     ```
 
-#### Run the web application.
+#### Run the web application
 
 1.	In Solution Explorer, double-click **Property**.
-2.	On the side menu, click **web**.
-3.	select the **Specific Page** then press **...** button and select **Index.html**. 
-4.	Click the **IIS Express** (Run).
-5.	In Microsoft Edge, press F12 to see the console.
+2.	In the left pane, click **web**.
+3.	Select **Specific Page**, click **...**, and then select **Index.html**. 
+4.	Click **IIS Express (Run)**.
+5.	To see the console, in Microsoft Edge, press F12.
 6.	Verify that the array prints to the console.
-7.	Close Microsoft Edge and return to Visual Studio.
+7.	Close Microsoft Edge, and then return to Visual Studio.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
-The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
+The text in this document is available under the [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are **not** included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 
 This document is provided &quot;as-is.&quot; Information and views expressed in this document, including URL and other Internet Web site references, may change without notice. You bear the risk of using it. Some examples are for illustration only and are fictitious. No real association is intended or inferred. Microsoft makes no warranties, express or implied, with respect to the information provided here.
