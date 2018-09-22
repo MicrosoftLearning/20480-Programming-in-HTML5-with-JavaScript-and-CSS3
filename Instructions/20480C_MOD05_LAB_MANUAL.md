@@ -71,13 +71,13 @@ Finally, you will run the application and view the **Schedule** page to verify t
 - Call the **displaySchedule** function to display the sessions on the page.
 7.	After you have created the callback, add a statement to send the request to the server. To do this, use the **send()** method of the **request** object.
 8.      in the file **schedule.js** call the **downloadSchedule** function after the **addEventListener** code line.
-        ```javascript
-                track1CheckBox.addEventListener("click", displaySchedule, false);
-                track2CheckBox.addEventListener("click", displaySchedule, false);
-                list.addEventListener("click", handleListClick, false);
+```javascript
+        track1CheckBox.addEventListener("click", displaySchedule, false);
+        track2CheckBox.addEventListener("click", displaySchedule, false);
+        list.addEventListener("click", handleListClick, false);
 
-                downloadSchedule();
-        ```
+        downloadSchedule();
+```
 
 #### Task 3: Add error handling to the downloadSchedule function
 
