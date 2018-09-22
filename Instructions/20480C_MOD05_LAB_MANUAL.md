@@ -70,7 +70,14 @@ Finally, you will run the application and view the **Schedule** page to verify t
 
 - Call the **displaySchedule** function to display the sessions on the page.
 7.	After you have created the callback, add a statement to send the request to the server. To do this, use the **send()** method of the **request** object.
-8.	Add a statement to the end of the **schedule.js** file that calls the **downloadSchedule** function after initializing the event handlers for the check boxes and list on the **Schedule** page. 
+8.      in the file **schedule.js** call the **downloadSchedule** function after the **addEventListener** code line.
+        ```javascript
+                track1CheckBox.addEventListener("click", displaySchedule, false);
+                track2CheckBox.addEventListener("click", displaySchedule, false);
+                list.addEventListener("click", handleListClick, false);
+
+                downloadSchedule();
+        ```
 
 #### Task 3: Add error handling to the downloadSchedule function
 
@@ -148,7 +155,7 @@ First, you will refactor the **downloadSchedule** function by replacing the use 
 
 1.	From the **Allfiles\Mod05\Labfiles\Starter\Exercise 3** folder, open the **ContosoConf.sln** solution.
 2.	From the **scripts/pages** folder, in the **schedule.js** file, refactor the **downloadSchedule** function to use the async **fetch()** function.
-- The fetch fetch must have a **url** agrument of **/schedule/list**.
+- The fetch api must have a **url** agrument of **/schedule/list**.
 - Use the **response.json** with **await** to fetch the json response asyncronously; the response will contain a property called **schedule** that you should parse and push to the **schedule** array variable, and then call the **displaySchedule()** function.
 
 - Check **response.ok** to handle any errors that might occur; then simply display the **Schedule list not available** message.
@@ -157,8 +164,8 @@ First, you will refactor the **downloadSchedule** function by replacing the use 
 #### Task 2: Refactor the saveStar function
 
 1.	In the **schedule.js** file, refactor the **saveStar** function to use the async **fetch()** function.
-- The **fetch options** object must have a **method** property of **POST**, **header** property to type **Headers** containing **Content-Type** header and **body** property of **"starred=" + isStarred**.
-- The fetch fetch must have a **url** agrument of **/schedule/list** and the **options** argument.
+- The **options** object must have a **method** property of **POST**, **header** property to type **Headers** containing **Content-Type** header and **body** property of **"starred=" + isStarred**.
+- The fetch api must have a **url** agrument of **/schedule/list** and the **options** argument.
 - Use the **response.json** with **await** to fetch the json response asyncronously. Check if the **starCount** property in the response object is greater than 50, display the **This session is very popular! Be sure to arrive early to get a seat** message.
 
 
