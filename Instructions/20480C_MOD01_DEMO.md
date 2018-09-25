@@ -31,7 +31,7 @@
             </body>
         </html>
    ```
-3. Save the file as **Allfiles\Mod01\Democode\ ContactUs.html**.
+3. Save the file as **Allfiles\Mod01\Democode\ContactUs.html**.
 
 #### Add content to the page
 
@@ -112,7 +112,7 @@
           </label>
         </li>
     </ol>
-    
+    ```
 
 4.	Save the file, and then close Notepad.
 
@@ -149,7 +149,7 @@
 
 #### Add and edit files in the project
 
-1.	In Visual Studio, click **Solution Explorer**.
+1.	In **DemoWebSite - Microsoft Visual Studio**, click **Solution Explorer**.
 2.	In Solution Explorer, right-click the **DemoWebSite** project, point to **Add**, and then click **Existing Item**.
 3.	In the **Add Existing Item** dialog box, browse to **[Repository Root]\Allfiles\Mod01\Democode**, click **ContactUs.html**, and then click **Add**.
 4.	In Solution Explorer, right-click **ContactUs.html**, and then click **Set As Start Page**.
@@ -187,7 +187,8 @@
 
 >**Note**: You can enter some sample data, but do not click **Send** because the URL that is the target of the form is not available.
 
-5.	Switch to Visual Studio.
+5.	Switch to **DemoWebSite - Microsoft Visual Studio**.
+6. On the **Debug** menu, click **Stop Debugging**.
 
 #### Modify the live application
 1.	In the **ContactUs.html** file, make the following modifications:
@@ -203,8 +204,7 @@
 3.	On the **File** menu, click **Save All**.
 4.	To refresh the display, return to Microsoft Edge and press F5.
 5.	Verify that the **Name** field changed to **Full name**, the **Telephone** field changed to **Telephone number**, and that the style of the heading has changed.
-6.	Return to Visual Studio.
-7.	On the **Debug** menu, click **Stop Debugging**.
+6.	Return to **DemoWebSite - Microsoft Visual Studio**.
 
 ### Demonstration: Exploring the Contoso Conference Application
 
