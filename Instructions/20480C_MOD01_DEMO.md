@@ -6,8 +6,8 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub (**https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course.
-2. Browse to **Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
+1. Ensure that you have cloned the 20480C directory from GitHub **(https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles)**. It contains the code segments for the labs and demos in this course.
+2. Browse to **[Repository Root]/Allfiles/Mod01/Democode**, and then open the **DemoWebSite - Complete.sln** file.
 3. Run the **DemoWebSite - Complete.sln** application.
 4. In Microsoft Edge, on the address bar, note the port number that appears after **http://localhost:**. You will use this port number during this demonstration.
 5. Close Microsoft Edge.
@@ -112,15 +112,16 @@
           </label>
         </li>
     </ol>
-    ```
+    
 
 4.	Save the file, and then close Notepad.
 
 #### View the page
+
 1.	Open File Explorer.
-2.	Browse to **Allfiles\Mod01\Democode**.
+2.	Browse to **[Repository Root]\Allfiles\Mod01\Democode**.
 3.	To display the page in Microsoft Edge, double-click **ContactUs.html**.
-4.	In the **How do you want to open this type of file (.html)?** dialog box, select **Microsoft Edge**.
+4.	If the **How do you want to open this type of file (.html)?** dialog box, select **Microsoft Edge**.
 
 ![alt text](./Images/20480B_1_ContactUs.png "About page")
 
@@ -130,7 +131,7 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub (**https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course. 
+1. Ensure that you have cloned the 20480C directory from GitHub **(https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles)**. It contains the code segments for the labs and demos in this course. 
 
 
 #### Demonstration Steps
@@ -138,20 +139,19 @@
 #### Create a website project
 
 1.	Open Microsoft Visual Studio 2017.
-2.	In Visual Studio, on the **File** menu, point to **New**, and then click **Web Site**.
-3.	In the **New Web Site** dialog box, click **ASP.NET Empty Web Site**.
+2.	In  Microsoft Visual Studio, on the **File** menu, point to **New**, and then click **Project**.
+3.	In the **New Project** dialog box, Select **Web**, click **ASP.NET Web Application(.NET Framework)**.
 
- 
 >**Note**: It does not matter whether you select the **Visual Basic** or **Visual C#** templates in the left pane; the templates for both languages enable you to create HTML5 webpages and implement functionality by using JavaScript.
 
-4.	From the web location drop-down list, select **File System**, set the file path to **Allfiles\Mod01\Democode\DemoWebSite**, and then click **OK**.
-5.	On the **File** menu, click **Save DemoWebSite**.
+4.	From the location drop-down list, Set the file path to set the file path to **[Repository Root]\Allfiles\Mod01\Democode\DemoWebSite**, and then click **OK**.
+5.      In New **ASP.NET Core Web Application-DemoWebSite**, Select **Empty**, and then click **OK**.
 
 #### Add and edit files in the project
 
 1.	In Visual Studio, click **Solution Explorer**.
 2.	In Solution Explorer, right-click the **DemoWebSite** project, point to **Add**, and then click **Existing Item**.
-3.	In the **Add Existing Item** dialog box, browse to **Allfiles\Mod01\Democode**, click **ContactUs.html**, and then click **Add**.
+3.	In the **Add Existing Item** dialog box, browse to **[Repository Root]\Allfiles\Mod01\Democode**, click **ContactUs.html**, and then click **Add**.
 4.	In Solution Explorer, right-click **ContactUs.html**, and then click **Set As Start Page**.
 5.	In Solution Explorer, right-click the **DemoWebSite** project, point to **Add**, click **New Folder**, and then name it **styles**.
 6.	Right-click the **styles** folder, point to **Add**, and then click **Add New Item**.
@@ -216,7 +216,7 @@
 
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
-3.	Start Visual Studio, and then from the **Allfiles\Mod01\Labfiles\Starter** folder, open the **ContosoConf.sln** solution.
+3.	Start Visual Studio, and then from the **[Repository Root]\Allfiles\Mod01\Labfiles\Starter** folder, open the **ContosoConf.sln** solution.
 4.	In Solution Explorer, expand the **ContosoConf** project, and then in the root folder of the project, highlight the **.htm** files. (These files correspond to each webpage that students will build in the labs throughout the course.)
 5.	To display the HTML markup for this page in Visual Studio Code, double-click **index.htm**. Explain that this is the home page of the application and it is the default page that users see when they visit the website for the application.
 6.	In the **Design View** window, click the **Design** tab. Explain that the layout shown in the **Design View** window is the default styling of the page, and that the stylesheets that students create as part of the application modify how the elements are presented.
