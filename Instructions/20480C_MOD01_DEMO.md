@@ -151,7 +151,7 @@
 
 1.	In **DemoWebSite - Microsoft Visual Studio**, click **Solution Explorer**.
 2.	In Solution Explorer, right-click the **DemoWebSite** project, point to **Add**, and then click **Existing Item**.
-3.	In the **Add Existing Item** dialog box, browse to **[Repository Root]\Allfiles\Mod01\Democode**, click **ContactUs.html**, and then click **Add**.
+3.	In the **Add Existing Item - DemoWebSite** dialog box, browse to **[Repository Root]\Allfiles\Mod01\Democode**, click **ContactUs.html**, and then click **Add**.
 4.	In Solution Explorer, right-click **ContactUs.html**, and then click **Set As Start Page**.
 5.	In Solution Explorer, right-click the **DemoWebSite** project, point to **Add**, click **New Folder**, and then name it **styles**.
 6.	Right-click the **styles** folder, point to **Add**, and then click **Add New Item**.
