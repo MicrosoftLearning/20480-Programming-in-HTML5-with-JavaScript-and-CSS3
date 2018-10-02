@@ -14,8 +14,8 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Open Microsoft Visual Studio 2017.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
-3.	In the **Open Project** dialog box, browse to the **Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
-4.	In Solution Explorer, expand the **Allfiles\\...\\DemoWebSite** web application, and then double-click **ContactUs.html**.
+3.	In the **Open Project** dialog box, browse to the **[Repository Root]\Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
+4.	In Solution Explorer, expand **DemoWebSite** project, and then double-click **ContactUs.html**.
 5.	In the **ContactUs.html** file, enclose the contents of the **&lt;body&gt;** element in an **&lt;article&gt;** element as shown in the following code example:
     ```html
         <!DOCTYPE HTML>
