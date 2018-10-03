@@ -116,7 +116,7 @@
 
 4.	Save the file, and then close Notepad.
 
-#### View the page
+### View the page
 
 1.	Open File Explorer.
 2.	Browse to **[Repository Root]\Allfiles\Mod01\Democode**.
