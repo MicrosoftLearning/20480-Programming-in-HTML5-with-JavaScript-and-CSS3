@@ -180,7 +180,7 @@
 11. On the **File** menu, click **Save All**.
 
 #### Run the web application
-1.	In Visual Studio, on the **Debug** menu, click **Start Debugging**.
+1.	In DemoWebSite - Microsoft Visual Studio, on the **Debug** menu, click **Start Debugging**.
 2.	In the **Debugging Not Enabled** dialog box, click **Modify the Web.config file to enable debugging**, and then click **OK**.
 3.	Verify that Microsoft Edge starts running and displays **ContactUs.html**. The text for the page should appear in blue.
 4.	In Microsoft Edge, if the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
