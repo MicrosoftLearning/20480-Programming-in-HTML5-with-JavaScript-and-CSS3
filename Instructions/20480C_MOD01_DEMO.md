@@ -112,7 +112,7 @@
           </label>
         </li>
     </ol>
-    ```
+   ```
 
 4.	Save the file, and then close Notepad.
 
@@ -216,7 +216,7 @@
 
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
-3.	Start Visual Studio, and then from the **[Repository Root]\Allfiles\Mod01\Labfiles\Starter** folder, open the **ContosoConf.sln** solution.
+3.	Start Microsoft Visual Studio 2017, and then from the [Repository Root]\Allfiles\Mod01\Labfiles\Starter folder, open the ContosoConf.sln solution.
 4.	In Solution Explorer, expand the **ContosoConf** project, and then in the root folder of the project, highlight the **.htm** files. (These files correspond to each webpage that students will build in the labs throughout the course.)
 5.	To display the HTML markup for this page in Visual Studio Code, double-click **index.htm**. Explain that this is the home page of the application and it is the default page that users see when they visit the website for the application.
 6.	In the **Design View** window, click the **Design** tab. Explain that the layout shown in the **Design View** window is the default styling of the page, and that the stylesheets that students create as part of the application modify how the elements are presented.
