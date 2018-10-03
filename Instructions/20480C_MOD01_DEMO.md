@@ -157,7 +157,7 @@
 6.	Right-click the **styles** folder, point to **Add**, and then click **New Item**.
 7.	In the **Add New Item - DemoWebSite** dialog box, in the middle pane, click **Style Sheet**. In the **Name** box, enter **ContactUsStyles.css**, and then click **Add**.
 
->**Note**: You can also use the **Add New Item-DemoWebSite** dialog box to create new JavaScript and HTML files and add them to a project.
+>**Note**: You can also use the **Add New Item - DemoWebSite** dialog box to create new JavaScript and HTML files and add them to a project.
 
 8.	In the **ContactUsStyles.css** file, add the following style:
    ```css
