@@ -145,7 +145,7 @@
 >**Note**: It does not matter whether you select the **Visual Basic** or **Visual C#** templates in the left pane; the templates for both languages enable you to create HTML5 webpages and implement functionality by using JavaScript.
 
 4.	From the location drop-down list, Set the file path to set the file path to **[Repository Root]\Allfiles\Mod01\Democode\DemoWebSite**, and then click **OK**.
-5.      In New **ASP.NET Core Web Application-DemoWebSite**, Select **Empty**, and then click **OK**.
+5. In New **ASP.NET Core Web Application-DemoWebSite**, Select **Empty**, and then click **OK**.
 
 #### Add and edit files in the project
 
@@ -154,7 +154,7 @@
 3.	In the **Add Existing Item - DemoWebSite** dialog box, browse to **[Repository Root]\Allfiles\Mod01\Democode**, click **ContactUs.html**, and then click **Add**.
 4.	In Solution Explorer, right-click **ContactUs.html**, and then click **Set As Start Page**.
 5.	In Solution Explorer, right-click the **DemoWebSite** project, point to **Add**, click **New Folder**, and then name it **styles**.
-6.	Right-click the **styles** folder, point to **Add**, and then click **Add New Item**.
+6.	Right-click the **styles** folder, point to **Add**, and then click **New Item**.
 7.	In the **Add New Item - DemoWebSite** dialog box, in the middle pane, click **Style Sheet**. In the **Name** box, enter **ContactUsStyles.css**, and then click **Add**.
 
 >**Note**: You can also use the **Add New Item** dialog box to create new JavaScript and HTML files and add them to a project.
