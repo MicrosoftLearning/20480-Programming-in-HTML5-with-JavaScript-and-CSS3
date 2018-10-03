@@ -13,7 +13,7 @@
 5. Close Microsoft Edge.
 
 
-#### Demonstration Steps
+### Demonstration Steps
 
 #### Create an HTML page
 
