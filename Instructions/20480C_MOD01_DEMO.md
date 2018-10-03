@@ -31,7 +31,7 @@
             </body>
         </html>
    ```
-3. Save the file as **Allfiles\Mod01\Democode\ContactUs.html**.
+3. Save the file as **[Repository Root]\Allfiles\Mod01\Democode\ContactUs.html**.
 
 #### Add content to the page
 
