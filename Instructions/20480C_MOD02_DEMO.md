@@ -84,7 +84,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
           <h1>Contact Contoso Conferencing</h1>
         </header>
     ```
-3.	Add the following HTML markup immediately after the **&lt;/article&gt;** tag near the end of the document.
+3.	Add the following HTML markup immediately after the **&lt;/article&gt;** tag near the end of the document such that the code should look as follows:
     ```html
         ...
         </article>
