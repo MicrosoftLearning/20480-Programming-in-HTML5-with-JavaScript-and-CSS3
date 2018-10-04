@@ -113,7 +113,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 6.	Expand the **&lt;body&gt;** element.
 7.	Expand the **&lt;article&gt;** element, and then verify that it contains a **&lt;header&gt;** element and two **&lt;section&gt;** elements.
 8.	Expand the **&lt;header&gt;** element.
-9.	Expand the **&lt;h1&gt;** element.
+9.	View the **&lt;h1&gt;** element.
 10. In the **F12** window, click each element and verify that Microsoft Edge surrounds each element as you select it.
 
 
