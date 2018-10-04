@@ -230,7 +230,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 ![alt text](./Images/20480B_2_ContactUs_Styled.png "The ContactUs page with styling")
 
 5.	In Microsoft Edge, press F12.
-6.	In the **F12** window, select the **HTML** tab, and then double-click the **&lt;html&gt;** element.
+6.	In the **F12** window, select the **DOM Explorer** tab, and then double-click the **&lt;html&gt;** element.
 7.	Click the **&lt;body&gt;** element.
 8.	In the right pane, verify that the following CSS rule appears:
     ```css
