@@ -134,7 +134,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 11. To call the **printArray** function from the **init** function with the complete array, enter the following code:
    ```javascript
         printArray(personsLst);
-    ```
+   ```
 12. To call **getPersonsAboveAge** with the array and the **age** property that we defined earlier, and then save the return value in the **const** property, enter the following code:
    ```javascript
         const personAboveAge = getPersonsAboveAge(personsLst, age);
