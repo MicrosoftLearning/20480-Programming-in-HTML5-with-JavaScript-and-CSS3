@@ -237,7 +237,7 @@
 
 16.	Explain that the first exercise of the lab provides more information about the purpose of each webpage in the application.
 17.	Close Microsoft Edge.
-
+18.   Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
