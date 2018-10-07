@@ -265,6 +265,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 10.	In Microsoft Edge, show the simple styling for the **Home** page. The labs in later modules will modify and extend some of these styles, for example, to change the appearance of the navigation bar.
 11.	In the navigation bar, click **About**. Again, explain that the simple styling used by this page will be modified in later labs to generate a more appealing layout.
 12.	Close Microsoft Edge.
+13. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
