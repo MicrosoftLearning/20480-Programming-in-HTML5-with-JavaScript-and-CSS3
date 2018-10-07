@@ -175,18 +175,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
         section {
         }
     ```
-11.	Click after the opening curly brace for the section rule, and then in the toolbar, click **Build Style**.   
-
->**Note**: If the toolbar is not visible, right-click the body of the section rule, and then click **Build Style**.
-
-12.	In the **Modify Style** dialog box, in the **Category** list, click **Box**.
-13.	Clear the **padding: Same for all** check box, and then in the **bottom** box, enter **5**.
-14.	In the **Category** list, click **Border**.
-15.	Under **border-style**, clear the **Same for all** check box, and then in the **bottom** list box, select **dotted**.
-16.	Under **border-width**, clear the **Same for all** check box, and then in the **bottom** box, enter **1**.
-17.	Under **border-color**, clear the **Same for all** check box, and then in the **bottom** box, enter **grey**.
-18.	Click **OK**.
-19.	Verify that the section rule now looks like this:
+11.	Verify that the section rule now looks like this:
     ```css
         section {
           padding-bottom: 5px;
@@ -195,7 +184,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
           border-bottom-color: grey;
         }
     ```
-20.	To style the form and its elements, add the following rules:
+12.	To style the form and its elements, add the following rules:
     ```css
         fieldset {
           background-color: pink;
@@ -218,7 +207,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
           width: 200px;
         }
     ```
-21.	On the **File** menu, click **Save All**.
+13.	On the **File** menu, click **Save All**.
 
 #### Use the F12 Developer Tools to Inspect Styles
 
