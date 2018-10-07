@@ -253,6 +253,9 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
 3.	Start Visual Studio. Then, in the **Allfiles\Mod02\Labfiles\Solution\Exercise 2\ContosoConf** folder, open the **ContosoConf.sln** solution.
+
+>**Note**: If **Security Warning for ContosoConf** dialogue box appears, clear **Ask me for every project in this solution** and then click **OK**.
+
 4.	In Solution Explorer, expand the **ContosoConf** project, and then double-click **index.htm**.
 5.	In code editor, briefly scroll through the HTML markup for the web page, and explain to the students that they will be creating the **Home** page for the web application and adding the HTML markup to display the elements on this page.
 6.	In Solution Explorer, double-click **about.htm**.
