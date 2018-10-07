@@ -121,7 +121,7 @@
 1.	Open File Explorer.
 2.	Browse to **[Repository Root]\Allfiles\Mod01\Democode**.
 3.	To display the page in Microsoft Edge, double-click **ContactUs.html**.
-4.	If the **How do you want to open this type of file (.html)?** dialog box, select **Microsoft Edge**.
+4.	If the **How do you want to open this type of file (.html)?** dialog box appears, select **Microsoft Edge**.
 
 ![alt text](./Images/20480B_1_ContactUs.png "About page")
 
@@ -182,7 +182,7 @@
 #### Run the web application
 1.	In DemoWebSite - Microsoft Visual Studio, on the **Debug** menu, click **Start Debugging**.
 2. Please add the necessary steps required to trust the certificate and related to the certificate pop-up window.
-3.	In the **Debugging Not Enabled** dialog box, click **Modify the Web.config file to enable debugging**, and then click **OK**.
+3.	If the **Debugging Not Enabled** dialog box appears, click **Modify the Web.config file to enable debugging**, and then click **OK**.
 4.	Verify that Microsoft Edge starts running and displays **ContactUs.html**. The text for the page should appear in blue.
 5.	In Microsoft Edge, if the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
