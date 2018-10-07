@@ -144,7 +144,7 @@
 
 >**Note**: It does not matter whether you select the **Visual Basic** or **Visual C#** templates in the left pane; the templates for both languages enable you to create HTML5 webpages and implement functionality by using JavaScript.
 
-4.	From the location drop-down list, Set the file path to set the file path to **[Repository Root]\Allfiles\Mod01\Democode\DemoWebSite**, and then click **OK**.
+4.	From the location drop-down list, set the file path to **[Repository Root]\Allfiles\Mod01\Democode\DemoWebSite**, and then click **OK**.
 5. In New **ASP.NET Core Web Application-DemoWebSite**, Select **Empty**, and then click **OK**.
 
 ### Add and edit files in the project
