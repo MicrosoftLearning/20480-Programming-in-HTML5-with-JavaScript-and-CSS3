@@ -141,6 +141,9 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 1.	Open Visual Studio.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
 3.	In the **Open Project** dialog box, browse to the **[Repository Root]\Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
+
+>**Note**: If **Inconsistent Line Endings** dialogue box appears, clear **Always show this dialog** checkbox and then click **Yes**.
+
 4.	In Solution Explorer, expand the **DemoWebSite** Project , and then expand the **styles** folder.
 5.	Double-click **ContactUsStyles.css**.
 6.	Review the existing rules for the **body** and **h1** elements.
