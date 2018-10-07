@@ -147,7 +147,7 @@
 4.	From the location drop-down list, Set the file path to set the file path to **[Repository Root]\Allfiles\Mod01\Democode\DemoWebSite**, and then click **OK**.
 5. In New **ASP.NET Core Web Application-DemoWebSite**, Select **Empty**, and then click **OK**.
 
-#### Add and edit files in the project
+### Add and edit files in the project
 
 1.	In **DemoWebSite - Microsoft Visual Studio**, click **Solution Explorer**.
 2.	In Solution Explorer, right-click the **DemoWebSite** project, point to **Add**, and then click **Existing Item**.
