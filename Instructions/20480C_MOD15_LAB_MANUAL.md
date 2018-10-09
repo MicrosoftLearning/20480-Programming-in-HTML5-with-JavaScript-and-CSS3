@@ -61,7 +61,7 @@ Finally, you will run the application and verify that the site remains the same 
 2.  Replace all scripts in html files to import the new bundel files
 3.  Run the application, the application shuled work as before and suppert previous version explorer 
 
->**Results:** After completing this exercise, you will have a new **bundel.js** files support es5 for older explorer 
+>**Results:** After completing this exercise, you will have a new **bundel.js** files support es5 for older explorer.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
