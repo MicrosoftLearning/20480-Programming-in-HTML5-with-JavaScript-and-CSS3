@@ -143,28 +143,28 @@
 8. Open again in explorer 10 and show that code run.
 9. replace the callback-based inplementation of the request() function with an ECMAScript 6 promise-based implementation.
 The request() function definition should now look like this:
-    ```javascript
-        let request = obj => {
-            return new Promise((resolve, reject) => {
-                let xhr = new XMLHttpRequest();
-                xhr.open(obj.method || "GET", obj.url);
-                if (obj.headers) {
-                    Object.keys(obj.headers).forEach(key => {
-                        xhr.setRequestHeader(key, obj.headers[key]);
-                    });
+```javascript
+    let request = obj => {
+        return new Promise((resolve, reject) => {
+            let xhr = new XMLHttpRequest();
+            xhr.open(obj.method || "GET", obj.url);
+            if (obj.headers) {
+                Object.keys(obj.headers).forEach(key => {
+                    xhr.setRequestHeader(key, obj.headers[key]);
+                });
+            }
+            xhr.onload = () => {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    resolve(xhr.response);
+                } else {
+                    reject(xhr.statusText);
                 }
-                xhr.onload = () => {
-                    if (xhr.status >= 200 && xhr.status < 300) {
-                        resolve(xhr.response);
-                    } else {
-                        reject(xhr.statusText);
-                    }
-                };
-                xhr.onerror = () => reject(xhr.statusText);
-                xhr.send(obj.body);
-            });
-        };
-    ```
+            };
+            xhr.onerror = () => reject(xhr.statusText);
+            xhr.send(obj.body);
+        });
+    };
+```
 10. Modify the call to the request() function to use ECMAScript 6 .then() and .catch() syntax.
     ```javascript
         request({url: "employees.json"})
