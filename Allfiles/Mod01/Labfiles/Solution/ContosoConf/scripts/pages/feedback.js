@@ -1,35 +1,29 @@
-﻿/// <reference path="../_namespace.js" />
-/// <reference path="../StarRatingView.js" />
+﻿import { StarRatingView } from "../StarRatingView.js";
 
-(function () {
+const section = document.getElementById("feedback");
+const form = section.querySelector("form");
+const sent = document.getElementById("feedback-sent");
 
-    const section = document.getElementById("feedback");
-    const form = section.querySelector("form");
-    const sent = document.getElementById("feedback-sent");
+function formSubmitting(event) {
+    event.preventDefault();
+    form.classList.add("sending");
+};
 
-    const formSubmitting = function (event) {
-        event.preventDefault();
-        form.classList.add("sending");
-    };
+function animationEnded() {
+    section.style.display = "none";
+    sent.style.display = "block";
+};
 
-    const animationEnded = function () {
-        section.style.display = "none";
-        sent.style.display = "block";
-    };
+form.addEventListener("submit", formSubmitting, false);
+form.addEventListener("msAnimationEnd", animationEnded, false);
+form.addEventListener("webkitAnimationEnd", animationEnded, false);
+form.addEventListener("animationEnd", animationEnded, false);
 
-    form.addEventListener("submit", formSubmitting, false);
-    form.addEventListener("msAnimationEnd", animationEnded, false);
-    form.addEventListener("webkitAnimationEnd", animationEnded, false);
-    form.addEventListener("animationEnd", animationEnded, false);
+const questions = form.querySelectorAll(".feedback-question");
+for (let i = 0; i < questions.length; i++) {
+    new StarRatingView(questions[i]);
+}
 
-    const StarRatingView = conference.StarRatingView;
-
-    const questions = form.querySelectorAll(".feedback-question");
-    for (let i = 0; i < questions.length; i++) {
-        StarRatingView.create(questions[i]);
-    }
-
-} ());
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
@@ -225,15 +219,15 @@
 // SIG // b2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3Nv
 // SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECkkoAAAAAACAwCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
-// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNDQ0OVow
+// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNTAwMDgxNVow
 // SIG // IwYJKoZIhvcNAQkEMRYEFKO/0rrddISwI+0kiRBgjiZs
-// SIG // y6LRMA0GCSqGSIb3DQEBBQUABIIBAEik9zGFv9D4ztGE
-// SIG // KtJ13iCK4FbG3KEhMwxOTuBWX3Oy243pT/68Gysk+Ykp
-// SIG // xN/F9w2485a+3gemiVwNYSVj/XIUyYLuMySOLtJBq8AV
-// SIG // Do7+OMGv6+HhtqWTcdZd4jGx3456WU1xvkc2WfXaRKKG
-// SIG // dwwaT1daka0XuuKIEZ09/ZtPReIY1pez8/ao1l31ZpHR
-// SIG // PVrRIJGze0O7wv3eNdd21g8MghTm/HXPBBt8El1puYbt
-// SIG // wreYBhw+1ufL8Yxsy+eM4xfIpkjbe2c8kSk1YK4W0Nes
-// SIG // 962DOtFWvKefVEOZC1O/sJBt4CxzzKFTb9eEERsJWgJU
-// SIG // Y6kBEEhZZ16HXtyyST0=
+// SIG // y6LRMA0GCSqGSIb3DQEBBQUABIIBAHxdCn0fUEP/koyn
+// SIG // L7xDG8sAQm3LjYhj479/UzU/2io4ryQLQT9k2mdf+35Q
+// SIG // cmo2HB2pS9aJ9bCrLxcWj+DN2vy9rdMiKoVPLdbAHY/U
+// SIG // oTumVDix+rF0Vw6eshl33fD31KsSF1c2ck1DXrkMqllq
+// SIG // 5g7I1vVxl+FhXIoKEYu2jryalNhFjrUa4xgXAf36wM5t
+// SIG // bX0RB9tYaMrYdS8QjKpAxYLHJMs0GqHccNQG7P9eYn+6
+// SIG // GEuLFV/uOG89JIUA+bgbs9nYCZ553IdQ+75MYmUhBffI
+// SIG // fzdEnINuTGUm1NTwIDCWJkCSe6tamc2MAuBjo83OMeRf
+// SIG // Ytvp3tUeycsI83YrUBA=
 // SIG // End signature block

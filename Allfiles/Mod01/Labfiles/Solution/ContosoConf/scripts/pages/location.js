@@ -1,48 +1,44 @@
-﻿/// <reference path="_namespace.js" />
-/// <reference path="geometry.js" />
+﻿import { distanceInMiles } from "../geometry.js";
 
-(function () {
+const conferenceLocation = {
+    latitude: 47.6097,  // decimal degrees
+    longitude: 122.3331 // decimal degrees
+};
 
-    const conferenceLocation = {
-        latitude: 47.6097,  // decimal degrees
-        longitude: 122.3331 // decimal degrees
-    };
+const maximumDistanceInMilesFromConferenceToShowVenue = 10;
 
-    const maximumDistanceInMilesFromConferenceToShowVenue = 10;
+const distanceElement = document.getElementById("distance");
+const travelSection = document.querySelector("section.travel");
+const venueSection = document.querySelector("section.venue");
 
-    const distanceElement = document.getElementById("distance");
-    const travelSection = document.querySelector("section.travel");
-    const venueSection = document.querySelector("section.venue");
+function distanceFromConference(coords) {
+    return Math.floor(distanceInMiles(coords, conferenceLocation));
+};
 
-    const distanceFromConference = function (coords) {
-        return Math.floor(conference.geometry.distanceInMiles(coords, conferenceLocation));
-    };
+function showDistanceMessage(distance) {
+    const message = "You are " + distance + " miles from the conference";
+    distanceElement.textContent = message;
+};
 
-    const showDistanceMessage = function (distance) {
-        const message = "You are " + distance + " miles from the conference";
-        distanceElement.textContent = message;
-    };
+function moveVenueSectionToTop() {
+    travelSection.parentNode.insertBefore(venueSection, travelSection);
+};
 
-    const moveVenueSectionToTop = function () {
-        travelSection.parentNode.insertBefore(venueSection, travelSection);
-    };
+function updateUIForPosition(position) {
+    const distance = distanceFromConference(position.coords);
+    showDistanceMessage(distance);
+    const isNearToConference = distance < maximumDistanceInMilesFromConferenceToShowVenue;
+    if (isNearToConference) {
+        moveVenueSectionToTop();
+    }
+};
 
-    const updateUIForPosition = function (position) {
-        const distance = distanceFromConference(position.coords);
-        showDistanceMessage(distance);
-        const isNearToConference = distance < maximumDistanceInMilesFromConferenceToShowVenue;
-        if (isNearToConference) {
-            moveVenueSectionToTop();
-        }
-    };
+function error() {
+    distanceElement.textContent = "Could not detect your current location.";
+};
 
-    const error = function () {
-        distanceElement.textContent = "Could not detect your current location.";
-    };
+navigator.geolocation.getCurrentPosition(updateUIForPosition, error);
 
-    navigator.geolocation.getCurrentPosition(updateUIForPosition, error);
-
-} ());
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
@@ -238,15 +234,15 @@
 // SIG // b2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3Nv
 // SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECjkIAAAAAAB8wCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
-// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNDQ0OVow
+// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNTAwMDgxNVow
 // SIG // IwYJKoZIhvcNAQkEMRYEFMkr+7JJi4PkiVFPQ2H3R3yn
-// SIG // Jxq3MA0GCSqGSIb3DQEBBQUABIIBAAHiqRJip9emnL9E
-// SIG // P9c9wikpg+7OGHUjQxUdwuYJsOuBk1i6hNbk+nYvDOhp
-// SIG // aFzW3IhsVsWckcP/1BXNuaaFHKdcqqMJv9ldbaWZ5E4K
-// SIG // DU8uz2MOp0LnFqc8vvoAEuylUohtF2gM3BWF9voCSa8Z
-// SIG // GGkRCSIgJwjEv18UdukIIxJh/DxOkiU/vA1wKPP9/Iyq
-// SIG // 6+ZF5o3pTpI0RDFO7MEzVFJAL6HqYrac2DA/TKrMs1Su
-// SIG // UEe674I6InFC+XA736CkSLbgj7vTN2ZGfaGGYYHjz7nt
-// SIG // o/2DMqtuj5rMsWCgkONOj0LhYWcFnQftjByIDU5jtAmr
-// SIG // XFRCvNuv4SRI655u6ME=
+// SIG // Jxq3MA0GCSqGSIb3DQEBBQUABIIBAFjY42iXEA2WLBS7
+// SIG // sBPTlqP1c59ZTo+wGJAauqiY0YgLWXyqAFeWwc1g2xDN
+// SIG // qelLYSYxu1hkihUs6Wczxqjk3gr7Xp4av5jxz3a1O6nr
+// SIG // mf1NrHuKJZiH2NAL0pxAvi+cm85CWZnk5IFr87LmhzEA
+// SIG // WXcXjairG2tOlSaEgyFixIJ4g4ln/qlSuBvRJqX6w9bz
+// SIG // 1eWKOEFaC/CBOZlrqp5tWEthgslOuZbK+i9W1/jPxxvz
+// SIG // q2J+zyFylHCgrV+rje1iaj3ttd9ED7IINp9LY8sHOXgS
+// SIG // iWpxW6ELl645t3KATZtigj2KZnFDFA9P2kKmPiWcG4Jq
+// SIG // 88pRvGplPxlg2OwfeE4=
 // SIG // End signature block

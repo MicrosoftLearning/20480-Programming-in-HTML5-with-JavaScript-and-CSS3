@@ -1,59 +1,53 @@
-﻿/// <reference path="_namespace.js" />
-/// <reference path="Object.inherit.js" />
+﻿export class LocalStarStorage {
 
-(function () {
+    constructor(localStorage) {
+        /// <summary>Encapsulates the browser's localStorage API to make saving a list of starred sessions easy.</summary>
+        this.localStorage = localStorage;
+        this.load();
+    }
 
-    conference.LocalStarStorage = Object.inherit({
+    addStar(sessionId) {
+        /// <summary>Stars the given session.</summary>
+        if (this.isStarred(sessionId)) return;
 
-        initialize: function (localStorage) {
-            /// <summary>Encapsulates the browser's localStorage API to make saving a list of starred sessions easy.</summary>
-            this.localStorage = localStorage;
-            this.load();
-        },
+        this.sessions.push(sessionId);
+        this.save();
+    }
 
-        addStar: function (sessionId) {
-            /// <summary>Stars the given session.</summary>
-            if (this.isStarred(sessionId)) return;
-
-            this.sessions.push(sessionId);
+    removeStar(sessionId) {
+        /// <summary>Removes the star from the given session.</summary>
+        const index = this.sessions.indexOf(sessionId);
+        if (index >= 0) {
+            this.sessions.splice(index, 1);
             this.save();
-        },
+        }
+    }
 
-        removeStar: function (sessionId) {
-            /// <summary>Removes the star from the given session.</summary>
-            const index = this.sessions.indexOf(sessionId);
-            if (index >= 0) {
-                this.sessions.splice(index, 1);
-                this.save();
-            }
-        },
+    isStarred(sessionId) {
+        /// <summary>Returns true if the given session is starred.</summary>
+        return this.sessions.indexOf(sessionId) >= 0;
+    }
 
-        isStarred: function (sessionId) {
-            /// <summary>Returns true if the given session is starred.</summary>
-            return this.sessions.indexOf(sessionId) >= 0;
-        },
-
-        load: function () {
-            /// <summary>Loads the starred sessions from storage.</summary>
-            const json = this.localStorage.getItem("stars");
-            if (json) {
-                try {
-                    this.sessions = JSON.parse(json) || [];
-                } catch (exception) {
-                    this.sessions = [];
-                }
-            } else {
+    load() {
+        /// <summary>Loads the starred sessions from storage.</summary>
+        const json = this.localStorage.getItem("stars");
+        if (json) {
+            try {
+                this.sessions = JSON.parse(json) || [];
+            } catch (exception) {
                 this.sessions = [];
             }
-        },
-
-        save: function () {
-            /// <summary>Saves the starred sessions to storage.</summary>
-            this.localStorage.setItem("stars", JSON.stringify(this.sessions));
+        } else {
+            this.sessions = [];
         }
-    });
+    }
 
-} ());
+    save() {
+        /// <summary>Saves the starred sessions to storage.</summary>
+        this.localStorage.setItem("stars", JSON.stringify(this.sessions));
+    }
+}
+
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
@@ -249,15 +243,15 @@
 // SIG // b2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3Nv
 // SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECkkoAAAAAACAwCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
-// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNDQ1MFow
+// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNTAwMDgxNVow
 // SIG // IwYJKoZIhvcNAQkEMRYEFNS7cgqijzCTAvzTIViLddWr
-// SIG // 4nxTMA0GCSqGSIb3DQEBBQUABIIBAGaMsdY6aCQElUI+
-// SIG // F3TDfsY8vv8L0gZApNVp53Ry1sO+yQlZ3SfTKvLkwK9/
-// SIG // xARKTE5ohX7cQH4cVLmUviZAgRcQbWW3/nFzUVG5oqh1
-// SIG // kPCbrRm/HN5ba8nIrPpleUy3pgojrPCZCC3/odGzQhh0
-// SIG // 5T9aTDwA3sqPAOVYr0twWs51gCZ8ho49fp0EcNaP33Gn
-// SIG // c4h+tvzXcmwTUXaQeLTnlthqHcBmIPS3BguBC1bEewd8
-// SIG // 7LqfKPTW1NChv/U6VdODktNo/0hrC4ipSKaDd8/tMwb9
-// SIG // xoDvOHbziKFq3qohER+eybLoc71R+0su6Zn/wzknMYh3
-// SIG // BT7ZB4hh/DhWHaiqexQ=
+// SIG // 4nxTMA0GCSqGSIb3DQEBBQUABIIBAF8I4IV6PxESffl3
+// SIG // bYpnnJbz3VS8UEwgQdc5hbKxToHf5Y/k9qQ/YovEmWwN
+// SIG // 82rO8LT8dTLAv/d+nxHK43RFmnCH2RwsiciFG9phOyx2
+// SIG // N0Ucqy392ZTeNlOeKiUtcBAcu4X7rf2nUGWWMDFR97yQ
+// SIG // AU317wkt3pvWEX/5laNUVZR76dWcauZfIgFx5NYVfMN+
+// SIG // JgpQkPkiFH4iaDGJwPMt3GMGt0UEDBBQJQ/RTkY48r6t
+// SIG // bbcytu8bu97DHEZArOb7DZ/hyzvA3FFhHY0NrJaH1ZGK
+// SIG // VosLUP12K2icoAJS1D2cW/g/nyKARCCBcI+0TihOb3o5
+// SIG // SpT9NCqe3NyzEM5oFw0=
 // SIG // End signature block

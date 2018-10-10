@@ -1,36 +1,26 @@
-﻿/// <reference path="_namespace.js" />
+﻿const radiusOfEarthInMiles = 3963.1676;
 
-conference.geometry = (function () {
+function radians(degrees) {
+    return degrees * Math.PI / 180;
+};
 
-    const radiusOfEarthInMiles = 3963.1676;
+export function distanceInMiles(p1, p2) {
+    let lat1 = p1.latitude; // inputs are in decimal degrees
+    const lon1 = p1.longitude;
+    let lat2 = p2.latitude;
+    const lon2 = p2.longitude;
 
-    const radians = function (degrees) {
-        return degrees * Math.PI / 180;
-    };
+    const dLat = radians(lat2 - lat1);
+    const dLon = radians(lon2 - lon1);
+    lat1 = radians(lat1);
+    lat2 = radians(lat2);
 
-    const distanceInMiles = function (p1, p2) {
-        let lat1 = p1.latitude; // inputs are in decimal degrees
-        const lon1 = p1.longitude;
-        let lat2 = p2.latitude;
-        const lon2 = p2.longitude;
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
-        const dLat = radians(lat2 - lat1);
-        const dLon = radians(lon2 - lon1);
-        lat1 = radians(lat1);
-        lat2 = radians(lat2);
+    return radiusOfEarthInMiles * c;
+};
 
-        const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
-        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-
-        return radiusOfEarthInMiles * c;
-    };
-
-    return {
-        radians: radians,
-        distanceInMiles: distanceInMiles
-    };
-    
-} ());
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
@@ -226,15 +216,15 @@ conference.geometry = (function () {
 // SIG // b2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3Nv
 // SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECjkIAAAAAAB8wCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
-// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNDQ1MFow
+// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNTAwMDgxNVow
 // SIG // IwYJKoZIhvcNAQkEMRYEFGd39yCeUKq8lZei4rTAYiAV
-// SIG // lru0MA0GCSqGSIb3DQEBBQUABIIBAHIEO3skuzi61WcE
-// SIG // TucUmNrZFjWU4KhpF/8zSWN/O1fAnq7kMmw6l/JjM4+S
-// SIG // K0QmiouFZCsbG0XRkMTBhGLYxNSi4dpWuJFdUe8PHCz+
-// SIG // Gjg7Jlo6/ZWocpLThG2b469eCESPouuNRLRukrm/7Oee
-// SIG // KNr9wpncxS6cX9/mbXkxQi1ZRkx0GoClAwDw1nQ1JqN+
-// SIG // qnqRYeZ20k/7QXc9kNYzxvkg0TnqllL06SjyJLgjLsSK
-// SIG // YW+c4FZGRFgKvqndJEBkrccbml/Q1j/BA6uAN1DHyo4t
-// SIG // +GlxhzBtqor8EbG72Bp50tvYcasPba1YHUJ+ZnTSNc5w
-// SIG // NQmzyCwsWlc9txHCAZM=
+// SIG // lru0MA0GCSqGSIb3DQEBBQUABIIBABAefCfzMWnuNnO8
+// SIG // 7355kcQoKxVvhz877vDixCNsDvT/oHl9SLSFAopNFMxK
+// SIG // AFgGctT6+V4OqHKsgBtXHZK+5AiwaONAtJ/Q0PWd9+4N
+// SIG // h980wb4wRQK9NtOH3+BL4hMuizpt14KaUAJWkQ0yixJp
+// SIG // PnYOOT3opfrrK0eNODx3PH7uSKZT6IG9sp2/fjAWNYoK
+// SIG // ZMdVN7+EzSrxy6PS8R63gaJLvT1w/UmAV4XwRen7e+9O
+// SIG // bNii/Y/XPQ7+J61OfLJzJuLtRBgiqczqqLDWNdk9IxFz
+// SIG // s4MKRVlcFUWRKodtBZyVu7Wn7aJNP9Yaj0qFDWYflgqH
+// SIG // 0llppLoSP0EIvl36lho=
 // SIG // End signature block

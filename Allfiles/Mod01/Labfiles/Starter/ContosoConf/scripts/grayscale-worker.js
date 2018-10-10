@@ -1,42 +1,29 @@
 ﻿// This script is for a Web Worker.
-
 addEventListener("message", function (event) {
-
     const imageData = event.data;
-    const pixels = imageData.data; // Pixels is an array of integers encoded as [ red, green, blue, alpha, red, green, blue, alpha, red, green, blue, alpha, ... ]
-    let previousProgress;
-
-    const greyScalePixel = function (index) {
-        const brightness = 0.34 * pixels[index] + 0.5 * pixels[index + 1] + 0.16 * pixels[index + 2];
-
-        pixels[index] = brightness; // red
-        pixels[index + 1] = brightness; // green
-        pixels[index + 2] = brightness; // blue
-    };
-
-    const updateProgress = function (index) {
-        const progress = Math.floor(100 * index / pixels.length);
-        if (previousProgress !== progress) { // Avoid flooding the client with the same repeated progress.
-            postMessage({ progress: progress });
-            previousProgress = progress;
-        }
-    };
-
+    const pixels = imageData.data;
     for (let i = 0; i < pixels.length; i += 4) {
-        greyScalePixel(i);
-        updateProgress(i);
+        grayscalePixel(pixels, i);
     }
-
-    postMessage({ progress: 100 });
     postMessage({ done: imageData });
-
 });
+
+function grayscalePixel(pixels, index) {
+    /// <summary>Updates the pixel, starting at the given index, to be gray scale.</summary>
+
+    const brightness = 0.34 * pixels[index] + 0.5 * pixels[index + 1] + 0.16 * pixels[index + 2];
+
+    pixels[index] = brightness; // red
+    pixels[index + 1] = brightness; // green
+    pixels[index + 2] = brightness; // blue
+};
+
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
 // SIG // gjcCAR4wJAIBAQQQEODJBs441BGiowAQS9NQkAIBAAIB
-// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFCPi53srrtpR
-// SIG // 9QF4Be+pqRrM8B7noIIVJjCCBJkwggOBoAMCAQICEzMA
+// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFLFPp86/CptT
+// SIG // 50D37VTN59N1wuFGoIIVJjCCBJkwggOBoAMCAQICEzMA
 // SIG // AACdHo0nrrjz2DgAAQAAAJ0wDQYJKoZIhvcNAQEFBQAw
 // SIG // eTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0
 // SIG // b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1p
@@ -208,33 +195,33 @@ addEventListener("message", function (event) {
 // SIG // rrjz2DgAAQAAAJ0wCQYFKw4DAhoFAKCBvjAZBgkqhkiG
 // SIG // 9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEEAYI3AgEL
 // SIG // MQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG9w0BCQQxFgQU
-// SIG // dFIy16Dr9w46pNFCAucfkplDqRcwXgYKKwYBBAGCNwIB
+// SIG // 2Cipb7iwTA64vtwDCpASj/QhS8owXgYKKwYBBAGCNwIB
 // SIG // DDFQME6gJoAkAE0AaQBjAHIAbwBzAG8AZgB0ACAATABl
 // SIG // AGEAcgBuAGkAbgBnoSSAImh0dHA6Ly93d3cubWljcm9z
 // SIG // b2Z0LmNvbS9sZWFybmluZyAwDQYJKoZIhvcNAQEBBQAE
-// SIG // ggEAiEsMV8hCVjoF1LcjlyyH/xTaelbYZ0744q7O3hnC
-// SIG // xymtuaqEoRcH9ROlkniaL51vHd38sNMIX2xGGZXZ5iwp
-// SIG // oa+BizU3XRR36aVCgS5H1D9O4rp9Rq1Aqt/X/y/yOaCX
-// SIG // 1gOWN7/8KA1bP3KycynolPfaRkQYVTPPGWfGGVsjeY5m
-// SIG // xs4/Hg/cz2bma4Vpd2Ib+OHnckxF4DxfMP75E275tlxv
-// SIG // cLIJaxHH6o6EyZhkJdRdh3s889u8psAuFXyBxKe6D9qN
-// SIG // QX9fpN4FEOcEimcsa46JPAWYGNvdQf/FrhzJZOLmDROO
-// SIG // okyn3ADob5rJjTRvWnd2jJZmoZd6RX6Wy7zp6aGCAh8w
+// SIG // ggEANdrT8rHO9Jkb0Lm7Ms197MKn+c0DLrkkVWV5p0Po
+// SIG // 2S4pqNorZ0eOxkNF+W5flThoujYG+BzufVP3S25emoNf
+// SIG // B1so6uz7M+63W5Sds2r/DC4g7gApHdfuCmQ7NHQAbOUq
+// SIG // MyqDv5qSyZm6uQ5i6cI3aUSFVRqDeeVMUHyBIa3Dtqxf
+// SIG // 5At3ckgVmW6lay58p8xzPv0PUPWKWCGY9QaBDmrDKpTA
+// SIG // OK/567R4lOkvtsKyn4nMSYRzt9HdgmB090+v3JNEBU+w
+// SIG // m8sy07cKJbB+pK7yIX8tQe3A87I85f/V3/EV+iT1rwM8
+// SIG // bSlts2zBo/D2sAtZdnBxOZGXKCKOCkV79Mq1MqGCAh8w
 // SIG // ggIbBgkqhkiG9w0BCQYxggIMMIICCAIBATCBhTB3MQsw
 // SIG // CQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQ
 // SIG // MA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9z
 // SIG // b2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3Nv
 // SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECkkoAAAAAACAwCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
-// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNDQ1M1ow
-// SIG // IwYJKoZIhvcNAQkEMRYEFER0Q253qVipDEWl1srXOQsq
-// SIG // DvoRMA0GCSqGSIb3DQEBBQUABIIBAAop/jDhQRp0EDr4
-// SIG // I69Qto6g4cBwgor8mUsv7CPacvJykkUCP8LjJBOhrL1c
-// SIG // VL0h6Ajc7s/V520lLnpAGeJaA+np5rEpQEaJvIjC4fMo
-// SIG // eBZkrMSMaM2NKhVLHoMj6jMMinV3zxx1tgR7XRjrDd4t
-// SIG // J0gyiYRaDoRWd0cyXq9wAIUNDuKcYVDgi8t8/WeB/NPO
-// SIG // RWRFUy+3k+2a6Bpkp0U/m9PtJaZZR5MPMJiW0e9vEpBR
-// SIG // lLUu6dblsGIgYmcENW/PXp1S3hdvW2IPHiMoALZhAXo3
-// SIG // G3JAnOmHbpoo+TAcvxQgox3c1FA3Fut0opRJurfSVDIx
-// SIG // UtTcxNgQlH6jA7r/zFE=
+// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNTAwMDgxNVow
+// SIG // IwYJKoZIhvcNAQkEMRYEFJfFI3iXk6x2xl70KQ7rOSU+
+// SIG // 0zmXMA0GCSqGSIb3DQEBBQUABIIBAEZOIKCqsnshCG2M
+// SIG // 2nL6cL6zEwNng8LlNlduH8dmRXSUcXh08R9htVDYTzyQ
+// SIG // eoAV4yibtraoNukz3MpRvnkxApwB/hMh2rQDgsJEOA6N
+// SIG // dkKhxE93Z/lNwxakYuIgKwu+cPsS9vEjKtnf6L5RW4sI
+// SIG // 2J31/OqJyJpe2vek/EMGIRIs4MdC5Uw3lcLZy1KyGbn9
+// SIG // 3FKH3FIXil0Wg3iJj2wnbsFZohnPJbI0QCKX4N5+Glx/
+// SIG // tqySlwF1ksISjvtklev943kaRL3spsvpuyro9w3hxd1z
+// SIG // tkwOBPHkDwiJXmZREn3/v4+BTsKRgOkUN+57re6BDUYJ
+// SIG // NBRK/7yQG7+U2u3Kjlg=
 // SIG // End signature block
