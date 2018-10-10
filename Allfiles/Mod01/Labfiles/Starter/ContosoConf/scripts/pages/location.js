@@ -1,48 +1,44 @@
-﻿/// <reference path="_namespace.js" />
-/// <reference path="geometry.js" />
+﻿import { distanceInMiles } from "../geometry.js";
 
-(function () {
+const conferenceLocation = {
+    latitude: 47.6097,  // decimal degrees
+    longitude: 122.3331 // decimal degrees
+};
 
-    const conferenceLocation = {
-        latitude: 47.6097,  // decimal degrees
-        longitude: 122.3331 // decimal degrees
-    };
+const maximumDistanceInMilesFromConferenceToShowVenue = 10;
 
-    const maximumDistanceInMilesFromConferenceToShowVenue = 10;
+const distanceElement = document.getElementById("distance");
+const travelSection = document.querySelector("section.travel");
+const venueSection = document.querySelector("section.venue");
 
-    const distanceElement = document.getElementById("distance");
-    const travelSection = document.querySelector("section.travel");
-    const venueSection = document.querySelector("section.venue");
+function distanceFromConference(coords) {
+    return Math.floor(distanceInMiles(coords, conferenceLocation));
+};
 
-    const distanceFromConference = function (coords) {
-        return Math.floor(conference.geometry.distanceInMiles(coords, conferenceLocation));
-    };
+function showDistanceMessage(distance) {
+    const message = "You are " + distance + " miles from the conference";
+    distanceElement.textContent = message;
+};
 
-    const showDistanceMessage = function (distance) {
-        const message = "You are " + distance + " miles from the conference";
-        distanceElement.textContent = message;
-    };
+function moveVenueSectionToTop() {
+    travelSection.parentNode.insertBefore(venueSection, travelSection);
+};
 
-    const moveVenueSectionToTop = function () {
-        travelSection.parentNode.insertBefore(venueSection, travelSection);
-    };
+function updateUIForPosition(position) {
+    const distance = distanceFromConference(position.coords);
+    showDistanceMessage(distance);
+    const isNearToConference = distance < maximumDistanceInMilesFromConferenceToShowVenue;
+    if (isNearToConference) {
+        moveVenueSectionToTop();
+    }
+};
 
-    const updateUIForPosition = function (position) {
-        const distance = distanceFromConference(position.coords);
-        showDistanceMessage(distance);
-        const isNearToConference = distance < maximumDistanceInMilesFromConferenceToShowVenue;
-        if (isNearToConference) {
-            moveVenueSectionToTop();
-        }
-    };
+function error() {
+    distanceElement.textContent = "Could not detect your current location.";
+};
 
-    const error = function () {
-        distanceElement.textContent = "Could not detect your current location.";
-    };
+navigator.geolocation.getCurrentPosition(updateUIForPosition, error);
 
-    navigator.geolocation.getCurrentPosition(updateUIForPosition, error);
-
-} ());
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
@@ -84,28 +80,28 @@
 // SIG // Ha7Ki8f3iB7q/pEMn08HCe0mkm6zlBkB+F+B567aiY9/
 // SIG // Wl6EX7W+fEblR6/+WCuRf4fcRh9RlczDYqG1x1/ryWlc
 // SIG // cZGpjVYgLDpOk/2bBo+tivhofju6eUKTOUn10F7scI1C
-// SIG // dcWCVZAbtVVhMIIEujCCA6KgAwIBAgIKYQKSSgAAAAAA
-// SIG // IDANBgkqhkiG9w0BAQUFADB3MQswCQYDVQQGEwJVUzET
+// SIG // dcWCVZAbtVVhMIIEujCCA6KgAwIBAgIKYQKOQgAAAAAA
+// SIG // HzANBgkqhkiG9w0BAQUFADB3MQswCQYDVQQGEwJVUzET
 // SIG // MBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVk
 // SIG // bW9uZDEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0
 // SIG // aW9uMSEwHwYDVQQDExhNaWNyb3NvZnQgVGltZS1TdGFt
-// SIG // cCBQQ0EwHhcNMTIwMTA5MjIyNTU5WhcNMTMwNDA5MjIy
-// SIG // NTU5WjCBszELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldh
+// SIG // cCBQQ0EwHhcNMTIwMTA5MjIyNTU4WhcNMTMwNDA5MjIy
+// SIG // NTU4WjCBszELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldh
 // SIG // c2hpbmd0b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNV
 // SIG // BAoTFU1pY3Jvc29mdCBDb3Jwb3JhdGlvbjENMAsGA1UE
 // SIG // CxMETU9QUjEnMCUGA1UECxMebkNpcGhlciBEU0UgRVNO
-// SIG // OkI4RUMtMzBBNC03MTQ0MSUwIwYDVQQDExxNaWNyb3Nv
+// SIG // OkY1MjgtMzc3Ny04QTc2MSUwIwYDVQQDExxNaWNyb3Nv
 // SIG // ZnQgVGltZS1TdGFtcCBTZXJ2aWNlMIIBIjANBgkqhkiG
-// SIG // 9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzWPD96K1R9n5OZRT
-// SIG // rGuPpnk4IfTRbj0VOBbBcyyZj/vgPFvhokyLsquLtPJK
-// SIG // x7mTUNEm9YdTsHp180cPFytnLGTrYOdKjOCLXsRWaTc6
-// SIG // KgRdFwHIv6m308mro5GogeM/LbfY5MR4AHk5z/3HZOIj
-// SIG // EnieDHYnSY+arA504wZVVUnI7aF8cEVhfrJxFh7hwUG5
-// SIG // 0tIy6VIk8zZQBNfdbzxJ1QvUdkD8ZWUTfpVROtX/uJqn
-// SIG // V2tLFeU3WB/cAA3FrurfgUf58FKu5s9arOAUSqZxlID6
-// SIG // /bAjMGDpg2CsDiQe/xHy56VVYpXun3+eKdbNSwp2g/BD
-// SIG // BN8GSSDyU1pEsFF6OQIDAQABo4IBCTCCAQUwHQYDVR0O
-// SIG // BBYEFM0ZrGFNlGcr9q+UdVnb8FgAg6E6MB8GA1UdIwQY
+// SIG // 9w0BAQEFAAOCAQ8AMIIBCgKCAQEAluyOR01UwlyVgNdO
+// SIG // Cz2/l0PDS+NgZxEvAU0M2NFGLxBA3gukUFISiAtDei0/
+// SIG // 7khuZseR5gPKbux5qWojm81ins1qpD/no0P/YkehtLpE
+// SIG // +t9AwYVUfuigpyxDI5tSHzI19P6aVp+NY3d7MJ4KM4Vy
+// SIG // G8pKyMwlzdtdES7HsIzxj0NIRwW1eiAL5fPvwbr0s9jN
+// SIG // OI/7Iao9Cm2FF9DK54YDwDODtSXEzFqcxMPaYiVNUyUU
+// SIG // YY/7G+Ds90fGgEXmNVMjNnfKsN2YKznAdTUP3YFMIT12
+// SIG // MMWysGVzKUgn2MLSsIRHu3i61XQD3tdLGfdT3njahvdh
+// SIG // iCYztEfGoFSIFSssdQIDAQABo4IBCTCCAQUwHQYDVR0O
+// SIG // BBYEFC/oRsho025PsiDQ3olO8UfuSMHyMB8GA1UdIwQY
 // SIG // MBaAFCM0+NlSRnAK7UD7dvuzK7DDNbMPMFQGA1UdHwRN
 // SIG // MEswSaBHoEWGQ2h0dHA6Ly9jcmwubWljcm9zb2Z0LmNv
 // SIG // bS9wa2kvY3JsL3Byb2R1Y3RzL01pY3Jvc29mdFRpbWVT
@@ -113,15 +109,15 @@
 // SIG // AQUFBzAChjxodHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20v
 // SIG // cGtpL2NlcnRzL01pY3Jvc29mdFRpbWVTdGFtcFBDQS5j
 // SIG // cnQwEwYDVR0lBAwwCgYIKwYBBQUHAwgwDQYJKoZIhvcN
-// SIG // AQEFBQADggEBAFEc1t82HdyAvAKnxpnfFsiQBmkVmjK5
-// SIG // 82QQ0orzYikbeY/KYKmzXcTkFi01jESb8fRcYaRBrpqL
-// SIG // ulDRanlqs2KMnU1RUAupjtS/ohDAR9VOdVKJHj+Wao8u
-// SIG // QBQGcu4/cFmSXYXtg5n6goSe5AMBIROrJ9bMcUnl2h3/
-// SIG // bzwJTtWNZugMyX/uMRQCN197aeyJPkV/JUTnHxrWxRrD
-// SIG // SuTh8YSY50/5qZinGEbshGzsqQMK/Xx6Uh2ca6SoD5iS
-// SIG // pJJ4XCt4432yx9m2cH3fW3NTv6rUZlBL8Mk7lYXlwUpl
-// SIG // nSVYULsgVJF5OhsHXGpXKK8xx5/nwx3uR/0n13/PdNxl
-// SIG // xT8wggW8MIIDpKADAgECAgphMyYaAAAAAAAxMA0GCSqG
+// SIG // AQEFBQADggEBAHP/fS6dzY2IK3x9414VceloYvAItkNW
+// SIG // xFxKLWjY+UgRkfMRnIXsEtRUoHWpOKFZf3XuxvU02FSk
+// SIG // 4tDMfJerk3UwlwcdBFMsNn9/8UAeDJuA4hIKIDoxwAd1
+// SIG // Z+D6NJzsiPtXHOVYYiCQRS9dRanIjrN8cm0QJ8VL2G+i
+// SIG // qBKzbTUjZ/os2yUtuV2xHgXnQyg+nAV2d/El3gVHGW3e
+// SIG // SYWh2kpLCEYhNah1Nky3swiq37cr2b4qav3fNRfMPwzH
+// SIG // 3QbPTpQkYyALLiSuX0NEEnpc3TfbpEWzkToSV33jR8Zm
+// SIG // 08+cRlb0TAex4Ayq1fbVPKLgtdT4HH4EVRBrGPSRzVGn
+// SIG // lWUwggW8MIIDpKADAgECAgphMyYaAAAAAAAxMA0GCSqG
 // SIG // SIb3DQEBBQUAMF8xEzARBgoJkiaJk/IsZAEZFgNjb20x
 // SIG // GTAXBgoJkiaJk/IsZAEZFgltaWNyb3NvZnQxLTArBgNV
 // SIG // BAMTJE1pY3Jvc29mdCBSb290IENlcnRpZmljYXRlIEF1
@@ -236,17 +232,17 @@
 // SIG // CQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQ
 // SIG // MA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9z
 // SIG // b2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3Nv
-// SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECkkoAAAAAACAwCQYF
+// SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECjkIAAAAAAB8wCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
-// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNDQ1MFow
+// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNTAwMDgxNVow
 // SIG // IwYJKoZIhvcNAQkEMRYEFMkr+7JJi4PkiVFPQ2H3R3yn
-// SIG // Jxq3MA0GCSqGSIb3DQEBBQUABIIBAMjkFgF0plC4pFaT
-// SIG // Z/bUW1xJmIaXitlr5QYc7Kdcso0geeYU+68RjnzpA7Ws
-// SIG // /JzWVojnso63IXwwTN50rSj84YiBbfhCzvZ5ciiDN3YR
-// SIG // jmsJ43MRoF0If6PgO/koBGAEbC6FFG4IIfbaVnPbf377
-// SIG // hbI1O4mN6wI7RAzuvtsRa0rYVFvhr6QmmHyG2Mkjm5Xv
-// SIG // A6xdlVfAp6oZ64eepwMiKXEfNpTrK8XDaC1PHOdN/VXz
-// SIG // F/qsw8sdLrt4vkg2L1qNbA3e2PX/ZU2L9o1NvuFiwMgB
-// SIG // yxhYATEWq1OHUkkSeCHqs8u2m+sRCH3GmdvHzGX/ohjy
-// SIG // hSkrHL8J7DqBaa/EkBk=
+// SIG // Jxq3MA0GCSqGSIb3DQEBBQUABIIBAFjY42iXEA2WLBS7
+// SIG // sBPTlqP1c59ZTo+wGJAauqiY0YgLWXyqAFeWwc1g2xDN
+// SIG // qelLYSYxu1hkihUs6Wczxqjk3gr7Xp4av5jxz3a1O6nr
+// SIG // mf1NrHuKJZiH2NAL0pxAvi+cm85CWZnk5IFr87LmhzEA
+// SIG // WXcXjairG2tOlSaEgyFixIJ4g4ln/qlSuBvRJqX6w9bz
+// SIG // 1eWKOEFaC/CBOZlrqp5tWEthgslOuZbK+i9W1/jPxxvz
+// SIG // q2J+zyFylHCgrV+rje1iaj3ttd9ED7IINp9LY8sHOXgS
+// SIG // iWpxW6ELl645t3KATZtigj2KZnFDFA9P2kKmPiWcG4Jq
+// SIG // 88pRvGplPxlg2OwfeE4=
 // SIG // End signature block

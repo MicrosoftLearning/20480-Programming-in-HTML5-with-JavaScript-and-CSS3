@@ -4,8 +4,6 @@
     text-align: justify;
 
     /* Columns Layout */
-    -webkit-column-count: 3;
-    -webkit-column-gap: 5rem;
     column-count: 3;
     column-gap: 5rem;
 }
@@ -48,7 +46,6 @@
 /* For small screens revert back to normal layout */
 @media screen and (max-width: 960px) {
     .about > article > section {
-        -webkit-column-count: 1;
         column-count: 1;
     }
     

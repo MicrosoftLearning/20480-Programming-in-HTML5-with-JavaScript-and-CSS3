@@ -1,198 +1,14 @@
-﻿/// <reference path="../_namespace.js" />
-/// <reference path="../greyscale.js" />
+﻿import { SpeakerBadgePage } from "../SpeakerBadgePage.js";
 
-(function () {
+const badgeElement = document.querySelector(".badge");
+new SpeakerBadgePage(badgeElement);
 
-    const grayscaleImage = conference.grayscaleImage;
-
-
-    const speakerBadgePage = {
-        
-        initialize: function (element) {
-            this.canvas = element.querySelector("canvas");
-            this.busyElement = element.querySelector(".busy");
-            this.progress = element.querySelector("progress");
-            
-            this.speakerId = this.canvas.getAttribute("data-speaker-id");
-            this.speakerName = this.canvas.getAttribute("data-speaker-name");
-            this.canvas.addEventListener("dragover", this.handleDragOver.bind(this));
-            this.canvas.addEventListener("drop", this.handleDrop.bind(this));
-            
-            this.drawBadge();
-        },
-
-        handleDragOver: function (event) {
-            event.stopPropagation();
-            event.preventDefault();
-            event.dataTransfer.dropEffect = 'copy'; // Makes the browser display a "copy" cursor.
-        },
-
-        handleDrop: function (event) {
-            event.stopPropagation();
-            event.preventDefault();
-
-            const files = event.dataTransfer.files;
-            if (files.length == 0) return;
-
-            // More than one file could have been dropped, we'll just use the first.
-            const file = files[0];
-            if (this.isImageType(file.type)) {
-                this.busy();
-                this.readFile(file)
-                    .pipe(this.loadImage)
-                    .pipe(grayscaleImage)
-                    .progress(this.updateProgress)
-                    .done(this.drawBadge, this.notBusy);
-            } else {
-                alert("Please drop an image file.");
-            }
-        },
-
-        drawBadge: function (image) {
-            this.context = this.canvas.getContext("2d");
-            this.drawBackground();
-            this.drawTopText();
-            this.drawSpeakerName();
-            if (image) {
-                this.drawSpeakerImage(image);
-            } else {
-                this.drawImagePlaceholder();
-            }
-            this.drawBarCode(this.speakerId);
-        },
-
-        drawBackground: function () {
-            this.context.fillStyle = "white";
-            this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
-        },
-
-        drawSpeakerImage: function (image) {
-            const size = Math.min(image.width, image.height);
-            const sourceX = image.width / 2 - size / 2;
-            const sourceY = image.height / 2 - size / 2;
-            this.context.drawImage(image, sourceX, sourceY, size, size, 20, 20, 160, 160);
-        },
-
-        drawImagePlaceholder: function () {
-            this.context.strokeStyle = "2px #888";
-            this.context.strokeRect(20, 20, 160, 160);
-            this.context.font = "12px sans-serif";
-            this.context.textBaseline = "middle";
-            this.context.textAlign = "center";
-            this.context.fillStyle = "black";
-            this.context.fillText("Drag your profile photo here", 100, 100);
-        },
-
-        drawTopText: function () {
-            this.context.font = "20px sans-serif";
-            this.context.fillStyle = "black";
-            this.context.textBaseline = "top";
-            this.context.textAlign = "left";
-            this.context.fillText("ContosoConf 2013 Speaker:", 200, 20);
-        },
-
-        drawSpeakerName: function () {
-            this.context.font = "40px sans-serif";
-            this.context.fillStyle = "black";
-            this.context.textBaseline = "top";
-            this.context.textAlign = "left";
-            this.context.fillText(this.speakerName, 200, 60);
-        },
-
-        drawBarCode: function (text) {
-            text = "*" + text + "*"; // Wrap in "*" deliminators.
-            const encodings = {
-                "0": "bwbWBwBwb",
-                "1": "BwbWbwbwB",
-                "2": "bwBWbwbwB",
-                "3": "BwBWbwbwb",
-                "4": "bwbWBwbwB",
-                "5": "BwbWBwbwb",
-                "6": "bwBWBwbwb",
-                "7": "bwbWbwBwB",
-                "8": "BwbWbwBwb",
-                "9": "bwBWbwBwb",
-                "*": "bWbwBwBwb"
-            };
-            let x = 200, y = 140, height = 40, thick = 6, thin = 2;
-            for (let charIndex = 0; charIndex < text.length; charIndex++) {
-                const code = encodings[text[charIndex]];
-                for (let stripeIndex = 0; stripeIndex < code.length; stripeIndex++) {
-                    if (stripeIndex % 2 === 0) {
-                        this.context.fillStyle = "black";
-                    } else {
-                        this.context.fillStyle = "white";
-                    }
-                    const isWideStripe = code.charCodeAt(stripeIndex) < 91;
-                    if (isWideStripe) {
-                        this.context.fillRect(x, y, thick, height);
-                        x += thick;
-                    } else {
-                        this.context.fillRect(x, y, thin, height);
-                        x += thin;
-                    }
-                }
-
-                if (charIndex < text.length - 1) {
-                    // Space between each
-                    this.context.fillStyle = "white";
-                    this.context.fillRect(x, y, thin, height);
-                    x += thin;
-                }
-            }
-        },
-
-        isImageType: function (type) {
-            const imageTypes = ["image/jpeg", "image/jpg", "image/png"];
-            return imageTypes.indexOf(type) === 0;
-        },
-
-        readFile: function (file) {
-            const reading = $.Deferred();
-            const reader = new FileReader();
-            const self = this;
-            reader.onload = function (loadEvent) {
-                const fileDataUrl = loadEvent.target.result;
-                reading.resolveWith(self, [fileDataUrl]);
-            };
-            reader.readAsDataURL(file);
-            return reading;
-        },
-
-        loadImage: function (imageUrl) {
-            const loading = $.Deferred();
-            const image = new Image();
-            const self = this;
-            image.onload = function () {
-                loading.resolveWith(self, [image]);
-            };
-            image.src = imageUrl; // This starts the image loading
-            return loading;
-        },
-
-        updateProgress: function (progress) {
-            this.progress.value = progress;
-        },
-
-        busy: function () {
-            this.busyElement.style.display = "block";
-        },
-
-        notBusy: function () {
-            this.busyElement.style.display = "none";
-        }
-    };
-
-    const badgeElement = document.querySelector(".badge");
-    speakerBadgePage.initialize(badgeElement);
-
-} ());
 // SIG // Begin signature block
 // SIG // MIIaaAYJKoZIhvcNAQcCoIIaWTCCGlUCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
 // SIG // gjcCAR4wJAIBAQQQEODJBs441BGiowAQS9NQkAIBAAIB
-// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFNd666wpqjMO
-// SIG // aFDY52XtHhn8isbkoIIVLzCCBJkwggOBoAMCAQICEzMA
+// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFFvrdwu6OeDJ
+// SIG // DbzfNDBDsunT5btboIIVLzCCBJkwggOBoAMCAQICEzMA
 // SIG // AACdHo0nrrjz2DgAAQAAAJ0wDQYJKoZIhvcNAQEFBQAw
 // SIG // eTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0
 // SIG // b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1p
@@ -364,33 +180,33 @@
 // SIG // EzMAAACdHo0nrrjz2DgAAQAAAJ0wCQYFKw4DAhoFAKCB
 // SIG // vjAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgor
 // SIG // BgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG
-// SIG // 9w0BCQQxFgQU7YSk4rETZMSWv7CfOLHIPJuSKsEwXgYK
+// SIG // 9w0BCQQxFgQURjU9WKCXg5B7uRgK9u9NXqTqQx8wXgYK
 // SIG // KwYBBAGCNwIBDDFQME6gJoAkAE0AaQBjAHIAbwBzAG8A
 // SIG // ZgB0ACAATABlAGEAcgBuAGkAbgBnoSSAImh0dHA6Ly93
 // SIG // d3cubWljcm9zb2Z0LmNvbS9sZWFybmluZyAwDQYJKoZI
-// SIG // hvcNAQEBBQAEggEATmeFal5h3ST7oq/8Q8vFqaygD6px
-// SIG // 7SYaepKt0fO3/Y0zF18RfUBmahqtQRDDh8jSHyXZlApo
-// SIG // F4Uj1tRRXRLC+0I2UIcey1zuCtxcyPlgWsJ+2K2IQ0do
-// SIG // /Hminc3KmGZyNVPizBNx+ImOgrfTyhCtcyQTUMYJgXG4
-// SIG // fILsBNcoYyR3J9ca5dnIwlWu3eXufDF6J+LEbTLX3x8x
-// SIG // RNW2pgfpMTgBLMHgyGe35Odh1HRB29ifZgkh2tPZNYx9
-// SIG // y0zgNDZqhdyx8jfVuYzLUf5bgsp+piMABzB6MyKLSpci
-// SIG // le0uhcjyMcrxma3C7et7/9yj52ZZnCQvphQqJDBrqFsw
-// SIG // ndR2ZKGCAigwggIkBgkqhkiG9w0BCQYxggIVMIICEQIB
+// SIG // hvcNAQEBBQAEggEALevHxEGZv8yu/jDn4v7gWp0CVfb1
+// SIG // qQNZuKfiN14sv3L/oorvMaIzsv6IKsykJQwmgg+SyS8M
+// SIG // lqyHZv5qKTMrqiJZO2nF9nP86KnuoMQ04KE7cKTsZ7FE
+// SIG // Z37Qs3ONKMkdEyMVGfgFDLWenatn1xb8kuejNrB8dB9y
+// SIG // 5NOAyGcqcdJseorGGhBtvHRXtwyw0YabeRbqvPTEtcg1
+// SIG // +2ireBX837pm4z5Oy72xnOPJeSalOA21uLiyNmv1im9B
+// SIG // +W1/lOcSXtQbRSN9hY59gYsRhWuu0Q8/FzTjbSvJ5DnV
+// SIG // B2ngi96lLIQMxwOQtk7HceSO+i0kaa+lGydUuMdzc+JP
+// SIG // IObyv6GCAigwggIkBgkqhkiG9w0BCQYxggIVMIICEQIB
 // SIG // ATCBjjB3MQswCQYDVQQGEwJVUzETMBEGA1UECBMKV2Fz
 // SIG // aGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UE
 // SIG // ChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQD
 // SIG // ExhNaWNyb3NvZnQgVGltZS1TdGFtcCBQQ0ECEzMAAAAr
 // SIG // OTJIwbLJSPMAAAAAACswCQYFKw4DAhoFAKBdMBgGCSqG
 // SIG // SIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkF
-// SIG // MQ8XDTEyMTExNDIzNDQ0OVowIwYJKoZIhvcNAQkEMRYE
-// SIG // FCvLxca8rFTvD+G6XeDqZhNeHGqwMA0GCSqGSIb3DQEB
-// SIG // BQUABIIBACgphVQWWFD3P0BL5w43L0zAy+gOOWcPH0cF
-// SIG // Ii4uA5oslxPfG0dL9QbKYYfIZ9kD+3mAlyCcPrwg32jt
-// SIG // RWVe85RAx9sUVHS9AlCGc+cbuYUqXW4K59YQ2bDTHkjq
-// SIG // PEwxwk13C+zU/mHy7X/t2m6SNmtqwwD8HhmmCE9BTxLV
-// SIG // vI9F3wW8+jMydqygsyFBiMr4SLKzZMrrinwRShy8q1v6
-// SIG // LyWuyfQlGbsdSGIa9IN38JmKIDDJY8K0OY8kxOCdzIBw
-// SIG // iqtRhIkB/gBZgmfwHYSl4G3ucpYJNuOkcHtLrordR4ed
-// SIG // sLITSqEt3rLYtz9SeCX7xnHfjKp5AO9uGnOBvq96GkQ=
+// SIG // MQ8XDTEyMTExNTAwMDgxNVowIwYJKoZIhvcNAQkEMRYE
+// SIG // FOZM+5s+hovKxUbyl0bp1YAOlWzVMA0GCSqGSIb3DQEB
+// SIG // BQUABIIBAJyihSd/wsfxO08pu+yZPNddZE12DPEBNESY
+// SIG // HmH6KKAblK1z/9pSGvB+kJKHajsxVSRlZiQSoUPbP+I4
+// SIG // jzDZQWtC2RkXxrF34AxDit+Et8GZOsBNvu8pGSaTMEYZ
+// SIG // kgD8YSCXxnsNQ0J2dATVL1WMuxpE1nIJPj3by1tiQznm
+// SIG // UOqWZPGBQCvOVGz35BPVaEjYbmdgkjvoe5NR8hqdtLRq
+// SIG // zyCa6Am/PYUltnq0zk/ZhgbK1CFUe8ne1uaENRhPE32X
+// SIG // zOapr+mt90EmXXgSSY6BZ+YtsjRljjGZHtRmTe0XFNcu
+// SIG // VrZGO72qEya2Mx9TqI+hEDD6UyALuDu1qS+Wtwb2+Vg=
 // SIG // End signature block

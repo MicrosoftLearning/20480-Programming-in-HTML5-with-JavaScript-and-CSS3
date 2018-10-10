@@ -1,169 +1,12 @@
-﻿/// <reference path="../_namespace.js" />
-/// <reference path="../Object.inherit.js" />
-/// <reference path="../HtmlTemplate.js" />
-/// <reference path="../LocalStarStorage.js" />
-/// <reference path="../datetime.js" />
+﻿import { ScheduleList } from "../ScheduleList.js";
+import { LocalStarStorage } from "../LocalStarStorage.js";
 
-(function () {
-
-    // Import objects/functions from the conference namespace.
-    const HtmlTemplate = conference.HtmlTemplate;
-    const LocalStarStorage = conference.LocalStarStorage;
-    const parseTimeAsTotalMinutes = conference.parseTimeAsTotalMinutes;
-
-
-    const ScheduleItem = Object.inherit({
-
-        initialize: function (data, localStarStorage) {
-            this.id = data.id;
-            this.tracks = data.tracks;
-            this.localStarStorage = localStarStorage;
-
-            this.element = this.scheduleItemTemplate.createElement(data);
-
-            if (localStarStorage.isStarred(this.id)) {
-                this.element.classList.add(this.starredClass);
-            }
-
-            this.initializeElementClass();
-            this.initializeElementPosition(data.start, data.end);
-            this.addStarClickEventHandler();
-        },
-
-        scheduleItemTemplate: HtmlTemplate.create("schedule-item"),
-
-        initializeElementClass: function () {
-            if (this.isInTrack(1) && this.isInTrack(2)) {
-                this.element.classList.add("both-tracks");
-            } else if (this.isInTrack(1)) {
-                this.element.classList.add("track-1");
-            } else if (this.isInTrack(2)) {
-                this.element.classList.add("track-2");
-            }
-        },
-
-        initializeElementPosition: function (start, end) {
-            const startTimeInMinutes = parseTimeAsTotalMinutes(start);
-            const endTimeInMinutes = parseTimeAsTotalMinutes(end);
-            const pixelsPerMinute = 2;
-            const conferenceStartTimeInMinutes = 8 * 60 + 30;
-            this.element.style.top = pixelsPerMinute * (startTimeInMinutes - conferenceStartTimeInMinutes) + "px";
-            this.element.style.height = pixelsPerMinute * (endTimeInMinutes - startTimeInMinutes) + "px";
-        },
-
-        addStarClickEventHandler: function () {
-            const starElement = this.element.querySelector(".star");
-            starElement.addEventListener("click", this.toggleStar.bind(this), false);
-        },
-
-        isInTrack: function (track) {
-            return this.tracks.indexOf(track) >= 0;
-        },
-
-        starredClass: "starred",
-
-        toggleStar: function () {
-            if (this.isStarred()) {
-                this.unsetStar();
-            } else {
-                this.setStar();
-            }
-        },
-
-        isStarred: function () {
-            return this.element.classList.contains(this.starredClass);
-        },
-
-        unsetStar: function () {
-            this.element.classList.remove(this.starredClass);
-            this.postStarChange(false);
-            this.localStarStorage.removeStar(this.id);
-        },
-
-        setStar: function () {
-            this.element.classList.add(this.starredClass);
-            this.postStarChange(true);
-            this.localStarStorage.addStar(this.id);
-        },
-
-        postStarChange: function (isStarred) {
-            const request = $.ajax({
-                type: "POST",
-                url: "/schedule/star/" + this.id,
-                data: { starred: isStarred },
-                context: this
-            });
-            request.done(function (responseData) {
-                this.updateStarCount(responseData.starCount);
-            });
-        },
-
-        updateStarCount: function (starCount) {
-            const starCountElement = this.element.querySelector(".star-count");
-            starCountElement.textContent = starCount.toString();
-        },
-
-        show: function () {
-            this.element.style.display = "block";
-        },
-
-        hide: function () {
-            this.element.style.display = "none";
-        }
-    });
-
-
-    const ScheduleList = Object.inherit({
-        initialize: function (listElement, localStarStorage) {
-            this.element = listElement;
-            this.localStarStorage = localStarStorage;
-            this.items = [];
-        },
-
-        startDownload: function () {
-            const request = $.ajax({
-                url: "/schedule/list",
-                context: this
-            });
-            request.done(this.downloadDone)
-                   .fail(this.downloadFailed);
-        },
-
-        downloadDone: function (responseData) {
-            this.addAll(responseData.schedule);
-        },
-
-        downloadFailed: function () {
-            alert("Could not retrieve schedule data at this time. Please try again later.");
-        },
-
-        addAll: function (itemsArray) {
-            itemsArray.forEach(this.add, this);
-        },
-
-        add: function (itemData) {
-            const item = ScheduleItem.create(itemData, this.localStarStorage);
-            this.items.push(item); // Store item object in our array
-            this.element.appendChild(item.element); // Also add the item element to the UI.
-        }
-    });
-
-
-    const Page = Object.inherit({
-        initialize: function () {
-            const scheduleListElement = document.getElementById("schedule");
-            this.scheduleList = ScheduleList.create(
-                scheduleListElement,
-                LocalStarStorage.create(localStorage)
-            );
-            this.scheduleList.startDownload();
-        }
-    });
-
-
-    Page.create();
-
-} ());
+const scheduleListElement = document.getElementById("schedule");
+const scheduleList = new ScheduleList(
+    scheduleListElement,
+    new LocalStarStorage(localStorage)
+);
+scheduleList.startDownload();
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
@@ -205,28 +48,28 @@
 // SIG // Ha7Ki8f3iB7q/pEMn08HCe0mkm6zlBkB+F+B567aiY9/
 // SIG // Wl6EX7W+fEblR6/+WCuRf4fcRh9RlczDYqG1x1/ryWlc
 // SIG // cZGpjVYgLDpOk/2bBo+tivhofju6eUKTOUn10F7scI1C
-// SIG // dcWCVZAbtVVhMIIEujCCA6KgAwIBAgIKYQKOQgAAAAAA
-// SIG // HzANBgkqhkiG9w0BAQUFADB3MQswCQYDVQQGEwJVUzET
+// SIG // dcWCVZAbtVVhMIIEujCCA6KgAwIBAgIKYQKSSgAAAAAA
+// SIG // IDANBgkqhkiG9w0BAQUFADB3MQswCQYDVQQGEwJVUzET
 // SIG // MBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVk
 // SIG // bW9uZDEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0
 // SIG // aW9uMSEwHwYDVQQDExhNaWNyb3NvZnQgVGltZS1TdGFt
-// SIG // cCBQQ0EwHhcNMTIwMTA5MjIyNTU4WhcNMTMwNDA5MjIy
-// SIG // NTU4WjCBszELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldh
+// SIG // cCBQQ0EwHhcNMTIwMTA5MjIyNTU5WhcNMTMwNDA5MjIy
+// SIG // NTU5WjCBszELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldh
 // SIG // c2hpbmd0b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNV
 // SIG // BAoTFU1pY3Jvc29mdCBDb3Jwb3JhdGlvbjENMAsGA1UE
 // SIG // CxMETU9QUjEnMCUGA1UECxMebkNpcGhlciBEU0UgRVNO
-// SIG // OkY1MjgtMzc3Ny04QTc2MSUwIwYDVQQDExxNaWNyb3Nv
+// SIG // OkI4RUMtMzBBNC03MTQ0MSUwIwYDVQQDExxNaWNyb3Nv
 // SIG // ZnQgVGltZS1TdGFtcCBTZXJ2aWNlMIIBIjANBgkqhkiG
-// SIG // 9w0BAQEFAAOCAQ8AMIIBCgKCAQEAluyOR01UwlyVgNdO
-// SIG // Cz2/l0PDS+NgZxEvAU0M2NFGLxBA3gukUFISiAtDei0/
-// SIG // 7khuZseR5gPKbux5qWojm81ins1qpD/no0P/YkehtLpE
-// SIG // +t9AwYVUfuigpyxDI5tSHzI19P6aVp+NY3d7MJ4KM4Vy
-// SIG // G8pKyMwlzdtdES7HsIzxj0NIRwW1eiAL5fPvwbr0s9jN
-// SIG // OI/7Iao9Cm2FF9DK54YDwDODtSXEzFqcxMPaYiVNUyUU
-// SIG // YY/7G+Ds90fGgEXmNVMjNnfKsN2YKznAdTUP3YFMIT12
-// SIG // MMWysGVzKUgn2MLSsIRHu3i61XQD3tdLGfdT3njahvdh
-// SIG // iCYztEfGoFSIFSssdQIDAQABo4IBCTCCAQUwHQYDVR0O
-// SIG // BBYEFC/oRsho025PsiDQ3olO8UfuSMHyMB8GA1UdIwQY
+// SIG // 9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzWPD96K1R9n5OZRT
+// SIG // rGuPpnk4IfTRbj0VOBbBcyyZj/vgPFvhokyLsquLtPJK
+// SIG // x7mTUNEm9YdTsHp180cPFytnLGTrYOdKjOCLXsRWaTc6
+// SIG // KgRdFwHIv6m308mro5GogeM/LbfY5MR4AHk5z/3HZOIj
+// SIG // EnieDHYnSY+arA504wZVVUnI7aF8cEVhfrJxFh7hwUG5
+// SIG // 0tIy6VIk8zZQBNfdbzxJ1QvUdkD8ZWUTfpVROtX/uJqn
+// SIG // V2tLFeU3WB/cAA3FrurfgUf58FKu5s9arOAUSqZxlID6
+// SIG // /bAjMGDpg2CsDiQe/xHy56VVYpXun3+eKdbNSwp2g/BD
+// SIG // BN8GSSDyU1pEsFF6OQIDAQABo4IBCTCCAQUwHQYDVR0O
+// SIG // BBYEFM0ZrGFNlGcr9q+UdVnb8FgAg6E6MB8GA1UdIwQY
 // SIG // MBaAFCM0+NlSRnAK7UD7dvuzK7DDNbMPMFQGA1UdHwRN
 // SIG // MEswSaBHoEWGQ2h0dHA6Ly9jcmwubWljcm9zb2Z0LmNv
 // SIG // bS9wa2kvY3JsL3Byb2R1Y3RzL01pY3Jvc29mdFRpbWVT
@@ -234,15 +77,15 @@
 // SIG // AQUFBzAChjxodHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20v
 // SIG // cGtpL2NlcnRzL01pY3Jvc29mdFRpbWVTdGFtcFBDQS5j
 // SIG // cnQwEwYDVR0lBAwwCgYIKwYBBQUHAwgwDQYJKoZIhvcN
-// SIG // AQEFBQADggEBAHP/fS6dzY2IK3x9414VceloYvAItkNW
-// SIG // xFxKLWjY+UgRkfMRnIXsEtRUoHWpOKFZf3XuxvU02FSk
-// SIG // 4tDMfJerk3UwlwcdBFMsNn9/8UAeDJuA4hIKIDoxwAd1
-// SIG // Z+D6NJzsiPtXHOVYYiCQRS9dRanIjrN8cm0QJ8VL2G+i
-// SIG // qBKzbTUjZ/os2yUtuV2xHgXnQyg+nAV2d/El3gVHGW3e
-// SIG // SYWh2kpLCEYhNah1Nky3swiq37cr2b4qav3fNRfMPwzH
-// SIG // 3QbPTpQkYyALLiSuX0NEEnpc3TfbpEWzkToSV33jR8Zm
-// SIG // 08+cRlb0TAex4Ayq1fbVPKLgtdT4HH4EVRBrGPSRzVGn
-// SIG // lWUwggW8MIIDpKADAgECAgphMyYaAAAAAAAxMA0GCSqG
+// SIG // AQEFBQADggEBAFEc1t82HdyAvAKnxpnfFsiQBmkVmjK5
+// SIG // 82QQ0orzYikbeY/KYKmzXcTkFi01jESb8fRcYaRBrpqL
+// SIG // ulDRanlqs2KMnU1RUAupjtS/ohDAR9VOdVKJHj+Wao8u
+// SIG // QBQGcu4/cFmSXYXtg5n6goSe5AMBIROrJ9bMcUnl2h3/
+// SIG // bzwJTtWNZugMyX/uMRQCN197aeyJPkV/JUTnHxrWxRrD
+// SIG // SuTh8YSY50/5qZinGEbshGzsqQMK/Xx6Uh2ca6SoD5iS
+// SIG // pJJ4XCt4432yx9m2cH3fW3NTv6rUZlBL8Mk7lYXlwUpl
+// SIG // nSVYULsgVJF5OhsHXGpXKK8xx5/nwx3uR/0n13/PdNxl
+// SIG // xT8wggW8MIIDpKADAgECAgphMyYaAAAAAAAxMA0GCSqG
 // SIG // SIb3DQEBBQUAMF8xEzARBgoJkiaJk/IsZAEZFgNjb20x
 // SIG // GTAXBgoJkiaJk/IsZAEZFgltaWNyb3NvZnQxLTArBgNV
 // SIG // BAMTJE1pY3Jvc29mdCBSb290IENlcnRpZmljYXRlIEF1
@@ -357,17 +200,17 @@
 // SIG // CQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQ
 // SIG // MA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9z
 // SIG // b2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3Nv
-// SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECjkIAAAAAAB8wCQYF
+// SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECkkoAAAAAACAwCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
-// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNDQ0OVow
+// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNTAwMDgxNVow
 // SIG // IwYJKoZIhvcNAQkEMRYEFBSoxwKL+uRem42yZ1ltpyZN
-// SIG // nhxlMA0GCSqGSIb3DQEBBQUABIIBAA9jO80n56UqshQW
-// SIG // unYQGytRo+mdann089pkuM25cZX2ibx826WLai5ArPCL
-// SIG // Z/ydzo1IWSR3TS5dBiz2PPsPK3ouCyU6b6eGsOyEY0gZ
-// SIG // 5WkxqdXp2Lids6zvQ2aEnsQkYm+Iv/sTnx/dpM8amjB5
-// SIG // ghA8IPKZ5ooLNoUJZxN6mR1MdomWA9TzI7JpWODs8B1j
-// SIG // nDor7Okp+JpamoAMDftNcYvBA85Cgd3PGKyvtlvjgLHz
-// SIG // 7Jp/ArPy1CQS2WwTjbigYQHZmAQgdqJv0CPD0zS4hM6G
-// SIG // aeDy1PQMwM2GqLM++lbulXT06i31b11R0JQVN1K+jarE
-// SIG // HWHTUS690re0IX/F6k0=
+// SIG // nhxlMA0GCSqGSIb3DQEBBQUABIIBAGR9pA0IlNqRRRoQ
+// SIG // PDqrtokv5lQdVf5SeCHPY0V3lp7/sMSu5cxQGgJrgu78
+// SIG // 4mYAS79MF4b2xmQeUIiPTaGKcccWpyIXL2WBoHjFUmJd
+// SIG // ks9i4w3x2UOJlFZ81hF/4UgnEgyTtR40hSPwYHNh+9Wn
+// SIG // 6nwj6l1Ybly7vlJPyVN82SdhMTxbx9EDBmaAY3YY3D6j
+// SIG // eQYNm2xwxdWQek288G2lqVtphIq/g8TGIgkhg3rK12uJ
+// SIG // PMFKNPYbAQpVPxVpJR785GrFH64qdKXOMxqo8CBw0QAq
+// SIG // QX90pIDq+NcqBF+xdZgc6H+eI0C/PB3VekpED/iDf0bP
+// SIG // ThXhyeCQm/irP9ztoBM=
 // SIG // End signature block

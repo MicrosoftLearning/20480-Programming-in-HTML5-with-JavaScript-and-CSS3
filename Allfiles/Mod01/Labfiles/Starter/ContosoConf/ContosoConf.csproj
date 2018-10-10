@@ -88,17 +88,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.htm" />
+    <Content Include="dist\feedback.bundle.js" />
+    <Content Include="dist\live.bundle.js" />
+    <Content Include="dist\location.bundle.js" />
+    <Content Include="dist\locationVenue.bundle.js" />
+    <Content Include="dist\offline.bundle.js" />
+    <Content Include="dist\register.bundle.js" />
+    <Content Include="dist\schedule.bundle.js" />
+    <Content Include="dist\speakerBadge.bundle.js" />
+    <Content Include="dist\video.bundle.js" />
+    <Content Include="images\speakers\mark-hanson-large.jpg" />
     <Content Include="registered.htm" />
     <Content Include="Global.asax" />
-    <Content Include="scripts\WebSocket.js" />
+    <Content Include="scripts\LivePage.js" />
     <Content Include="scripts\offline.js" />
     <Content Include="scripts\datetime.js" />
-    <Content Include="scripts\Object.inherit.js" />
     <Content Include="scripts\geometry.js" />
     <Content Include="scripts\grayscale-worker.js" />
     <Content Include="scripts\grayscale.js" />
     <Content Include="scripts\HtmlTemplate.js" />
-    <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\pages\live.js" />
     <Content Include="scripts\pages\location.js" />
     <Content Include="scripts\pages\register.js" />
@@ -107,6 +115,9 @@
     <Content Include="scripts\pages\location-venue.js" />
     <Content Include="scripts\LocalStarStorage.js" />
     <Content Include="scripts\pages\video.js" />
+    <Content Include="scripts\ScheduleItem.js" />
+    <Content Include="scripts\ScheduleList.js" />
+    <Content Include="scripts\speakerBadgePage.js" />
     <Content Include="speaker-badge.htm" />
     <Content Include="location.htm" />
     <Content Include="live.htm" />
@@ -125,20 +136,19 @@
     <Content Include="index.htm" />
     <Content Include="scripts\pages\feedback.js" />
     <Content Include="scripts\StarRatingView.js" />
-    <Content Include="scripts\_namespace.js" />
+    <Content Include="styles\footer.css" />
+    <Content Include="styles\header.css" />
     <Content Include="styles\images\stars.png" />
     <Content Include="styles\mobile.css" />
-    <Content Include="styles\header.css" />
-    <Content Include="styles\footer.css" />
     <Content Include="styles\nav.css" />
-    <Content Include="styles\pages\location.css" />
-    <Content Include="styles\pages\speaker-badge.css" />
-    <Content Include="styles\pages\live.css" />
-    <Content Include="styles\pages\feedback.css" />
-    <Content Include="styles\pages\schedule.css" />
-    <Content Include="styles\pages\register.css" />
     <Content Include="styles\pages\about.css" />
+    <Content Include="styles\pages\feedback.css" />
     <Content Include="styles\pages\index.css" />
+    <Content Include="styles\pages\live.css" />
+    <Content Include="styles\pages\location.css" />
+    <Content Include="styles\pages\register.css" />
+    <Content Include="styles\pages\schedule.css" />
+    <Content Include="styles\pages\speaker-badge.css" />
     <Content Include="styles\print.css" />
     <Content Include="styles\site.css" />
     <Content Include="Web.config" />
@@ -148,6 +158,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\RegistrationController.cs" />
@@ -155,6 +166,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Live\LiveClientConnection.cs" />
+    <Compile Include="Live\LiveHttpHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -164,9 +177,22 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="appcache.manifest" />
+    <Content Include="Live\socket.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="dist\feedback.bundle.js.map" />
+    <Content Include="dist\live.bundle.js.map" />
+    <Content Include="dist\location.bundle.js.map" />
+    <Content Include="dist\locationVenue.bundle.js.map" />
+    <Content Include="dist\offline.bundle.js.map" />
+    <Content Include="dist\register.bundle.js.map" />
+    <Content Include="dist\schedule.bundle.js.map" />
+    <Content Include="dist\speakerBadge.bundle.js.map" />
+    <Content Include="dist\video.bundle.js.map" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

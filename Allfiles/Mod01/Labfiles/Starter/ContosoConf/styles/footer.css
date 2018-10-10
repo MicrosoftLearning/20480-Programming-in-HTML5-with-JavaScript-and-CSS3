@@ -13,6 +13,5 @@ footer.page-footer .container {
 
 /* To stick the footer at the bottom of the page, give the page-section a min-height so it pushes down */
 section.page-section {
-    min-height: -webkit-calc(100% - 46.6rem);
     min-height: calc(100% - 46.6rem); /* 46.6rem is the combined height of the nav, header and footer. */
 }

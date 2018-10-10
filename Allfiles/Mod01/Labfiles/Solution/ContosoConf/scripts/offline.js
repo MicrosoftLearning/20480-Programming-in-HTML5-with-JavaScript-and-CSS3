@@ -1,35 +1,32 @@
-﻿(function () {
+﻿const offlinePages = /^\/(index|about|schedule|location).htm$/;
 
-    const offlinePages = /^\/(index|about|schedule|location).htm$/;
-
-    const hideLinksThatRequireOnline = function () {
-        const allNavLinks = document.querySelectorAll("nav.page-nav a");
-        for (let i = 0; i < allNavLinks.length; i++) {
-            const href = allNavLinks[i].getAttribute("href");
-            if (!offlinePages.test(href)) {
-                allNavLinks[i].style.display = "none";
-            }
+function hideLinksThatRequireOnline() {
+    const allNavLinks = document.querySelectorAll("nav.page-nav a");
+    for (let i = 0; i < allNavLinks.length; i++) {
+        const href = allNavLinks[i].getAttribute("href");
+        if (!offlinePages.test(href)) {
+            allNavLinks[i].style.display = "none";
         }
-    };
-
-    const showLinks = function () {
-        const allNavLinks = document.querySelectorAll("nav.page-nav a");
-        for (let i = 0; i < allNavLinks.length; i++) {
-            allNavLinks[i].style.display = "";
-        }
-    };
-
-    if (!navigator.onLine) {
-        hideLinksThatRequireOnline();
     }
+};
 
-    document.body.onoffline = hideLinksThatRequireOnline;
-    document.body.ononline = showLinks;
+function showLinks() {
+    const allNavLinks = document.querySelectorAll("nav.page-nav a");
+    for (let i = 0; i < allNavLinks.length; i++) {
+        allNavLinks[i].style.display = "";
+    }
+};
 
-    // Error fetching appcache.manifest: so we are probably offline
-    applicationCache.addEventListener("error", hideLinksThatRequireOnline, false);
+if (!navigator.onLine) {
+    hideLinksThatRequireOnline();
+}
 
-} ());
+document.body.onoffline = hideLinksThatRequireOnline;
+document.body.ononline = showLinks;
+
+// Error fetching appcache.manifest: so we are probably offline
+applicationCache.addEventListener("error", hideLinksThatRequireOnline, false);
+
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
@@ -225,15 +222,15 @@
 // SIG // b2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3Nv
 // SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECkkoAAAAAACAwCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
-// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNDQ1MFow
+// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNTAwMDgxNVow
 // SIG // IwYJKoZIhvcNAQkEMRYEFDqzauuRIOaiLH6j/hMFCv8t
-// SIG // 5POBMA0GCSqGSIb3DQEBBQUABIIBAGTMbfI8j3AR09ne
-// SIG // GhpHDfDiSDBEH3OSVLP73bAerJmlBRlDHmKsnmJVcm27
-// SIG // 7D2uXD5AzI4PUVG87xx4rEJPNCmniQBDgXqPHWBXXOgg
-// SIG // ys2J3QYlehf+uM+FgypGW8QigMf4ntJTzxo4sfWuzYdr
-// SIG // oG2zjYEQtJEC5V7sFYn+9P9rAbg/LyXt6nFMTcNkLFLf
-// SIG // MF3ejMUZOpz1n2EPJDwgsMgwjyJLSawaZr7W6Y/IM/Px
-// SIG // 1+z+fVTOufzPr68lMEWU6JSZfa6aObWMZhh39+L6dIPG
-// SIG // L3tQLe/hr9psJ1oYZMAi5d3FITqkvujmzqYFlg80t3U0
-// SIG // JxP9dzePy35bmhFMAUY=
+// SIG // 5POBMA0GCSqGSIb3DQEBBQUABIIBABNjrHQUwXLJ7v6V
+// SIG // Hy68udxwzGr4YLDn3RZmiuGl5rFEM2av0hF9ZicdRHfc
+// SIG // dzpu4sUNeDoMRZxmEgHdBROUvAhRZs97rrtB7XEtXA5C
+// SIG // A5lFVZ916qUlOnehmiFqmZaaEq1eNyy9WQoBw8Rp3FpM
+// SIG // 1xlgzhwSxSFMlG29M9qP45lBaOye3oWm7y8VOFmcXQAv
+// SIG // ecxnw0xH94F+9EpTGm+xla/te/1wG+cPRqsvy6K7Fa1f
+// SIG // 25dbbZ4BjDLYGcxKTD4lp1SONLHmQSxNTQHgZ5egwvaL
+// SIG // gxMtcK0hgPAHVJTvRUDA548utnjIMMKN4PJJv+QJ8699
+// SIG // gbpexqB5vzYRfsYYqsI=
 // SIG // End signature block
