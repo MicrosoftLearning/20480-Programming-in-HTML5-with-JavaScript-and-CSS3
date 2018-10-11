@@ -8,6 +8,7 @@ When you create a website and deploy it to a production server, you would want t
 
 Therefore, you will want to bundle your website files into one file.
 
+
 #### Objectives
 
 After completing this lab, you will be able to: 
@@ -26,6 +27,7 @@ In this exercise, you will add webpack and configure it for the ContosoConf proj
 
 First, you will install the webpack package in the solution. You will then configure it to create a bundle file for all your JavaScript files. Then, you will add Babel to your solution to create a cross-platform package.
 
+
 Next, you will run webpack to create a deploy package.
 
 Finally, you will run the application and verify that the site remains the same with the bundle file.
@@ -38,6 +40,7 @@ Finally, you will run the application and verify that the site remains the same 
 4.  In your project root, create the **webpack.config.js** file.
 5.  Configure webpack and pass an entry with the object to include all the JavaScript files in the HTML files.
    ```json
+
         entry: {
             video: './scripts/pages/video.js',
             feedback: './scripts/pages/feedback.js',
@@ -62,6 +65,7 @@ Finally, you will run the application and verify that the site remains the same 
 3.  Run the application. The application should work as before and support older versions of Internet Explorer.
 
 >**Results**: After completing this exercise, you will have a new **bundle.js** file which supports ECMAScript 5 for older browsers.
+
 
 ©2018 Microsoft Corporation. All rights reserved.
 

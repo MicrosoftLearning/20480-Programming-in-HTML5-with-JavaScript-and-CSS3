@@ -6,7 +6,7 @@
 
 You have been asked to modify the **Schedule** page for the ContosoConf website. Previously, the session data was stored as a hard-coded array and the JavaScript code for the page displayed the data from this array. However, session information is not static; it may be updated at any time by the conference organizers and stored in a database. A web service is available that can retrieve the data from this database and you decide to update the code for the **Schedule** page to use this web service rather than the hard-coded data currently embedded in the application.
 
-In addition, the conference organizers asked if it was possible for conference attendees to be able to indicate which sessions they would like to attend. This will enable the conference organizers to schedule popular sessions in larger rooms. The **Schedule** page has been enhanced to display star icons next to each session. An attendee can click a star icon to register their interest in that session. This information must be recorded in a database on the server and you send this information to another web service that updates the corresponding data in the database.
+In addition, the conference organizers asked whether it was possible for conference attendees to be able to indicate which sessions they would like to attend. This will enable the conference organizers to schedule popular sessions in larger rooms. The **Schedule** page has been enhanced to display star icons next to each session. An attendee can click a star icon to register their interest in that session. This information must be recorded in a database on the server and you send this information to another web service that updates the corresponding data in the database.
 
 For popular sessions, the web service will return the number of attendees who have selected it. You will need to handle this response and display a message to the attendee when they have selected a potentially busy session.
 
@@ -36,13 +36,13 @@ Finally, you will run the application and view the **Schedule** page to verify t
 
 #### Task 1: Review the Schedule page
 
-1.	Start Visual Studio. 
+1.	Start Microsoft Visual Studio. 
 2. From the **Allfiles\Mod05\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 3.	In the **ContosoConf** project, open the **scripts\pages\schedule.js** file. 
 4.	Review the JavaScript code. 
 - Notice that the previously hard-coded array of session data (in the **schedule** variable) has been replaced with an empty array.
 - Also notice that the **createSessionElement** function has been modified to generate a star icon next to the session title.
->**Note**: The star icon is an **&lt;a&gt;** link element that is styled with a background image in the shape of a star. To do this, the **&lt;a&gt;** element has the **class** attribute set to **star** and the **schedule.css** file in the **styles\pages** folder contains the following style:
+>**Note**: The star icon is a **&lt;a&gt;** link element that is styled with a background image in the shape of a star. To do this, the **&lt;a&gt;** element has the **class** attribute set to **star** and the **schedule.css** file in the **styles\pages** folder contains the following style:
 >```javascript
 >        .star {
 >            display: inline-block;
@@ -60,9 +60,9 @@ Finally, you will run the application and view the **Schedule** page to verify t
 ```javascript
         // TODO: Create a function called downloadSchedule
 ```
-2.	Create an empty function named **downloadSchedule**. You will add code to this function in subsequent tasks to get a list of sessions from a web service asynchronously.
-3.	Within this function define a variable named **request** and assign it a new **XMLHttpRequest** object.
-4.	In the **downloadSchedule** function, use the **request** object to asynchronously retrieve data from **/schedule/list** by performing a GET operation. To do this, call the **open()** method of the **request** object.
+2.	Create an empty function named **downloadSchedule**. You will add code to this function in subsequent tasks to get a list of sessions asynchronously from a web service.
+3.	Within this function, define a variable named **request**, and then assign it a new **XMLHttpRequest** object.
+4.	In the **downloadSchedule** function, use the **request** object to retrieve data asynchronously from **/schedule/list** by performing a GET operation. To do this, call the **open()** method of the **request** object.
 5.	After the previous statement, create an empty callback that handles the response from the web service and attach it to the **onreadystatechange** property of the **request** object.
 6.	In the callback, perform the following operations:
 - Ensure that the **readyState** property of the request object indicates the response is complete (it should have the value **4**).
@@ -70,7 +70,14 @@ Finally, you will run the application and view the **Schedule** page to verify t
 
 - Call the **displaySchedule** function to display the sessions on the page.
 7.	After you have created the callback, add a statement to send the request to the server. To do this, use the **send()** method of the **request** object.
-8.	Add a statement to the end of the **schedule.js** file that calls the **downloadSchedule** function after initializing the event handlers for the check boxes and list on the **Schedule** page. 
+8.    in the file **schedule.js** call the **downloadSchedule** function after the **addEventListener** code line.
+```javascript
+        track1CheckBox.addEventListener("click", displaySchedule, false);
+        track2CheckBox.addEventListener("click", displaySchedule, false);
+        list.addEventListener("click", handleListClick, false);
+
+        downloadSchedule();
+```
 
 #### Task 3: Add error handling to the downloadSchedule function
 
@@ -140,26 +147,26 @@ First, you will create a function that creates an **XMLHttpRequest** object that
 
 #### Scenario
 
-The existing code using an **XMLHttpRequest** object works, but it is somewhat verbose. The **XMLHttpRequest** object also requires you to carefully set HTTP headers and encode the content appropriately; otherwise request data may not be transmitted correctly. In this exercise, you will refactor the JavaScript code for the Schedule page to make it simpler and more maintainable, by using the async **fetch()** function.
+The existing code that uses an **XMLHttpRequest** object works, but it is somewhat verbose. The **XMLHttpRequest** object also requires you to carefully set HTTP headers and encode the content appropriately; otherwise request data may not be transmitted correctly. In this exercise, you will refactor the JavaScript code for the **Schedule** page to make it simpler and more maintainable by using the async **fetch()** function.
 
-First, you will refactor the **downloadSchedule** function by replacing the use of an **XMLHttpRequest** object with a call to the **fetch** method. Then you will refactor the **saveStar()** function in a similar manner. Using the **fetch()** function will simplify the code by automatically encoding the request content and setting HTTP headers. Finally, you will run the application and view the Schedule page to verify that it still displays sessions and responds to star clicks as before.
+First, you will refactor the **downloadSchedule** function by replacing the use of an **XMLHttpRequest** object with a call to the **fetch** method. Then you will refactor the **saveStar()** function in a similar manner. Using the **fetch()** function will simplify the code by automatically encoding the request content and setting HTTP headers. Finally, you will run the application and view the **Schedule** page to verify that it still displays sessions and responds to star clicks as before.
 
 #### Task 1: Refactor the downloadSchedule function.
 
-1.	Open the **ContosoConf.sln** solution in the **Allfiles\Mod05\Labfiles\Starter\Exercise 3** folder.
-2.	In the **schedule.js** file in the **scripts/pages** folder, refactor the **downloadSchedule** function to use the async **fetch()** function.
-- The fetch fetch must have a **url** agrument of **/schedule/list**.
-- Use the **response.json** with await to fetch the json response asyncronously; the response will contain a property called **schedule** that you should parse and push to the **schedule** array variable, and then call the **displaySchedule()** function.
+1.	From the **Allfiles\Mod05\Labfiles\Starter\Exercise 3** folder, open the **ContosoConf.sln** solution.
+2.	From the **scripts/pages** folder, in the **schedule.js** file, refactor the **downloadSchedule** function to use the async **fetch()** function.
+- The fetch api must have a **url** agrument of **/schedule/list**.
+- Use the **response.json** with **await** to fetch the json response asyncronously; the response will contain a property called **schedule** that you should parse and push to the **schedule** array variable, and then call the **displaySchedule()** function.
 
-- Check **response.ok** to handle any errors that might occur; simply display the message **Schedule list not available**.
+- Check **response.ok** to handle any errors that might occur; then simply display the **Schedule list not available** message.
 
 
 #### Task 2: Refactor the saveStar function
 
 1.	In the **schedule.js** file, refactor the **saveStar** function to use the async **fetch()** function.
-- The fetch options object must have a **method** property of **POST**, **header** property to type **Headers** containing **Content-Type** header and **body** property of **"starred=" + isStarred**.
-- The fetch fetch must have a **url** agrument of **/schedule/list** and the **options** argument.
-- Use the **response.json** with await to fetch the json response asyncronously. Check if the **starCount** property in the response object is greater than 50, display the message **This session is very popular! Be sure to arrive early to get a seat**.
+- The **options** object must have a **method** property of **POST**, **header** property to type **Headers** containing **Content-Type** header and **body** property of **"starred=" + isStarred**.
+- The fetch api must have a **url** agrument of **/schedule/list** and the **options** argument.
+- Use the **response.json** with **await** to fetch the json response asyncronously. Check if the **starCount** property in the response object is greater than 50, display the **This session is very popular! Be sure to arrive early to get a seat** message.
 
 
 #### Test the Schedule page

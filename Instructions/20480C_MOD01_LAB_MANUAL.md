@@ -158,7 +158,7 @@ In this exercise, you will examine the Visual Studio 2017 project for the Contos
 - Styling is handled by a set of CSS files. The about.css style sheet implements the styling specific to this page.
 
 3.	Open the **schedule.htm** file. This file contains the HTML markup for the **Schedule** page. 
-In this page, notice that the list of sessions in the **&lt;section class="page-section schedule"&gt;** element is empty; it is populated when the page is displayed by using the JavaScript code in the **schedule.js** script referenced near the end of the file.
+In this page, notice that the list of sessions in the **&lt;section class="page-section schedule"&gt;** element is empty; it is populated when the page is displayed by using the JavaScript code in the **schedule.bundel.js** script referenced near the end of the file.
 
 4.	Open the **register.htm** file. This file contains an HTML form in the **&lt;section class="page-section register"&gt;** element. 
 This form validates the data that an attendee enters.
@@ -172,7 +172,7 @@ The venue map is drawn by using Scalable Vector Graphics in the **&lt;section cl
 This file contains a form in the **&lt;section class="page-section Live"&gt;** element that enables a user to submit questions.
 Questions are posted to a server listening on a web socket.
 Questions posted by other users are received by using a web socket, and then added to the list on the page. 
-The JavaScript code that implements the web socket code is located in the **live.js** file.
+The JavaScript code that implements the web socket code is located in the **live.bundel.js** file.
 
 7.	View the **feedback.htm** file. This page contains the feedback form in the **&lt;section class="page-section feedback"&gt;** element, enabling attendees to provide their feedback on the conference.
 The input fields for the first four questions are rendered as stars by using the JavaScript code in the StartRatingView.js file and the styles in the feedback.css style sheet. Properties of the input fields define the maximum and minimum ratings, and each rating is displayed as a single yellow star.
