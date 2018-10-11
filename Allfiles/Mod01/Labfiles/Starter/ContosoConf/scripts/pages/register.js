@@ -1,40 +1,37 @@
-﻿(function () {
-    
-    // Get the registration <form> element from the DOM.
-    const form = document.getElementById("registration-form");
-    const submitButton = form.querySelector("button");
-    // Get the <input> elements from the DOM.
-    const passwordInput = document.getElementById("password");
-    const confirmPasswordInput = document.getElementById("confirm-password");
+﻿// Get the registration <form> element from the DOM.
+const form = document.getElementById("registration-form");
+const submitButton = form.querySelector("button");
+// Get the <input> elements from the DOM.
+const passwordInput = document.getElementById("password");
+const confirmPasswordInput = document.getElementById("confirm-password");
 
-    const checkPasswords = function() {
-        const passwordsMatch = passwordInput.value === confirmPasswordInput.value;
-        if (passwordsMatch) {
-            // Clear any previous error message.
-            confirmPasswordInput.setCustomValidity("");
-        } else {
-            // Setting this error message will prevent the form from being submitted.
-            confirmPasswordInput.setCustomValidity("Your passwords don't match. Please type the same password again.");
-        }
-    };
+function checkPasswords() {
+    const passwordsMatch = passwordInput.value === confirmPasswordInput.value;
+    if (passwordsMatch) {
+        // Clear any previous error message.
+        confirmPasswordInput.setCustomValidity("");
+    } else {
+        // Setting this error message will prevent the form from being submitted.
+        confirmPasswordInput.setCustomValidity("Your passwords don't match. Please type the same password again.");
+    }
+};
 
-    const addPasswordInputEventListeners = function () {
-        passwordInput.addEventListener("input", checkPasswords, false);
-        confirmPasswordInput.addEventListener("input", checkPasswords, false);
-    };
+function addPasswordInputEventListeners() {
+    passwordInput.addEventListener("input", checkPasswords, false);
+    confirmPasswordInput.addEventListener("input", checkPasswords, false);
+};
 
-    const formSubmissionAttempted = function() {
-        form.classList.add("submission-attempted");
-    };
+function formSubmissionAttempted() {
+    form.classList.add("submission-attempted");
+};
 
-    const addSubmitClickEventListener = function() {
-        submitButton.addEventListener("click", formSubmissionAttempted, false);
-    };
+function addSubmitClickEventListener() {
+    submitButton.addEventListener("click", formSubmissionAttempted, false);
+};
 
-    addPasswordInputEventListeners();
-    addSubmitClickEventListener();
+addPasswordInputEventListeners();
+addSubmitClickEventListener();
 
-}());
 // SIG // Begin signature block
 // SIG // MIIaaAYJKoZIhvcNAQcCoIIaWTCCGlUCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
@@ -231,14 +228,14 @@
 // SIG // ExhNaWNyb3NvZnQgVGltZS1TdGFtcCBQQ0ECEzMAAAAr
 // SIG // OTJIwbLJSPMAAAAAACswCQYFKw4DAhoFAKBdMBgGCSqG
 // SIG // SIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkF
-// SIG // MQ8XDTEyMTExNDIzNDQ0OVowIwYJKoZIhvcNAQkEMRYE
+// SIG // MQ8XDTEyMTExNTAwMDgxNVowIwYJKoZIhvcNAQkEMRYE
 // SIG // FDyFgE11xy1greMAmq0PrMyhh+U9MA0GCSqGSIb3DQEB
-// SIG // BQUABIIBADoNUkEPb9z6I5W6xXdn9ht3IsUdX5ornxSO
-// SIG // 3oTx6wRoqenRT6B4OvoBsqppITlXqHW7Ub3nUwTZXpxB
-// SIG // MoUWXfmUGh/dlyo3r1Wtc7BUb3ba5tAOOc4aaXvFkMip
-// SIG // Tuv9MEqPMI//xa4se4u7G8i69jSlDYRfVlKP97Jc0Y1W
-// SIG // mr1uYrnOWjGpM9g1H2M2cqUKT0/IRUnX2QyrZialOSBN
-// SIG // DxX3lqfLFkwGFQF/wX2/hvcQsnXgoIM8zYBbXn82rXeF
-// SIG // +PEviEMzzIzieebrlH8rJ5+83MtiGW6vFq609GExGsMn
-// SIG // 4mKeh8aAGlHbi08hrGdeMEPTAnrWb/79lRKtAxKwBkg=
+// SIG // BQUABIIBAFbdVCAE8Mj7kZhxpognOzOeywh/e0X2LYcx
+// SIG // ytew02GVqgLRAFKKLJeOOqJCP2mEYfrXgqAmgZ/YXa0e
+// SIG // 9/4ZbJE/GjnQHmOgskQRxj2OL9AhbEwMaFA3k7AeUAMr
+// SIG // VVfljZnrzg2gWd3RbTobLI5cgEASLEDLpITu9xwi0BTw
+// SIG // 4zar14WiemFz8QZ08kBARlL6JRKEK2XqZ1np9X9ktJ+a
+// SIG // wY4hfvne2Uf7JE7JDvgvrjvXEKEA/w49sXRZfvk+AebJ
+// SIG // A4F5ScY/yYUJpA2Pp9tr7RZULspSkPgwUOPsdiqQpuej
+// SIG // YBnp7iMMp+FWgJ9dhaKjVd/YibxGNcfvofa5qKAfRt4=
 // SIG // End signature block

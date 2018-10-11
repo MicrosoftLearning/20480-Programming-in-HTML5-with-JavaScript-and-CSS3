@@ -1,96 +1,88 @@
-﻿/// <reference path="_namespace.js" />
-/// <reference path="Object.inherit.js"/>
+﻿export class StarRatingView {
 
-(function () {
+    constructor(element) {
+        this.element = element;
+        this.inputElement = element.querySelector("input");
 
-    conference.StarRatingView = Object.inherit({
+        this.createUI();
+        this.listenForStarMouseEvents();
+    }
 
-        initialize: function (element) {
-            this.element = element;
-            this.inputElement = element.querySelector("input");
-
-            this.createUI();
-            this.listenForStarMouseEvents();
-        },
-
-        createUI: function () {
-            const min = parseInt(this.inputElement.min, 10);
-            const max = parseInt(this.inputElement.max, 10);
-            this.starElements = [];
-            for (let rating = min; rating <= max; rating++) {
-                const starElement = this.createStarElement(rating);
-                this.element.appendChild(starElement);
-                this.starElements.push(starElement);
-            }
-
-            this.inputElement.style.display = "none";
-        },
-
-        createStarElement: function (rating) {
-            const starElement = document.createElement("div");
-            starElement.setAttribute("class", "star");
-            starElement.ratingValue = rating;
-            return starElement;
-        },
-
-        listenForStarMouseEvents: function () {
-            // Add event listener to the container element.
-            // The events of child star elements will bubble up.
-            this.element.addEventListener("click", this.starClicked.bind(this), false);
-            this.element.addEventListener("mouseover", this.starMousedOver.bind(this), false);
-            this.element.addEventListener("mouseout", this.starMousedOut.bind(this), false);
-        },
-
-        starClicked: function (e) {
-            const element = e.srcElement || e.target;
-            if (!element.classList.contains("star")) return;
-
-            this.setRating(element.ratingValue);
-        },
-
-        starMousedOver: function (e) {
-            // Mousing over a star will toggle the "hover" state for it and all preceeding stars.
-
-            const element = e.srcElement || e.target;
-            if (!element.classList.contains("star")) return;
-
-            this.setHoverState(element.ratingValue);
-        },
-
-        starMousedOut: function (e) {
-            const element = e.srcElement || e.target;
-            if (!element.classList.contains("star")) return;
-            this.removeHoverStates();
-        },
-
-        setHoverState: function (rating) {
-            for (let i = 0; i < rating; i++) {
-                this.starElements[i].classList.add("hover");
-            }
-        },
-
-        removeHoverStates: function () {
-            for (let i = 0, length = this.starElements.length; i < length; i++) {
-                this.starElements[i].classList.remove("hover");
-            }
-        },
-
-        setRating: function (rating) {
-            this.inputElement.value = rating;
-
-            let index;
-            const max = this.starElements.length;
-            for (index = 0; index < rating; index++) {
-                this.starElements[index].classList.add("selected");
-            }
-            for (index = rating; index < max; index++) {
-                this.starElements[index].classList.remove("selected");
-            }
+    createUI() {
+        const min = parseInt(this.inputElement.min, 10);
+        const max = parseInt(this.inputElement.max, 10);
+        this.starElements = [];
+        for (let rating = min; rating <= max; rating++) {
+            const starElement = this.createStarElement(rating);
+            this.element.appendChild(starElement);
+            this.starElements.push(starElement);
         }
-        
-    });
 
-} ());
+        this.inputElement.style.display = "none";
+    }
+
+    createStarElement(rating) {
+        const starElement = document.createElement("div");
+        starElement.setAttribute("class", "star");
+        starElement.ratingValue = rating;
+        return starElement;
+    }
+
+    listenForStarMouseEvents() {
+        // Add event listener to the container element.
+        // The events of child star elements will bubble up.
+        this.element.addEventListener("click", this.starClicked.bind(this), false);
+        this.element.addEventListener("mouseover", this.starMousedOver.bind(this), false);
+        this.element.addEventListener("mouseout", this.starMousedOut.bind(this), false);
+    }
+
+    starClicked(e) {
+        const element = e.srcElement || e.target;
+        if (!element.classList.contains("star")) return;
+
+        this.setRating(element.ratingValue);
+    }
+
+    starMousedOver(e) {
+        // Mousing over a star will toggle the "hover" state for it and all preceeding stars.
+
+        const element = e.srcElement || e.target;
+        if (!element.classList.contains("star")) return;
+
+        this.setHoverState(element.ratingValue);
+    }
+
+    starMousedOut(e) {
+        const element = e.srcElement || e.target;
+        if (!element.classList.contains("star")) return;
+        this.removeHoverStates();
+    }
+
+    setHoverState(rating) {
+        for (let i = 0; i < rating; i++) {
+            this.starElements[i].classList.add("hover");
+        }
+    }
+
+    removeHoverStates() {
+        for (let i = 0, length = this.starElements.length; i < length; i++) {
+            this.starElements[i].classList.remove("hover");
+        }
+    }
+
+    setRating(rating) {
+        this.inputElement.value = rating;
+
+        let index;
+        const max = this.starElements.length;
+        for (index = 0; index < rating; index++) {
+            this.starElements[index].classList.add("selected");
+        }
+        for (index = rating; index < max; index++) {
+            this.starElements[index].classList.remove("selected");
+        }
+    }
+}
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
@@ -286,15 +278,15 @@
 // SIG // b2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3Nv
 // SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECjkIAAAAAAB8wCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
-// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNDQ1M1ow
+// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNTAwMDgxNVow
 // SIG // IwYJKoZIhvcNAQkEMRYEFDr7feQDGEZN55yvPA7FY2qQ
-// SIG // JYh2MA0GCSqGSIb3DQEBBQUABIIBAEWsdTxKGu0GW48u
-// SIG // nXzhwoOd06zRwDpBB+i7g7NY+mJ4gs7v4+bWt1pH/uCu
-// SIG // O0JefGP6ulZdcgA1EaSu399h8zbIVOmnUSUmzrxFt/WM
-// SIG // BXEUmQdaTJMLLb5bxcUVhAp7/jQUwcM5MSCbaftLbeHj
-// SIG // 1T6xBBlhmJounPqzvzC+3H7nESZ7tp7hYM8TpW1ky1es
-// SIG // LTO3RACJBoyzWExRoqQZVK9E0l5QLx70/FP3AOSHA5bG
-// SIG // 2Nm14BVHBQlzZmOfl4nJNap3byPxV2lDX9UFKA9GH5U8
-// SIG // V0QEgUefuHLsrGOJj7VqF1w3snyzrQ6K13CCSJlL9Pfh
-// SIG // Wabavh4W4+cG+q48Uek=
+// SIG // JYh2MA0GCSqGSIb3DQEBBQUABIIBADO3Fm0Gk9+bPlq8
+// SIG // dp2lA3zAjlNdDHv/LCsXVFcVlal4ZjJhjTC+LuCHDqFd
+// SIG // 5QMpeo7TL2CbW4AIrl6Nq23CGT4tvDbbj+QMNbT7G10/
+// SIG // /AXJ68OR15S5s+ScS3GsSjImKXUu81wwauwP/AlcRuQp
+// SIG // c8gMZmvYpH/GtvHqfLYg5/4NvllHjp3Xv6QRGtFYOsJC
+// SIG // fijB8zFnzZnyU6awY1aJCwiWUvRX+5XQqDzZUUoMugov
+// SIG // +gMH93ih+XcrqHV9qOfTSpPvqkGxvFhU76hAkCEmDOOi
+// SIG // T2Of9Jo65Gf2C2GxWcSadtilgmsHjq9+n5GiGCsUVza6
+// SIG // UdlyKv/8q3hVcWTXKdE=
 // SIG // End signature block

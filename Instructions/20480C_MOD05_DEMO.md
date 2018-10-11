@@ -6,27 +6,28 @@
 
 #### Preparation Steps 
 
-1. Ensure that you have cloned the 20480C directory from GitHub. It contains the code segments for this course's labs and demos. https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles.
+Ensure that you have cloned the 20480C directory from GitHub (**https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3/tree/master/Allfiles**). It contains the code segments for the labs and demos in this course.
 
 #### Demonstration Steps
 
-#### Create new project
+#### Create a New Project
 
-1. On the Windows 10 **Start** screen, open **Visual studio 2017**.
+1. Open Microsoft Visual Studio 2017.
 2. In Visual Studio, on the **File** menu, point to **New**, and then click **Project**.
-3. In the **New Project** dialog box, in the left pane, under **Installed** expand the **Visual C#** node, and then click the **Web** node.
-4. click **ASP.NET Empty Web Application**.
-5. In the **Name** box, type **fetchWeb**.
-6.	In the **Location** box, type **Allfiles\Mod05\Democode**, and then click **OK**.
+3. In the **New Project** dialog box, in the left pane, under **Installed**, expand the **Visual C#** node, and then click the **Web** node.
+4. Click **ASP.NET Web Application (.NET Framework)**.
+5. In the **Name** box, enter **New fetchWeb**.
+6. In the **Location** box, enter **[Repository Root]\Allfiles\Mod05\Democode**, and then click **OK**.
+7. In **New ASP.NET Web Application - New fetchWeb** window, click **Empty** and then click **OK**.
 
-#### Add the index page.
+#### Add the Index Page
 
-1.	In Visual Studio, on the **Project** menu, click **Add New Item**.
+1.	In **NewfetchWeb - Microsoft Visual Studio**, on the **Project** menu, click **Add New Item**.
 2.	In the **Add New Item – fetchWeb** dialog box, click **HTML Page**.
-3.	In the **Name** box, type **index.html**.
+3.	In the **Name** box, enter **index.html**.
 4.	Click **Add**.
-5.  Open **index.html** file.
-6.  Inside the file add the following text
+5. Open the **index.html** file.
+6. Inside the file, add the following text:
     ```html
         <!DOCTYPE html>
         <html>
@@ -69,14 +70,15 @@
         </html>
     ```
 
-#### Add the JavaScript file.
+#### Add the JavaScript File
 
-1.  Right click on the **Script** folder, click **Add**, then click **New Item**.
-2.  In the **Add New Item – fetchWeb** dialog box, click **JavaScript File**.
-3.  In the **Name** box, type **indexScript.js**.
-4.	Click **Add**.
-5.  Open **indexScript.js** file.
-6.  Add the following code to **indexScript.js**
+1. Right-click **NewfetchWeb**, Click **Add** and then select **New folder**. Type **Scripts**.
+2. Right-click the **Scripts** folder, click **Add**, and then select **New Item**.
+3. In the **Add New Item – fetchWeb** dialog box, click **JavaScript File**.
+4. In the **Name** box, enter **indexScript.js**.
+5.	Click **Add**.
+6. Open the **indexScript.js** file.
+7. Add the following code to **indexScript.js**:
     ```javascript
         //server URL
         const personApiUrl = "https://randomuser.me/api/?results=3";
@@ -91,16 +93,16 @@
             return parent.appendChild(el); 
         }
     ```
-7. Define an async method called **getPersons**.
+8. Define an async method called **getPersons**.
     ```javascript
         async function getPersons() {
         }
     ```
-8. inside **getPersons** mathod create **fetch** call to **personApiUrl** and store the response in a variable.
+9. Inside the **getPersons** method, create **fetch**, call to **personApiUrl**, and then store the response in a variable.
     ```javascript
         let response = await fetch(personApiUrl);
     ```
-9. if the **response** is ok create a table and use the map function to iterate for each element in the response element to generate row and add it to the table.
+10. If the **response** is ok, create a table and use the map function to iterate for each element in the response element to generate row and add it to the table.
     ```javascript
         if (response.ok) {
             //Converting the response to Json
@@ -128,7 +130,7 @@
             })
         }
     ```
-10. wrap all the code in **getPerson** mathod with **try-catch**.
+11. Wrap all the code in the **getPerson** method with **try-catch**.
     ```javascript
         try {
             //Get request by fetch
@@ -163,26 +165,27 @@
             console.log(e);
         }
     ```
-11. Add event listener on **DOMContentLoaded**. get the add person button by it's id **addPersonsBtn** and add an event listener on **click** event and call the **getPerson** mathod.
+12. Add an event listener in **DOMContentLoaded**. Get the add person button by its ID **addPersonsBtn** and then add an event listener on the **click** event to call the **getPerson** method.
     ```javascript
         document.addEventListener('DOMContentLoaded', function (event) {
             document.getElementById('addPersonsBtn').addEventListener('click', getPersons);
         });
     ```
-12. add the folowing script tag to the **&lt;Head&gt;** element of the **index.html** page.
+13. Add the folowing **script** tag to the **&lt;Head&gt;** element of the **index.html** page.
     ```html
         <script src="/Scripts/indexScript.js"></script>
     ```
 
-#### Run the web application.
+#### Run the Web Application
 
-1.	In Solution Explorer, double-click **Property**.
+1.	In **Solution Explorer**, double-click **Properties**.
 2.	On the side menu, click **web**.
-3.	select the **Specific Page** then press **...** button and select **Index.html**. 
-4.	Click the **IIS Express** (Run).
-5.	In Microsoft Edge, press the **Get Persons** button.
-6.	Verify that the table is full with persones.
-7.	Close Microsoft Edge and return to Visual Studio.
+3.	Select the **specific page**, click **OK**, and then select **Index.html**. 
+4.	Click **IIS Express (Microsoft Edge)**.
+5.	In Microsoft Edge, click **Get Persons**.
+6.	Verify that the table lists all the people.
+7.	Close Microsoft Edge, and then return to Visual Studio.
+8.  On **Debug** menu, Click **Stop Debugging**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

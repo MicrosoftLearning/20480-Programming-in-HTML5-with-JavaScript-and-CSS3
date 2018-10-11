@@ -1,46 +1,39 @@
-﻿/// <reference path="../_namespace.js" />
-/// <reference path="../datetime.js" />
+﻿import { formatTime } from "../datetime.js";
 
-(function () {
+const videoSection = document.querySelector(".video");
+const video = videoSection.querySelector("video");
+const controls = videoSection.querySelector(".video-controls");
+const playButton = videoSection.querySelector(".video-play");
+const pauseButton = videoSection.querySelector(".video-pause");
+const time = videoSection.querySelector(".video-time");
 
-    const formatTime = conference.formatTime;
-    
+function ready() {
+    controls.style.display = "block";
+};
 
-    const videoSection = document.querySelector(".video");
-    const video = videoSection.querySelector("video");
-    const controls = videoSection.querySelector(".video-controls");
-    const playButton = videoSection.querySelector(".video-play");
-    const pauseButton = videoSection.querySelector(".video-pause");
-    const time = videoSection.querySelector(".video-time");
+function play() {
+    video.play();
+    playButton.style.display = "none";
+    pauseButton.style.display = "";
+};
 
-    const ready = function () {
-        controls.style.display = "block";
-    };
-
-    const play = function () {
-        video.play();
-        playButton.style.display = "none";
-        pauseButton.style.display = "";
-    };
-
-    const pause = function () {
-        video.pause();
-        playButton.style.display = "";
-        pauseButton.style.display = "none";
-    };
-
-    const updateTime = function () {
-        time.textContent = formatTime(video.currentTime);
-    };
-
+function pause() {
+    video.pause();
+    playButton.style.display = "";
     pauseButton.style.display = "none";
+};
 
-    video.addEventListener("loadeddata", ready, false);
-    video.addEventListener("timeupdate", updateTime, false);
-    playButton.addEventListener("click", play, false);
-    pauseButton.addEventListener("click", pause, false);
+function updateTime() {
+    time.textContent = formatTime(video.currentTime);
+};
 
-} ());
+pauseButton.style.display = "none";
+
+video.addEventListener("loadeddata", ready, false);
+video.addEventListener("timeupdate", updateTime, false);
+playButton.addEventListener("click", play, false);
+pauseButton.addEventListener("click", pause, false);
+
 // SIG // Begin signature block
 // SIG // MIIaVgYJKoZIhvcNAQcCoIIaRzCCGkMCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
@@ -236,15 +229,15 @@
 // SIG // b2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQDExhNaWNyb3Nv
 // SIG // ZnQgVGltZS1TdGFtcCBQQ0ECCmECjkIAAAAAAB8wCQYF
 // SIG // Kw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0B
-// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNDIzNDQ1MFow
+// SIG // BwEwHAYJKoZIhvcNAQkFMQ8XDTEyMTExNTAwMDgxNVow
 // SIG // IwYJKoZIhvcNAQkEMRYEFNakkZYn82jVxQx9ZzoShAUC
-// SIG // 6x5HMA0GCSqGSIb3DQEBBQUABIIBAFOCYhzB7pthfMaE
-// SIG // 8YjmZNr9+7eKC2IGsUzgAqYUQGBkHPrjoUmt6J6xWfeE
-// SIG // oDsbVyesnyZujZgSQKej+W1IoEZo2m7EySCyT4udR6Vc
-// SIG // Go8PFDfff6Ri5UC1+bLr20sF0QvtZBA828IdgKPkIRPz
-// SIG // Z+z6ZkeZg3c7AxUhrg2ay/fZNayAQMcSnf9EJTJ5+7mC
-// SIG // yD7bXh22GWYRVpih/yGGplpHJcS4J6/Lc6QfEuhhK2/W
-// SIG // ImU+XtRHeFml+vFckGnIHkIE32uM2UU1Oh9YaOGyarCb
-// SIG // loKp5LkLC9XsPyLgecQ9a+OceAih92CtqAhuBCC7LF46
-// SIG // 8I8svHu4EyyLQ6Zvzhs=
+// SIG // 6x5HMA0GCSqGSIb3DQEBBQUABIIBAFyRuldrVtKVAOi/
+// SIG // IRKgeCPANl/yKXhAq1BBy7zYEhqmRIz/NQPBbmowPofb
+// SIG // Smq+KePAcw6TnusBVBxpo+sY0eTEwtGlhA9kASZ02mGU
+// SIG // 6r9otGucmpJdtXFxFXXv1vOAgOnP1PgIZgVqnxgpuxsB
+// SIG // /xTptKrjf5f8Kn6zWnPpHpyWwXdmwp6iHPqOthPbluI7
+// SIG // hE3u9aoJ3cV9gu81+xCj5oWV1HRRcKqUyZx8C1lTanS3
+// SIG // pIMw8hMc9k1MLsJOiJuQd/AbFfbkzGtBE5+IrAYK3aaw
+// SIG // HXO7Dmul2thMM0bOyIgAlSDUrzC7G2OTBX8RP2lluSfz
+// SIG // ZwvUwjNzsGbAgF4/Jig=
 // SIG // End signature block
