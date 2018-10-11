@@ -185,6 +185,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 5.	In Microsoft Edge, click **Get Persons**.
 6.	Verify that the table lists all the people.
 7.	Close Microsoft Edge, and then return to Visual Studio.
+8.  On **Debug** menu, Click **Stop Debugging**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
