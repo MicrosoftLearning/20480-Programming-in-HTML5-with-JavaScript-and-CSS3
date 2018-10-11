@@ -17,7 +17,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 3. In the **New Project** dialog box, in the left pane, under **Installed**, expand the **Visual C#** node, and then click the **Web** node.
 4. Click **ASP.NET Web Application (.NET Framework)**.
 5. In the **Name** box, enter **New fetchWeb**.
-6.	In the **Location** box, enter **Allfiles\Mod05\Democode**, and then click **OK**.
+6.	In the **Location** box, enter **[Repository Root]\Allfiles\Mod05\Democode**, and then click **OK**.
 
 #### Add the Index Page
 
