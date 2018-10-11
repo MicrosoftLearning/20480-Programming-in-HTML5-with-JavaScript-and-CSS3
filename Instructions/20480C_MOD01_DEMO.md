@@ -219,25 +219,23 @@
 2.	Point out to the students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
 3.	Start Microsoft Visual Studio 2017, and then from the [Repository Root]\Allfiles\Mod01\Labfiles\Starter folder, open the ContosoConf.sln solution.
 4.	In Solution Explorer, expand the **ContosoConf** project, and then in the root folder of the project, highlight the **.htm** files. (These files correspond to each webpage that students will build in the labs throughout the course.)
-5.	To display the HTML markup for this page in Visual Studio Code, double-click **index.htm**. Explain that this is the home page of the application and it is the default page that users see when they visit the website for the application.
-6.	In the **Design View** window, click the **Design** tab. Explain that the layout shown in the **Design View** window is the default styling of the page, and that the stylesheets that students create as part of the application modify how the elements are presented.
-7.	In Solution Explorer, expand the **styles** folder. Point out that this folder contains the global stylesheets used by all the pages in the application.
-8.	Expand the **pages** folder, and describe how each page also has its own stylesheet that contains the styles required for that page.
-9.	To display the stylesheet in Visual Studio Code, double-click **index.css**. Scroll through this stylesheet and emphasize that this stylesheet contains the styles that will be used in the home page (**index.htm**).
-10. In Solution Explorer, expand the **scripts** folder. Explain that this folder contains the global JavaScript code files used throughout the application.
-11. Expand the **pages** folder, and describe how most of the webpages also have their own code file that contains the JavaScript code specifically for that page.
-12. To display the JavaScript code in Visual Studio Code, double-click **video.js**. Scroll through this file and explain that this is the code that handles the video player controls on the home page.
-13. On the **Debug** menu, click **Start Without Debugging**. Explain that this step saves changes that might have been made to the HTML files, stylesheets, and JavaScript code files, and then starts the web application. It then moves to the home page of the application and displays it in Microsoft Edge.
+5.	In Solution Explorer, expand the **styles** folder. Point out that this folder contains the global stylesheets used by all the pages in the application.
+6.	Expand the **pages** folder, and describe how each page also has its own stylesheet that contains the styles required for that page.
+7.	To display the stylesheet in Visual Studio Code, double-click **index.css**. Scroll through this stylesheet and emphasize that this stylesheet contains the styles that will be used in the home page (**index.htm**).
+8. In Solution Explorer, expand the **scripts** folder. Explain that this folder contains the global JavaScript code files used throughout the application.
+9. Expand the **pages** folder, and describe how most of the webpages also have their own code file that contains the JavaScript code specifically for that page.
+10. To display the JavaScript code in Visual Studio Code, double-click **video.js**. Scroll through this file and explain that this is the code that handles the video player controls on the home page.
+11. On the **Debug** menu, click **Start Without Debugging**. Explain that this step saves changes that might have been made to the HTML files, stylesheets, and JavaScript code files, and then starts the web application. It then moves to the home page of the application and displays it in Microsoft Edge.
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
-14.	Point out that the web application runs by using a local instance of Microsoft Internet Information Services (IIS) Express on the virtual machine. Highlight the URL in the address bar of Microsoft Edge.
-15.	Quickly visit each page in the application by using the links on the navigation bar at the top of the webpage. 
+12.	Point out that the web application runs by using a local instance of Microsoft Internet Information Services (IIS) Express on the virtual machine. Highlight the URL in the address bar of Microsoft Edge.
+13.	Quickly visit each page in the application by using the links on the navigation bar at the top of the webpage. 
 
 >**Note**: On the **Location** page, the **localhost wants to track your physical location** message will appear. Click **Allow once**, and then in the **Enable Location Services** dialog box, click **Yes**.
 
-16.	Explain that the first exercise of the lab provides more information about the purpose of each webpage in the application.
-17.	Close Microsoft Edge.
-18.   Close all open windows.
+14.	Explain that the first exercise of the lab provides more information about the purpose of each webpage in the application.
+15.	Close Microsoft Edge.
+16.   Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
