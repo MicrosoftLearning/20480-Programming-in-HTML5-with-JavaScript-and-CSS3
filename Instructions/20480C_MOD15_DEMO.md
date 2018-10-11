@@ -63,48 +63,28 @@
 
 #### Demonstration Steps
 
-#### Set up local http server
+#### Set up npm configuration.
 
 1.	Open Microsoft Visual Studio 2017.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **File**.
-3.	In the **Open File** dialog box, browse to the **Allfiles\Mod15\DemoCode\build-tutorial** folder, click **build-tutorial.html**, and then click **Open**.
+3.	In the **Open File** dialog box, browse to the **Allfiles\Mod15\DemoCode\build-tutorial** folder, click **build-tutorial.sln**, and then click **Open**.
 4.	In Visual Studio, on the **Project** menu, right click **Add New Item**.
 5.	In the **Add New Item – babelDemo** dialog box, click **npm Configuration File**.
 6.	In the **Name** box, type **package.json**.
 7.	Click **Add**.
-8.  Open **CMD** and navigate to the project folder.
-9.  To install **http-server** run the folowing commend in **CMD**:
-```bash
-    npm install http-server --save-dev
-```
->**note:** **http-server** is a lightweight web server we use to run the application locally during development and avoid cross domain policy issues when loading data using **XMLHttpRequest**.
-
-1. Navigate (cd) to the build-tutorial directory.
-2. Type the following command to create a package.json file **npm init**
-3. Install http-server in your project. 
-```bash
-    npm install http-server --save-dev
-```
->**note:** http-server is a lightweight web server we use to run the application locally during development and avoid cross domain policy issues when loading data using XMLHttpRequest.
-
-4. Open package.json in your favorite code editor. In the scripts section, remove the test script, and add a script named start that starts the local web server. The scripts section should now look like this:
-    ```json
-        "scripts": {
-            "start": "http-server"
-        },
-    ```
-5. On the command line, type the following command to start the HTTP server: **npm start**
-6. Open explorer 10 browser and go to http://localhost:8080/index.html show to students that code not work.
 
 #### Set Up Babel and Webpack.
 
-1. open code in app.js and show the code include ECMAScript 6 features, explain that we going to use babel to compile them.
-2. In the build-tutorial directory, create a new file named webpack.config.js defined as follows:
+1.  In Visual Studio, on the **Project** menu, right click **Add New Item**.
+2.  In the **Add New Item – build-tutorial** dialog box, click **JavaScript File**.
+3.  In the **Name** box, type **webpack.config.js**.
+4.  Click **Add**.
+5.  In **webpack.config.js** file, configure **webpack** as follows:
     ```javascript
         var path = require('path');
         var webpack = require('webpack');
         module.exports = {
-            entry: './js/app.js',
+            entry: './scripts/app.js',
             output: {
                 path: path.resolve(__dirname, 'build'),
                 filename: 'app.bundle.js'
@@ -126,91 +106,29 @@
             devtool: 'source-map'
         };
     ```
-3. Open package.json and add a script named webpack that builds your application using Webpack and Babel:
+6.  Open **package.json** file and add a script named **webpack** that builds your application using **Webpack** and **Babel**:
     ```json
         "scripts": {
-            "webpack": "webpack",
-            "start": "http-server"
+            "webpack": "webpack"
         },
     ```
-4. In build-tutorial root create build directory
-5. On command line type the following command to build the app: **npm run webpack**
-6. Open index.html and change the script tag to:
+7.  In build-tutorial, right click **Add** and select **folder**.
+8.  In the **Name** box, type **build**.
+9.  Click **Add**.
+
+#### Build and run the app
+
+1.  In **CMD** run the following commend:
+    ```bash
+        npm run webpack
+    ```
+2.  Open **index.html** and replace the script **src** value to the bundel file.
     ```html
         <script src="build/app.bundle.js"></script>
     ```
-7. Run npm start in command line,
-8. Open again in explorer 10 and show that code run.
-9. replace the callback-based inplementation of the request() function with an ECMAScript 6 promise-based implementation.
-The request() function definition should now look like this:
-```javascript
-    let request = obj => {
-        return new Promise((resolve, reject) => {
-            let xhr = new XMLHttpRequest();
-            xhr.open(obj.method || "GET", obj.url);
-            if (obj.headers) {
-                Object.keys(obj.headers).forEach(key => {
-                    xhr.setRequestHeader(key, obj.headers[key]);
-                });
-            }
-            xhr.onload = () => {
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    resolve(xhr.response);
-                } else {
-                    reject(xhr.statusText);
-                }
-            };
-            xhr.onerror = () => reject(xhr.statusText);
-            xhr.send(obj.body);
-        });
-    };
-```
-10. Modify the call to the request() function to use ECMAScript 6 .then() and .catch() syntax.
-    ```javascript
-        request({url: "employees.json"})
-        .then(data => {
-            let employees = JSON.parse(data);
-            let html = "";
-            employees.forEach(employee => {
-                html += `
-                    <div>
-                        <div>
-                            ${employee.firstName} ${employee.lastName}
-                            <p>${employee.phone}</p>
-                        </div>
-                    </div>`;
-            });
-        document.getElementById("list").innerHTML = html;
-        })
-        .catch(error => {
-            console.log(error);
-        });
-    ```
-11. Run **npm start** and show the code run in edge because edge support promise. Open the app with explorer 10 and show to the students that code not runinig.
-12. Add babel polyfill by useing the command **npm install --save babel-polyfill**
-13. With webpack.config.js, add babel-polyfill to your entry array:
-    ```json
-        entry: ["babel-polyfill","./js/app.js"],
-    ```
-14. Insert new script tag to index.html
-    ```html
-        <script src="node_modules/babel-polyfill/dist/polyfill.min.js"></script>
-    ```
-15. Run **npm start** and show in explorer the code works.
-
-16. Insert modules to code.
-In the /js directory, create a new file named request.js
-17. Move the request() function definition from app.js into request.js
-18. Use export to add request as default function to the module.
-19. In the end of code insert line:
-    ```javascript
-        export default request;
-    ```
-20. import the request module in app.js
-    ```javascript
-        import request from './request';
-    ```
-21. Build and run the app
+3.  Run the application.
+4.  Open explorer 10 and go to **http://localhost:51341/index.html**.
+5.  See that the site still running in **explorer 10** like in **edge**.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
