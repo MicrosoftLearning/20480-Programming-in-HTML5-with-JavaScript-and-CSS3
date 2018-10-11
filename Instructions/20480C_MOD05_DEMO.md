@@ -73,7 +73,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 #### Add the JavaScript File
 
 1. Right-click **NewfetchWeb**, Click **Add** and then select **New folder**. Type **Scripts**.
-2. Right-click the **Script** folder, click **Add**, and then select **New Item**.
+2. Right-click the **Scripts** folder, click **Add**, and then select **New Item**.
 3. In the **Add New Item – fetchWeb** dialog box, click **JavaScript File**.
 4. In the **Name** box, enter **indexScript.js**.
 5.	Click **Add**.
