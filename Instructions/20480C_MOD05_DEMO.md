@@ -72,12 +72,13 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 #### Add the JavaScript File
 
-1. Right-click the **Script** folder, click **Add**, and then select **New Item**.
-2. In the **Add New Item – fetchWeb** dialog box, click **JavaScript File**.
-3. In the **Name** box, enter **indexScript.js**.
-4.	Click **Add**.
-5. Open the **indexScript.js** file.
-6. Add the following code to **indexScript.js**:
+1. Right-click **NewfetchWeb**, Click **Add** and then select **New folder**. Type **Scripts**.
+2. Right-click the **Script** folder, click **Add**, and then select **New Item**.
+3. In the **Add New Item – fetchWeb** dialog box, click **JavaScript File**.
+4. In the **Name** box, enter **indexScript.js**.
+5.	Click **Add**.
+6. Open the **indexScript.js** file.
+7. Add the following code to **indexScript.js**:
     ```javascript
         //server URL
         const personApiUrl = "https://randomuser.me/api/?results=3";
@@ -92,16 +93,16 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
             return parent.appendChild(el); 
         }
     ```
-7. Define an async method called **getPersons**.
+8. Define an async method called **getPersons**.
     ```javascript
         async function getPersons() {
         }
     ```
-8. Inside the **getPersons** method, create **fetch**, call to **personApiUrl**, and then store the response in a variable.
+9. Inside the **getPersons** method, create **fetch**, call to **personApiUrl**, and then store the response in a variable.
     ```javascript
         let response = await fetch(personApiUrl);
     ```
-9. If the **response** is ok, create a table and use the map function to iterate for each element in the response element to generate row and add it to the table.
+10. If the **response** is ok, create a table and use the map function to iterate for each element in the response element to generate row and add it to the table.
     ```javascript
         if (response.ok) {
             //Converting the response to Json
@@ -129,7 +130,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
             })
         }
     ```
-10. Wrap all the code in the **getPerson** method with **try-catch**.
+11. Wrap all the code in the **getPerson** method with **try-catch**.
     ```javascript
         try {
             //Get request by fetch
@@ -164,13 +165,13 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
             console.log(e);
         }
     ```
-11. Add an event listener in **DOMContentLoaded**. Get the add person button by its ID **addPersonsBtn** and then add an event listener on the **click** event to call the **getPerson** method.
+12. Add an event listener in **DOMContentLoaded**. Get the add person button by its ID **addPersonsBtn** and then add an event listener on the **click** event to call the **getPerson** method.
     ```javascript
         document.addEventListener('DOMContentLoaded', function (event) {
             document.getElementById('addPersonsBtn').addEventListener('click', getPersons);
         });
     ```
-12. Add the folowing **script** tag to the **&lt;Head&gt;** element of the **index.html** page.
+13. Add the folowing **script** tag to the **&lt;Head&gt;** element of the **index.html** page.
     ```html
         <script src="/Scripts/indexScript.js"></script>
     ```
