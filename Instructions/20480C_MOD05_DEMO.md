@@ -22,7 +22,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 #### Add the Index Page
 
-1.	In Visual Studio, on the **Project** menu, click **Add New Item**.
+1.	In **NewfetchWeb - Microsoft Visual Studio**, on the **Project** menu, click **Add New Item**.
 2.	In the **Add New Item – fetchWeb** dialog box, click **HTML Page**.
 3.	In the **Name** box, enter **index.html**.
 4.	Click **Add**.
