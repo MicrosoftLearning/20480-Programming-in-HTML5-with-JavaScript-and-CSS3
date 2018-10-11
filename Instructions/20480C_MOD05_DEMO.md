@@ -181,7 +181,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 1.	In **Solution Explorer**, double-click **Properties**.
 2.	On the side menu, click **web**.
 3.	Select the **specific page**, click **OK**, and then select **Index.html**. 
-4.	Click **IIS Express (Run)**.
+4.	Click **IIS Express (Microsoft Edge)**.
 5.	In Microsoft Edge, click **Get Persons**.
 6.	Verify that the table lists all the people.
 7.	Close Microsoft Edge, and then return to Visual Studio.
