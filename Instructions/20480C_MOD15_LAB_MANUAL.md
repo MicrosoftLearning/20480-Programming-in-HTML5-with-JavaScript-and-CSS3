@@ -1,24 +1,71 @@
-## Module 15: Packaging Javascript for Production Deployment
+## Module 15: Packaging JavaScript for Production Deployment
 
 ## Lab: Setting Up Webpack Bundle for Production
 
 #### Scenario
 
+When you create a website and deploy it to a production server, you would want the site to be light and fast. You would also not want to make too many requests to get the site JavaScript file.
+
+Therefore, you will want to bundle your website files into one file.
+
+
 #### Objectives
+
+After completing this lab, you will be able to: 
+- Configure webpack and Babel and create a deploy package for a web project.
+
 
 #### Lab Setup
 
-Estimated Time: **60 minutes**
+Estimated Time: **45 minutes**
 
-### Exercise 1: Creating Deploy Package Using Webpack
+### Exercise 1: Creating a Deploy Package Using Webpack
 
 #### Scenario
 
+In this exercise, you will add webpack and configure it for the ContosoConf project.
+
+First, you will install the webpack package in the solution. You will then configure it to create a bundle file for all your JavaScript files. Then, you will add Babel to your solution to create a cross-platform package.
 
 
-#### Task 1: Review the Speaker Badge page.
+Next, you will run webpack to create a deploy package.
 
->**Results:** After completing this exercise, you will have a created a web page that remains responsive while slow image processing code runs in a web worker.
+Finally, you will run the application and verify that the site remains the same with the bundle file.
+
+#### Task 1: Install and configure Babel and webpack
+
+1.	Start Microsoft Visual Studio and from the **Allfiles\Mod15\Labfiles\Starter** folder, open the **ContosoConf.sln** solution.
+2.  In your project, create the **package.json** file.
+3.  To install the **babel-core**, **babel-loader**, **babel-preset-es2015**, and **webpack** packages in developer mode, use the command prompt.
+4.  In your project root, create the **webpack.config.js** file.
+5.  Configure webpack and pass an entry with the object to include all the JavaScript files in the HTML files.
+   ```json
+
+        entry: {
+            video: './scripts/pages/video.js',
+            feedback: './scripts/pages/feedback.js',
+            live: './scripts/pages/live.js',
+            location: './scripts/pages/location.js',
+            locationVenue: './scripts/pages/location-venue.js',
+            register: './scripts/pages/register.js',
+            schedule: './scripts/pages/schedule.js',
+            speakerBadge: './scripts/pages/speaker-badge.js',
+            offline: './scripts/offline.js'
+        }
+   ```
+6.  Configure the output filename to create one file per entry.
+   ```json
+        filename: '[name].bundle.js',
+   ```
+
+#### Task 2: Create bundle files and replace JavaScript
+
+1.  Run **npm run webpack**.
+2.  Replace all the scripts in the HTML files to import the new bundle files.
+3.  Run the application. The application should work as before and support older versions of Internet Explorer.
+
+>**Results**: After completing this exercise, you will have a new **bundle.js** file which supports ECMAScript 5 for older browsers.
+
 
 ©2018 Microsoft Corporation. All rights reserved.
 

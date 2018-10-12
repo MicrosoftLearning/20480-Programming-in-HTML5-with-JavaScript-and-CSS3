@@ -14,8 +14,8 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Open Microsoft Visual Studio 2017.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
-3.	In the **Open Project** dialog box, browse to the **Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
-4.	In Solution Explorer, expand the **Allfiles\\...\\DemoWebSite** web application, and then double-click **ContactUs.html**.
+3.	In the **Open Project** dialog box, browse to the **[Repository Root]\Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
+4.	In Solution Explorer, expand **DemoWebSite** project, and then double-click **ContactUs.html**.
 5.	In the **ContactUs.html** file, enclose the contents of the **&lt;body&gt;** element in an **&lt;article&gt;** element as shown in the following code example:
     ```html
         <!DOCTYPE HTML>
@@ -84,7 +84,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
           <h1>Contact Contoso Conferencing</h1>
         </header>
     ```
-3.	Add the following HTML markup immediately after the **&lt;/article&gt;** tag near the end of the document.
+3.	Add the following HTML markup immediately after the **&lt;/article&gt;** tag near the end of the document such that the code should look as follows:
     ```html
         ...
         </article>
@@ -113,7 +113,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 6.	Expand the **&lt;body&gt;** element.
 7.	Expand the **&lt;article&gt;** element, and then verify that it contains a **&lt;header&gt;** element and two **&lt;section&gt;** elements.
 8.	Expand the **&lt;header&gt;** element.
-9.	Expand the **&lt;h1&gt;** element.
+9.	View the **&lt;h1&gt;** element.
 10. In the **F12** window, click each element and verify that Microsoft Edge surrounds each element as you select it.
 
 
@@ -140,8 +140,11 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Open Visual Studio.
 2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.
-3.	In the **Open Project** dialog box, browse to the **Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
-4.	In Solution Explorer, expand the **Allfiles\\...\\DemoWebSite** web application, and then expand the **styles** folder.
+3.	In the **Open Project** dialog box, browse to the **[Repository Root]\Allfiles\Mod02\Democode\Starter** folder, click **DemoWebSite.sln**, and then click **Open**.
+
+>**Note**: If **Inconsistent Line Endings** dialogue box appears, clear **Always show this dialog** checkbox and then click **Yes**.
+
+4.	In Solution Explorer, expand the **DemoWebSite** Project , and then expand the **styles** folder.
 5.	Double-click **ContactUsStyles.css**.
 6.	Review the existing rules for the **body** and **h1** elements.
 7.	Modify the **body** rule, remove the **color** rule, and change the font used on the whole page as shown in the following code example.
@@ -175,18 +178,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
         section {
         }
     ```
-11.	Click after the opening curly brace for the section rule, and then in the toolbar, click **Build Style**.   
-
->**Note**: If the toolbar is not visible, right-click the body of the section rule, and then click **Build Style**.
-
-12.	In the **Modify Style** dialog box, in the **Category** list, click **Box**.
-13.	Clear the **padding: Same for all** check box, and then in the **bottom** box, enter **5**.
-14.	In the **Category** list, click **Border**.
-15.	Under **border-style**, clear the **Same for all** check box, and then in the **bottom** list box, select **dotted**.
-16.	Under **border-width**, clear the **Same for all** check box, and then in the **bottom** box, enter **1**.
-17.	Under **border-color**, clear the **Same for all** check box, and then in the **bottom** box, enter **grey**.
-18.	Click **OK**.
-19.	Verify that the section rule now looks like this:
+11.	Verify that the section rule now looks like this:
     ```css
         section {
           padding-bottom: 5px;
@@ -195,7 +187,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
           border-bottom-color: grey;
         }
     ```
-20.	To style the form and its elements, add the following rules:
+12.	To style the form and its elements, add the following rules:
     ```css
         fieldset {
           background-color: pink;
@@ -218,7 +210,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
           width: 200px;
         }
     ```
-21.	On the **File** menu, click **Save All**.
+13.	On the **File** menu, click **Save All**.
 
 #### Use the F12 Developer Tools to Inspect Styles
 
@@ -230,7 +222,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 ![alt text](./Images/20480B_2_ContactUs_Styled.png "The ContactUs page with styling")
 
 5.	In Microsoft Edge, press F12.
-6.	In the **F12** window, select the **HTML** tab, and then double-click the **&lt;html&gt;** element.
+6.	In the **F12** window, select the **DOM Explorer** tab, and then double-click the **&lt;html&gt;** element.
 7.	Click the **&lt;body&gt;** element.
 8.	In the right pane, verify that the following CSS rule appears:
     ```css
@@ -264,6 +256,9 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
 3.	Start Visual Studio. Then, in the **Allfiles\Mod02\Labfiles\Solution\Exercise 2\ContosoConf** folder, open the **ContosoConf.sln** solution.
+
+>**Note**: If **Security Warning for ContosoConf** dialogue box appears, clear **Ask me for every project in this solution** and then click **OK**.
+
 4.	In Solution Explorer, expand the **ContosoConf** project, and then double-click **index.htm**.
 5.	In code editor, briefly scroll through the HTML markup for the web page, and explain to the students that they will be creating the **Home** page for the web application and adding the HTML markup to display the elements on this page.
 6.	In Solution Explorer, double-click **about.htm**.
@@ -273,9 +268,10 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message** again. 
 
-10.	In Internet Explorer, show the simple styling for the **Home** page. The labs in later modules will modify and extend some of these styles, for example, to change the appearance of the navigation bar.
+10.	In Microsoft Edge, show the simple styling for the **Home** page. The labs in later modules will modify and extend some of these styles, for example, to change the appearance of the navigation bar.
 11.	In the navigation bar, click **About**. Again, explain that the simple styling used by this page will be modified in later labs to generate a more appealing layout.
-12.	Close Internet Explorer.
+12.	Close Microsoft Edge.
+13. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

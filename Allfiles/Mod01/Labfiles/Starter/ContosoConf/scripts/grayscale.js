@@ -1,60 +1,54 @@
-﻿/// <reference path="_namespace.js" />
+﻿import { grayscalePixel } from "./grayscale-worker.js";
+function createCanvas(size) {
+    /// <summary>Creates a canvas used for image manipulation.</summary>
 
-(function () {
+    const temporaryCanvas = document.createElement("canvas");
+    temporaryCanvas.setAttribute("width", size.width);
+    temporaryCanvas.setAttribute("height", size.height);
+    return temporaryCanvas;
+};
 
-    const createCanvas = function (size) {
-        /// <summary>Creates a canvas used for image manipulation.</summary>
+function getImageData(context, image) {
+    /// <summary>Draws the image onto the canvas context, then returns the resulting image data.</summary>
 
-        const temporaryCanvas = document.createElement("canvas");
-        temporaryCanvas.setAttribute("width", size.width);
-        temporaryCanvas.setAttribute("height", size.height);
-        return temporaryCanvas;
-    };
+    context.drawImage(image, 0, 0);
+    return context.getImageData(0, 0, image.width, image.height);
+};
 
-    const getImageData = function (context, image) {
-        /// <summary>Draws the image onto the canvas context, then returns the resulting image data.</summary>
 
-        context.drawImage(image, 0, 0);
-        return context.getImageData(0, 0, image.width, image.height);
-    };
 
-    conference.grayscaleImage = function (image) {
-        /// <summary>Converts a colour image into grey scale.</summary>
-        const deferred = $.Deferred();
+export function grayscaleImage(image) {
+    // Converts a colour image into gray scale.
 
+    // Return a new promise.
+    return new Promise(function (resolve, reject) {   
         const canvas = createCanvas(image);
         const context = canvas.getContext("2d");
         const imageData = getImageData(context, image);
 
-        const handleMessage = function (event) {
-            const message = event.data;
-            
-            if (message.progress) {
-                deferred.notifyWith(this, [message.progress]);
-
-            } else if (message.done) {
-                // Update the canvas with the gray scaled image data.
-                context.clearRect(0, 0, canvas.width, canvas.height);
-                context.putImageData(message.done, 0, 0);
-                deferred.resolveWith(this, [canvas]);
-            }
-        };
-
+        // TODO: Create a Worker that runs /scripts/grayscale-worker.js
         const worker = new Worker("/scripts/grayscale-worker.js");
+        const handleMessage = function (event) {
+            // Update the canvas with the gray scaled image data.
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.putImageData(imageData, 0, 0);
+
+            // Returning a Promise makes this function easy to chain together with other deferred operations.
+            // The canvas object is returned as this can be used like an image.
+            resolve([canvas]);
+        };
         worker.addEventListener("message", handleMessage.bind(this));
         worker.postMessage(imageData);
 
-        // Returning a jQuery Deferred makes this function easy to chain together with other deferred operations.
-        return deferred;
-    };
-
-} ());
+       
+    });
+};
 // SIG // Begin signature block
 // SIG // MIIaaAYJKoZIhvcNAQcCoIIaWTCCGlUCAQExCzAJBgUr
 // SIG // DgMCGgUAMGcGCisGAQQBgjcCAQSgWTBXMDIGCisGAQQB
 // SIG // gjcCAR4wJAIBAQQQEODJBs441BGiowAQS9NQkAIBAAIB
-// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFNmq3gchdJTT
-// SIG // qh3RRwrhuhXYVe6roIIVLzCCBJkwggOBoAMCAQICEzMA
+// SIG // AAIBAAIBAAIBADAhMAkGBSsOAwIaBQAEFOF0eRw+tEJ1
+// SIG // dEvRnzurmbmyQNZmoIIVLzCCBJkwggOBoAMCAQICEzMA
 // SIG // AACdHo0nrrjz2DgAAQAAAJ0wDQYJKoZIhvcNAQEFBQAw
 // SIG // eTELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0
 // SIG // b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1p
@@ -226,33 +220,33 @@
 // SIG // EzMAAACdHo0nrrjz2DgAAQAAAJ0wCQYFKw4DAhoFAKCB
 // SIG // vjAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgor
 // SIG // BgEEAYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAjBgkqhkiG
-// SIG // 9w0BCQQxFgQUEKYeQvQpT91F68hBQCcQ0p7DqxowXgYK
+// SIG // 9w0BCQQxFgQU6k6eF4tLmKZCXAuMNmLLlQU+ceYwXgYK
 // SIG // KwYBBAGCNwIBDDFQME6gJoAkAE0AaQBjAHIAbwBzAG8A
 // SIG // ZgB0ACAATABlAGEAcgBuAGkAbgBnoSSAImh0dHA6Ly93
 // SIG // d3cubWljcm9zb2Z0LmNvbS9sZWFybmluZyAwDQYJKoZI
-// SIG // hvcNAQEBBQAEggEADhyKPpA5AkNJ8KQM/S1ruWP6hKu7
-// SIG // uuUI27TA2aZ3zU/ZW+pqVrumsVZYqnX0DYvRfqm/rlVf
-// SIG // yziSKaHnBAaLfvWb6SqpVUlRZ4p7sxKaMkU3rPErKfNg
-// SIG // TXl4DfcuC42P81tiqMuxxf1IpCTVcVSKA8UnAoCIJnLD
-// SIG // RigqnXTOPgQzCHsyyXDF6WrVyU8JSeODmk09d2r86EKQ
-// SIG // RsZDwRvLqCps8hVUSuPNLx9g04UYSAAwglTVvMKYtWhZ
-// SIG // WYA1KwSl0Jgic69jdqArpQYEwaHO4UkV333eu5G4Q+S/
-// SIG // /FTe105I1NnNyKtlKbOK6djCwhpqm7WNYUMgCfjwLQhi
-// SIG // 6LRLVKGCAigwggIkBgkqhkiG9w0BCQYxggIVMIICEQIB
+// SIG // hvcNAQEBBQAEggEAN7px6Dqjz8kx2N4aj8dYJpvIibvk
+// SIG // 6EFdyGg17uSch2BfSlFd/xBA7suzqT+Ji3XnBcPVsomQ
+// SIG // e1aqE7tl9m3ETEIrwSAd6l34lK33oqnRbhOtl0DIZ9iV
+// SIG // C5yD1dSROcejG8PzxpGe2gzi9e1odZL65XxgkxqYaXtQ
+// SIG // XdTcpFG1h81qO80ybK2OniwKMgcjMWF1E8oH0ODHtH6R
+// SIG // 0sJVVwG7sEoyEe7p/JWxUoLrPUlVGCD393q4kc4sRfTd
+// SIG // y4knLZVeji6qAJwsg1oqwy7tyfcBGj8QcqSBjR16SRRl
+// SIG // EWoHBt02supNnOCaPtlsBSetADWnw43goc4PZNVUb8KU
+// SIG // V3cHrqGCAigwggIkBgkqhkiG9w0BCQYxggIVMIICEQIB
 // SIG // ATCBjjB3MQswCQYDVQQGEwJVUzETMBEGA1UECBMKV2Fz
 // SIG // aGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UE
 // SIG // ChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMSEwHwYDVQQD
 // SIG // ExhNaWNyb3NvZnQgVGltZS1TdGFtcCBQQ0ECEzMAAAAr
 // SIG // OTJIwbLJSPMAAAAAACswCQYFKw4DAhoFAKBdMBgGCSqG
 // SIG // SIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkF
-// SIG // MQ8XDTEyMTExNDIzNDQ1M1owIwYJKoZIhvcNAQkEMRYE
-// SIG // FJdjg0vhkaP6eecMiURqiWfJxzARMA0GCSqGSIb3DQEB
-// SIG // BQUABIIBAAGNMUrcKEffhb+lA1CytfmYzimIhDGPjJyU
-// SIG // psbzaSIwQEbCl40msWBVPXBD3e/fOV8DWrGs2kPLqCd/
-// SIG // S15M2QyiA27kqU7efBRCVA8yaC0h6T2iVfDHxLV4pWq8
-// SIG // taeJdcPPfBcYGxo+j1dcYHBZtpREmg+PDtFziMGGdk5x
-// SIG // 4NmRUII+ZFWbUx0rlKp8U17KclijNRUiZBNH7Mzvg9Wr
-// SIG // RoRD2nhVT3KKsR9UmfCG7k7qvX4XQwi1VuTZulQ4bG2B
-// SIG // vNa9RHN8hlHmzilkkHeAd02xEo7QEKfZPnLpc+1ajCTg
-// SIG // JBEpU7mzc/9C+X111XhuerHDZNlfepkv08nbPAOonpw=
+// SIG // MQ8XDTEyMTExNTAwMDgxNVowIwYJKoZIhvcNAQkEMRYE
+// SIG // FCrmbyNPj9P8AnXTHNthNVdt+k1yMA0GCSqGSIb3DQEB
+// SIG // BQUABIIBAGt3/MdJjuRyFASdaO7AlvyZlWAeh5b2PhlN
+// SIG // bBEHmrxfMuW/33npcG5KmE0MXqz1QabXDMIzcSgtEcH2
+// SIG // qv9e6sZSkF9brqtgrSN5SKBjNXEBMMfPIshM5qEfEbKI
+// SIG // 1Al86IjpRkSYbrK44FnAeOkykTI8qct/hJenxhglbmsw
+// SIG // S5JwNEbUgAPrbtqWt466K0rm9jlMNIS5NKSiA4kMZHdd
+// SIG // vB7/5gCfz6wLXc5BjaBeVlbRkPRllzUcxQFr8otb2dpI
+// SIG // 2V6JN3Ed1J4bbIjNga61dvPEzF1u3Gc8yyiBHz8eBONE
+// SIG // oV4466OMQHiOGS3eAtyXM+fFqO3XRYurVZUM+EZE9gE=
 // SIG // End signature block
