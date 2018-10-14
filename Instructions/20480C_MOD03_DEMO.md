@@ -29,52 +29,32 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 6. In the **index.html** file, add the following text:
    ```html
         <!DOCTYPE html>
+        <!DOCTYPE html>
         <html>
         <head>
             <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>HTML Basic</title>
-            <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
-            <link href="/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-            <script src="/Scripts/modernizr-2.6.2.js"></script>
         </head>
         <body>
-            <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
 
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav"></ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container body-content">
-                
-            </div>
         </body>
         </html>
    ```
 
 #### Add the JavaScript file
 
-1. Right-click the **Script** folder, select **Add**, and then click **New Item**.
-2. In the **Add New Item – HtmlBasics** dialog box, click **JavaScript File**.
-3. In the **Name** box, enter **indexScript.js**.
-4.	Click **Add**.
-5. Open the **indexScript.js** file.
-6. To create an **Init** function, enter the following code: 
+1.  Right-click **HtmlBasics**, Click **Add** and then select **New folder**. Type **Scripts**.
+2.  Right-click the **Script** folder, select **Add**, and then click **New Item**.
+3.  In the **Add New Item – HtmlBasics** dialog box, click **JavaScript File**.
+4.  In the **Name** box, enter **indexScript.js**.
+5.  Click **Add**.
+6.  Open the **indexScript.js** file.
+7.  To create an **Init** function, enter the following code: 
    ```javascript
         function init() {
         }
    ```
-7. To define an array of people with the **Name**, **Age**, and **Email** properties, enter the following code:
+8.  Define an array of people with the **Name**, **Age**, and **Email** properties, enter the following code:
    ```javascript
 
         const personsLst = [
@@ -104,11 +84,11 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
             email: 'william@example.com'
         }]
    ```
-8. To define an **age** property, enter the following code:
+9.  To define an **age** property, enter the following code:
     ```javascript
         const age = 20;
     ```
-9. To create a function that receives the array of people and the **age** property, and then returns a new array with all the people above the defined age, enter the following code:
+10. Create a function that receives the array of people and the **age** property, and then returns a new array with all the people above the defined age, enter the following code:
    ```javascript
         function getPersonsAboveAge(array, age) {
             const personAboveAge = [];
@@ -122,7 +102,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
             return personAboveAge;
         }
    ```
-10. To create a function that receives an array and prints it to the console by using a **for** loop, enter the following code:
+11. Create a function that receives an array and prints it to the console by using a **for** loop, enter the following code:
    ```javascript
         function printArray(array) {
             for (let i = 0; i < array.length; i++) {
@@ -131,19 +111,19 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
         }
    ```
 
-11. To call the **printArray** function from the **init** function with the complete array, enter the following code:
+12. Call the **printArray** function from the **init** function with the complete array, enter the following code:
    ```javascript
         printArray(personsLst);
    ```
-12. To call **getPersonsAboveAge** with the array and the **age** property that we defined earlier, and then save the return value in the **const** property, enter the following code:
+13. Call **getPersonsAboveAge** with the array and the **age** property that we defined earlier, and then save the return value in a **const** property, enter the following code:
    ```javascript
         const personAboveAge = getPersonsAboveAge(personsLst, age);
    ```
-13. To call the **printArray** function again but now with the array of people above the defined age, enter the following code:
+14. Call the **printArray** function again but now with the array of people above the defined age, enter the following code:
    ```javascript
         printArray(personAboveAge);
    ```
-14. On the **index.html** page, to the **&lt;Head&gt;** element, add the folowing script tag:
+15. On the **index.html** page, to the **&lt;Head&gt;** element, add the folowing script tag:
    ```html
         <script src="/Scripts/indexScript.js"></script>
    ```
