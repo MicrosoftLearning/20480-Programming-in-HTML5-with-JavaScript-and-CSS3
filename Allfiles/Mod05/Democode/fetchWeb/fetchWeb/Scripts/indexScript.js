@@ -42,10 +42,10 @@ async function getPersons() {
 }
 //Create new element by element name
 function createNode(element) {
-    return document.createElement(element); 
+    return document.createElement(element);
 }
 
 // Append the element(el) into the parent
 function append(parent, el) {
-    return parent.appendChild(el); 
+    return parent.appendChild(el);
 }
