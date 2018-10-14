@@ -18,18 +18,17 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
 5.	In **Microsoft Edge**, on the navigation bar, click **About**.
-6.	Press F10 to display the menu bar.
-7.	On the **File** menu, click **Print preview**. Point out that the layout of the **About** page is modified to suit a printer; there is no navigation bar, and the text is displayed without splitting it up into three columns.
-8.	Close the **Print Preview** window.
-9.	In **Microsoft Edge**, press F12 to display the **F12 Developer Tools** window.
-10.	On the **Tools** menu, point to **Resize**, and then select **480 x 800**. Point out that the **Microsoft Edge** window changes size and matches that of a handheld device.
-11.	Close the **F12 Developer Tools** window.
-12.	In **Microsoft Edge**, notice that the layout of the navigation bar has changed; it is displayed over two lines, and the **Register Free** link is no longer displayed.
-13.	Close **Microsoft Edge**.
-14.	In **Solution Explorer**, expand the **ContosoConf** project, expand the **styles** folder, and then double-click **print.css**.
-15.	In the **Code Editor** window, show the CSS styles in this file. Mention that students will create this style sheet to format pages when they are sent to a printer.
-16.	In **Solution Explorer**, double-click **mobile.css**.
-17.	In the **Code Editor** window, scroll through the file and explain that it contains the styles used by the application when it runs in a narrow window matching that of a handheld device.
+6.	Press **ctrl+P** to display  **Print preview**. Point out that the layout of the **About** page is modified to suit a printer; there is no navigation bar, and the text is displayed without splitting it up into three columns.
+7.	Close the **Print Preview** window.
+8.	In **Microsoft Edge**, press F12 to display the **F12 Developer Tools** window.
+9.	On the **Tools** menu, point to **Resize**, and then select **480 x 800**. Point out that the **Microsoft Edge** window changes size and matches that of a handheld device.
+10.	Close the **F12 Developer Tools** window.
+11.	In **Microsoft Edge**, notice that the layout of the navigation bar has changed; it is displayed over two lines, and the **Register Free** link is no longer displayed.
+12.	Close **Microsoft Edge**.
+13.	In **Solution Explorer**, expand the **ContosoConf** project, expand the **styles** folder, and then double-click **print.css**.
+14.	In the **Code Editor** window, show the CSS styles in this file. Mention that students will create this style sheet to format pages when they are sent to a printer.
+15.	In **Solution Explorer**, double-click **mobile.css**.
+16.	In the **Code Editor** window, scroll through the file and explain that it contains the styles used by the application when it runs in a narrow window matching that of a handheld device.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
