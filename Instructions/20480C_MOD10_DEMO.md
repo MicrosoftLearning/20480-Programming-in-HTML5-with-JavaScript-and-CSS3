@@ -18,8 +18,8 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
 5.	In **Microsoft Edge**, on the navigation bar, click **About**.
-6.	Press **ctrl+P** to display  **Print preview**. Point out that the layout of the **About** page is modified to suit a printer; there is no navigation bar, and the text is displayed without splitting it up into three columns.
-7.	Close the **Print Preview** window.
+6.	Press **ctrl+P** to display **Print preview**. Point out that the layout of the **About** page is modified to suit a printer; there is no navigation bar, and the text is displayed without splitting it up into three columns.
+7.  Close the **About ContosoConf - Print** window.
 8.	In **Microsoft Edge**, press F12 to display the **F12 Developer Tools** window.
 9.	On the **Tools** menu, point to **Resize**, and then select **800 x 480**. Point out that the **Microsoft Edge** window changes size and matches that of a handheld device.
 10.	Close the **F12 Developer Tools** window.
