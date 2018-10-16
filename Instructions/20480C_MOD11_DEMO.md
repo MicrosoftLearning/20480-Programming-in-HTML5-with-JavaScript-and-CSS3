@@ -92,7 +92,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise is essential reading and contains a description of what they will accomplish in the exercise.
-3.	Start Microsoft Visual Studio, browse to **Allfiles\Mod11\Labfiles\Solution\Exercise 2**, and then open the **ContosoConf.sln** solution.
+3.	Start Microsoft Visual Studio, browse to **[Repository Root]\Allfiles\Mod11\Labfiles\Solution\Exercise 2**, and then open the **ContosoConf.sln** solution.
 4.	On the **Debug** menu, click **Start Without Debugging**.
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message** again.
