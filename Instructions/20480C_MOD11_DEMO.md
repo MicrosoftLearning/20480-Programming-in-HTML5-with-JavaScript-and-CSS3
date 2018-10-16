@@ -101,7 +101,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 6.	In the **localhost wants to track your physical location** message box, click **Allow once**.
 7.	Scroll down and point out the location map. Mention that the students will implement a part of this map in Exercise 1.
 8.	In the location map, click **Room B**. Point out that that the students will write the code to catch the **click** event of the SVG element that defines the map for room B and use this event to display the sessions being held in that room.
-9.	Close Internet Explorer.
+9.	Close the Microsoft Edge.
 10.	In **Solution Explorer**, expand the **ContosoConf** project, and then double-click **location.htm**.
 11.	In the **Code Editor** window, find the **&lt;svg viewBox …&gt;** element, and then explain that students will implement this element to draw the venue map for Room B.
 12.	In **Solution Explorer**, expand the **scripts** folder, expand the **pages** folder, and then double-click **location-venue.js**.
