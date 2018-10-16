@@ -58,7 +58,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the **Start** menu, click the **Desktop** tile.
 2.	On the taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, open the **Allfiles\Mod11\Democode\CanvasDocument.html** file.
+3.	In Microsoft Edge, open the **[Repository Root]\Allfiles\Mod11\Democode\CanvasDocument.html** file.
 4.	If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 5.	In Microsoft Edge, click **Separate Transformations**.
 6.	In Microsoft Edge, right-click the webpage, and then select **View source**.
