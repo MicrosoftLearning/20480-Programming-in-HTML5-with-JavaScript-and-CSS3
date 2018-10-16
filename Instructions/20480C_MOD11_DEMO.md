@@ -14,7 +14,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the **Start** menu, click the **Desktop** tile.
 2.	On the taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, open the **Allfiles\Mod11\Democode\SvgDocument.html** file.
+3.	In Microsoft Edge, open the **[Repository Root]\Allfiles\Mod11\Democode\SvgDocument.html** file.
 4.	If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 5.	In Microsoft Edge, click **Transformations**.
 6.	in Microsoft Edge, right-click the webpage, and then select **View source**.
@@ -58,7 +58,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the **Start** menu, click the **Desktop** tile.
 2.	On the taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, open the **Allfiles\Mod11\Democode\CanvasDocument.html** file.
+3.	In Microsoft Edge, open the **[Repository Root]\Allfiles\Mod11\Democode\CanvasDocument.html** file.
 4.	If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 5.	In Microsoft Edge, click **Separate Transformations**.
 6.	In Microsoft Edge, right-click the webpage, and then select **View source**.
@@ -92,16 +92,16 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise is essential reading and contains a description of what they will accomplish in the exercise.
-3.	Start Microsoft Visual Studio, browse to **Allfiles\Mod11\Labfiles\Solution\Exercise 2**, and then open the **ContosoConf.sln** solution.
+3.	Start Microsoft Visual Studio, browse to **[Repository Root]\Allfiles\Mod11\Labfiles\Solution\Exercise 2**, and then open the **ContosoConf.sln** solution.
 4.	On the **Debug** menu, click **Start Without Debugging**.
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message** again.
 
-5.	In Microsoft Internet Explorer, on the navigation bar, click **Location**.
+5.	In Microsoft Edge, on the navigation bar, click **Location**.
 6.	In the **localhost wants to track your physical location** message box, click **Allow once**.
 7.	Scroll down and point out the location map. Mention that the students will implement a part of this map in Exercise 1.
 8.	In the location map, click **Room B**. Point out that that the students will write the code to catch the **click** event of the SVG element that defines the map for room B and use this event to display the sessions being held in that room.
-9.	Close Internet Explorer.
+9.	Close the Microsoft Edge.
 10.	In **Solution Explorer**, expand the **ContosoConf** project, and then double-click **location.htm**.
 11.	In the **Code Editor** window, find the **&lt;svg viewBox …&gt;** element, and then explain that students will implement this element to draw the venue map for Room B.
 12.	In **Solution Explorer**, expand the **scripts** folder, expand the **pages** folder, and then double-click **location-venue.js**.
