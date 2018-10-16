@@ -97,7 +97,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message** again.
 
-5.	In Microsoft Internet Explorer, on the navigation bar, click **Location**.
+5.	In Microsoft Edge, on the navigation bar, click **Location**.
 6.	In the **localhost wants to track your physical location** message box, click **Allow once**.
 7.	Scroll down and point out the location map. Mention that the students will implement a part of this map in Exercise 1.
 8.	In the location map, click **Room B**. Point out that that the students will write the code to catch the **click** event of the SVG element that defines the map for room B and use this event to display the sessions being held in that room.
