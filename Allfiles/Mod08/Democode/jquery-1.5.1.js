@@ -5526,7 +5526,7 @@
 	
 				cloneFixAttributes( elem, clone );
 	
-				// Using Sizzle here is crazy slow, so we use getElementsByTagName
+				// Using Sizzle here is slow, so we use getElementsByTagName
 				// instead
 				srcElements = getAll( elem );
 				destElements = getAll( clone );
