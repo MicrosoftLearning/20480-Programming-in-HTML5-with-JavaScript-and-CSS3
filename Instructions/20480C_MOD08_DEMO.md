@@ -50,14 +50,12 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 3.	In Microsoft Edge, browse to the website **http://www.microsoft.com/**.
 4.	To display the **F12 Developer Tools** window, press F12.
 5.	In the **F12 Developer Tools** window, click **Network**.
-6.	On the **F12 Developer Tools** toolbar, click **Start capturing**.
-7.	In Microsoft Edge, in the navigation bar, click the **touchgallery** icon.
-8.	Return to the **F12 Developer Tools** window.
+6.	On the **F12 Developer Tools** toolbar, click **Start Profiling Session**.
 
 ![alt text](./Images/20480B_8_Network-Capture.png "The network traffic captured for a web page")
 
-9.	Click the first line of the network capture, and then on the toolbar click **Go to detailed view**.
-10.	Click each of the following tabs and show the data that they contain:
+7.	Click the first line of the network capture.
+8.	On the right side, click each of the following tabs and show the data that they contain:
 - **Request headers**
 - **Request body**
 - **Response headers**
@@ -65,7 +63,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 - **Cookies**
 - **Initiator**
 - **Timings**
-11.	On the **F12 Developer Tools** toolbar, click **Stop capturing**.
+9.	On the **F12 Developer Tools** toolbar, click **Stop Profiling Session**.
 
 #### Capture Profile Data for a Web Application
 
