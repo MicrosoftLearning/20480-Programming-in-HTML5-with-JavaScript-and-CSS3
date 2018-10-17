@@ -29,6 +29,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 14.	In the **Code Editor** window, show the CSS styles in this file. Mention that students will create this style sheet to format pages when they are sent to a printer.
 15.	In **Solution Explorer**, double-click **mobile.css**.
 16.	In the **Code Editor** window, scroll through the file and explain that it contains the styles used by the application when it runs in a narrow window matching that of a handheld device.
+17. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

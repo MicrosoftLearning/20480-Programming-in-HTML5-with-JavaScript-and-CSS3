@@ -50,14 +50,12 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 3.	In Microsoft Edge, browse to the website **http://www.microsoft.com/**.
 4.	To display the **F12 Developer Tools** window, press F12.
 5.	In the **F12 Developer Tools** window, click **Network**.
-6.	On the **F12 Developer Tools** toolbar, click **Start capturing**.
-7.	In Microsoft Edge, in the navigation bar, click the **touchgallery** icon.
-8.	Return to the **F12 Developer Tools** window.
+6.	On the **F12 Developer Tools** toolbar, click **Start Profiling Session**.
 
 ![alt text](./Images/20480B_8_Network-Capture.png "The network traffic captured for a web page")
 
-9.	Click the first line of the network capture, and then on the toolbar click **Go to detailed view**.
-10.	Click each of the following tabs and show the data that they contain:
+7.	Click the first line of the network capture.
+8.	On the right side, click each of the following tabs and show the data that they contain:
 - **Request headers**
 - **Request body**
 - **Response headers**
@@ -65,23 +63,22 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 - **Cookies**
 - **Initiator**
 - **Timings**
-11.	On the **F12 Developer Tools** toolbar, click **Stop capturing**.
+9.	On the **F12 Developer Tools** toolbar, click **Stop Profiling Session**.
 
 #### Capture Profile Data for a Web Application
 
-1.	In the **F12 Developer Tools** window, click **Profiler**.
-2.	On the **F12 Developer Tools** toolbar, click **Start profiling**.
-3.	In Microsoft Edge, click the **videos** icon in the navigation bar.
+1.	In the **F12 Developer Tools** window, click **Performance**.
+2.	On the **F12 Developer Tools** toolbar, click **Start Profiling Session**.
+3.	In Microsoft Edge, click the **Cart** icon in the navigation bar.
 4.	Return to the **F12 Developer Tools** window.
-5.	On the **F12 Developer Tools** toolbar, click **Stop profiling**.
+5.	On the **F12 Developer Tools** toolbar, click **Stop profiling Session**.
 
 ![alt text](./Images/20480B_8_Profile-Capture.png "Profile data for a web page")
 
-6.	On the **F12 Developer Tools** toolbar, in the **Current view** list, click **Call tree**.
-7.	In the **Search Profiler** box, enter **onWindowEvent**, and then press ENTER.
-> **Note**: In the captured data, examine the work performed by the **onWindowEvent** event handler.
-8.	To display the code for this event handler in the **Script** window, double-click **onWindowEvent**.
-9.	To display the tools menu, press Ctrl+Alt+O, and then to display the code in an easier to read format, select **Format JavaScript**.
+6.	On the **F12 Developer Tools** toolbar, in the **Performance** list, click **Timeline**.
+7.	In the **Timeline**, you can see the order and the time the event append.
+8.	Click **JavaScript call stack**.
+9.	In the **JavaScript call stack**, you can see the mathod tree that appand.
 10.	Close the **F12 Developer Tools** window.
 11.	Close Microsoft Edge.
 
