@@ -1,8 +1,8 @@
 @media screen and (max-width: 480px) {
     nav.page-nav .container {
-        display: -ms-flexbox;
-        -ms-flex-wrap: wrap;
-        -ms-flex-pack: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     nav.page-nav .active:before,
