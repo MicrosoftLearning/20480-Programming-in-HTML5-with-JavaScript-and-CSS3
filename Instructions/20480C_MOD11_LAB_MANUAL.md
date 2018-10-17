@@ -28,7 +28,7 @@ First, you will complete the partially completed SVG markup of the venue map. Ne
 
 #### Task 1: Review the incomplete HTML markup for the venue map
 
-1.	Start Microsoft Visual Studio, browse to **Allfiles\Mod11\Labfiles\Starter\Exercise 1**, and then open the **ContosoConf.sln** solution.
+1.	Start Microsoft Visual Studio, browse to **[Repository Root]\Allfiles\Mod11\Labfiles\Starter\Exercise 1**, and then open the **ContosoConf.sln** solution.
 2.	Open the **location.htm** file.
 3.	Verify that the page contains the following **&lt;svg&gt;** element of the venue map, and two hidden **&lt;div&gt;** elements containing room information:
    ```html
