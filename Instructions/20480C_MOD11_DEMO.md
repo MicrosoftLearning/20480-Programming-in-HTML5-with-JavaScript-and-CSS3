@@ -92,7 +92,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise is essential reading and contains a description of what they will accomplish in the exercise.
-3.      In Microsoft Visual Studio, on the **File** menu Point to **Open**, and then click **Project/Solution**.
+3. In Microsoft Visual Studio, on the **File** menu Point to **Open**, and then click **Project/Solution**.
 4.	Browse to **[Repository Root]\Allfiles\Mod11\Labfiles\Solution\Exercise 2**, and then open the **ContosoConf.sln** solution.
 5.	On the **Debug** menu, click **Start Without Debugging**.
 
