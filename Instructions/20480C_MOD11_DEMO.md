@@ -92,22 +92,23 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise is essential reading and contains a description of what they will accomplish in the exercise.
-3.	Start Microsoft Visual Studio, browse to **[Repository Root]\Allfiles\Mod11\Labfiles\Solution\Exercise 2**, and then open the **ContosoConf.sln** solution.
-4.	On the **Debug** menu, click **Start Without Debugging**.
+3.      In Microsoft Visual Studio, on the **File** menu Point to **Open**, and then click **Project/Solution**.
+4.	Browse to **[Repository Root]\Allfiles\Mod11\Labfiles\Solution\Exercise 2**, and then open the **ContosoConf.sln** solution.
+5.	On the **Debug** menu, click **Start Without Debugging**.
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message** again.
 
-5.	In Microsoft Edge, on the navigation bar, click **Location**.
-6.	In the **localhost wants to track your physical location** message box, click **Allow once**.
-7.	Scroll down and point out the location map. Mention that the students will implement a part of this map in Exercise 1.
-8.	In the location map, click **Room B**. Point out that that the students will write the code to catch the **click** event of the SVG element that defines the map for room B and use this event to display the sessions being held in that room.
-9.	Close the Microsoft Edge.
-10.	In **Solution Explorer**, expand the **ContosoConf** project, and then double-click **location.htm**.
-11.	In the **Code Editor** window, find the **&lt;svg viewBox …&gt;** element, and then explain that students will implement this element to draw the venue map for Room B.
-12.	In **Solution Explorer**, expand the **scripts** folder, expand the **pages** folder, and then double-click **location-venue.js**.
-13.	In the **Code Editor** window, explain that the code in this file handles the click event for the **&lt;svg&gt;** element, and then displays the list of sessions that run in the room that the user clicked.
-14.	In **Solution Explorer**, double-click **speaker-badge.htm**.
-15.	In the **Code Editor** window, find the following section:
+6.	In Microsoft Edge, on the navigation bar, click **Location**.
+7.	In the **localhost wants to track your physical location** message box, click **Allow once**.
+8.	Scroll down and point out the location map. Mention that the students will implement a part of this map in Exercise 1.
+9.	In the location map, click **Room B**. Point out that that the students will write the code to catch the **click** event of the SVG element that defines the map for room B and use this event to display the sessions being held in that room.
+10.	Close the Microsoft Edge.
+11.	In **Solution Explorer**, expand the **ContosoConf** project, and then double-click **location.htm**.
+12.	In the **Code Editor** window, find the **&lt;svg viewBox …&gt;** element, and then explain that students will implement this element to draw the venue map for Room B.
+13.	In **Solution Explorer**, expand the **scripts** folder, expand the **pages** folder, and then double-click **location-venue.js**.
+14.	In the **Code Editor** window, explain that the code in this file handles the click event for the **&lt;svg&gt;** element, and then displays the list of sessions that run in the room that the user clicked.
+15.	In **Solution Explorer**, double-click **speaker-badge.htm**.
+16.	In the **Code Editor** window, find the following section:
 ```html
         <section class="page-section badge">
             <div class="container">
@@ -118,7 +119,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
             </div>
         </section>
    ```
-16.	Explain that in Exercise 2, the students will create the **&lt;canvas&gt;** element in this section and use it to display the photograph of the instructor, instead of using an **&lt;img&gt;** element.
+17.	Explain that in Exercise 2, the students will create the **&lt;canvas&gt;** element in this section and use it to display the photograph of the instructor, instead of using an **&lt;img&gt;** element.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
