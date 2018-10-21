@@ -144,7 +144,7 @@ First, you will create a canvas element on the speaker badge page. Next, you wil
 
 #### Task 2: Draw the details for the badge
 
-1.	In the **scripts\pages** folder, open the **speaker-badge.js** file. The JavaScript code in this file contains a refactored version of the drag-and-drop code that you created during an earlier lab exercise. Notice that the canvas element on the page has been assigned to **this.canvas**:
+1.	In the **scripts** folder, open the **speakerBadgePage.js** file. The JavaScript code in this file contains a refactored version of the drag-and-drop code that you created during an earlier lab exercise. Notice that the canvas element on the page has been assigned to **this.canvas**:
    ```javascript
         this.canvas = element.querySelector("canvas");
    ```
