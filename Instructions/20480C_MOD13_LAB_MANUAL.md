@@ -230,7 +230,7 @@ This method creates a new link element that enables a user to report a question 
         handleQuestionsClick(event) {
             event.preventDefault();
 
-            var clickedElement = event.srcElement || event.target;
+            const clickedElement = event.srcElement || event.target;
             if (this.isReportLink(clickedElement)) {
                 var questionId = clickedElement.parentNode.questionId;
                 this.reportQuestion(questionId);
