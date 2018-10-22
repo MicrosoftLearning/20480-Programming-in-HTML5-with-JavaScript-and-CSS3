@@ -107,7 +107,7 @@ First, you will define a keyframe animation by using CSS. Next, you will use the
 
 #### Task 1: Define a keyframe animation
 
-1.	In Visual Studio, from the **Allfiles\Mod12\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution.
+1.	In Visual Studio, from the **[Repository Root]\Allfiles\Mod12\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution.
 2.	In the **feedback.css** style sheet, in the **styles\pages** folder, find the following comment:
     ```css
         /* TODO: Add key frame animation named "send"
