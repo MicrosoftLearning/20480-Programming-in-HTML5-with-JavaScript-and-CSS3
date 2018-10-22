@@ -124,7 +124,7 @@ First, you will create a canvas element on the speaker badge page. Next, you wil
 
 #### Task 1: Create the canvas element
 
-1.	In Visual Studio, browse to **Allfiles\Mod11\Labfiles\Starter\Exercise 2**, and then open the **ContosoConf.sln** solution.
+1.	In ContosoConf - Microsoft Visual Studio, browse to **[Repository Root]\Allfiles\Mod11\Labfiles\Starter\Exercise 2**, and then open the **ContosoConf.sln** solution.
 2.	Open the **speaker-badge.htm** file. This page contains a section that enables the user to create their speaker badge. Previously, you used an **&lt;img&gt;** element to drag an image of the speaker onto this page. This **&lt;img&gt;** element has been removed because you are going to modify the page to use a canvas. Using a canvas provides more scope for customizing the image.
 3.	Find the following comment:
    ```html
