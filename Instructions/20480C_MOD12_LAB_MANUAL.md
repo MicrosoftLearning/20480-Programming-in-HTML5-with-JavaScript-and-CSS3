@@ -139,6 +139,7 @@ First, you will define a keyframe animation by using CSS. Next, you will use the
 2.	Click **Send Feedback**.
 3.	Verify that the form shrinks and flies off the top of the page.
 4.	Close Microsoft Edge.
+5. Close all open windows.
 
 >**Result**: After completing this exercise, submitting the conference feedback form will trigger an animation that makes the form fly off the page.
 
