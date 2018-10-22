@@ -30,7 +30,7 @@ First, you will animate the star icons on the **Feedback** page so they react wh
 
 #### Task 1: Review the Feedback page
 
-1.	Start Microsoft Visual Studio, and then from the **Allfiles\Mod12\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+1.	Start Microsoft Visual Studio, and then from the **[Repository Root]\Allfiles\Mod12\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 2.	In the **ContosoConf** project, examine the contents of the **feedback.htm** file. This page contains an HTML form that collects conference attendee feedback:
     ```html
         <form method="post" action="/send-feedback">
