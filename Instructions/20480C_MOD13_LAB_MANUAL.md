@@ -31,7 +31,7 @@ In this exercise, you will review the new **Live** page and JavaScript. You will
 
 #### Task 1: Review the Live page
 
-1.	Start Microsoft Visual Studio, and then from the **Allfiles\Mod13\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+1.	Start Microsoft Visual Studio, and then from the **[Repository Root]\Allfiles\Mod13\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 2.	Start the application, and then view the **Live** page. Ignore the error that occurs (this error happens because the JavaScript code for the page is not yet complete).
 
 Using this page, an attendee can type a question and click **Ask** to send it to the presenter. All questions asked by all attendees will appear on this page, underneath the **Ask a question** box.
