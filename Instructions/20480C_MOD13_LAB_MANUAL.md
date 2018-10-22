@@ -155,7 +155,7 @@ In this exercise, you will create a message object that contains a question. You
 
 #### Task 1: Format a question as a message
 
-1.	Open the **ContosoConf** solution in the **Allfiles\Mod13\Labfiles\Starter\Exercise 2** folder.
+1.	Open the **ContosoConf** solution in the **[Repository Root]\Allfiles\Mod13\Labfiles\Starter\Exercise 2** folder.
 2.	Open the **        new LivePage(.js** file in the **scripts** folder. In this file, the **LivePage** class has methods that handle the **Ask a question** form submission. The question text is passed to the **askQuestion** method, which looks like this:
 
     ```javascript
