@@ -208,7 +208,7 @@ In this exercise, you will add a link next to each question to enable a student 
 
     ```javascript
         createReportLink() {
-            var report = document.createElement("a");
+            const report = document.createElement("a");
             report.textContent = "Report";
             report.setAttribute("href", "#");
             report.setAttribute("class", "report");
