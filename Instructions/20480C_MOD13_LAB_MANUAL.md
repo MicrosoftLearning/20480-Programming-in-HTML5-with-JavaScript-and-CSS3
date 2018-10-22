@@ -249,7 +249,7 @@ This method creates a new link element that enables a user to report a question 
 1.	Find the **handleRemoveMessage()** function:
     ```javascript
         handleRemoveMessage(message) {
-            var listItems = this.questionListElement.querySelectorAll("li");
+            const listItems = this.questionListElement.querySelectorAll("li");
             for (var i = 0; i < listItems.length; i++) {
                 if (listItems[i].questionId === message.remove) {
                     this.questionListElement.removeChild(listItems[i]);
