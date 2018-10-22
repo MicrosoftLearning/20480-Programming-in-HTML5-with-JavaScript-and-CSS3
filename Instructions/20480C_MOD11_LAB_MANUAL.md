@@ -184,7 +184,7 @@ The file also contains a number of other functions that will draw the various el
 #### Task 3: Test the application
 
 1.	Run the application, and then view the **speaker-badge.htm** page.
-2.	Browse to **Allfiles\Mod11\Labfiles\Resources**, and then drag the **mark-hansen.jpg** image file onto the canvas.
+2.	Browse to **[Repository Root]\Allfiles\Mod11\Labfiles\Resources**, and then drag the **mark-hansen.jpg** image file onto the canvas.
 3.	Verify that the image is drawn on the canvas, along with the speaker’s details.
 
 ![alt text](./Images/20480B_11_Speaker-Badge-Canvas.png "The speaker badge for Mark Hanson")
