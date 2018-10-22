@@ -203,7 +203,7 @@ In this exercise, you will add a link next to each question to enable a student 
 
 #### Task 1: Display report links
 
-1.	Open the **ContosoConf** solution in the **Allfiles\Mod13\Labfiles\Starter\Exercise 3** folder.
+1.	Open the **ContosoConf** solution in the **[Repository Root]\Allfiles\Mod13\Labfiles\Starter\Exercise 3** folder.
 2.	Open the **LivePage.js** file in the **scripts** folder, and review the **createReportLink** method:
 
     ```javascript
