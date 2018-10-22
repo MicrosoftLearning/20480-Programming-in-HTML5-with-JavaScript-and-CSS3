@@ -38,7 +38,7 @@ Using this page, an attendee can type a question and click **Ask** to send it to
 
 ![alt text](./Images/20480B_13_Live.png "The Live page")
 
-3.	Close Microsoft Edge and return to Visual Studio.
+3.	Close Microsoft Edge and return to ContosoConf - Microsoft Visual Studio.
 4.	In the **ContosoConf** project, open the **live.htm** file.
 5.	Review the HTML markup for this page and note the **&lt;form&gt;** element used to ask questions, together with the empty **&lt;ul&gt;** element that will display questions:
     ```html
