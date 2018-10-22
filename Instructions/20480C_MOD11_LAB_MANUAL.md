@@ -190,6 +190,7 @@ The file also contains a number of other functions that will draw the various el
 ![alt text](./Images/20480B_11_Speaker-Badge-Canvas.png "The speaker badge for Mark Hanson")
 
 4.	Close Microsoft Edge.
+5. Close all open windows.
 
 >**Result**: After completing this exercise, you will have a **Speaker Badge** page that enables conference speakers to create their badge.
 
