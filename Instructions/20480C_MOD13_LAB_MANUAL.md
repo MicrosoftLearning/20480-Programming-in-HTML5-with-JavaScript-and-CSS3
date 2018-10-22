@@ -120,7 +120,7 @@ Using this page, an attendee can type a question and click **Ask** to send it to
 2.	Review the **displayQuestion** method.
     ```javascript
         displayQuestion(question) {
-            var item = this.createQuestionItem(question);
+            const item = this.createQuestionItem(question);
             //item.appendChild(this.createReportLink());
             this.questionListElement.appendChild(item);
         }
