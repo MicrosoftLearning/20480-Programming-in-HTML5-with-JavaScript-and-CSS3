@@ -268,6 +268,7 @@ This function removes all messages that contain the **remove** property from the
 3.	Click the **Report** link next to the **What are some good resources for getting started with HTML5?** question.
 4.	Verify that the question disappears from the page (there will be a short delay while the question is assessed).
 5.	Close Microsoft Edge.
+6. Close all open windows.
 
 >**Result:** After completing this exercise, you will have added a feature to the **Live** page that enables users to report inappropriate questions and causes the application to remove them.
 
