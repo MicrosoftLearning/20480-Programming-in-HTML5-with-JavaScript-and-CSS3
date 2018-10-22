@@ -116,7 +116,7 @@ First, you will define a keyframe animation by using CSS. Next, you will use the
                  At 100% translate(0, -1000px)
         */
     ```
-3.	After this comment, define a keyframe animation named **send**. The animation should perform the following operations:
+3.	After this comment, define keyframes animation named **send**. The animation should perform the following operations:
 - Reduce the size of the targeted element by using a scale transform to 0.8 times the original size.
 - Slide the target element up off the page. A translation of 1000px up is enough to move the feedback form out of view.
 6.	The **sending** CSS class will be added to the feedback form when it is submitted (you will write the JavaScript code to do this in the next task). 
