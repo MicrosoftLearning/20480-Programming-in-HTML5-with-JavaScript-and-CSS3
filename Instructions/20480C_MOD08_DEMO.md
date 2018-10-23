@@ -151,7 +151,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 21.	In **Solution Explorer**, in the **scripts\pages** folder, double-click **location.js**. Explain that this file contains the code that the students will write to find and display the distance of the user from the conference location by using the Geolocation API.
 22.	On the **Debug** menu, click **Start Without Debugging**.
 23.	In the navigation bar, click **Location**.
-24.	In the **localhost wants to track your physical location** message box, click **Allow once**.
+24.	If the **localhost wants to track your physical location** message box appears, click **Allow once**.
 25.	In the **Enable Location Services** dialog box, click **Yes**.
 26.	Point out that the distance to the conference venue appears above the address on the **Location** page.
 27.	Close Microsoft Edge.
