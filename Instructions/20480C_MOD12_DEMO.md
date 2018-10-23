@@ -177,7 +177,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 >**Note**: If the message **Intranet settings are turned off by default** appears, click **Don’t show this message again**.
 
-5.	In Internet Explorer, on the **Home** page, move the mouse pointer over the **Register Free** link, and then point out how the link expands and rotates as the mouse pointer traverses it.
+5.	In Microsoft Edge, on the **Home** page, move the mouse pointer over the **Register Free** link, and then point out how the link expands and rotates as the mouse pointer traverses it.
 6.	In the navigation bar, click **Feedback**.
 7.	On the **Feedback** page, place the mouse pointer over the stars, and then point out how they are animated.
 8.	Click **Send Feedback**, and then point out how the feedback form is animated; it changes the size and then flies off the top of the screen
