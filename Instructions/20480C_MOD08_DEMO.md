@@ -154,7 +154,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 24.	In the **localhost wants to track your physical location** message box, click **Allow once**.
 25.	In the **Enable Location Services** dialog box, click **Yes**.
 26.	Point out that the distance to the conference venue appears above the address on the **Location** page.
-27.	Close Internet Explorer.
+27.	Close Microsoft Edge.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
