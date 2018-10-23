@@ -51,7 +51,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the Start screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\2DTranslations.html**. 
+3.	In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\2DTranslations.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 5.	Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D translation by using the **translate()**, **translateX()**, or **translateY()** functions. The text message inside each rectangle describes the transformation for that rectangle.
 6.	Right-click in the browser window, and then select **View source**. 
