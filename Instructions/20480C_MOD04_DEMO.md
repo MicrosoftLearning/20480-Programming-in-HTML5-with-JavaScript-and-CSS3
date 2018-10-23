@@ -33,7 +33,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 18.	In the **Website/blog** box, type **http://adatum.com/**.
 19.	Click **Register** and verify that the **Thanks for registering** page appears.
 20.	Mention that the form also performs other checks, such as verifying that the email address is in the correct format, and that the values in the password and confirm password fields match.
-21.	Close Internet Explorer.
+21.	Close Microsoft Edge.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
