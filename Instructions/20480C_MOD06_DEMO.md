@@ -148,7 +148,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
    - **.about p:first-child**. This rule prevents the drop cap in the first paragraph from being indented.
    - **.about blockquote**. This rule formats the text for the block quote on the **About** page.
    - **.about blockquote:before**. This rule adds the quote mark to the start of the block quote.
-
+18. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
