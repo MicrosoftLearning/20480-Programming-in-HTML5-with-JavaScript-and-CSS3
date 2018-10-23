@@ -13,7 +13,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 #### Switch between layout modes in a webpage
 
 1.	Open Microsoft Visual Studio 2017.
-2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **File**.
+2.	In Microsoft Visual Studio, on the **File** menu, point to **Open**, and then click **File**.
 3.	In the **Open File** dialog box, browse to the **Allfiles\Mod06\Democode** folder, click **positioning.html**, and then click **Open**.
 4.	Review the code with the students. This file contains an HTML **article** with four **div** elements. The file also contains styles for the **article** and **div** elements.
    ```html
