@@ -105,7 +105,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the Start screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\3DTransformations.html**. 
+3.	In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\3DTransformations.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 5.	Verify that the browser displays a cube. There are six faces to the cube, each of which displays text and has a different background color. The front face is partially transparent so that it does not completely obscure the other faces.
 6.	Place the mouse pointer over the cube. Verify that it rotates by 90 degrees over a period of five seconds. Then, move the mouse pointer off the cube, and then verify that the cube rotates smoothly back to its original position.
