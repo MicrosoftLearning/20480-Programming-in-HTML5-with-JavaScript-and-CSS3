@@ -193,6 +193,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
         form.classList.add("sending");
     ```
 17. Explain that this statement adds the **sending** class to the feedback form, which triggers the animation defined by the **.sending** rule in the **feedback.css** stylesheet.
+18. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
