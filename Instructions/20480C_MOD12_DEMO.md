@@ -181,7 +181,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 6.	In the navigation bar, click **Feedback**.
 7.	On the **Feedback** page, place the mouse pointer over the stars, and then point out how they are animated.
 8.	Click **Send Feedback**, and then point out how the feedback form is animated; it changes the size and then flies off the top of the screen
-9.	Close Internet Explorer.
+9.	Close Microsoft Edge.
 10. In **Solution Explorer**, expand the **ContosoConf** project, expand the **styles** folder, and then double-click **header.css**.
 11. In the **Code Editor** window, find the **header.page-header .register:hover** rule, and then draw students' attention to the **transform** and **transition** properties in this rule. These properties rotate and scale the **Register Free** link over a period of one second.
 12. In **Solution Explorer**, in the **styles** folder, expand the **pages** folder, and then double-click **feedback.css**. 
