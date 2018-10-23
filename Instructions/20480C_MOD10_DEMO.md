@@ -22,7 +22,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 7.	Press **ctrl+P** to display **Print preview**. Point out that the layout of the **About** page is modified to suit a printer; there is no navigation bar, and the text is displayed without splitting it up into three columns.
 8.  Close the **About ContosoConf - Print** window.
 9.	In **Microsoft Edge**, press F12 to display the **F12 Developer Tools** window.
-10.	On the **Tools** menu, point to **Resize**, and then select **800 x 480**. Point out that the **Microsoft Edge** window changes size and matches that of a handheld device.
+10. In **DevTools-Microsoft Edge** click **Emulation**, under **Display** change the orientation as **Portrait** from the resolution dropdown list select **800x400**. Point out that the Microsoft Edge window changes size and matches that of a handheld device.
 11.	Close the **F12 Developer Tools** window.
 12.	In **Microsoft Edge**, notice that the layout of the navigation bar has changed; it is displayed over two lines, and the **Register Free** link is no longer displayed.
 13.	Close **Microsoft Edge**.
