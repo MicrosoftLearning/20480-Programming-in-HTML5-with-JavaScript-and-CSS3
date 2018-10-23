@@ -14,7 +14,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the Start screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, browse to the file **Allfiles\Mod08\Democode\Document.html**.
+3.	In Microsoft Edge, browse to the file **[Repository Root]\Allfiles\Mod08\Democode\Document.html**.
 4.	If the **Microsoft Edge restricted this webpage from running scripts or ActiveX controls** message appears, click **Allow blocked content**.
 5.	To display the **Developer Tools** window, press F12.
 6.	If the **F12 Developer Tools** window appears as a pane in Microsoft Edge, in the **F12 Developer Tools** pane, click **Unpin**.
