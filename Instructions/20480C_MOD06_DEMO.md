@@ -61,7 +61,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 ![alt text](./Images/20480B_6_Layout-Column.png "The div elements in block layout mode")
 
 8.	Press F12.
-9.	In the F12 Developer Tools pane, to unpin the window, press Ctrl+P. Position the F12 Developer Tools window so that you can see it and the Microsoft Edge window at the same time.
+9. In the F12 Developer Tools Pane, click on **Dock Bottom** option on the top right corner, so that can see Both Microsoft Edge and Developer windows at the same time.
 10.	To display the fully expanded version of the layout rules applied to the HTML content, click the **CSS** tab.
 11.	Right-click the **div** entry, and then select **Add attribute**.
 12.	Type **display: inline**, and then press ENTER.
