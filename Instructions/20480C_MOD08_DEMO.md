@@ -77,7 +77,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 6.	On the **F12 Developer Tools** toolbar, in the **Performance** list, click **Timeline**.
 7.	In the **Timeline**, you can see the order and the time the event append.
-8.	Click **JavaScript call stack**.
+8.	Click **JavaScript call stacks**.
 9.	In the **JavaScript call stack**, you can see the mathod tree that appand.
 10.	Close the **F12 Developer Tools** window.
 11.	Close Microsoft Edge.
