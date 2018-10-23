@@ -137,7 +137,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the Start screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\KeyframeAnimations.html**. 
+3.	In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\KeyframeAnimations.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 5.	Verify that a green rectangle appears on the page, with a small white circle in the top left corner. The green rectangle represents a pool table and the white circle represents a ball. There is also a button that enables you to start the animation.
 6.	Click **Start Animation**. 
