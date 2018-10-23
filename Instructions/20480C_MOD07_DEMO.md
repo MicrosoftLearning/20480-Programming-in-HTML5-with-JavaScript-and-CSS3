@@ -18,7 +18,6 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 6.	In **Solution Explorer**, in the **scripts** folder, expand the **pages** folder, and then double-click **schedule.js**. 
 7.	In the **Code and Text Editor** window, find the variables and functions, and point out how to refactor them as properties and methods in the **ScheduleList** class.
 8.	In the **Code and Text Editor** window, replace the code which creates **LocalStarStorage** and invokes **startDownlaod** method with creation of the **ScheduleList** class and invocation of the refactored method.
-8.	In the **Code and Text Editor** window, replace the code which creates **LocalStarStorage** and invokes **startDownlaod** method with creation of the **ScheduleList** class and invocation of the refactored method.
 9.	On the **Debug** menu, click **Start Without Debugging**.
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
