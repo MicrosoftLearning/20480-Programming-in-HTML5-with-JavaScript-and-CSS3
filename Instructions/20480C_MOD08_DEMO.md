@@ -133,7 +133,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 15.	On the **Debug** menu, click **Start Without Debugging**.
 16.	Scroll to the bottom of the **Home** page, and then click **Play**. Notice that the video starts running, a **Pause** button appears, and the elapsed time is also displayed.
 17.	To suspend the video, click **Pause**.
-18.	Close Internet Explorer.
+18.	Close Microsoft Edge.
 19.	In **Solution Explorer**, double-click **location.htm**.
 20.	Find the following section near the bottom of the file. This **&lt;h2&gt;** element with the **id** of distance will be used to display the distance of the user from the conference location:
     ```html
