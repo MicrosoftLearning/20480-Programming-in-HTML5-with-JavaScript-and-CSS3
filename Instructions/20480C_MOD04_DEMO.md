@@ -23,7 +23,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 >**Note:** If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
-11.	In Internet Explorer, on the **Home** page, on the navigation bar, click **Register**.
+11.	In Microsoft Edge, on the **Home** page, on the navigation bar, click **Register**.
 12.	On the **Register** page, click **Register**, and point out that the form does not allow the user to omit mandatory information, such as the first name, last name, email address, or password.
 13.	In the **First name** box, type **Josh**.
 14.	In the **Last name** box, type **Bailey**.
