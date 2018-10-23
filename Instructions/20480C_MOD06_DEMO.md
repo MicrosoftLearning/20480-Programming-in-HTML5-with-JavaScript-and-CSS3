@@ -122,7 +122,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
-6.	In Microsoft Internet Explorer, on the **Home** page, point out the styling of the items in the navigation bar. Click each page in turn, and notice how the navigation bar uses a ribbon effect to indicate the current page.
+6.	In Microsaoft Edge, on the **Home** page, point out the styling of the items in the navigation bar. Click each page in turn, and notice how the navigation bar uses a ribbon effect to indicate the current page.
 7.	In the navigation bar, click **Home**.
 8.	On the **Home** page, point out the **Register Free** link. This is an ordinary HTML link created as a **&lt;a&gt;** tag that takes the user to the **Register** page, but styled to look like a large red button.
 9.	Place the mouse pointer over the **Register Free** link and point out how the link is highlighted.
