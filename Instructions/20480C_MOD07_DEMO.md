@@ -24,6 +24,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 11.	In Microsoft Edge, in the navigation bar, click **Schedule**, and explain that the **Schedule** page uses the **ScheduleList** object to fetch the session data for display.
 12.	Close Microsoft Edge.
+13. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
