@@ -14,7 +14,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the Start screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\Transitions.html**. 
+3.	In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\Transitions.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 5.	Place the mouse pointer over the upper rectangle on the web page. Verify that the following transitions are applied simultaneously to the rectangle:
 - The width, height, and font size increase over a period of two seconds.
