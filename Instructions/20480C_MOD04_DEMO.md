@@ -34,6 +34,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 19.	Click **Register** and verify that the **Thanks for registering** page appears.
 20.	Mention that the form also performs other checks, such as verifying that the email address is in the correct format, and that the values in the password and confirm password fields match.
 21.	Close Microsoft Edge.
+22. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
