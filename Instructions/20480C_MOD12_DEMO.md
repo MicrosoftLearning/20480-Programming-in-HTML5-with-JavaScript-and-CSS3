@@ -65,7 +65,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 #### Perform 2D Scaling Transformations
 
-1.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\2DScaling.html**. 
+1.	In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\2DScaling.html**. 
 2.	Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D scaling transformation by using the **scale()**, **scaleX()**, or **scaleY()** functions. The text message inside each rectangle describes the transformation for that rectangle. 
 3.	Right-click in the browser window, and then select **View source**. 
 4.	In the source window, scroll down to the bottom of the document. Note that the body of the document has a series of **&lt;div&gt;** elements and each element has a distinct CSS class.
