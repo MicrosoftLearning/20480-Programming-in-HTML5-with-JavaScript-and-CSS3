@@ -23,7 +23,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
-11.	In Internet Explorer, in the navigation bar, click **Schedule**, and explain that the **Schedule** page uses the **ScheduleList** object to fetch the session data for display.
+11.	In Microsoft Edge, in the navigation bar, click **Schedule**, and explain that the **Schedule** page uses the **ScheduleList** object to fetch the session data for display.
 12.	Close Microsoft Edge.
 
 ©2018 Microsoft Corporation. All rights reserved.
