@@ -113,7 +113,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 >**Note**: If the message **Intranet settings are turned off by default** appears, click **Don’t show this message again**.
 
-9.	On the Windows taskbar, click **File Explorer**, and then browse to **Allfiles\Mod08\Labfiles\Resources**.
+9.	On the Windows taskbar, click **File Explorer**, and then browse to **[Repository Root]\Allfiles\Mod08\Labfiles\Resources**.
 10.	Drag-and-drop **mark-hanson.jpg** from File Explorer, onto the empty rectangle in Internet Explorer, and verify that the image appears on the page.
 11.	Close Microsoft Edge.
 12.	In **Solution Explorer**, double-click **index.htm**.
