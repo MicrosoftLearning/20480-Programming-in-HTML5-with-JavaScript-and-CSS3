@@ -93,7 +93,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
-3.	Start Microsoft Visual Studio, and then from the **Allfiles\Mod08\Labfiles\Solution\Exercise 3** folder, open the **ContosoConf.sln** solution.
+3.	Start Microsoft Visual Studio, and then from the **[Repository Root]\Allfiles\Mod08\Labfiles\Solution\Exercise 3** folder, open the **ContosoConf.sln** solution.
 4.	In **Solution Explorer**, expand the **ContosoConf** project, and then double-click **speaker-badge.htm**.
 5.	In the **Code Editor** window, scroll through the code and find the following **&lt;section&gt;** element:
     ```html
@@ -114,7 +114,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 >**Note**: If the message **Intranet settings are turned off by default** appears, click **Don’t show this message again**.
 
 9.	On the Windows taskbar, click **File Explorer**, and then browse to **[Repository Root]\Allfiles\Mod08\Labfiles\Resources**.
-10.	Drag-and-drop **mark-hanson.jpg** from File Explorer, onto the empty rectangle in Internet Explorer, and verify that the image appears on the page.
+10.	Drag-and-drop **mark-hanson.jpg** from File Explorer, onto the empty rectangle in Microsoft Edge, and verify that the image appears on the page.
 11.	Close Microsoft Edge.
 12.	In **Solution Explorer**, double-click **index.htm**.
 13.	Find the following section near the bottom of the file. This section contains the HTML markup for the video controls that download and play a video presentation of a session from a previous conference:
