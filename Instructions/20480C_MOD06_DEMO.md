@@ -131,7 +131,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
    - The first letter of the first paragraph is styled as a drop cap.
    - The text at the start of all the remaining paragraphs is indented.
    - The block quote in the third column is styled to make it stand out.
-11.	Close Internet Explorer.
+11.	Close Microsoft Edge.
 12.	In **Solution Explorer**, expand the **ContosoConf** project, expand the **styles** folder, and then double-click **nav.css**.
 13.	In the **Code Editor** window, scroll through the code. Point out that to change the layout of the navigation bar, the students will add the styles defined in this file.
 14.	In **Solution Explorer**, double-click **header.css**. 
