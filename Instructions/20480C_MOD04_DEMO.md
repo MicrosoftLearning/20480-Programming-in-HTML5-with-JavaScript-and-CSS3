@@ -12,7 +12,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise is essential reading and contains a description of what they will accomplish in the exercise.
-3.	Start Microsoft Visual Studio. From the **Allfiles\Mod04\Labfiles\Solution\Exercise 2** folder, open the **ContosoConf.sln** solution.
+3.	Start Microsoft Visual Studio. From the **[Repository Root]\Allfiles\Mod04\Labfiles\Solution\Exercise 2** folder, open the **ContosoConf.sln** solution.
 4.	In **Solution Explorer**, expand the **ContosoConf** project, and then double-click **register.htm**.
 5.	In the **Code Editor** window, find the **&lt;form&gt;** element, and explain that students will create this form to enable new users to register with the conference. The form contains boxes for the user's first name, last name, email address, password (including a confirm password box), and an optional URL, if the user has a website. The HTML markup uses input attributes to validate the data entered by the user.
 6.	In **Solution Explorer**, expand the **scripts** folder, expand the **pages** folder, and then double-click **register.js**.
