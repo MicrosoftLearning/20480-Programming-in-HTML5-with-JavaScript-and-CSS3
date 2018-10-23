@@ -115,7 +115,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 9.	On the Windows taskbar, click **File Explorer**, and then browse to **Allfiles\Mod08\Labfiles\Resources**.
 10.	Drag-and-drop **mark-hanson.jpg** from File Explorer, onto the empty rectangle in Internet Explorer, and verify that the image appears on the page.
-11.	Close Internet Explorer.
+11.	Close Microsoft Edge.
 12.	In **Solution Explorer**, double-click **index.htm**.
 13.	Find the following section near the bottom of the file. This section contains the HTML markup for the video controls that download and play a video presentation of a session from a previous conference:
     ```html
