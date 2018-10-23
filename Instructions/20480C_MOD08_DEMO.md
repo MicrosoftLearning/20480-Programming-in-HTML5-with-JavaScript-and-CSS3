@@ -155,6 +155,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 25.	In the **Enable Location Services** dialog box, click **Yes**.
 26.	Point out that the distance to the conference venue appears above the address on the **Location** page.
 27.	Close Microsoft Edge.
+28. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
