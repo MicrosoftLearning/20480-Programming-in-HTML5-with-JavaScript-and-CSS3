@@ -27,7 +27,7 @@ The JavaScript code for the **Schedule** page has been partially refactored to b
 
 #### Task 1: Define the ScheduleList class
 
-1.	From the **Allfiles\Mod07\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+1.	From the **[Repository Root]\Allfiles\Mod07\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 2.	In the **schedule.js** file, in the **scripts\pages** folder, find and remove the following comment:
     ```javascript
 		// TODO: Create a ScheduleList class.
