@@ -25,7 +25,7 @@ Estimated Time: **60 minutes**
 
 The JavaScript code for the **Schedule** page has been partially refactored to be more maintainable. In this exercise, you will continue the refactoring process by updating the code for the **Schedule** page. You will create a new class **ScheduleList**, and then you will move the existing functions and variables relating to the schedule list into this new class.
 
-#### Task 1: Define the ScheduleList class
+#### Task 1: Create the ScheduleList Class
 
 1.	From the **[Repository Root]\Allfiles\Mod07\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 2.	In the **schedule.js** file, in the **scripts\pages** folder, find and remove the following comment:
