@@ -47,7 +47,7 @@ First, you will create a new ASP.NET Web Application. Then you will add two HTML
 
 #### Task 3: Add images to the Home Page
 
-1.	Add the speaker and sponsor images to the ContosoConf project. You can find these images in the **Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources** folder. Add the images to a new folder, **images**, in the project.
+1.	Add the speaker and sponsor images to the ContosoConf project. You can find these images in the **[Repository Root]\Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources** folder. Add the images to a new folder, **images**, in the project.
 2.	To include the images from the **speakers** and **sponsors** folders, which are located in the **images** folder, update the HTML markup in the **index.htm** file. For example:
     ```html
         <img src="/images/speakers/melissa-kerr.jpg" alt="Melissa Kerr"/>
