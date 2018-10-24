@@ -92,7 +92,8 @@ The JavaScript code for the **Schedule** page has been partially refactored to b
 
 >**Note**: The styling and layout of the **Schedule** page has been changed. This is performed by using the CSS rules implemented in the **schedule.css** style sheet and is not a result of any updates made to the JavaScript code.
 
-3.	Close Microsoft Edge. 
+3.	Close Microsoft Edge.
+4. Close all open windows.
 
 >**Result**: After completing this exercise, you will be able to describe how the Contoso Conference application is structured as a Microsoft Visual Studio 2017 project.
 
