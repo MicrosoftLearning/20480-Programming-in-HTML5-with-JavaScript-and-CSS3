@@ -28,7 +28,7 @@ First, you will create a new ASP.NET Web Application. Then you will add two HTML
 #### Task 1: Create a new ASP.NET web application
 
 1.	Start Microsoft Visual Studio 2017.
-2.	In the **Allfiles\Mod02\Labfiles\Starter\Exercise 1** folder, create a new web application, and then name it **ContosoConf**. Use the **Visual C# ASP.NET Empty Web Application** template to create this web application. 
+2.	In the **[Repository Root]\Allfiles\Mod02\Labfiles\Starter\Exercise 1** folder, create a new web application, and then name it **ContosoConf**. Use the **Visual C# ASP.NET Empty Web Application** template to create this web application. 
 
 #### Task 2: Add the Home page
 
