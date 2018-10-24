@@ -63,7 +63,7 @@ First, you will create a new ASP.NET Web Application. Then you will add two HTML
 1.	Add a new HTML page, **about.htm**, to the ContosoConf project.
 2. On the **Project** menu, click **Add New Item**.
 3. Select the **HTML Page** template.
-4.	Add HTML elements to **about.htm** by using the text provided in the **about.txt** file, which is located in the **Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources** folder.
+4.	Add HTML elements to **about.htm** by using the text provided in the **about.txt** file, which is located in the **[Repository Root]\Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources** folder.
 5. Add an appropriate title to the page.
 6. From **index.htm**, copy the **&lt;header&gt;** and **&lt;footer&gt;** elements.
 7. Use the **&lt;article&gt;**, **&lt;blockquote&gt;**, and **&lt;ol&gt;** elements where appropriate.
