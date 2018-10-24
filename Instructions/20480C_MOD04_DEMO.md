@@ -12,7 +12,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise is essential reading and contains a description of what they will accomplish in the exercise.
-3.	Start Microsoft Visual Studio. From the **Allfiles\Mod04\Labfiles\Solution\Exercise 2** folder, open the **ContosoConf.sln** solution.
+3.	Start Microsoft Visual Studio. From the **[Repository Root]\Allfiles\Mod04\Labfiles\Solution\Exercise 2** folder, open the **ContosoConf.sln** solution.
 4.	In **Solution Explorer**, expand the **ContosoConf** project, and then double-click **register.htm**.
 5.	In the **Code Editor** window, find the **&lt;form&gt;** element, and explain that students will create this form to enable new users to register with the conference. The form contains boxes for the user's first name, last name, email address, password (including a confirm password box), and an optional URL, if the user has a website. The HTML markup uses input attributes to validate the data entered by the user.
 6.	In **Solution Explorer**, expand the **scripts** folder, expand the **pages** folder, and then double-click **register.js**.
@@ -23,7 +23,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 >**Note:** If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
-11.	In Internet Explorer, on the **Home** page, on the navigation bar, click **Register**.
+11.	In Microsoft Edge, on the **Home** page, on the navigation bar, click **Register**.
 12.	On the **Register** page, click **Register**, and point out that the form does not allow the user to omit mandatory information, such as the first name, last name, email address, or password.
 13.	In the **First name** box, type **Josh**.
 14.	In the **Last name** box, type **Bailey**.
@@ -33,7 +33,8 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 18.	In the **Website/blog** box, type **http://adatum.com/**.
 19.	Click **Register** and verify that the **Thanks for registering** page appears.
 20.	Mention that the form also performs other checks, such as verifying that the email address is in the correct format, and that the values in the password and confirm password fields match.
-21.	Close Internet Explorer.
+21.	Close Microsoft Edge.
+22. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

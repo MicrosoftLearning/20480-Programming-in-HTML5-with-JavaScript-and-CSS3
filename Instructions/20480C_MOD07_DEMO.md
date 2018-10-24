@@ -12,19 +12,19 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
-3.	Start Microsoft Visual Studio and then from the **Allfiles\Mod07\Labfiles\Solution\Exercise 1** folder, open the **ContosoConf.sln** solution.
+3.	Start Microsoft Visual Studio and then from the **[Repository Root]\Allfiles\Mod07\Labfiles\Solution\Exercise 1** folder, open the **ContosoConf.sln** solution.
 4.	In **Solution Explorer**, expand the **ContosoConf** project, expand the **scripts** folder, and then add a new Javascript file named **ScheduleList.js**. 
 5.	In the **Code Editor** window, add a constructor instance to this class. Mention that the purpose of this constructor is to create and initialize new instances of the **ScheduleList** type.
 6.	In **Solution Explorer**, in the **scripts** folder, expand the **pages** folder, and then double-click **schedule.js**. 
 7.	In the **Code and Text Editor** window, find the variables and functions, and point out how to refactor them as properties and methods in the **ScheduleList** class.
 8.	In the **Code and Text Editor** window, replace the code which creates **LocalStarStorage** and invokes **startDownlaod** method with creation of the **ScheduleList** class and invocation of the refactored method.
-8.	In the **Code and Text Editor** window, replace the code which creates **LocalStarStorage** and invokes **startDownlaod** method with creation of the **ScheduleList** class and invocation of the refactored method.
 9.	On the **Debug** menu, click **Start Without Debugging**.
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
-11.	In Internet Explorer, in the navigation bar, click **Schedule**, and explain that the **Schedule** page uses the **ScheduleList** object to fetch the session data for display.
-12.	Close Internet Explorer.
+11.	In Microsoft Edge, in the navigation bar, click **Schedule**, and explain that the **Schedule** page uses the **ScheduleList** object to fetch the session data for display.
+12.	Close Microsoft Edge.
+13. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

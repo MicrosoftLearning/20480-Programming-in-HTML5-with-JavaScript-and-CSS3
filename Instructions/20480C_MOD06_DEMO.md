@@ -13,8 +13,8 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 #### Switch between layout modes in a webpage
 
 1.	Open Microsoft Visual Studio 2017.
-2.	In Visual Studio, on the **File** menu, point to **Open**, and then click **File**.
-3.	In the **Open File** dialog box, browse to the **Allfiles\Mod06\Democode** folder, click **positioning.html**, and then click **Open**.
+2.	In Microsoft Visual Studio, on the **File** menu, point to **Open**, and then click **File**.
+3.	In the **Open File** dialog box, browse to the **[Repository Root]\Allfiles\Mod06\Democode** folder, click **positioning.html**, and then click **Open**.
 4.	Review the code with the students. This file contains an HTML **article** with four **div** elements. The file also contains styles for the **article** and **div** elements.
    ```html
         <!DOCTYPE html>
@@ -61,7 +61,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 ![alt text](./Images/20480B_6_Layout-Column.png "The div elements in block layout mode")
 
 8.	Press F12.
-9.	In the F12 Developer Tools pane, to unpin the window, press Ctrl+P. Position the F12 Developer Tools window so that you can see it and the Microsoft Edge window at the same time.
+9. In the F12 Developer Tools Pane, click on **Dock Bottom** option on the top right corner, so that can see Both Microsoft Edge and Developer windows at the same time.
 10.	To display the fully expanded version of the layout rules applied to the HTML content, click the **CSS** tab.
 11.	Right-click the **div** entry, and then select **Add attribute**.
 12.	Type **display: inline**, and then press ENTER.
@@ -122,7 +122,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
-6.	In Microsoft Internet Explorer, on the **Home** page, point out the styling of the items in the navigation bar. Click each page in turn, and notice how the navigation bar uses a ribbon effect to indicate the current page.
+6.	In Microsoft Edge, on the **Home** page, point out the styling of the items in the navigation bar. Click each page in turn, and notice how the navigation bar uses a ribbon effect to indicate the current page.
 7.	In the navigation bar, click **Home**.
 8.	On the **Home** page, point out the **Register Free** link. This is an ordinary HTML link created as a **&lt;a&gt;** tag that takes the user to the **Register** page, but styled to look like a large red button.
 9.	Place the mouse pointer over the **Register Free** link and point out how the link is highlighted.
@@ -131,7 +131,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
    - The first letter of the first paragraph is styled as a drop cap.
    - The text at the start of all the remaining paragraphs is indented.
    - The block quote in the third column is styled to make it stand out.
-11.	Close Internet Explorer.
+11.	Close Microsoft Edge.
 12.	In **Solution Explorer**, expand the **ContosoConf** project, expand the **styles** folder, and then double-click **nav.css**.
 13.	In the **Code Editor** window, scroll through the code. Point out that to change the layout of the navigation bar, the students will add the styles defined in this file.
 14.	In **Solution Explorer**, double-click **header.css**. 
@@ -148,7 +148,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
    - **.about p:first-child**. This rule prevents the drop cap in the first paragraph from being indented.
    - **.about blockquote**. This rule formats the text for the block quote on the **About** page.
    - **.about blockquote:before**. This rule adds the quote mark to the start of the block quote.
-
+18. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

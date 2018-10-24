@@ -28,12 +28,12 @@ First, you will create a new ASP.NET Web Application. Then you will add two HTML
 #### Task 1: Create a new ASP.NET web application
 
 1.	Start Microsoft Visual Studio 2017.
-2.	In the **Allfiles\Mod02\Labfiles\Starter\Exercise 1** folder, create a new web application, and then name it **ContosoConf**. Use the **Visual C# ASP.NET Empty Web Application** template to create this web application. 
+2.	In the **[Repository Root]\Allfiles\Mod02\Labfiles\Starter\Exercise 1** folder, create a new web application, and then name it **ContosoConf**. Use the **Visual C# ASP.NET Empty Web Application** template to create this web application. 
 
 #### Task 2: Add the Home page
 
 1.	Add a new HTML page, **index.htm**, to the ContosoConf project. This page is the default page for the website, and will be displayed when a user browses to the URL for the website.
-2.	From the **Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources** folder, open the **index.txt** file in Notepad. 
+2.	From the **[Repository Root]\Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources** folder, open the **index.txt** file in Notepad. 
 3. Examine this file and add HTML5 elements to the **index.htm** file by using a web application that can display the items specified in the **index.txt** file. 
 4. Use HTML5 elements such as **&lt;header&gt;**, **&lt;section&gt;**, and **&lt;footer&gt;** where appropriate. For example, the following **&lt;header&gt;** element has the content from the **index.txt** file:
  ```html
@@ -47,7 +47,7 @@ First, you will create a new ASP.NET Web Application. Then you will add two HTML
 
 #### Task 3: Add images to the Home Page
 
-1.	Add the speaker and sponsor images to the ContosoConf project. You can find these images in the **Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources** folder. Add the images to a new folder, **images**, in the project.
+1.	Add the speaker and sponsor images to the ContosoConf project. You can find these images in the **[Repository Root]\Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources** folder. Add the images to a new folder, **images**, in the project.
 2.	To include the images from the **speakers** and **sponsors** folders, which are located in the **images** folder, update the HTML markup in the **index.htm** file. For example:
     ```html
         <img src="/images/speakers/melissa-kerr.jpg" alt="Melissa Kerr"/>
@@ -63,7 +63,7 @@ First, you will create a new ASP.NET Web Application. Then you will add two HTML
 1.	Add a new HTML page, **about.htm**, to the ContosoConf project.
 2. On the **Project** menu, click **Add New Item**.
 3. Select the **HTML Page** template.
-4.	Add HTML elements to **about.htm** by using the text provided in the **about.txt** file, which is located in the **Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources** folder.
+4.	Add HTML elements to **about.htm** by using the text provided in the **about.txt** file, which is located in the **[Repository Root]\Allfiles\Mod02\Labfiles\Starter\Exercise 1\Resources** folder.
 5. Add an appropriate title to the page.
 6. From **index.htm**, copy the **&lt;header&gt;** and **&lt;footer&gt;** elements.
 7. Use the **&lt;article&gt;**, **&lt;blockquote&gt;**, and **&lt;ol&gt;** elements where appropriate.

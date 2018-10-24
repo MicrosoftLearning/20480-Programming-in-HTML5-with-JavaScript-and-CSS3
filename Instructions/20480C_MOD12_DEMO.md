@@ -14,7 +14,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the Start screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\Transitions.html**. 
+3.	In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\Transitions.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 5.	Place the mouse pointer over the upper rectangle on the web page. Verify that the following transitions are applied simultaneously to the rectangle:
 - The width, height, and font size increase over a period of two seconds.
@@ -51,7 +51,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the Start screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\2DTranslations.html**. 
+3.	In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\2DTranslations.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 5.	Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D translation by using the **translate()**, **translateX()**, or **translateY()** functions. The text message inside each rectangle describes the transformation for that rectangle.
 6.	Right-click in the browser window, and then select **View source**. 
@@ -65,7 +65,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 #### Perform 2D Scaling Transformations
 
-1.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\2DScaling.html**. 
+1.	In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\2DScaling.html**. 
 2.	Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D scaling transformation by using the **scale()**, **scaleX()**, or **scaleY()** functions. The text message inside each rectangle describes the transformation for that rectangle. 
 3.	Right-click in the browser window, and then select **View source**. 
 4.	In the source window, scroll down to the bottom of the document. Note that the body of the document has a series of **&lt;div&gt;** elements and each element has a distinct CSS class.
@@ -74,7 +74,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 #### Perform 2D Rotations
 
-1.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\2DRotations.html**. 
+1.	In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\2DRotations.html**. 
 2.	Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D rotation by using the **rotate()** function. The fourth rectangle also shows how to perform multiple transformations, and how to change the origin of the transformation to the top left of the target element.
 3.	Right-click in the browser window, and then select **View source**. 
 4.	In the source window, scroll down to the bottom of the document. Note that the body of the document has a series of **&lt;div&gt;** elements and each element has a distinct CSS class.
@@ -83,7 +83,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 #### Perform 2D Skewing Transformations
 
-1.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\2DSkewing.html**. 
+1.	In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\2DSkewing.html**. 
 2.	Verify that the browser displays a series of rectangles. Each rectangle demonstrates how to perform a 2D skewing operation by using the **skew()**, **skewX()**, or **skewY()** functions. 
 3.	Right-click in the browser window, and then select **View source**. 
 4.	In the source window, scroll down to the bottom of the document. Note that the body of the document has a series of **&lt;div&gt;** elements and each element has a distinct CSS class.
@@ -105,7 +105,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the Start screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\3DTransformations.html**. 
+3.	In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\3DTransformations.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 5.	Verify that the browser displays a cube. There are six faces to the cube, each of which displays text and has a different background color. The front face is partially transparent so that it does not completely obscure the other faces.
 6.	Place the mouse pointer over the cube. Verify that it rotates by 90 degrees over a period of five seconds. Then, move the mouse pointer off the cube, and then verify that the cube rotates smoothly back to its original position.
@@ -137,7 +137,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the Start screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, open the file **Allfiles\Mod12\Democode\KeyframeAnimations.html**. 
+3.	In Microsoft Edge, open the file **[Repository Root]\Allfiles\Mod12\Democode\KeyframeAnimations.html**. 
 4.	If a message box appears asking if you want to allow blocked content, click **Allow blocked content**.
 5.	Verify that a green rectangle appears on the page, with a small white circle in the top left corner. The green rectangle represents a pool table and the white circle represents a ball. There is also a button that enables you to start the animation.
 6.	Click **Start Animation**. 
@@ -172,16 +172,16 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise contains a description of what they will accomplish in the exercise and is also essential reading.
-3.	Start Microsoft Visual Studio, and from the **Allfiles\Mod12\Labfiles\Solution\Exercise 2** folder, open the **ContosoConf.sln** solution.
+3.	Start Microsoft Visual Studio, and from the **[Repository Root]\Allfiles\Mod12\Labfiles\Solution\Exercise 2** folder, open the **ContosoConf.sln** solution.
 4.	On the **Debug** menu, click **Start Without Debugging**.
 
 >**Note**: If the message **Intranet settings are turned off by default** appears, click **Don’t show this message again**.
 
-5.	In Internet Explorer, on the **Home** page, move the mouse pointer over the **Register Free** link, and then point out how the link expands and rotates as the mouse pointer traverses it.
+5.	In Microsoft Edge, on the **Home** page, move the mouse pointer over the **Register Free** link, and then point out how the link expands and rotates as the mouse pointer traverses it.
 6.	In the navigation bar, click **Feedback**.
 7.	On the **Feedback** page, place the mouse pointer over the stars, and then point out how they are animated.
 8.	Click **Send Feedback**, and then point out how the feedback form is animated; it changes the size and then flies off the top of the screen
-9.	Close Internet Explorer.
+9.	Close Microsoft Edge.
 10. In **Solution Explorer**, expand the **ContosoConf** project, expand the **styles** folder, and then double-click **header.css**.
 11. In the **Code Editor** window, find the **header.page-header .register:hover** rule, and then draw students' attention to the **transform** and **transition** properties in this rule. These properties rotate and scale the **Register Free** link over a period of one second.
 12. In **Solution Explorer**, in the **styles** folder, expand the **pages** folder, and then double-click **feedback.css**. 
@@ -193,6 +193,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
         form.classList.add("sending");
     ```
 17. Explain that this statement adds the **sending** class to the feedback form, which triggers the animation defined by the **.sending** rule in the **feedback.css** stylesheet.
+18. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

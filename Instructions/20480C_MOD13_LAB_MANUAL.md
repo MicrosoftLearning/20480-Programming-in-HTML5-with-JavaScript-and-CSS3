@@ -31,14 +31,14 @@ In this exercise, you will review the new **Live** page and JavaScript. You will
 
 #### Task 1: Review the Live page
 
-1.	Start Microsoft Visual Studio, and then from the **Allfiles\Mod13\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+1.	Start Microsoft Visual Studio, and then from the **[Repository Root]\Allfiles\Mod13\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 2.	Start the application, and then view the **Live** page. Ignore the error that occurs (this error happens because the JavaScript code for the page is not yet complete).
 
 Using this page, an attendee can type a question and click **Ask** to send it to the presenter. All questions asked by all attendees will appear on this page, underneath the **Ask a question** box.
 
 ![alt text](./Images/20480B_13_Live.png "The Live page")
 
-3.	Close Microsoft Edge and return to Visual Studio.
+3.	Close Microsoft Edge and return to ContosoConf - Microsoft Visual Studio.
 4.	In the **ContosoConf** project, open the **live.htm** file.
 5.	Review the HTML markup for this page and note the **&lt;form&gt;** element used to ask questions, together with the empty **&lt;ul&gt;** element that will display questions:
     ```html
@@ -120,7 +120,7 @@ Using this page, an attendee can type a question and click **Ask** to send it to
 2.	Review the **displayQuestion** method.
     ```javascript
         displayQuestion(question) {
-            var item = this.createQuestionItem(question);
+            const item = this.createQuestionItem(question);
             //item.appendChild(this.createReportLink());
             this.questionListElement.appendChild(item);
         }
@@ -155,7 +155,7 @@ In this exercise, you will create a message object that contains a question. You
 
 #### Task 1: Format a question as a message
 
-1.	Open the **ContosoConf** solution in the **Allfiles\Mod13\Labfiles\Starter\Exercise 2** folder.
+1.	Open the **ContosoConf** solution in the **[Repository Root]\Allfiles\Mod13\Labfiles\Starter\Exercise 2** folder.
 2.	Open the **        new LivePage(.js** file in the **scripts** folder. In this file, the **LivePage** class has methods that handle the **Ask a question** form submission. The question text is passed to the **askQuestion** method, which looks like this:
 
     ```javascript
@@ -203,12 +203,12 @@ In this exercise, you will add a link next to each question to enable a student 
 
 #### Task 1: Display report links
 
-1.	Open the **ContosoConf** solution in the **Allfiles\Mod13\Labfiles\Starter\Exercise 3** folder.
+1.	Open the **ContosoConf** solution in the **[Repository Root]\Allfiles\Mod13\Labfiles\Starter\Exercise 3** folder.
 2.	Open the **LivePage.js** file in the **scripts** folder, and review the **createReportLink** method:
 
     ```javascript
         createReportLink() {
-            var report = document.createElement("a");
+            const report = document.createElement("a");
             report.textContent = "Report";
             report.setAttribute("href", "#");
             report.setAttribute("class", "report");
@@ -230,7 +230,7 @@ This method creates a new link element that enables a user to report a question 
         handleQuestionsClick(event) {
             event.preventDefault();
 
-            var clickedElement = event.srcElement || event.target;
+            const clickedElement = event.srcElement || event.target;
             if (this.isReportLink(clickedElement)) {
                 var questionId = clickedElement.parentNode.questionId;
                 this.reportQuestion(questionId);
@@ -249,7 +249,7 @@ This method creates a new link element that enables a user to report a question 
 1.	Find the **handleRemoveMessage()** function:
     ```javascript
         handleRemoveMessage(message) {
-            var listItems = this.questionListElement.querySelectorAll("li");
+            const listItems = this.questionListElement.querySelectorAll("li");
             for (var i = 0; i < listItems.length; i++) {
                 if (listItems[i].questionId === message.remove) {
                     this.questionListElement.removeChild(listItems[i]);
@@ -268,6 +268,7 @@ This function removes all messages that contain the **remove** property from the
 3.	Click the **Report** link next to the **What are some good resources for getting started with HTML5?** question.
 4.	Verify that the question disappears from the page (there will be a short delay while the question is assessed).
 5.	Close Microsoft Edge.
+6. Close all open windows.
 
 >**Result:** After completing this exercise, you will have added a feature to the **Live** page that enables users to report inappropriate questions and causes the application to remove them.
 

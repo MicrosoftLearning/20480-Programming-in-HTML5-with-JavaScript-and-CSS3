@@ -30,7 +30,7 @@ First, you will animate the star icons on the **Feedback** page so they react wh
 
 #### Task 1: Review the Feedback page
 
-1.	Start Microsoft Visual Studio, and then from the **Allfiles\Mod12\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+1.	Start Microsoft Visual Studio, and then from the **[Repository Root]\Allfiles\Mod12\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 2.	In the **ContosoConf** project, examine the contents of the **feedback.htm** file. This page contains an HTML form that collects conference attendee feedback:
     ```html
         <form method="post" action="/send-feedback">
@@ -107,7 +107,7 @@ First, you will define a keyframe animation by using CSS. Next, you will use the
 
 #### Task 1: Define a keyframe animation
 
-1.	In Visual Studio, from the **Allfiles\Mod12\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution.
+1.	In Visual Studio, from the **[Repository Root]\Allfiles\Mod12\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution.
 2.	In the **feedback.css** style sheet, in the **styles\pages** folder, find the following comment:
     ```css
         /* TODO: Add key frame animation named "send"
@@ -116,7 +116,7 @@ First, you will define a keyframe animation by using CSS. Next, you will use the
                  At 100% translate(0, -1000px)
         */
     ```
-3.	After this comment, define a keyframe animation named **send**. The animation should perform the following operations:
+3.	After this comment, define keyframes animation named **send**. The animation should perform the following operations:
 - Reduce the size of the targeted element by using a scale transform to 0.8 times the original size.
 - Slide the target element up off the page. A translation of 1000px up is enough to move the feedback form out of view.
 6.	The **sending** CSS class will be added to the feedback form when it is submitted (you will write the JavaScript code to do this in the next task). 
@@ -139,6 +139,7 @@ First, you will define a keyframe animation by using CSS. Next, you will use the
 2.	Click **Send Feedback**.
 3.	Verify that the form shrinks and flies off the top of the page.
 4.	Close Microsoft Edge.
+5. Close all open windows.
 
 >**Result**: After completing this exercise, submitting the conference feedback form will trigger an animation that makes the form fly off the page.
 

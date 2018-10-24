@@ -14,7 +14,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	On the Start screen, click the **Desktop** tile.
 2.	On the Windows taskbar, click **Microsoft Edge**.
-3.	In Microsoft Edge, browse to the file **Allfiles\Mod08\Democode\Document.html**.
+3.	In Microsoft Edge, browse to the file **[Repository Root]\Allfiles\Mod08\Democode\Document.html**.
 4.	If the **Microsoft Edge restricted this webpage from running scripts or ActiveX controls** message appears, click **Allow blocked content**.
 5.	To display the **Developer Tools** window, press F12.
 6.	If the **F12 Developer Tools** window appears as a pane in Microsoft Edge, in the **F12 Developer Tools** pane, click **Unpin**.
@@ -77,8 +77,8 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 6.	On the **F12 Developer Tools** toolbar, in the **Performance** list, click **Timeline**.
 7.	In the **Timeline**, you can see the order and the time the event append.
-8.	Click **JavaScript call stack**.
-9.	In the **JavaScript call stack**, you can see the mathod tree that appand.
+8.	Click **JavaScript call stacks**.
+9.	In the **JavaScript call stacks**, you can see the method tree that append.
 10.	Close the **F12 Developer Tools** window.
 11.	Close Microsoft Edge.
 
@@ -93,7 +93,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
-3.	Start Microsoft Visual Studio, and then from the **Allfiles\Mod08\Labfiles\Solution\Exercise 3** folder, open the **ContosoConf.sln** solution.
+3.	Start Microsoft Visual Studio, and then from the **[Repository Root]\Allfiles\Mod08\Labfiles\Solution\Exercise 3** folder, open the **ContosoConf.sln** solution.
 4.	In **Solution Explorer**, expand the **ContosoConf** project, and then double-click **speaker-badge.htm**.
 5.	In the **Code Editor** window, scroll through the code and find the following **&lt;section&gt;** element:
     ```html
@@ -113,9 +113,9 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 >**Note**: If the message **Intranet settings are turned off by default** appears, click **Don’t show this message again**.
 
-9.	On the Windows taskbar, click **File Explorer**, and then browse to **Allfiles\Mod08\Labfiles\Resources**.
-10.	Drag-and-drop **mark-hanson.jpg** from File Explorer, onto the empty rectangle in Internet Explorer, and verify that the image appears on the page.
-11.	Close Internet Explorer.
+9.	On the Windows taskbar, click **File Explorer**, and then browse to **[Repository Root]\Allfiles\Mod08\Labfiles\Resources**.
+10.	Drag-and-drop **mark-hanson.jpg** from File Explorer, onto the empty rectangle in Microsoft Edge, and verify that the image appears on the page.
+11.	Close Microsoft Edge.
 12.	In **Solution Explorer**, double-click **index.htm**.
 13.	Find the following section near the bottom of the file. This section contains the HTML markup for the video controls that download and play a video presentation of a session from a previous conference:
     ```html
@@ -133,7 +133,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 15.	On the **Debug** menu, click **Start Without Debugging**.
 16.	Scroll to the bottom of the **Home** page, and then click **Play**. Notice that the video starts running, a **Pause** button appears, and the elapsed time is also displayed.
 17.	To suspend the video, click **Pause**.
-18.	Close Internet Explorer.
+18.	Close Microsoft Edge.
 19.	In **Solution Explorer**, double-click **location.htm**.
 20.	Find the following section near the bottom of the file. This **&lt;h2&gt;** element with the **id** of distance will be used to display the distance of the user from the conference location:
     ```html
@@ -151,10 +151,11 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 21.	In **Solution Explorer**, in the **scripts\pages** folder, double-click **location.js**. Explain that this file contains the code that the students will write to find and display the distance of the user from the conference location by using the Geolocation API.
 22.	On the **Debug** menu, click **Start Without Debugging**.
 23.	In the navigation bar, click **Location**.
-24.	In the **localhost wants to track your physical location** message box, click **Allow once**.
-25.	In the **Enable Location Services** dialog box, click **Yes**.
+24.	If the **localhost wants to track your physical location** message box appears, click **Allow once**.
+25.	If the **Enable Location Services** dialog box appears, click **Yes**.
 26.	Point out that the distance to the conference venue appears above the address on the **Location** page.
-27.	Close Internet Explorer.
+27.	Close Microsoft Edge.
+28. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 

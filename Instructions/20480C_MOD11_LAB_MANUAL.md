@@ -28,7 +28,7 @@ First, you will complete the partially completed SVG markup of the venue map. Ne
 
 #### Task 1: Review the incomplete HTML markup for the venue map
 
-1.	Start Microsoft Visual Studio, browse to **Allfiles\Mod11\Labfiles\Starter\Exercise 1**, and then open the **ContosoConf.sln** solution.
+1.	Start Microsoft Visual Studio, browse to **[Repository Root]\Allfiles\Mod11\Labfiles\Starter\Exercise 1**, and then open the **ContosoConf.sln** solution.
 2.	Open the **location.htm** file.
 3.	Verify that the page contains the following **&lt;svg&gt;** element of the venue map, and two hidden **&lt;div&gt;** elements containing room information:
    ```html
@@ -124,7 +124,7 @@ First, you will create a canvas element on the speaker badge page. Next, you wil
 
 #### Task 1: Create the canvas element
 
-1.	In Visual Studio, browse to **Allfiles\Mod11\Labfiles\Starter\Exercise 2**, and then open the **ContosoConf.sln** solution.
+1.	In ContosoConf - Microsoft Visual Studio, browse to **[Repository Root]\Allfiles\Mod11\Labfiles\Starter\Exercise 2**, and then open the **ContosoConf.sln** solution.
 2.	Open the **speaker-badge.htm** file. This page contains a section that enables the user to create their speaker badge. Previously, you used an **&lt;img&gt;** element to drag an image of the speaker onto this page. This **&lt;img&gt;** element has been removed because you are going to modify the page to use a canvas. Using a canvas provides more scope for customizing the image.
 3.	Find the following comment:
    ```html
@@ -144,7 +144,7 @@ First, you will create a canvas element on the speaker badge page. Next, you wil
 
 #### Task 2: Draw the details for the badge
 
-1.	In the **scripts\pages** folder, open the **speaker-badge.js** file. The JavaScript code in this file contains a refactored version of the drag-and-drop code that you created during an earlier lab exercise. Notice that the canvas element on the page has been assigned to **this.canvas**:
+1.	In the **scripts\pages** folder, open the **speakerbadgePage.js** file. The JavaScript code in this file contains a refactored version of the drag-and-drop code that you created during an earlier lab exercise. Notice that the canvas element on the page has been assigned to **this.canvas**:
    ```javascript
         this.canvas = element.querySelector("canvas");
    ```
@@ -184,12 +184,13 @@ The file also contains a number of other functions that will draw the various el
 #### Task 3: Test the application
 
 1.	Run the application, and then view the **speaker-badge.htm** page.
-2.	Browse to **Allfiles\Mod11\Labfiles\Resources**, and then drag the **mark-hansen.jpg** image file onto the canvas.
+2.	Browse to **[Repository Root]\Allfiles\Mod11\Labfiles\Resources**, and then drag the **mark-hansen.jpg** image file onto the canvas.
 3.	Verify that the image is drawn on the canvas, along with the speaker’s details.
 
 ![alt text](./Images/20480B_11_Speaker-Badge-Canvas.png "The speaker badge for Mark Hanson")
 
 4.	Close Microsoft Edge.
+5. Close all open windows.
 
 >**Result**: After completing this exercise, you will have a **Speaker Badge** page that enables conference speakers to create their badge.
 
