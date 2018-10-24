@@ -50,8 +50,8 @@ const clearList = () => {
 
 const displaySchedule = () => {
     clearList();
-    for(let schedule of schedules)
-        const tracks = schedul.tracks;
+    for (let schedule of schedules) {
+        const tracks = schedule.tracks;
         const isCurrentTrack = (track1CheckBox.checked && tracks.indexOf(1) >= 0) ||
             (track2CheckBox.checked && tracks.indexOf(2) >= 0);
         if (isCurrentTrack) {
@@ -59,6 +59,7 @@ const displaySchedule = () => {
             list.appendChild(li);
         }
     }
+}
 
 const saveStar = (sessionId, isStarred) => {
     const request = new XMLHttpRequest();
