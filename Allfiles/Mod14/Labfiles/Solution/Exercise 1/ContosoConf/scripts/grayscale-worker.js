@@ -1,7 +1,7 @@
 ﻿// This script is for a Web Worker.
 addEventListener("message", function (event) {
     const imageData = event.data;
-    const pixels = imageData.data;
+    let pixels = imageData.data;
     for (let i = 0; i < pixels.length; i += 4) {
         grayscalePixel(pixels, i);
     }

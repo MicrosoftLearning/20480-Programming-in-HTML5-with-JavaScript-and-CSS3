@@ -1,5 +1,4 @@
-﻿import { grayscalePixel } from "./grayscale-worker.js";
-function createCanvas(size) {
+﻿function createCanvas(size) {
     /// <summary>Creates a canvas used for image manipulation.</summary>
 
     const temporaryCanvas = document.createElement("canvas");
@@ -31,11 +30,11 @@ export function grayscaleImage(image) {
         const handleMessage = function (event) {
             // Update the canvas with the gray scaled image data.
             context.clearRect(0, 0, canvas.width, canvas.height);
-            context.putImageData(imageData, 0, 0);
+            context.putImageData(event.data.done, 0, 0);
 
             // Returning a Promise makes this function easy to chain together with other deferred operations.
             // The canvas object is returned as this can be used like an image.
-            resolve([canvas]);
+            resolve(canvas);
         };
         worker.addEventListener("message", handleMessage.bind(this));
         worker.postMessage(imageData);

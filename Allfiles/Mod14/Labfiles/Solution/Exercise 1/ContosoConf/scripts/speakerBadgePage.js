@@ -35,6 +35,7 @@ export class SpeakerBadgePage {
             this.readFile(file)
                 .then((file) => this.loadImage(file))
                 .then((file) => grayscaleImage(file))
+                .then((file) => this.drawBadge(file))
                 .then((file) => this.notBusy(file));
         } else {
             alert("Please drop an image file.");
