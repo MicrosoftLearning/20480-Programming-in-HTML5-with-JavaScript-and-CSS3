@@ -76,9 +76,9 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
 #### Set Up Babel and Webpack
 
 1.  Open the command prompt and navigate to the project folder.
-2.  To install **@babel/core**, **babel-loader**, **babel-preset-es2015**, **webpack**, and **webpack-cli**, run the following command at the command prompt:
+2.  To install **@babel/core**, **babel-loader**, **@babel/preset-env**, **webpack**, and **webpack-cli**, run the following command at the command prompt:
    ```bash
-        npm install @babel/core babel-loader babel-preset-es2015 webpack webpack-cli --save-dev
+        npm install @babel/core babel-loader @babel/preset-env webpack webpack-cli --save-dev
    ```
 3.  In Visual Studio, on the **Project** menu, right-click **Add New Item**.
 4.  In the **Add New Item – build-tutorial** dialog box, click **JavaScript File**.
@@ -100,7 +100,7 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
                         test: /\.js$/,
                         loader: 'babel-loader',
                         query: {
-                            presets: ['es2015']
+                            presets: ['@babel/preset-env']
                         }
                     }
                 ]
