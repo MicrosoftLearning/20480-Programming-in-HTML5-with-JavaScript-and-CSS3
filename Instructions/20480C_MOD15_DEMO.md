@@ -75,11 +75,16 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
 
 #### Set Up Babel and Webpack
 
-1.  In Visual Studio, on the **Project** menu, right-click **Add New Item**.
-2.  In the **Add New Item – build-tutorial** dialog box, click **JavaScript File**.
-3.  In the **Name** box, type **webpack.config.js**.
-4.  Click **Add**.
-5.  In the **webpack.config.js** file, configure **webpack** as follows:
+1.  Open the command prompt and navigate to the project folder.
+2.  To install **@babel/core**, **babel-loader**, **babel-preset-es2015**, **webpack**, and **webpack-cli**, run the following command at the command prompt:
+   ```bash
+        npm install @babel/core babel-loader babel-preset-es2015 webpack webpack-cli --save-dev
+   ```
+3.  In Visual Studio, on the **Project** menu, right-click **Add New Item**.
+4.  In the **Add New Item – build-tutorial** dialog box, click **JavaScript File**.
+5.  In the **Name** box, type **webpack.config.js**.
+6.  Click **Add**.
+7.  In the **webpack.config.js** file, configure **webpack** as follows:
    ```javascript
         var path = require('path');
         var webpack = require('webpack');
@@ -106,15 +111,15 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
             devtool: 'source-map'
         };
    ```
-6.  Open the **package.json** file and add a script named **webpack** that builds your application by using **webpack** and **Babel**.
+8.  Open the **package.json** file and add a script named **webpack** that builds your application by using **webpack** and **Babel**.
    ```json
         "scripts": {
             "webpack": "webpack"
         },
    ```
-7.  In build-tutorial, right-click **Add**, and then select **folder**.
-8.  In the **Name** box, type **build**.
-9.  Click **Add**.
+9.  In build-tutorial, right-click **Add**, and then select **folder**.
+10.  In the **Name** box, type **build**.
+11.  Click **Add**.
 
 #### Build and Run the App
 
