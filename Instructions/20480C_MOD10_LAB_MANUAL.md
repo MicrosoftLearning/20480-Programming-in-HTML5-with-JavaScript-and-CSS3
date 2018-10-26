@@ -33,7 +33,7 @@ In the style sheet, you will add rules to override the layout of the website, re
 ![alt text](./Images/20480B_10_Print-Preview.png "The About page in Print Preview mode")
 
 4.	Close the **About ContosoConf - Print** window and then close Microsoft Edge.
-5.	In Visual Studio, examine the about.htm page and verify that the **&lt;nav&gt;** element is marked with the **page-nav** class, the **&lt;header&gt;** element is marked with the **page-header** class, and the **&lt;footer&gt;** element is marked with the **page-footer** class, as follows:
+5.	In ContosoConf - Microsoft Visual Studio, examine the about.htm page and verify that the **&lt;nav&gt;** element is marked with the **page-nav** class, the **&lt;header&gt;** element is marked with the **page-header** class, and the **&lt;footer&gt;** element is marked with the **page-footer** class, as follows:
 ```html
     <nav class="page-nav">
 
