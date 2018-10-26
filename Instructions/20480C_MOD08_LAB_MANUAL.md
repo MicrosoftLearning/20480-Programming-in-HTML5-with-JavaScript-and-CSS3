@@ -161,6 +161,7 @@ In this exercise, you will add a video to the website's home page. You will add 
 2.	Wait for the video to load and the **Play** button to appear.
 3.	Click **Play**, and then verify that the video starts playing and the elapsed time is displayed.
 4.	Click **Pause**, and then verify that the video pauses.
+5. Close Microsoft Edge.
 
 >**Note**: You will not hear any sound because the virtual machine does not support audio.
 
