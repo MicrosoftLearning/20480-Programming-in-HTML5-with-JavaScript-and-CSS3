@@ -48,7 +48,7 @@ export function grayscaleImage(image) {
 
         // Returning a Promise makes this function easy to chain together with other deferred operations.
         // The canvas object is returned as this can be used like an image.
-        resolve([canvas]);
+        resolve(canvas);
     });
 };
 
