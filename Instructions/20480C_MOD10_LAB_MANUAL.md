@@ -93,7 +93,7 @@ Finally, you will run the application again and verify that the website layout a
 
 1.	In Visual Studio, from the **[Repository Root]\Allfiles\Mod10\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf** solution.
 2.	Run the application, and then view the **index.htm** page.
-3.	Resize Microsoft Edge to **480 × 800**, approximating the form factor of a Windows Phone 8 device.
+3.	Resize Microsoft Edge to **800 x 480**, approximating the form factor of a Windows Phone 8 device.
 
 >**Note**: Use the F12 Developer Tools to change the size of the device viewing the website. The **Resize** command on the **Tools** menu enables you to change the size of the browser.
 
