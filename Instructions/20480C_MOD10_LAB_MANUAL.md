@@ -108,12 +108,11 @@ Finally, you will run the application again and verify that the website layout a
 1.	From the styles **folder**, open the **mobile.css** style sheet. This style sheet is referenced in the **&lt;head&gt;** element of each page in the website. This style sheet is currently empty, but you will use it to specify the styles for hand-held devices and smartphones.
 2.	Add a CSS media query that targets screens that are less than or equal to 480 pixels in width.
 3.	In the media query, add a rule for **nav.page-nav .container** that uses a flexbox to display the contents of the navigation bar, as follows:
-  ```
-  css
+   ```css
         display: -ms-flexbox;
         -ms-flex-wrap: wrap;
         -ms-flex-pack: center;
-    ```
+   ```
 4.	Add another rule that hides the **:before** and **:after** pseudo elements of the **.active** navigation link.
 - Set the **display** property to none.
 5.	Add another rule that sets a **.5rem** margin around each navigation link. This rule should also set a **1px** dotted border with the color **#3d3d3d** completely around the link, instead of just on the right.
