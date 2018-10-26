@@ -76,7 +76,7 @@ You will use these classes to style the elements when the page is printed.
 
 ![alt text](./Images/20480B_10_Print-Preview-Final.png "The Print Preview version of the About page")
 
-4.	Close the **Print Preview** window, and then close Microsoft Edge.
+4.	Close the **About ContosoConf - Print** window, and then close Microsoft Edge.
 
 >**Results**: After completing this exercise, you will have added a style sheet that implements a print-friendly format for the web pages.
 
@@ -91,7 +91,7 @@ Finally, you will run the application again and verify that the website layout a
 
 #### Task 1: Simulate the web application running on a small device
 
-1.	In Visual Studio, from the **Allfiles\Mod10\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf** solution.
+1.	In Visual Studio, from the **[Repository Root]\Allfiles\Mod10\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf** solution.
 2.	Run the application, and then view the **index.htm** page.
 3.	Resize Microsoft Edge to **480 × 800**, approximating the form factor of a Windows Phone 8 device.
 
