@@ -28,13 +28,12 @@ In the style sheet, you will add rules to override the layout of the website, re
 
 1.	Start Microsoft Visual Studio, and then from the **[Repository Root]\Allfiles\Mod10\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 2.	Run the application, and then view the **about.htm** page.
-3.	In Microsoft Edge, press F10 to display the menu bar.
-4.	On the **File** menu, click **Print preview**. Notice that the print preview attempts to display the page header and that the text columns are too narrow.
+3.	On the **File** menu, click **Print preview**. Notice that the print preview attempts to display the page header and that the text columns are too narrow.
 
 ![alt text](./Images/20480B_10_Print-Preview.png "The About page in Print Preview mode")
 
-5.	Close the **Print Preview** window and then close Microsoft Edge.
-6.	In Visual Studio, examine the about.htm page and verify that the **&lt;nav&gt;** element is marked with the **page-nav** class, the **&lt;header&gt;** element is marked with the **page-header** class, and the **&lt;footer&gt;** element is marked with the **page-footer** class, as follows:
+4.	Close the **Print Preview** window and then close Microsoft Edge.
+5.	In Visual Studio, examine the about.htm page and verify that the **&lt;nav&gt;** element is marked with the **page-nav** class, the **&lt;header&gt;** element is marked with the **page-header** class, and the **&lt;footer&gt;** element is marked with the **page-footer** class, as follows:
 ```html
     <nav class="page-nav">
 
