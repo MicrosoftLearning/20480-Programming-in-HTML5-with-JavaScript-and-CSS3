@@ -26,7 +26,7 @@ In the style sheet, you will add rules to override the layout of the website, re
 
 #### Task 1: Review the existing application
 
-1.	Start Microsoft Visual Studio, and then from the **Allfiles\Mod10\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+1.	Start Microsoft Visual Studio, and then from the **[Repository Root]\Allfiles\Mod10\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 2.	Run the application, and then view the **about.htm** page.
 3.	In Microsoft Edge, press F10 to display the menu bar.
 4.	On the **File** menu, click **Print preview**. Notice that the print preview attempts to display the page header and that the text columns are too narrow.
