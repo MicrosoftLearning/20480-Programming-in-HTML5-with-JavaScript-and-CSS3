@@ -117,7 +117,7 @@ In this exercise, you will add a video to the website's home page. You will add 
 
 #### Task 1: Add a video player to the home page
 
-1.	From the **Allfiles\Mod08\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution.
+1.	From the **[Repository Root]\Allfiles\Mod08\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution.
 2.	Open the **index.htm** file and find the following comment:
     ```html
         <!-- TODO: Add video tag here -->
