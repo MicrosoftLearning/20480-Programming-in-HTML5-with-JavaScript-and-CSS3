@@ -32,7 +32,7 @@ You will add event listeners to handle drag-and-drop events. Then you will use t
 #### Task 1: Review the HTML markup and JavaScript code for the Speaker Badge page
 
 1.	Start Microsoft Visual Studio 2017. 
-2. Browse to the **Allfiles\Mod08\Labfiles\Starter\Exercise 1** folder, and then open the **ContosoConf.sln** solution.
+2. Browse to the **[Repository Root]\Allfiles\Mod08\Labfiles\Starter\Exercise 1** folder, and then open the **ContosoConf.sln** solution.
 3.	Open **speaker-badge.htm** and review the HTML markup for this page. Notice the **&lt;img&gt;** element that will display the speaker’s image when you have implemented the drag-and-drop functionality:
     ```html
         <img style="width: 300px; height: 300px; border: 1px solid #000"/>
