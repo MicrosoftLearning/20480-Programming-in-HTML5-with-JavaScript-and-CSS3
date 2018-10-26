@@ -186,7 +186,7 @@ You will use the Geolocation API to get the visitor’s current location, and th
 
 3.	Review the JavaScript code for this page in the **location.js** file, and note that the conference venue location is stored in a *conferenceLocation* variable:
     ```javascript
-        var conferenceLocation = {
+        const conferenceLocation = {
             latitude: 47.6097,  // decimal degrees
             longitude: 122.3331 // decimal degrees
         };
