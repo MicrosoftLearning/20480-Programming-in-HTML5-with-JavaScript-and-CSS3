@@ -22,7 +22,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 7.	Browse to the **Allfiles\Mod14\Labfiles\Resources** folder.
 8.	From File Explorer, drag **mark-hanson-large.jpg** to Internet Explorer and drop it on the canvas with the label **Drag your profile photo here**.
 9.	Verify that you can scroll the page up and down while the image is being processed.
-10.	Wait until the grayscale image of the presenter has been generated (this may take a minute or two), and then close Internet Explorer.
+10.	Wait until the grayscale image of the presenter has been generated (this may take a minute or two), and then close Microsoft Edge.
 11.	In **Solution Explorer**, expand the **ContosoConf** project, expand the **scripts** folder, and then double-click **grayscale-worker.js**.
 12.	In the **Code Editor** window, explain that the event handler at the top of the file waits for a message containing a color image. The event handler then calls the **grayscalePixel()** function to convert each pixel in the image to grayscale, and then posts a message with that grayscale image data.
 13.	In **Solution Explorer**, double-click **grayscale.js**.
