@@ -177,7 +177,7 @@ You will use the Geolocation API to get the visitor’s current location, and th
 
 #### Task 1: Review the HTML markup and JavaScript code.
 
-1. From the **Allfiles\Mod08\Labfiles\Starter\Exercise 3** folder, open the **ContosoConf.sln** solution.
+1. From the **[Repository Root]\Allfiles\Mod08\Labfiles\Starter\Exercise 3** folder, open the **ContosoConf.sln** solution.
 2.	Open the **location.htm** file and review the HTML markup for this page. Notice that the page includes the following empty heading:
     ```html
         <h2 id="distance"></h2>
