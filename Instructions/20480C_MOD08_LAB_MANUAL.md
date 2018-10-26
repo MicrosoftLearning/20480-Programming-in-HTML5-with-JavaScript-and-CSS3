@@ -85,7 +85,7 @@ You will add event listeners to handle drag-and-drop events. Then you will use t
 
 #### Task 4: Read the image by using a FileReader
 
-1.	In the **speaker-badge.js** file, review the **readFile** method.
+1.	In the **SpeakerBadgePage.js** file, review the **readFile** method.
 2.	To implement the missing functionality in the **readFile** method, use the File API: 
 - After the **// TODO: Create a new FileReader** comment, create a new **FileReader** object and assign it to a *reader* variable.
 - After the **// TODO: Assign a callback function for reader.onload** and **// TODO: In the callback use resolve([fileDataUrl]); to return the file data URL** comments, add code to assign a callback function to the **onload** property of the **reader** object.
