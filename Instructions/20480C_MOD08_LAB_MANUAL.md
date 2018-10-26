@@ -100,7 +100,7 @@ You will add event listeners to handle drag-and-drop events. Then you will use t
 
 >**Note**: The **Speaker Badge** page is not accessible from the menu bar in the application because this feature is only intended for use by the speakers. To view this page, you must browse directly to the **speaker-badge.htm** page on the website.
 
-2.	From the **Allfiles\Mod08\Labfiles\Resources** folder, drag **mark-hanson.jpg**  to the **Speaker Badge** page’s **empty image** element.
+2.	From the **[Repository Root]\Allfiles\Mod08\Labfiles\Resources** folder, drag **mark-hanson.jpg**  to the **Speaker Badge** page’s **empty image** element.
 3.	Verify that the speaker’s photo is displayed in the **empty image** element.
 
 ![alt text](./Images/20480B_8_speaker-badge-01.png "The Speaker Badge page with the speaker's photo")
