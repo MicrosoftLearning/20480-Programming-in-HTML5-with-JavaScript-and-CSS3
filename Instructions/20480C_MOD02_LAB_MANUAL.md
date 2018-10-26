@@ -142,6 +142,8 @@ Run the web application, and then verify that the **Home** and **About** pages a
 
 ![alt text](./Images/20480B_2_About.png "The styled About page")
 
+Close Microsoft edge and close all open windows.
+
 >**Result**: After completing this exercise, you will have used CSS rules to style the **Home** and **About** pages.
 
 ©2018 Microsoft Corporation. All rights reserved.
