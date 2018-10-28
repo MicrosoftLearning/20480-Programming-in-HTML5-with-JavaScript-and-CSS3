@@ -29,6 +29,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 14.	In the **Code Editor** window, find the **grayscaleImage()** function. Explain that this function creates a web worker that runs the **grayscale-worker.js** script, and posts a message to the web worker that contains the data for the image that the user dropped onto the canvas on the form. This function also arranges to catch the message that the web worker posts back, containing the grayscale version of the image, which is displayed on the canvas on the web page.
 15.	Point out that the code that sets up the message handler for the web worker uses **bind(this)** to ensure that the anonymous function that handles the event is resolved to the web page and not the web worker variable.
 16.	Close ContosoConf - Microsoft Visual Studio, and then close File Explorer.
+17. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
