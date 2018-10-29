@@ -182,7 +182,7 @@ In the **register.js** file, find the comment that starts with the following tex
    ```javascript
        // TODO: Task 4
    ```
-2.	In the **addPasswordInputEventListeners** function, add event listeners for this event to call the **checkPasswords** function.
+2.	In the **passwordInput.addEventListener** function, add event listeners for this event to call the **checkPasswords** function.
 - Use the **addEventListener** function.
 3.	Run the application, view the **register.htm** page, enter valid data for the **First name**, **Last name**, and **Email address** boxes, and then verify that an error message appears when the data in the **Confirm your password** box does not match the data in the **Choose your password** box.
 4.	Verify that the message does not appear if the passwords are the same.
