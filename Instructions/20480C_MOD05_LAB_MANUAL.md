@@ -37,7 +37,7 @@ Finally, you will run the application and view the **Schedule** page to verify t
 #### Task 1: Review the Schedule page
 
 1.	Start Microsoft Visual Studio. 
-2. From the **Allfiles\Mod05\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+2. From the **[Repository Root]\Allfiles\Mod05\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 3.	In the **ContosoConf** project, open the **scripts\pages\schedule.js** file. 
 4.	Review the JavaScript code. 
 - Notice that the previously hard-coded array of session data (in the **schedule** variable) has been replaced with an empty array.
