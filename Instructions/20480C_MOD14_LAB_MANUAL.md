@@ -176,7 +176,7 @@ The virtual machine is configured with two virtual CPUs, and the **grayscaleImag
 
 >**Note**: You may need to clear the browser cache and restart Microsoft Edge before testing changes to the worker script. To do this, press F12 to show the **F12 Developer Tools** window, and on the **Cache** menu, click **Clear browser cache**.
 
-2.	Drag and drop the file **Allfiles\Mod14\Labfiles\Resources\mark-hanson-large.jpg** onto the canvas.
+2.	Drag and drop the file **[Repository Root]\Allfiles\Mod14\Labfiles\Resources\mark-hanson-large.jpg** onto the canvas.
 3.	Verify that the page is still responsive while the image is being processed.
 4.	Close Microsoft Edge.
 
