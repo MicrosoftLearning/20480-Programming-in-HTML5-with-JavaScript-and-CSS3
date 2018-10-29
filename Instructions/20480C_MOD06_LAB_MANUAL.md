@@ -204,7 +204,7 @@ First, you will the text flow over three columns and add a drop cap style to the
 
 #### Task 1: Review the HTML and CSS
 
-1.	From the **Allfiles\Mod06\Labfiles\Starter\Exercise 3** folder, open the **Contoso.conf** solution.
+1.	From the **[Repository Root]\Allfiles\Mod06\Labfiles\Starter\Exercise 3** folder, open the **Contoso.conf** solution.
 2.	In the **ContosoConf** project, open the **about.htm** file. 
 3.	In the **&lt;head&gt;** element, in the **/styles/pages** folder, notice that there is a link to the **about.css** style sheet:
    ```html
