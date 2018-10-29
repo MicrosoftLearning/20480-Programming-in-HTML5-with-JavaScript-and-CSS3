@@ -113,7 +113,7 @@ The virtual machine is configured with two virtual CPUs, and the **grayscaleImag
 
 1.	Move the **grayscalePixel** function from **grayscale.js** to **grayscale-worker.js**. The **grayscalePixel** function looks like this:
     ```javascript
-        var grayscalePixel = function (pixels, index) {
+        function grayscalePixel(pixels, index) {
             /// <summary>Updates the pixel, starting at the given index, to be gray         scale.</summary>
 
             var brightness = 0.34 * pixels[index] + 0.5 * pixels[index + 1] + 0.16 * pixels     [index + 2];
