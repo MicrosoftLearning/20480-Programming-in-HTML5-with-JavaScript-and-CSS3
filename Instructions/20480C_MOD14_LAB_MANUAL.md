@@ -37,31 +37,32 @@ First, you will review the HTML markup and JavaScript code for the **Speaker Bad
     ```
 3.	From the **scripts** folder, open the **grayscale.js** file, and review the code. Notice that this file contains a function named **conference.grayscaleImage**, which converts an image to grayscale. This function converts the image one pixel at a time, and can take a long time to convert a large image.
     ```javascript
-        conference.grayscaleImage = function (image) {
+        export function grayscaleImage(image) {
             // Converts a color image into grayscale.
 
-            var deferred = $.Deferred();
+            // Return a new promise.
+            return new Promise(function(resolve, reject) {
 
-            var canvas = createCanvas(image);
-            var context = canvas.getContext("2d");
-            var imageData = getImageData(context, image);
+                const canvas = createCanvas(image);
+                const context = canvas.getContext("2d");
+                const imageData = getImageData(context, image);
 
-            // TODO: Create a Worker that runs /scripts/grayscale-worker.js
+                // TODO: Create a Worker that runs /scripts/grayscale-worker.js
 
-            var pixels = imageData.data;
-            // 4 array items per pixel => Red, Green, Blue, Alpha
-            for (var i = 0; i < pixels.length; i += 4) {
-                grayscalePixel(pixels, i);
-            }
+                const pixels = imageData.data;
+                // 4 array items per pixel => Red, Green, Blue, Alpha
+                for (const i = 0; i < pixels.length; i += 4) {
+                    grayscalePixel(pixels, i);
+                }
 
-            // Update the canvas with the grayscaled image data.
-            context.clearRect(0, 0, canvas.width, canvas.height);
-            context.putImageData(imageData, 0, 0);
+                // Update the canvas with the gray scaled image data.
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.putImageData(imageData, 0, 0);
 
-            // Returning a jQuery Deferred makes this function easy to chain together with other deferred operations.
-            // The canvas object is returned as this can be used like an image.
-            deferred.resolveWith(this, [canvas]);
-            return deferred;
+                // Returning a Promise makes this function easy to chain together with other deferred operations.
+                // The canvas object is returned as this can be used as an image.
+                resolve(canvas);
+            });
         };
     ```
 
