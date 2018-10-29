@@ -140,7 +140,7 @@ Next, you will add a CSS style to highlight input elements that are not valid (s
 
 #### Task 1: Write code to get the contents of the password input elements
 
-1.	In Visual Studio, from the **[Repository Root]\Allfiles\Mod04\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution. This project contains a working version of the application as it should appear at the end of exercise 1, together with additional comments and code fragments used in this exercise.
+1.	In ContosoConf - Microsoft Visual Studio, from the **[Repository Root]\Allfiles\Mod04\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution. This project contains a working version of the application as it should appear at the end of exercise 1, together with additional comments and code fragments used in this exercise.
 2.	In the **ContosoConf** project, open the **scripts\pages\register.js** file and find the following comment: 
    ```javascript
         // TODO: Task 1 - Get the password <input> elements from the DOM by ID
