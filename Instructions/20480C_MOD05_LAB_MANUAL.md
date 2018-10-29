@@ -169,7 +169,7 @@ First, you will refactor the **downloadSchedule** function by replacing the use 
 - Use the **response.json** with **await** to fetch the json response asyncronously. Check if the **starCount** property in the response object is greater than 50, display the **This session is very popular! Be sure to arrive early to get a seat** message.
 
 
-#### Test the Schedule page
+#### Task 3: Test the Schedule page
 
 1.	Run the application, and then go to the **schedule.htm** page.
 2.	Verify that the list of sessions appears correctly.
