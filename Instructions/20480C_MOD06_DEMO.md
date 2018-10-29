@@ -93,7 +93,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 >**Note**: This action creates a new rule for the **&lt;div&gt;** element with the **id** property set to **three**. This is the **&lt;div&gt;** containing the text **Three**.
 
 4.	Type **position: relative**, and then press ENTER.
-5.	Right-click the **#three** entry, and then select **Add attribute**.
+5.	Right-click the **#three** entry, and then select **Add property**.
 6.	Type **top: 2em**, and then press ENTER.
 7.	Right-click the **#three** entry, and then select **Add attribute**.
 8.	Type **left: 2em**, and then press ENTER.
