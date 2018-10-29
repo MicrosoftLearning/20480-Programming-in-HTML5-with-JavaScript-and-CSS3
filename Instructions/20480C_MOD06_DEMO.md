@@ -118,38 +118,39 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to students that the exercise scenario for each exercise is essential reading and contains a description of what they will accomplish in the exercise.
 3.	Start Microsoft Visual Studio.
-4. From the **[Repository Root]\Allfiles\Mod06\Labfiles\Solution\Exercise 3** folder, open the **ContosoConf.sln** solution.
-5.	On the **Debug** menu, click **Start Without Debugging**.
+4. In Microsoft Visual Studio, on the File menu point to **Open**, and then click **Project/Solution**.
+5. From the **[Repository Root]\Allfiles\Mod06\Labfiles\Solution\Exercise 3** folder, open the **ContosoConf.sln** solution.
+6.	On the **Debug** menu, click **Start Without Debugging**.
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
-6.	In Microsoft Edge, on the **Home** page, point out the styling of the items in the navigation bar. Click each page in turn, and notice how the navigation bar uses a ribbon effect to indicate the current page.
-7.	In the navigation bar, click **Home**.
-8.	On the **Home** page, point out the **Register Free** link. This is an ordinary HTML link created as a **&lt;a&gt;** tag that takes the user to the **Register** page, but styled to look like a large red button.
-9.	Place the mouse pointer over the **Register Free** link and point out how the link is highlighted.
-10.	In the navigation bar, click **About**. Point out the following features of the text on this page:
+7.	In Microsoft Edge, on the **Home** page, point out the styling of the items in the navigation bar. Click each page in turn, and notice how the navigation bar uses a ribbon effect to indicate the current page.
+8.	In the navigation bar, click **Home**.
+9.	On the **Home** page, point out the **Register Free** link. This is an ordinary HTML link created as a **&lt;a&gt;** tag that takes the user to the **Register** page, but styled to look like a large red button.
+10.	Place the mouse pointer over the **Register Free** link and point out how the link is highlighted.
+11.	In the navigation bar, click **About**. Point out the following features of the text on this page:
    - The text is formatted in three columns.
    - The first letter of the first paragraph is styled as a drop cap.
    - The text at the start of all the remaining paragraphs is indented.
    - The block quote in the third column is styled to make it stand out.
-11.	Close Microsoft Edge.
-12.	In **Solution Explorer**, expand the **ContosoConf** project, expand the **styles** folder, and then double-click **nav.css**.
-13.	In the **Code Editor** window, scroll through the code. Point out that to change the layout of the navigation bar, the students will add the styles defined in this file.
-14.	In **Solution Explorer**, double-click **header.css**. 
-15.	In the **Code Editor** window, summarize the purpose of the following style rules:
+12.	Close Microsoft Edge.
+13.	In **Solution Explorer**, expand the **ContosoConf** project, expand the **styles** folder, and then double-click **nav.css**.
+14.	In the **Code Editor** window, scroll through the code. Point out that to change the layout of the navigation bar, the students will add the styles defined in this file.
+15.	In **Solution Explorer**, double-click **header.css**. 
+16.	In the **Code Editor** window, summarize the purpose of the following style rules:
    - **header.page-header .register**. This rule formats the **Register Free** link as a large red button.
    - **header.page-header .register:hover**. This rule highlights the **Register Free** link when the mouse pointer is placed over it.
    - **header.page-header .register:before**. This rule adds a dotted border around the button for the **Register Free** link.
    - **header.page-header .register .free**. This rule sets the font size of the word **Free** in the **Register Free** link. This word is displayed with a font size that is 80% of the size of the word **Register**.
-16.	In **Solution Explorer**, in the **styles** folder, expand **pages**, and then double-click **about.css**. 
-17.	In the **Code Editor** window, summarize the purpose of the following style rules:
+17.	In **Solution Explorer**, in the **styles** folder, expand **pages**, and then double-click **about.css**. 
+18.	In the **Code Editor** window, summarize the purpose of the following style rules:
    - **.about > article > section**. This rule formats the text on the **About** page in three columns.
    - **.about p:first-child:first-letter**. This rule formats the first letter of the first paragraph as a drop cap.
    - **.about p**. This rule indents each paragraph on the **About** page.
    - **.about p:first-child**. This rule prevents the drop cap in the first paragraph from being indented.
    - **.about blockquote**. This rule formats the text for the block quote on the **About** page.
    - **.about blockquote:before**. This rule adds the quote mark to the start of the block quote.
-18. Close all open windows.
+19. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
