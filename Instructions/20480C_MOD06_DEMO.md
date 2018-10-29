@@ -62,7 +62,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 8.	Press F12.
 9. In the F12 Developer Tools Pane, click on **Dock Bottom** option on the top right corner, so that can see Both Microsoft Edge and Developer windows at the same time.
-10.	To display the fully expanded version of the layout rules applied to the HTML content, click the **CSS** tab.
+10.	To display the fully expanded version of the layout rules applied to the HTML content, click **Elements** tab.
 11.	Right-click the **div** entry, and then select **Add attribute**.
 12.	Type **display: inline**, and then press ENTER.
 13.	In Microsoft Edge, notice that the four **div** elements are now laid out side-by-side aligned by text baseline with height and width properties ignored. This is the **inline layout** mode.
