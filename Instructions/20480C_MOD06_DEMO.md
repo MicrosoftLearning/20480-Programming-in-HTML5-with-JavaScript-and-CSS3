@@ -103,7 +103,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 12.	In the F12 Developer Tools window, on the **CSS** tab, click the **position:absolute** rule for the **#three** selector, change it to **position:fixed**, and then press ENTER.
 13.	In Microsoft Edge, notice how the application positions the **three** box relative to the browser window. Make the window small enough to require scrolling and see how the **three** box remains stationary when you scroll (it does not scroll into view).
 14.	Close Microsoft Edge.
-15.  Close Visual Studio 2017. 
+15.  Close **positioning.html - Microsoft Visual Studio**. 
 
 # Lesson 4: Enhancing Graphical Effects by Using CSS3
 
