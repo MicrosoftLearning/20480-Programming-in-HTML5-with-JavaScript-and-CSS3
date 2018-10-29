@@ -127,7 +127,7 @@ You will use a style to set the position of the **Register** link. You will modi
 
 #### Task 1: Review the HTML and CSS
 
-1.	From the **Allfiles\Mod06\Labfiles\Starter\Exercise 2** folder, open the **Contoso.conf** solution.
+1.	From the **[Repository Root]\Allfiles\Mod06\Labfiles\Starter\Exercise 2** folder, open the **Contoso.conf** solution.
 2.	In the **ContosoConf** project, open the **index.htm** file.
 3.	Notice that the **&lt;head&gt;** element contains a link to the **header.css** style sheet in the **styles** folder:
    ```html
