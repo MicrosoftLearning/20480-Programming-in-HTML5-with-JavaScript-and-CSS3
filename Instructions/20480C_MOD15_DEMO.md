@@ -80,46 +80,58 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
    ```bash
         npm install @babel/core babel-loader @babel/preset-env webpack webpack-cli --save-dev
    ```
-3.  In Visual Studio, on the **Project** menu, right-click **Add New Item**.
-4.  In the **Add New Item – build-tutorial** dialog box, click **JavaScript File**.
-5.  In the **Name** box, type **webpack.config.js**.
-6.  Click **Add**.
-7.  In the **webpack.config.js** file, configure **webpack** as follows:
-   ```javascript
-        var path = require('path');
-        var webpack = require('webpack');
-        module.exports = {
-            entry: './scripts/app.js',
-            output: {
-                path: path.resolve(__dirname, 'build'),
-                filename: 'app.bundle.js'
-            },
-            module: {
-                rules: [
-                    {
-                        test: /\.js$/,
-                        loader: 'babel-loader',
-                        query: {
-                            presets: ['@babel/preset-env']
-                        }
-                    }
-                ]
-            },
-            stats: {
-                colors: true
-            },
-            devtool: 'source-map'
-        };
+3.  To install **babel-polyfill**, **babel-plugin-transform-async-functions**, **isomorphic-fetch**, run the following command at the command prompt:
+   ```bash
+        npm install babel-polyfill babel-plugin-transform-async-functions isomorphic-fetch --save
    ```
-8.  Open the **package.json** file and add a script named **webpack** that builds your application by using **webpack** and **Babel**.
+4.  In Visual Studio, on the **Project** menu, right-click **Add New Item**.
+5.  In the **Add New Item – build-tutorial** dialog box, click **JavaScript File**.
+6.  In the **Name** box, type **webpack.config.js**.
+7.  Click **Add**.
+8.  In the **webpack.config.js** file, configure **webpack** as follows:
+   ```javascript
+    var path = require('path');
+    var webpack = require('webpack');
+
+    module.exports = {
+        entry: ['babel-polyfill', './scripts/app.js'],
+        output: {
+            path: path.resolve(__dirname, 'build'),
+            filename: 'app.bundle.js'
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.js$/,
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ["@babel/preset-env"],
+                        plugins: ["transform-async-functions"]
+                    }
+                }
+            ]
+        },
+        stats: {
+            colors: true
+        },
+        devtool: 'source-map'
+    };
+   ```
+   
+9.  In Solution explorer expand scripts folder and then double-click app.js at start add the following code:
+   ```javascript
+    require('babel-polyfill');
+    require('isomorphic-fetch');
+   ```
+10.  Open the **package.json** file and add a script named **webpack** that builds your application by using **webpack** and **Babel**.
    ```json
         "scripts": {
             "webpack": "webpack"
         },
    ```
-9.  In build-tutorial, right-click **Add**, and then select **folder**.
-10.  In the **Name** box, type **build**.
-11.  Click **Add**.
+11.  In build-tutorial, right-click **Add**, and then select **folder**.
+12.  In the **Name** box, type **build**.
+13.  Click **Add**.
 
 #### Build and Run the App
 
