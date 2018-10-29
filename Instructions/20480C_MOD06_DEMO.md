@@ -65,7 +65,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 10.	To display the fully expanded version of the layout rules applied to the HTML content, click **Elements** tab.
 11. In Elements tab expand **body** and expand **article**.
 12.	Right-click the **div** entry, and then select **Add attribute**.
-13.	Type **display: inline**, and then press ENTER.
+13.	Type **style=display: inline** for each **div** entry, and then press ENTER.
 14.	In Microsoft Edge, notice that the four **div** elements are now laid out side-by-side aligned by text baseline with height and width properties ignored. This is the **inline layout** mode.
 
 ![alt text](./Images/20480B_6_Layout-Row.png "The div elements in inline layout mode")
