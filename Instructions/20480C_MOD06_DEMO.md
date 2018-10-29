@@ -87,7 +87,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 #### Switch between positioning modes in a webpage
 
 1.	In the F12 Developer Tools window, on the **CSS** tab, clear the three check boxes next to the display attributes for **body**, **article**, and **div**.
-2.	Right-click the **div** entry, and then select **Add rule after**.
+2.	Right-click the **div** entry, and then select **Add rule**.
 3.	Type **#three**, and then press **Tab**.
 
 >**Note**: This action creates a new rule for the **&lt;div&gt;** element with the **id** property set to **three**. This is the **&lt;div&gt;** containing the text **Three**.
