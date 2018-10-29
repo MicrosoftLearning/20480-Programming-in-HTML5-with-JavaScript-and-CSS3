@@ -43,7 +43,7 @@ Finally, you will run the application and view the **Schedule** page to verify t
 - Notice that the previously hard-coded array of session data (in the **schedule** variable) has been replaced with an empty array.
 - Also notice that the **createSessionElement** function has been modified to generate a star icon next to the session title.
 >**Note**: The star icon is a **&lt;a&gt;** link element that is styled with a background image in the shape of a star. To do this, the **&lt;a&gt;** element has the **class** attribute set to **star** and the **schedule.css** file in the **styles\pages** folder contains the following style:
->```javascript
+>```css
 >        .star {
 >            display: inline-block;
 >            width: 15px;
