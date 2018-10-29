@@ -125,9 +125,9 @@ The virtual machine is configured with two virtual CPUs, and the **grayscaleImag
     ```
 2.	Find the **pixels** variable and the **for** loop that performs the conversion to grayscale in the **grayscaleImage()** function in **grayscale.js**:
     ```javascript
-        var pixels = imageData.data;
+        const pixels = imageData.data;
         // 4 array items per pixel => Red, Green, Blue, Alpha
-        for (var i = 0; i < pixels.length; i += 4) {
+        for (let i = 0; i < pixels.length; i += 4) {
             grayscalePixel(pixels, i);
         }
     ```
