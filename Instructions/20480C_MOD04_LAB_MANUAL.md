@@ -218,7 +218,8 @@ In the **register.js** file, find the comment that starts with the following tex
 
 ![alt text](./Images/20480B_4_Register_Invalid_Style.png "Registration form with inputs that are invalid highlighted")
 
-5.	Close Microsoft Edge. 
+5.	Close Microsoft Edge.
+6. Close all open windows.
 
 >**Result:** After completing this exercise, you will have modified the registration page to validate password inputs.
 
