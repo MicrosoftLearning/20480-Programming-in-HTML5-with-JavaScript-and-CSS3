@@ -138,7 +138,7 @@ The virtual machine is configured with two virtual CPUs, and the **grayscaleImag
         
             const imageData = event.data;
             const pixels = imageData.data;
-            for (var i = 0; i < pixels.length; i += 4) {
+            for (const i = 0; i < pixels.length; i += 4) {
                 grayscalePixel(pixels, i);
             }
         });
