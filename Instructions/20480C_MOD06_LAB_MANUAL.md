@@ -243,7 +243,7 @@ First, you will the text flow over three columns and add a drop cap style to the
 1.	In **about.css**, after the __/* TODO: Indent paragraphs */__ comment, add a CSS rule that uses the **text-indent** property to indent the first line of each paragraph by **3rem**.
 2.	The first paragraph does not require indentation because it already has a drop cap effect; add a CSS rule specifically for the first paragraph (use the **.about p:first-child** selector), which resets the indentation and margin.
 
-#### Task 4: Style the block quote
+#### Task 5: Style the block quote
 
 1.	In **about.css**, after the __/* TODO: Blockquote */__ comment, add CSS rules that style **blockquote** elements to look like the following image:
 
@@ -255,7 +255,7 @@ First, you will the text flow over three columns and add a drop cap style to the
 - Set the **position** property to **absolute** and experiment with the values for the **top** and **line-height** properties.
 - Ensure that the text appears with the appropriate spacing.
 
-#### Task 5: Test the About page
+#### Task 6: Test the About page
 
 1.	Run the application.
 2. Open the **About** page.
