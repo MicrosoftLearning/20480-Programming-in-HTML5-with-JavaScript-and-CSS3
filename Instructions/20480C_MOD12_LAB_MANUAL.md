@@ -119,8 +119,8 @@ First, you will define a keyframe animation by using CSS. Next, you will use the
 3.	After this comment, define keyframes animation named **send**. The animation should perform the following operations:
 - Reduce the size of the targeted element by using a scale transform to 0.8 times the original size.
 - Slide the target element up off the page. A translation of 1000px up is enough to move the feedback form out of view.
-6.	The **sending** CSS class will be added to the feedback form when it is submitted (you will write the JavaScript code to do this in the next task). 
-7. In the **feedback.css** style sheet, add CSS properties to the **.sending** rule to apply the **send** animation and where indicated by the comment in this rule:
+4.	The **sending** CSS class will be added to the feedback form when it is submitted (you will write the JavaScript code to do this in the next task). 
+5. In the **feedback.css** style sheet, add CSS properties to the **.sending** rule to apply the **send** animation and where indicated by the comment in this rule:
 - Set the animation duration to one second.
 - Ensure that the animation runs only once and it maintains the properties set by the last keyframe after completion.
 
