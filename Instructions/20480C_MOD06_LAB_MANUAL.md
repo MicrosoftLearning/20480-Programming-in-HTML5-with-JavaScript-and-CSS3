@@ -263,6 +263,7 @@ First, you will the text flow over three columns and add a drop cap style to the
 ![alt text](./Images/20480B_6_About-Final.png "The About page")
 
 3.	Close Microsoft Edge.
+4. Close all open windows.
 
 >**Result**: After completing this exercise, you will have styled the text on the **About** page.
 
