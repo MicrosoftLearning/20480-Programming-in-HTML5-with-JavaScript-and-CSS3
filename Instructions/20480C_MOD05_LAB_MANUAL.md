@@ -153,7 +153,7 @@ First, you will refactor the **downloadSchedule** function by replacing the use 
 
 #### Task 1: Refactor the downloadSchedule function.
 
-1.	From the **Allfiles\Mod05\Labfiles\Starter\Exercise 3** folder, open the **ContosoConf.sln** solution.
+1.	From the **[Repository Root]\Allfiles\Mod05\Labfiles\Starter\Exercise 3** folder, open the **ContosoConf.sln** solution.
 2.	From the **scripts/pages** folder, in the **schedule.js** file, refactor the **downloadSchedule** function to use the async **fetch()** function.
 - The fetch api must have a **url** agrument of **/schedule/list**.
 - Use the **response.json** with **await** to fetch the json response asyncronously; the response will contain a property called **schedule** that you should parse and push to the **schedule** array variable, and then call the **displaySchedule()** function.
