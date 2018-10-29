@@ -19,7 +19,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
 6.	On the taskbar, click **File Explorer**.
-7.	Browse to the **Allfiles\Mod14\Labfiles\Resources** folder.
+7.	Browse to the **[Repository Root]\Allfiles\Mod14\Labfiles\Resources** folder.
 8.	From File Explorer, drag **mark-hanson-large.jpg** to Internet Explorer and drop it on the canvas with the label **Drag your profile photo here**.
 9.	Verify that you can scroll the page up and down while the image is being processed.
 10.	Wait until the grayscale image of the presenter has been generated (this may take a minute or two), and then close Microsoft Edge.
