@@ -30,7 +30,7 @@ First, you will review the HTML markup and JavaScript code for the **Speaker Bad
 
 #### Task 1: Review the Speaker Badge page
 
-1.	Start Microsoft Visual Studio 2017, and then from the **Allfiles\Mod14\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+1.	Start Microsoft Visual Studio 2017, and then from the **[Repository Root]\Allfiles\Mod14\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 2.	In the **ContosoConf** project, review the **Speaker Badge** page. Note the script reference to the **grayscale.js** JavaScript file in the **/scripts** folder:
     ```html
         <script src="/scripts/grayscale.js" type="text/javascript"></script>
