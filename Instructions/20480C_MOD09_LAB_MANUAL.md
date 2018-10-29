@@ -85,7 +85,7 @@ In this exercise, you will update the JavaScript code for the **Schedule** page 
 
 #### Task 1: Observe the current behavior of the Schedule page
 
-1.	In Visual Studio, browse to **Allfiles\Mod09\Labfiles\Starter\Exercise 2**, and then open the **ContosoConf.sln** solution.
+1.	In Visual Studio, browse to **[Repository Root]\Allfiles\Mod09\Labfiles\Starter\Exercise 2**, and then open the **ContosoConf.sln** solution.
 2.	Run the application, and then open the **schedule.htm** page.
 3.	Close **IIS Express** by using the icon in the Windows notification area.	
 4.	On the **Schedule** page, click some of the stars, and then refresh the page.
