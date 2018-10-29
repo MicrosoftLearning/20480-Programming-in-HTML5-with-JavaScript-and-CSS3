@@ -102,7 +102,7 @@ The virtual machine is configured with two virtual CPUs, and the **grayscaleImag
 2.	In the **scripts** folder, open the **grayscale-worker.js** file, and then add an event listener for the **message** event. Create an anonymous function to handle the event, but leave this function empty (you will write the code for this event handler in a later task when you implement the functionality to return data from the web worker).
 3.	Return to the **grayscale.js** file. In the **grayscaleImage()** function, before the call to the **postMessage()** function, add an event listener called **handleMessage** for the **message** event of the web worker, like this:
     ```javascript
-        var handleMessage = function (event) {
+        const handleMessage = function (event) {
         };
         worker.addEventListener("message", handleMessage.bind(this));
     ```
