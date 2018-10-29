@@ -162,6 +162,7 @@ In the **LocalStarStorage.js** file, implement the **LocalStarStorage load** met
 - Clear the **Allow website caches and databases** check box, and then click **OK**.
 - In the **Internet Options** dialog box, click **OK**.
 - Close Microsoft Edge.
+- Close all open windows.
 
 >**Result**: After completing this exercise, you will have updated the **Schedule** page to locally record starred sessions.
 
