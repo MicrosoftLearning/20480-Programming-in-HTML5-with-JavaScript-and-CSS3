@@ -66,21 +66,21 @@ First, you will review the HTML markup and JavaScript code for the **Speaker Bad
         };
     ```
 
->**Note**: For the purposes of this exercise, you can ignore the references to the jQuery **.Deferred()** function and the **deferred** object; this object simply enables the **grayscaleImage()** function to be used in a pipeline by using the **pipe()** function, as you will see in the next task.
-Also note that the **/scripts** folder contains another JavaScript file called **grayscale-worker.js**, which currently contains no code.
+>**Note**: The **/scripts** folder contains another JavaScript file called **grayscale-worker.js**, which currently contains no code.
 
 #### Task 2: Convert the speaker badge image to grayscale
 
 1.	From the **scripts/pages** folder, open the **speaker-badge.js** file. The JavaScript code in this page contains the functions that enable a user to drop an image onto the canvas and draw the badge (you added this functionality in a previous lab). Notice that the JavaScript code also contains a reference to the **grayscaleImage()** function in a variable, also called **grayscaleImage**.
-2.	After the **// TODO: Add grayscaleImage into the processing pipeline** comment, in the **handleDrop** method, modify the JavaScript code to insert the **grayscaleImage()** function into the processing pipeline for an image by using the jQuery **pipe()** function, as follows:
+2.	After the **// TODO: Add grayscaleImage into the processing pipeline** comment, in the **handleDrop** method, modify the JavaScript code to insert the **grayscaleImage()** function into the processing pipeline for an image by using the **then()** function, as follows:
     ```javascript
-        this.readFile(file)
-            .pipe(this.loadImage)
-            .pipe(grayscaleImage)
-            .done(this.drawBadge, this.notBusy);
+     this.readFile(file)
+		.then((file) => this.loadImage(file))
+		.then((file) => grayscaleImage(file))
+		.then((file) => this.drawBadge(file))
+		.then((file) => this.notBusy(file));
     ```
 
->**Note**: The **pipe()** function enables you to chain function calls together into a pipeline. The functions can operate asynchronously, but the **pipe()** function ensures that each function call is made only after the previous call has completed.
+>**Note**: The **then()** function enables you to chain function calls together into a pipeline. The functions can operate asynchronously, but the **then()** function ensures that each function call is made only after the previous call has completed.
 
 3.	Run the application and view the **speaker-badge.htm** page.
 4.	Drag the file **[Repository Root]\Allfiles\Mod14\Labfiles\Resources\mark-hanson-large.jpg** from File Explorer and drop it onto the speaker badge canvas in Microsoft Edge.
