@@ -95,7 +95,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 4.	Type **position: relative**, and then press ENTER.
 5.	Right-click the **#three** entry, and then select **Add property**.
 6.	Type **top: 2em**, and then press ENTER.
-7.	Right-click the **#three** entry, and then select **Add attribute**.
+7.	Right-click the **#three** entry, and then select **Add property**.
 8.	Type **left: 2em**, and then press ENTER.
 9.	In Microsoft Edge, notice how the application positions the **three** box relative to its normal position.
 10.	In the F12 Developer Tools window, on the **CSS** tab, click the **position:relative** rule for the **#three** selector, change it to **position:absolute**, and then press ENTER.
