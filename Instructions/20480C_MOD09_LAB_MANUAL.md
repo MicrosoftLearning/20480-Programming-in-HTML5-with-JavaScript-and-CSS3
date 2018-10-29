@@ -39,7 +39,7 @@ First, you will complete the creation of an application manifest file, which lis
 - In the **Internet Options** dialog box, click **OK**.
 - Close Microsoft Edge.
 2.	Start Microsoft Visual Studio.
-3. Browse to **Allfiles\Mod09\Labfiles\Starter\Exercise 1**, and then open the **ContosoConf.sln** solution.
+3. Browse to **[Repository Root]\Allfiles\Mod09\Labfiles\Starter\Exercise 1**, and then open the **ContosoConf.sln** solution.
 4.	Open the **appcache.manifest** file. This file contains a partial application manifest that lists the resources that a web browser must cache for offline access. 
 5.	After the comment near the start of the file, insert the following URLs to cache the **Home**, **About**, **Schedule**, and **Location** pages:
    ```javascript
