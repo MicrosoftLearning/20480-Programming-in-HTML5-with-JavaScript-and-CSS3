@@ -153,13 +153,13 @@ The virtual machine is configured with two virtual CPUs, and the **grayscaleImag
 - To send the message, use the **postMessage()** function.
 2.	In the **grayscale.js** file, near the end of the **grayscaleImage()** function, find the following lines of code that update a temporary canvas with the processed image data, and then resolve the deferred object:
     ```javascript
-        // Update the canvas with the grayscaled image data.
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.putImageData(imageData, 0, 0);
+	    // Update the canvas with the gray scaled image data.
+	    context.clearRect(0, 0, canvas.width, canvas.height);
+	    context.putImageData(imageData, 0, 0);
 
-        // Returning a jQuery Deferred makes this function easy to chain together with other deferred operations.
-        // The canvas object is returned as this can be used like an image.
-        deferred.resolveWith(this, [canvas]);
+	    // Returning a Promise makes this function easy to chain together with other deferred operations.
+	    // The canvas object is returned as this can be used like an image.
+	    resolve(canvas);
     ```
 3.	Move this block of code into the **message** event callback function (referenced by the **handleMessage** variable). 
 - Retrieve the image data from the **data.done** property of the **event** parameter in the callback function and store it in a variable called **updatedImageData**.
