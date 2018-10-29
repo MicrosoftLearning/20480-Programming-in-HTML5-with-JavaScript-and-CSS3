@@ -179,6 +179,7 @@ The virtual machine is configured with two virtual CPUs, and the **grayscaleImag
 2.	Drag and drop the file **[Repository Root]\Allfiles\Mod14\Labfiles\Resources\mark-hanson-large.jpg** onto the canvas.
 3.	Verify that the page is still responsive while the image is being processed.
 4.	Close Microsoft Edge.
+5.  Close all open windows.
 
 >**Results**: After completing this exercise, you will have a created a web page that remains responsive while slow image processing code runs in a web worker.
 
