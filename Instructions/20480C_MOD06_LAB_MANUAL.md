@@ -38,7 +38,7 @@ Finally, you will run the application, open the **Home** page, and then verify t
 #### Task 1: Review the HTML structure
 
 1.	Start Microsoft Visual Studio.
-2. From the **Allfiles\Mod06\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+2. From the **[Repository Root]\Allfiles\Mod06\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 3.	In the **ContosoConf** project, open the **index.htm** file. Notice that the **&lt;head&gt;** has a link to the **/styles/nav.css** style sheet:
    ```html
         <link href="/styles/nav.css" rel="stylesheet" type="text/css" />
