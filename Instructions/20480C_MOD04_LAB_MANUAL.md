@@ -28,7 +28,7 @@ You will select the correct input types for each piece of data collected by the 
 
 #### Task 1: Modify the Register page
 
-1.	Start Microsoft Visual Studio. From the **Allfiles\Mod04\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+1.	Start Microsoft Visual Studio. From the **[Repository Root]\Allfiles\Mod04\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
 2.	Open the **register.htm** file. 
 3.	Find the **&lt;form&gt;** element and read the **TODO** comment that describes the form input requirements together with the HTML snippet to use as a template:
    ```html
