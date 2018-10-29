@@ -259,7 +259,8 @@ This method creates a new link element that enables a user to report a question 
         }
     ```
 This function removes all messages that contain the **remove** property from the displayed list of questions; the socket server attaches this property to all messages that should no longer be displayed.
-2.	Update the **handleSocketMessage()** function to call the **handleRemoveMessage()** function for all messages that have the **remove** property.
+
+2. Update the **handleSocketMessage()** function to call the **handleRemoveMessage()** function for all messages that have the **remove** property.
 
 #### Task 4: Test the application
 
