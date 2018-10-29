@@ -82,7 +82,7 @@ Also note that the **/scripts** folder contains another JavaScript file called *
 >**Note**: The **pipe()** function enables you to chain function calls together into a pipeline. The functions can operate asynchronously, but the **pipe()** function ensures that each function call is made only after the previous call has completed.
 
 3.	Run the application and view the **speaker-badge.htm** page.
-4.	Drag the file **Allfiles\Mod14\Labfiles\Resources\mark-hanson-large.jpg** from File Explorer and drop it onto the speaker badge canvas in Microsoft Edge.
+4.	Drag the file **[Repository Root]\Allfiles\Mod14\Labfiles\Resources\mark-hanson-large.jpg** from File Explorer and drop it onto the speaker badge canvas in Microsoft Edge.
 5.	While the image is being processed, try scrolling the page or moving to a different page. Note that the page is frozen.
 
 >**Note**: Microsoft Edge may display the message **localhost is not responding due to a long-running script**. If this occurs, allow the script to complete.
