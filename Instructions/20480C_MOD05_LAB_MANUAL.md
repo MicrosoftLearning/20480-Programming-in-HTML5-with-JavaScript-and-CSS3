@@ -106,7 +106,7 @@ First, you will create a function that creates an **XMLHttpRequest** object that
 
 #### Task 1: Send the request to indicate the session that an attendee has selected
 
-1.	From the **Allfiles\Mod05\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution.
+1.	From the **[Repository Root]\Allfiles\Mod05\Labfiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution.
 2.	In the **schedule.js** file, find the function named **saveStar**.
 3.	Inside the function, add code to construct an **XMLHttpRequest** object and make a synchronous POST request to the following URL:
 ```javascript
