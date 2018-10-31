@@ -39,7 +39,7 @@ Finally, you will run the application and verify that the site remains the same 
 3.  To install the **babel-core**, **babel-loader**, **babel-preset-es2015**, and **webpack** packages in developer mode, use the command prompt.
 4.  In your project root, create the **webpack.config.js** file.
 5.  Configure webpack and pass an entry with the object to include all the JavaScript files in the HTML files.
-   ```json
+   ```javascript
 
         entry: {
             video: './scripts/pages/video.js',
@@ -54,7 +54,7 @@ Finally, you will run the application and verify that the site remains the same 
         }
    ```
 6.  Configure the output filename to create one file per entry.
-   ```json
+   ```javascript
         filename: '[name].bundle.js',
    ```
 
