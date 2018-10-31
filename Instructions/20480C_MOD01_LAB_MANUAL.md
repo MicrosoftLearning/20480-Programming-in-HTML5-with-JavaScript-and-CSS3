@@ -193,7 +193,7 @@ You will not use any of these items in this course.
 #### Task 3: Run the application and make live modifications.
 
 1.	Build and run the web application without debugging, and display the **Home** page.
-2.	Leave the application running and return to Visual Studio 2017.
+2.	Leave the application running and return to **ContosoConf - Microsoft Visual Studio**.
 3.	Edit the HTML markup for the Home page and change the text for the **Register Free** button to **Register Now**.
 4.	Open the nav.css style sheet in the **styles** folder; this style sheet contains the styles used to render the contents of the **&lt;nav&gt;** element and change the background color to blue.
 5.	Save the changes, return to Microsoft Edge, refresh the view, and verify that you can see the effects of the changes.
