@@ -13,7 +13,7 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
 #### Create New Project
 
 1. Open Microsoft Visual Studio 2017.
-2. In Visual Studio, on the **File** menu, point to **New**, and then click **Project**.
+2. In Microsoft Visual Studio, on the **File** menu, point to **New**, and then click **Project**.
 3. In the left pane of the **New Project** dialog box, under **Installed**, expand the **Visual C#** node, and then click the **Web** node.
 4. Click **ASP.NET Web Application(.NET Framework)**.
 5. In the **Name** box, type **babelDemo**.
