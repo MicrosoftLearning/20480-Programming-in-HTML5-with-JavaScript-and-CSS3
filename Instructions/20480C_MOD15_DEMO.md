@@ -18,13 +18,14 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
 4. Click **ASP.NET Web Application(.NET Framework)**.
 5. In the **Name** box, type **babelDemo**.
 6.	In the **Location** box, type **[Repository Root]\Allfiles\Mod15\DemoCode**, and then click **OK**.
-7. In babelDemo - Microsoft visual Studio, on the **Project** menu click **New Folder**.
-8.  Name it **src**.
-9.  In babelDemo - Microsoft Visual Studio, right-click **src** folder and point to **Add** and then click **NewItem**.
-10.  In the **Add New Item – babelDemo** dialog box, click **JavaScript File**.
-11.  In the **Name** box, type **index.js**.
-12.  Click **Add**.
-13.  Add the following code:
+7. In new ASP.NET Web Application - babelDemo page select **Empty** and then click **OK**.
+8. In babelDemo - Microsoft visual Studio, on the **Project** menu click **New Folder**.
+9.  Name it **src**.
+10.  In babelDemo - Microsoft Visual Studio, right-click **src** folder and point to **Add** and then click **NewItem**.
+11.  In the **Add New Item – babelDemo** dialog box, click **JavaScript File**.
+12.  In the **Name** box, type **index.js**.
+13.  Click **Add**.
+14.  Add the following code:
 ```javascript
     let customer = { name: "Joann Chambers" };
     let message = `Hello ${customer.name}`;
