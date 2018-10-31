@@ -13,7 +13,8 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise is essential reading and contains a description of what they will accomplish in the exercise.
 3.	Start Microsoft Visual Studio. 
-4. Browse to **Allfiles\Mod09\Labfiles\Solution\Exercise 2**, and open the **ContosoConf.sln** solution.
+4. Browse to **[Repository Root]\Allfiles\Mod09\Labfiles\Solution\Exercise 2**, and open the **ContosoConf.sln** solution.
+>**Note**: If **Security Warning for ContosoConf** dialog box appears, clear **Ask me for every project in this solution** checkbox and then click **OK**.
 5.	In **Solution Explorer**, expand the **ContosoConf** project, and then double-click **appcache.manifest**.
 6.	In the **Code Editor** window, scroll through the file and explain that it lists the items that will be cached by the web browser.
 7.	In **Solution Explorer**, expand the **scripts** folder, and then double-click **offline.js**.
