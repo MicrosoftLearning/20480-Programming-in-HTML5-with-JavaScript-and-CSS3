@@ -1,4 +1,5 @@
 # Module 13: Implementing Real-time Communication by Using Web Sockets
+Wherever a path to a file starts with *[Repository Root]*, replace it with the absolute path to the folder in which the 20480 repository resides. For example, if you cloned or extracted the 20480 repository to **C:\Users\John Doe\Downloads\20480**, change the path: **[Repository Root]\AllFiles\20480C\Mod01** to **C:\Users\John Doe\Downloads\20480\AllFiles\20480C\Mod01**.
 
 # Lesson 2: Using the WebSocket API
 
