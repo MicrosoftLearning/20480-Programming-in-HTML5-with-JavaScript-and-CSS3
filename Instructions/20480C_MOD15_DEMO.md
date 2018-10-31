@@ -20,7 +20,7 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
 6.	In the **Location** box, type **[Repository Root]\Allfiles\Mod15\DemoCode**, and then click **OK**.
 7. In babelDemo - Microsoft visual Studio, on the **Project** menu click **New Folder**.
 8.  Name it **src**.
-9.  In Visual Studio, in the **src** folder, right-click **Add New Item**.
+9.  In babelDemo - Microsoft Visual Studio, right-click **src** folder and point to **Add** and then click **NewItem**.
 10.  In the **Add New Item – babelDemo** dialog box, click **JavaScript File**.
 11.  In the **Name** box, type **index.js**.
 12.  Click **Add**.
