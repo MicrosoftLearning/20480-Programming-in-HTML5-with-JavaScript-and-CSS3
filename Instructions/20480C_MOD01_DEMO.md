@@ -1,5 +1,5 @@
 # Module 1: Overview of HTML and CSS
-
+Wherever a path to a file starts with *[Repository Root]*, replace it with the absolute path to the folder in which the 20480 repository resides. For example, if you cloned or extracted the 20480 repository to **C:\Users\John Doe\Downloads\20480**, change the path: **[Repository Root]\AllFiles\20480C\Mod01** to **C:\Users\John Doe\Downloads\20480\AllFiles\20480C\Mod01**.
 # Lesson 1: Overview of HTML
 
 ### Demonstration: Creating a Simple Contact Form
