@@ -43,7 +43,7 @@ The Contoso Conference web application contains the following pages:
 ![alt text](./Images/20480B_1_Home_Final.png "Home page")
 The graphics elements for the speakers and sponsors are implemented by using HTML **img** elements. The sources of the images are jpg and png files.
 
-4.	Scroll to the bottom of the page and play the video from the previous conference. This functionality is implemented by using the HTML5 **video** element. 
+4.	Scroll to the bottom of the **Home** page and play the video from the previous conference. This functionality is implemented by using the HTML5 **video** element. 
 5.	Pause the video.
 
 6.	Scroll to the top of the **Home** page and hover the mouse over the **Register Free** icon. Notice that the icon rotates and expands as the mouse enters the icon. This feature is implemented by using CSS. 
