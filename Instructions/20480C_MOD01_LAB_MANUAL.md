@@ -36,7 +36,7 @@ The Contoso Conference web application contains the following pages:
 
 #### Task 1: Start the web application and view the Home page.
 
-1.	Start Visual Studio.
+1.	Start Microsoft Visual Studio.
 2.	Open the **ContosoConf** solution in the **Allfiles\Mod01\Labfiles\Starter** folder
 3.	Start the application without debugging.
 
