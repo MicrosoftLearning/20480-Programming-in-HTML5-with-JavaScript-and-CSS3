@@ -129,7 +129,7 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
             "webpack": "webpack"
         },
    ```
-11.  In build-tutorial, right-click **Add**, and then select **folder**.
+11.  In Solution explorer right-click on **build -tutorial** and point to **Add** and then click **New folder**.
 12.  In the **Name** box, type **build**.
 13.  Click **Add**.
 
