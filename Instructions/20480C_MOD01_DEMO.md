@@ -144,8 +144,8 @@ Wherever a path to a file starts with *[Repository Root]*, replace it with the a
 
 >**Note**: It does not matter whether you select the **Visual Basic** or **Visual C#** templates in the left pane; the templates for both languages enable you to create HTML5 webpages and implement functionality by using JavaScript.
 4. In the **Name** text box enter **DemoWebSite**.
-4.	From the location drop-down list, set the file path to **[Repository Root]\Allfiles\Mod01\Democode\DemoWebSite**, and then click **OK**.
-5. In New **ASP.NET Web Application-DemoWebSite**, Select **Empty**, and then click **OK**.
+5.	From the location drop-down list, set the file path to **[Repository Root]\Allfiles\Mod01\Democode\DemoWebSite**, and then click **OK**.
+6. In **New ASP.NET Web Application-DemoWebSite**, Select **Empty**, and then click **OK**.
 
 ### Add and edit files in the project
 
