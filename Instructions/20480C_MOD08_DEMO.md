@@ -94,6 +94,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the exercise scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
 3.	Start Microsoft Visual Studio, and then from the **[Repository Root]\Allfiles\Mod08\Labfiles\Solution\Exercise 3** folder, open the **ContosoConf.sln** solution.
+>**Note**: If **Security Warning for ContosoConf** dialog box appears, clear **Ask me for every project in this solution** checkbox and then click **OK**.
 4.	In **Solution Explorer**, expand the **ContosoConf** project, and then double-click **speaker-badge.htm**.
 5.	In the **Code Editor** window, scroll through the code and find the following **&lt;section&gt;** element:
     ```html
