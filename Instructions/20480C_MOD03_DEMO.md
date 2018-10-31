@@ -154,6 +154,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 4. Click **ASP.NET Web Application(.NET Framework)**.
 5. In the **Name** box, enter **HtmlDOMSample**.
 6.	In the **Location** box, enter **Allfiles\Mod03\Labfiles\Starter\Exercise 2**, and then click **OK**.
+7. In **New ASP.NET Web Application- HtmlDOMSample** dialog box, Select **Empty** and then click **OK**.
 
 #### Add the index page
 
