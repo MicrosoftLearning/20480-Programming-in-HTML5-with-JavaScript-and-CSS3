@@ -30,6 +30,7 @@ First, you will use the HTML5 DOM to obtain a reference to the page’s schedule
 #### Task 1: Review the existing code for the Schedule page
 
 1.	Start Microsoft Visual Studio 2017, and then from the **Allfiles\Mod03\Labfiles\Starter\Exercise 1** folder, open the **ContosoConf.sln** solution.
+>**Note**: If **Security Warning for ContosoConf** dialog box appears, clear **Ask me for every project in this solution** checkbox and then click **OK**. 
 2.	In the **ContosoConf** project, review the content of the **schedule.htm** page. Notice that the **schedule** page section, which will be used to display the list of sessions, currently contains an empty list  named **schedule**:
     ```html
         <section class="page-section schedule>
@@ -129,6 +130,7 @@ First, you will add two check box HTML elements to the **Schedule** page. The fi
 #### Task 1: Add check box HTML elements
 
 1.	In Visual Studio, from the **Allfiles\Mod03\LabFiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution. This project contains a working version of the application as it should appear at the end of exercise 1.
+>**Note**: If **Security Warning for ContosoConf** dialog box appears, clear **Ask me for every project in this solution** checkbox and then click **OK**. 
 2.	In the **schedule.htm** file, before the **schedule** list, add two check boxes that allow the user to specify the tracks for which the page should display session information:
 
 ![alt text](./Images/20480B_3_Schedule_With_Checkboxes.png "The Schedule page with check boxes that enable the user to select the tracks")
@@ -162,6 +164,7 @@ First, you will add two check box HTML elements to the **Schedule** page. The fi
 2.	Verify that if both check boxes are selected, all tracks are listed.
 3.	Verify that if only **Track 1** or **Track 2** is selected, only the sessions for that track are listed.
 4.	Verify that if both tracks are not selected, no sessions are listed.
+5. Close all open windows.
 
 >**Note**: The sessions for Track 1 are:
 >- Registration
