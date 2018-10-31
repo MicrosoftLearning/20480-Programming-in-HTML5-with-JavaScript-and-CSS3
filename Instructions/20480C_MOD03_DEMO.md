@@ -306,7 +306,8 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 4.	Click **IIS Express (Microsoft Edge)**.
 5.	In the **HTML Basic** window, on the input box below the label **My hobbies**, type a hobby and then click the **Add hobby** button. Repeat this step 5 times.
 6.	Verify you cannot add more than 5 hobbies.
-7.	Close Microsoft Edge, and then return to Visual Studio.
+7. On Debug menu click **Stop Debugging**.
+8.	Close Microsoft Edge, and then return to Visual Studio.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
