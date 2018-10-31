@@ -18,7 +18,7 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
 4. Click **ASP.NET Web Application(.NET Framework)**.
 5. In the **Name** box, type **babelDemo**.
 6.	In the **Location** box, type **[Repository Root]\Allfiles\Mod15\DemoCode**, and then click **OK**.
-7. In Visual Studio, on the **Project** menu, right-click **New Folder**.
+7. In babelDemo - Microsoft visual Studio, on the **Project** menu click **New Folder**.
 8.  Name it **src**.
 9.  In Visual Studio, in the **src** folder, right-click **Add New Item**.
 10.  In the **Add New Item – babelDemo** dialog box, click **JavaScript File**.
