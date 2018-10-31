@@ -151,7 +151,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 1. Open **Microsoft Visual Studio**.
 2. In **Microsoft Visual Studio**, on the **File** menu, point to **New**, and then click **Project**.
 3. In the **New Project** dialog box, in the left pane, under **Installed**, expand the **Visual C#** node, and then click the **Web** node.
-4. Click **ASP.NET Empty Web Application**.
+4. Click **ASP.NET Web Application(.NET Framework)**.
 5. In the **Name** box, enter **HtmlDOMSample**.
 6.	In the **Location** box, enter **Allfiles\Mod03\Labfiles\Starter\Exercise 2**, and then click **OK**.
 
