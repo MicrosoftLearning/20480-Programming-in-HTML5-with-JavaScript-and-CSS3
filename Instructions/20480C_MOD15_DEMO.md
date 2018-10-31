@@ -32,7 +32,7 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
 
 #### Configure Babel on A new project
 
-1.	In Visual Studio, on the **Project** menu, right-click **Add New Item**.
+1.	In babelDemo - Microsoft Visual Studio, on the **Project** menu click **Add New Item**.
 2.	In the **Add New Item – babelDemo** dialog box, click **npm Configuration File**.
 3.	In the **Name** box, type **package.json**.
 4.	Click **Add**.
