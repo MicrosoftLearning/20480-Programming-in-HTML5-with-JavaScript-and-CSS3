@@ -147,7 +147,7 @@ In this exercise, you will examine the Visual Studio 2017 project for the Contos
 
 #### Task 1: Explore the web pages for the application by using Visual Studio 2017.
 
-1.	In Visual Studio, open the **index.htm** file. This file contains the HTML markup for the **Home** page as static text. Examine the following items in the file:
+1.	In **ContosoConf - Microsoft Visual Studio**, open the **index.htm** file. This file contains the HTML markup for the **Home** page as static text. Examine the following items in the file:
 - The **nav** element at the start of the **body** section. This element defines the menu that appears at the top of the page (the same menu appears on the other HTML pages as well). The item tagged with the active class specifies the item that refers to the current page. This item is styled differently when it is rendered.
 - The section with the **video** class above the page footer. This section implements the video player.
 - The **link** elements near the top of the file. These elements specify the CSS files that provide the styling for this page. The index.css style sheet contains the styles specifically for this page, while the other style sheets contain styles that are used throughout the application.
