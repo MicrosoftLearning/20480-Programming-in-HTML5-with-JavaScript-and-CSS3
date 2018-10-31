@@ -29,7 +29,6 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 6. In the **index.html** file, add the following text:
    ```html
         <!DOCTYPE html>
-        <!DOCTYPE html>
         <html>
         <head>
             <meta charset="utf-8" />
