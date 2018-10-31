@@ -120,6 +120,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 3.	Start Microsoft Visual Studio.
 4. In Microsoft Visual Studio, on the File menu point to **Open**, and then click **Project/Solution**.
 5. From the **[Repository Root]\Allfiles\Mod06\Labfiles\Solution\Exercise 3** folder, open the **ContosoConf.sln** solution.
+>**Note**: If **Security Warning for ContosoConf** dialog box appears, clear **Ask me for every project in this solution** checkbox and then click **OK**.
 6.	On the **Debug** menu, click **Start Without Debugging**.
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
