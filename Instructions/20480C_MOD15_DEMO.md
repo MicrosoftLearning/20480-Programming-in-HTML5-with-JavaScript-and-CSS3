@@ -148,6 +148,7 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
 4.  Open Microsoft Internet Explorer 11 and go to **http://localhost:51341/index.html**.
 5.  Check whether the website runs in Internet Explorer 11 as it does in Microsoft Edge.
 6.  On the Debug menu click **Stop Debugging**.
+7.  Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
