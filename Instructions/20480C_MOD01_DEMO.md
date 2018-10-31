@@ -143,7 +143,7 @@ Wherever a path to a file starts with *[Repository Root]*, replace it with the a
 3.	In the **New Project** dialog box, Select **Web**, click **ASP.NET Web Application(.NET Framework)**.
 
 >**Note**: It does not matter whether you select the **Visual Basic** or **Visual C#** templates in the left pane; the templates for both languages enable you to create HTML5 webpages and implement functionality by using JavaScript.
-
+4. In the **Name** text box enter **DemoWebSite**.
 4.	From the location drop-down list, set the file path to **[Repository Root]\Allfiles\Mod01\Democode\DemoWebSite**, and then click **OK**.
 5. In New **ASP.NET Core Web Application-DemoWebSite**, Select **Empty**, and then click **OK**.
 
@@ -181,10 +181,9 @@ Wherever a path to a file starts with *[Repository Root]*, replace it with the a
 
 #### Run the web application
 1.	In DemoWebSite - Microsoft Visual Studio, on the **Debug** menu, click **Start Debugging**.
-2. Please add the necessary steps required to trust the certificate and related to the certificate pop-up window.
-3.	If the **Debugging Not Enabled** dialog box appears, click **Modify the Web.config file to enable debugging**, and then click **OK**.
-4.	Verify that Microsoft Edge starts running and displays **ContactUs.html**. The text for the page should appear in blue.
-5.	In Microsoft Edge, if the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
+2.	If the **Debugging Not Enabled** dialog box appears, click **Modify the Web.config file to enable debugging**, and then click **OK**.
+3.	Verify that Microsoft Edge starts running and displays **ContactUs.html**. The text for the page should appear in blue.
+4.	In Microsoft Edge, if the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
 
 >**Note**: You can enter some sample data, but do not click **Send** because the URL that is the target of the form is not available.
 
