@@ -14,6 +14,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 2.	Point out to the students that the exercise scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
 3.  In Microsoft Visual Studio, on the **File** menu, point to **Open** and then select **Project/Solution**.
 4.	Browse to **[Repository Root]\Allfiles\Mod10\Labfiles\Solution\Exercise 2** folder, open the **ContosoConf.sln** solution.
+>**Note**: If **Security Warning for ContosoConf** dialog box appears, clear **Ask me for every project in this solution** checkbox and then click **OK**.
 5.	On the **Debug** menu, click **Start Without Debugging**.
 
 >**Note**: If the **Intranet settings are turned off by default** message appears, click **Don’t show this message again**.
