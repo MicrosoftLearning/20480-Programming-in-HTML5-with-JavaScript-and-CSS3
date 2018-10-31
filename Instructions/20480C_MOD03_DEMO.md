@@ -130,7 +130,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 
 #### Run the web application
 
-1.	In Solution Explorer, double-click **Property**.
+1.	In Solution Explorer, double-click **Properties**.
 2.	In the left pane, click **web**.
 3.	Select the specific page, click **...**, and then select **Index.html**. 
 4.	Click **IIS Express (Run)**.
