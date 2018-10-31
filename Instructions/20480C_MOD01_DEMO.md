@@ -145,7 +145,7 @@ Wherever a path to a file starts with *[Repository Root]*, replace it with the a
 >**Note**: It does not matter whether you select the **Visual Basic** or **Visual C#** templates in the left pane; the templates for both languages enable you to create HTML5 webpages and implement functionality by using JavaScript.
 4. In the **Name** text box enter **DemoWebSite**.
 4.	From the location drop-down list, set the file path to **[Repository Root]\Allfiles\Mod01\Democode\DemoWebSite**, and then click **OK**.
-5. In New **ASP.NET Core Web Application-DemoWebSite**, Select **Empty**, and then click **OK**.
+5. In New **ASP.NET Web Application-DemoWebSite**, Select **Empty**, and then click **OK**.
 
 ### Add and edit files in the project
 
@@ -187,24 +187,24 @@ Wherever a path to a file starts with *[Repository Root]*, replace it with the a
 
 >**Note**: You can enter some sample data, but do not click **Send** because the URL that is the target of the form is not available.
 
-5.	Switch to **DemoWebSite - Microsoft Visual Studio**.
-6. On the **Debug** menu, click **Stop Debugging**.
 
 #### Modify the live application
-1.	In the **ContactUs.html** file, make the following modifications:
+1.	Switch to **DemoWebSite - Microsoft Visual Studio**.
+2.	In the **ContactUs.html** file, make the following modifications:
    - Change **&lt;strong>Name</strong&gt;** to **&lt;strong>Full name</strong&gt;**.
    - Change **Telephone** to **Telephone number**.
-2.	In the **ContactUsStyles.css** file, add the following style:
+3.	In the **ContactUsStyles.css** file, add the following style:
     ```css
         h1 {
             font-family: 'Copperplate Gothic';
             color: red;
         }
     ```
-3.	On the **File** menu, click **Save All**.
-4.	To refresh the display, return to Microsoft Edge and press F5.
-5.	Verify that the **Name** field changed to **Full name**, the **Telephone** field changed to **Telephone number**, and that the style of the heading has changed.
-6.	Return to **DemoWebSite - Microsoft Visual Studio**.
+4.	On the **File** menu, click **Save All**.
+5.	To refresh the display, return to Microsoft Edge and press F5.
+6.	Verify that the **Name** field changed to **Full name**, the **Telephone** field changed to **Telephone number**, and that the style of the heading has changed.
+7.	Return to **DemoWebSite - Microsoft Visual Studio**.
+8. On the **Debug** menu, click **Stop Debugging**.
 
 ### Demonstration: Exploring the Contoso Conference Application
 
