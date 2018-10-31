@@ -129,7 +129,7 @@ First, you will add two check box HTML elements to the **Schedule** page. The fi
 
 #### Task 1: Add check box HTML elements
 
-1.	In Visual Studio, from the **[Repository Root]\Allfiles\Mod03\LabFiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution. This project contains a working version of the application as it should appear at the end of exercise 1.
+1.	In ContosoConf - Microsoft Visual Studio, from the **[Repository Root]\Allfiles\Mod03\LabFiles\Starter\Exercise 2** folder, open the **ContosoConf.sln** solution. This project contains a working version of the application as it should appear at the end of exercise 1.
 >**Note**: If **Security Warning for ContosoConf** dialog box appears, clear **Ask me for every project in this solution** checkbox and then click **OK**. 
 2.	In the **schedule.htm** file, before the **schedule** list, add two check boxes that allow the user to specify the tracks for which the page should display session information:
 
