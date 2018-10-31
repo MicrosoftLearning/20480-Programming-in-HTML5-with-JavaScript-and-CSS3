@@ -13,6 +13,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
 3.	Start Microsoft Visual Studio and then from the **[Repository Root]\Allfiles\Mod07\Labfiles\Solution\Exercise 1** folder, open the **ContosoConf.sln** solution.
+>**Note**: If **Security Warning for ContosoConf** dialog box appears, clear **Ask me for every project in this solution** checkbox and then click **OK**.
 4.	In **Solution Explorer**, expand the **ContosoConf** project, expand the **scripts** folder, and then add a new Javascript file named **ScheduleList.js**. 
 5.	In the **Code Editor** window, add a constructor instance to this class. Mention that the purpose of this constructor is to create and initialize new instances of the **ScheduleList** type.
 6.	In **Solution Explorer**, in the **scripts** folder, expand the **pages** folder, and then double-click **schedule.js**. 
