@@ -170,7 +170,7 @@ The virtual machine is configured with two virtual CPUs, and the **grayscaleImag
 >**Note**: Make sure that you leave the following statement in place at the end of the **grayscaleImage()** function.
 >
 >   ```javascript
->       return deferred;
+>       resolve(canvas);
 >   ```
 
 #### Task 6: Test the application
