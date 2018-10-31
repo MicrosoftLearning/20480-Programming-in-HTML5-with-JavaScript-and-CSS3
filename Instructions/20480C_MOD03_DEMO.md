@@ -305,8 +305,8 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 2.	In the left pane, click **web**.
 3.	Select **Specific Page**, click **...**, and then select **Index.html** and click **OK**. 
 4.	Click **IIS Express (Microsoft Edge)**.
-5.	To see the console, in Microsoft Edge, press F12.
-6.	Verify that the array prints to the console.
+5.	In the **HTML Basic** window, on the input box below the label **My hobbies**, type a hobby and then click the **Add hobby** button. Repeat this step 5 times.
+6.	Verify you cannot add more than 5 hobbies.
 7.	Close Microsoft Edge, and then return to Visual Studio.
 
 ©2018 Microsoft Corporation. All rights reserved.
