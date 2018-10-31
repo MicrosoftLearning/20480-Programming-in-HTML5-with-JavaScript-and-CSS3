@@ -48,9 +48,6 @@ Finally, you will run the application, open the **Home** page, and then verify t
         <nav class="page-nav">
           <div class="container">
             <a href="/index.htm" class="active">Home</a>
-            ...
-          </div>
-        </nav>
    ```
 5.	Run the application, open the **Home** page, and then notice that the navigation links are currently unstyled.
 
