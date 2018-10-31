@@ -218,6 +218,7 @@
 1.	Read the lab scenario to the students and point out that they should read each scenario before attempting the lab for a module.
 2.	Point out to the students that the Exercise Scenario for each exercise contains a description of what they will accomplish in the exercise, and is also essential reading.
 3.	Start Microsoft Visual Studio 2017, and then from the [Repository Root]\Allfiles\Mod01\Labfiles\Starter folder, open the ContosoConf.sln solution.
+>**Note**: If **Security Warning for ContosoConf** dialog box appears, clear **Ask me for every project in this solution** checkbox and then click **OK**. 
 4.	In Solution Explorer, expand the **ContosoConf** project, and then in the root folder of the project, highlight the **.htm** files. (These files correspond to each webpage that students will build in the labs throughout the course.)
 5.	In Solution Explorer, expand the **styles** folder. Point out that this folder contains the global stylesheets used by all the pages in the application.
 6.	Expand the **pages** folder, and describe how each page also has its own stylesheet that contains the styles required for that page.
