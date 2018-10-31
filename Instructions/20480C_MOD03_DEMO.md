@@ -155,7 +155,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 4. Click **ASP.NET Web Application(.NET Framework)**.
 5. In the **Name** box, enter **HtmlDOMSample**.
 6.	In the **Location** box, enter **[Repository root]Allfiles\Mod03\Labfiles\Starter\Exercise 2**, and then click **OK**.
-7. In **New ASP.NET Web Application- HtmlDOMSample** dialog box, Select **Empty** and then click **OK**.
+7. In **New ASP.NET Web Application- HtmlDOMSample** dialog box, Select **MVC** and then click **OK**.
 
 #### Add the index page
 
@@ -240,33 +240,32 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
    ```
 #### Add the JavaScript file
 
-1. Right-click **HtmlDOMSample** point to **Add** and then select **New folder**. Type **Scripts**.
-2. Right-click the **Scripts** folder, select **Add**, and then click **New Item**.
-3. In the **Add New Item – HtmlDOMSample** dialog box, click **JavaScript File**.
-4. In the **Name** box, enter **indexScript.js**.
-5.	Click **Add**.
-6. Open the **indexScript.js** file.
-7. To create a **createNode** function that receives the html element name and returns the html element, enter the following code:
+1. Right-click the **Scripts** folder, select **Add**, and then click **New Item**.
+2. In the **Add New Item – HtmlDOMSample** dialog box, click **JavaScript File**.
+3. In the **Name** box, enter **indexScript.js**.
+4.	Click **Add**.
+5. Open the **indexScript.js** file.
+6. To create a **createNode** function that receives the html element name and returns the html element, enter the following code:
    ```javascript
         function createNode(element) {
             return document.createElement(element);
         }
    ```
-8. To create an **append** function that receives the parent and child elements and appends the child to the parent, enter the following code:
+7. To create an **append** function that receives the parent and child elements and appends the child to the parent, enter the following code:
    ```javascript
         function append(parent, el) {
             return parent.appendChild(el);
         }
    ```
-9. Create an **addHobbies** function by adding the following code:
+8. Create an **addHobbies** function by adding the following code:
 ```javascript
         function addHobbies () { }
    ```
-10. To get all the inputs with the **hobbiesInput** class into the *const* variable, enter the following code:
+9. To get all the inputs with the **hobbiesInput** class into the *const* variable, enter the following code:
     ```javascript
         const inputList = document.querySelectorAll('.hobbiesInput');
     ```
-11. To check that **inputList** contains less than five elements, add new inputs with the **createNode** and **append** functions,  and if **inputList** contains more than five elements, remove the event listener, and then enter the following code:
+10. To check that **inputList** contains less than five elements, add new inputs with the **createNode** and **append** functions,  and if **inputList** contains more than five elements, remove the event listener, and then enter the following code:
     ```javascript
         if (inputList.length < 5) {
         
@@ -284,17 +283,17 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
             document.getElementById('newHobbyBtn').removeEventListener('click', addHobbies);
         }
     ```
-12. On the JavaScript page, to add an event listener on **DOMContentLoaded**, enter the following code:
+11. On the JavaScript page, to add an event listener on **DOMContentLoaded**, enter the following code:
     ```javascript
         document.addEventListener('DOMContentLoaded', function (event) {
             
         });
     ```
-13. To get a **newHobbyBtn** button by **getElementById**, add an event listener on the button, and attach an **addHobbies** function, enter the following code:
+12. To get a **newHobbyBtn** button by **getElementById**, add an event listener on the button, and attach an **addHobbies** function, enter the following code:
     ```javascript
         document.getElementById('newHobbyBtn').addEventListener('click', addHobbies);
     ```
-14. On the **index.html** page, to the **&lt;Head&gt;** element, add the folowing script tag:
+13. On the **index.html** page, to the **&lt;Head&gt;** element, add the folowing script tag:
     ```html
         <script src="/Scripts/indexScript.js"></script>
     ```
