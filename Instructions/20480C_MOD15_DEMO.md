@@ -15,7 +15,7 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
 1. Open Microsoft Visual Studio 2017.
 2. In Visual Studio, on the **File** menu, point to **New**, and then click **Project**.
 3. In the left pane of the **New Project** dialog box, under **Installed**, expand the **Visual C#** node, and then click the **Web** node.
-4. Click **ASP.NET Empty Web Application**.
+4. Click **ASP.NET Web Application(.NET Framework)**.
 5. In the **Name** box, type **babelDemo**.
 6.	In the **Location** box, type **Allfiles\Mod15\DemoCode**, and then click **OK**.
 7. In Visual Studio, on the **Project** menu, right-click **New Folder**.
