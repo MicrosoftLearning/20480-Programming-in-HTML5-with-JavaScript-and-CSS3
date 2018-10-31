@@ -67,7 +67,7 @@ Ensure that you have cloned the 20480C directory from GitHub. It contains the co
 
 1.	Open Microsoft Visual Studio.
 2.	In Microsoft Visual Studio, on the **File** menu, point to **Open**, and then click **File**.
-3.	In the **Open File** dialog box, browse to the **Allfiles\Mod15\DemoCode\build-tutorial** folder, click **build-tutorial.sln**, and then click **Open**.
+3.	In the **Open File** dialog box, browse to the **[Repository Root]\Allfiles\Mod15\DemoCode\build-tutorial** folder, click **build-tutorial.sln**, and then click **Open**.
 4.	In build-tutorial - Microsoft Visual Studio, on the **Project** menu, click **Add New Item**.
 5. In the **Add New Item – build-tutorial** dialog box, click **npm Configuration File**.
 6.	In the **Name** box, type **package.json**.
