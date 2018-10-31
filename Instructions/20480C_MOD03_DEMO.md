@@ -13,7 +13,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 #### Create new project
 
 1. Open Microsoft Visual Studio 2017.
-2. In Visual Studio, on the **File** menu, point to **New**, and then click **Project**.
+2. In **Microsoft Visual Studio**, on the **File** menu, point to **New**, and then click **Project**.
 3. In the **New Project** dialog box, in the left pane, under **Installed**, expand **Visual C#**, and then click **Web**.
 4. Click **ASP.NET Empty Web Application**.
 5. In the **Name** box, enter **HtmlBasics**.
