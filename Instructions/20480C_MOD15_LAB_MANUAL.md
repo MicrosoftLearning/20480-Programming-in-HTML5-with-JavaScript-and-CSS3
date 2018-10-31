@@ -34,7 +34,7 @@ Finally, you will run the application and verify that the site remains the same 
 
 #### Task 1: Install and configure Babel and webpack
 
-1.	Start Microsoft Visual Studio and from the **Allfiles\Mod15\Labfiles\Starter** folder, open the **ContosoConf.sln** solution.
+1.	Start Microsoft Visual Studio and from the **[Repository Root]\Allfiles\Mod15\Labfiles\Starter** folder, open the **ContosoConf.sln** solution.
 2.  In your project, create the **package.json** file.
 3.  To install the **babel-core**, **babel-loader**, **babel-preset-es2015**, and **webpack** packages in developer mode, use the command prompt.
 4.  In your project root, create the **webpack.config.js** file.
