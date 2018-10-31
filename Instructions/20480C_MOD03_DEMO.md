@@ -17,7 +17,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
 3. In the **New Project** dialog box, in the left pane, under **Installed**, expand **Visual C#**, and then click **Web**.
 4. Click **ASP.NET Empty Web Application(.NET Framework)**.
 5. In the **Name** box, enter **HtmlBasics**.
-6.	In the **Location** box, enter **Allfiles\Mod03\Labfiles\Starter\Exercise 1**, and then click **OK**.
+6.	In the **Location** box, enter **[Repository root]Allfiles\Mod03\Labfiles\Starter\Exercise 1**, and then click **OK**.
 7. In the **New ASP.NET Web Application- HtmlBasics** dialog box, Select **Empty** and then click **OK**.
 
 #### Add the index page
