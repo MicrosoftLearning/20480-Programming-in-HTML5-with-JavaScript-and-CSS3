@@ -239,6 +239,7 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
    ```
 #### Add the JavaScript file
 
+1. Right-click **HtmlDOMSample** point to **Add** and then select **New folder**. Type **Scripts**.
 1. Right-click the **Script** folder, select **Add**, and then click **New Item**.
 2. In the **Add New Item – HtmlBasics** dialog box, click **JavaScript File**.
 3. In the **Name** box, enter **indexScript.js**.
