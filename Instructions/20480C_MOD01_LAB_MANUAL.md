@@ -1,7 +1,7 @@
 ## Module 1: Overview of HTML and CSS
 
 ## Lab: Exploring the Contoso Conference Application
-
+Wherever a path to a file starts with *[Repository Root]*, replace it with the absolute path to the folder in which the 20480 repository resides. For example, if you cloned or extracted the 20480 repository to **C:\Users\John Doe\Downloads\20480**, change the path: **[Repository Root]\AllFiles\20480C\Mod01** to **C:\Users\John Doe\Downloads\20480\AllFiles\20480C\Mod01**.
 #### Scenario
 
 ContosoConf is an annual technical conference that describes the latest tools and techniques for building HTML5 web applications. The conference organizers have created a website to support the conference, using the same technologies that the conference showcases. 
