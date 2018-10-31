@@ -257,7 +257,10 @@ Ensure that you have cloned the 20480C directory from GitHub (**https://github.c
             return parent.appendChild(el);
         }
    ```
-9. Create an **addHobbies** function.
+9. Create an **addHobbies** function by adding the following code:
+```javascript
+        function addHobbies () { }
+   ```
 10. To get all the inputs with the **hobbiesInput** class into the *const* variable, enter the following code:
     ```javascript
         const inputList = document.querySelectorAll('.hobbiesInput');
