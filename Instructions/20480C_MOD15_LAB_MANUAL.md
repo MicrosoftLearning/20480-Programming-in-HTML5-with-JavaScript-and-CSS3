@@ -53,10 +53,40 @@ Finally, you will run the application and verify that the site remains the same 
             offline: './scripts/offline.js'
         }
    ```
-6.  Configure the output filename to create one file per entry.
+6. Add the **output** object to **module.exports**, configure the **path** property to indicate where to save the **bundle** files, the **filename** property with the **name** placeholder, and **publicPath** with the **dist** value.
    ```javascript
-        filename: '[name].bundle.js',
+   
+        output: {
+            path: path.resolve(__dirname,'dist'),
+            filename: '[name].bundle.js',
+            publicPath: '/dist/'
+        },
    ```
+7. Add the **module** object to **module.exports**. Inside the object, add the **rules** array with the **babel-loader** configuration object.
+   ```javascript
+
+        module: {
+            rules: [
+                {
+                    test: /\.js$/,
+                    loader: 'babel-loader',
+                    query: {
+                        presets: ['es2015']
+                    }
+                }
+            ]
+        },
+   ```
+8. To **module.exports**, add the **stats**, **devtool**, and **mode** objects.
+   ```javascript
+
+        stats: {
+            colors: true
+        },
+        devtool: 'source-map',
+        mode: 'production'
+   ```
+
 
 #### Task 2: Create bundle files and replace JavaScript
 
