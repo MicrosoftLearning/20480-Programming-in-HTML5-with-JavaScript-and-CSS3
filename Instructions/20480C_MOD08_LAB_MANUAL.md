@@ -190,7 +190,7 @@ You will use the Geolocation API to get the visitor’s current location, and th
     ```javascript
         const conferenceLocation = {
             latitude: 47.6097,  // decimal degrees
-            longitude: 122.3331 // decimal degrees
+            longitude: -122.3331 // decimal degrees
         };
     ```
 
