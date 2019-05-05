@@ -92,7 +92,7 @@ function createSessionElement(session) {
     const li = document.createElement("li");
     li.textContent = session.title;
     return li;
-};
+}
 
 function clearList() {
     while (list.firstChild) {
