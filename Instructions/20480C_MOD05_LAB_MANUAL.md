@@ -167,7 +167,7 @@ First, you will refactor the **downloadSchedule** function by replacing the use 
 
 1.	In the **schedule.js** file, refactor the **saveStar** function to use the async **fetch()** function.
 - The **options** object must have a **method** property of **POST**, **header** property to type **Headers** containing **Content-Type** header and **body** property of **"starred=" + isStarred**.
-- The fetch api must have a **url** agrument of **/schedule/list** and the **options** argument.
+- The fetch api must have a **url** agrument of **"/schedule/star/" + sessionId** and the **options** argument.
 - Use the **response.json** with **await** to fetch the json response asyncronously. Check if the **starCount** property in the response object is greater than 50, display the **This session is very popular! Be sure to arrive early to get a seat** message.
 
 
