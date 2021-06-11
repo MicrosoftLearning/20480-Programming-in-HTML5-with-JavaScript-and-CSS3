@@ -7,6 +7,7 @@ const sent = document.getElementById("feedback-sent");
 function formSubmitting(event) {
     event.preventDefault();
     // TODO: Trigger the animation by adding the "sending" CSS class to the form
+    form.classList.add("sending");
 };
 
 function animationEnded() {
@@ -18,6 +19,7 @@ form.addEventListener("submit", formSubmitting, false);
 
 // TODO: Add listener for the animationend event,
 //       calling the animationEnded function.
+form.addEventListener("animationend", animationEnded, false);
 
 const questions = form.querySelectorAll(".feedback-question");
 for (let i = 0; i < questions.length; i++) {
